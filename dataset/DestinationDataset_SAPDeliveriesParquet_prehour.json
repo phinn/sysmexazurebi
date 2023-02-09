@@ -1,0 +1,25 @@
+{
+	"name": "DestinationDataset_SAPDeliveriesParquet_prehour",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@getPastTime(16,'Hour','yyyyMMddhh')",
+					"type": "Expression"
+				},
+				"folderPath": "SAPDeliveries",
+				"fileSystem": "saps4data"
+			},
+			"compressionCodec": "gzip"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

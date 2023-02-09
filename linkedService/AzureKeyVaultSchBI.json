@@ -1,0 +1,11 @@
+{
+	"name": "AzureKeyVaultSchBI",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://schpowerbi.vault.azure.cn/"
+		}
+	}
+}

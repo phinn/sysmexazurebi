@@ -1,0 +1,16 @@
+{
+	"name": "sysmexdatafactoryencrypted",
+	"properties": {
+		"encryption": {
+			"vaultBaseUrl": "https://schpowerbi.vault.azure.cn",
+			"keyName": "financialkey",
+			"keyVersion": "f629f7370f9d49eda13256edbe7251d3"
+		}
+	},
+	"location": "chinaeast2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a31147e3-f23e-4a5f-8053-17552080936d",
+		"tenantId": "ae95c786-ff4d-4930-900e-ce61c30db855"
+	}
+}

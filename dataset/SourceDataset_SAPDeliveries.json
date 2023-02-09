@@ -1,0 +1,19 @@
+{
+	"name": "SourceDataset_SAPDeliveries",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestServiceAPIGW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/v1/sap/s4/bi/GetSAPDeliveries?startDate=20221101&endDate=20221125",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

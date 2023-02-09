@@ -1,0 +1,24 @@
+{
+	"name": "per4hour",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "SyncS4_SAPDeliveries_pre4hour",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 4,
+				"startTime": "2022-12-21T23:57:00",
+				"timeZone": "China Standard Time"
+			}
+		}
+	}
+}

@@ -1,0 +1,126 @@
+{
+	"name": "DestinationDataset_SAPDeliveriesDB_pre4hour",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Report",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "shipToDealerNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "solidToDealerNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deliveryDate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "createdDate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "createdTime",
+				"type": "nvarchar"
+			},
+			{
+				"name": "salesOrgNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "updatedDate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "billingStatus",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deliveryStatus",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deliveryDocNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deliveryDocItemNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deliveryDocItemType",
+				"type": "nvarchar"
+			},
+			{
+				"name": "productNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "productName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "productNameZH",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deliveryQuantity",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "upperItemBatchNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "basicUnitQuantity",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "storageLocation",
+				"type": "nvarchar"
+			},
+			{
+				"name": "storageLocationDesc",
+				"type": "nvarchar"
+			},
+			{
+				"name": "plantNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "batchNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "serialNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "bomsign",
+				"type": "nvarchar"
+			},
+			{
+				"name": "bomheaderMaterialNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "InsertTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "ods",
+			"table": "SAPS4Deliveries_pre4hour"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,12 @@
+{
+	"name": "selfhosted",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/f380de5b-8c2e-49a9-b019-e89b4bf45b71/resourcegroups/powerbi/providers/Microsoft.DataFactory/factories/sysmexfactory/integrationruntimes/selfhosted",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}

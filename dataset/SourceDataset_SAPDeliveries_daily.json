@@ -1,0 +1,19 @@
+{
+	"name": "SourceDataset_SAPDeliveries_daily",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestServiceAPIGW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "@concat('/v1/sap/s4/bi/GetSAPDeliveries?startDate=',getPastTime(16,'Hour','yyyy'),getPastTime(16,'Hour','MM'),getPastTime(16,'Hour','dd'),'&endDate=',getPastTime(-8,'Hour','yyyy'),getPastTime(-8,'Hour','MM'),getPastTime(-8,'Hour','dd'))",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

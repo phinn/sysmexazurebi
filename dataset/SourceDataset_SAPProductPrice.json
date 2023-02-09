@@ -1,0 +1,19 @@
+{
+	"name": "SourceDataset_SAPProductPrice",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SourceDataset_SAPProductPrice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/v1/mdg/GetProductListFromSAP",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
