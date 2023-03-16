@@ -100,33 +100,6 @@
 								"mappings": [
 									{
 										"source": {
-											"path": "$['d']['results'][0]['__metadata']['id']"
-										},
-										"sink": {
-											"name": "id",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"path": "$['d']['results'][0]['__metadata']['uri']"
-										},
-										"sink": {
-											"name": "uri",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"path": "$['d']['results'][0]['__metadata']['type']"
-										},
-										"sink": {
-											"name": "type",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
 											"path": "$['d']['results'][0]['Mandt']"
 										},
 										"sink": {
