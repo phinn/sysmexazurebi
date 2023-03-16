@@ -1050,7 +1050,8 @@
 									"path": "$['d']['results'][0]['Iseopblocked']"
 								},
 								"sink": {
-									"name": "Iseopblocked"
+									"name": "Iseopblocked",
+									"type": "String"
 								}
 							},
 							{
@@ -1058,7 +1059,8 @@
 									"path": "$['d']['results'][0]['Isaged']"
 								},
 								"sink": {
-									"name": "Isaged"
+									"name": "Isaged",
+									"type": "String"
 								}
 							},
 							{
@@ -1066,7 +1068,8 @@
 									"path": "$['d']['results'][0]['ForceId']"
 								},
 								"sink": {
-									"name": "ForceId"
+									"name": "ForceId",
+									"type": "String"
 								}
 							},
 							{
@@ -1074,7 +1077,8 @@
 									"path": "$['d']['results'][0]['ForceCnt']"
 								},
 								"sink": {
-									"name": "ForceCnt"
+									"name": "ForceCnt",
+									"type": "String"
 								}
 							},
 							{
@@ -1082,7 +1086,8 @@
 									"path": "$['d']['results'][0]['RelocId']"
 								},
 								"sink": {
-									"name": "RelocId"
+									"name": "RelocId",
+									"type": "String"
 								}
 							},
 							{
@@ -1090,7 +1095,8 @@
 									"path": "$['d']['results'][0]['RelocSeqId']"
 								},
 								"sink": {
-									"name": "RelocSeqId"
+									"name": "RelocSeqId",
+									"type": "String"
 								}
 							},
 							{
@@ -1098,7 +1104,8 @@
 									"path": "$['d']['results'][0]['SourceLogsys']"
 								},
 								"sink": {
-									"name": "SourceLogsys"
+									"name": "SourceLogsys",
+									"type": "String"
 								}
 							},
 							{
@@ -1106,7 +1113,8 @@
 									"path": "$['d']['results'][0]['FshTransaction']"
 								},
 								"sink": {
-									"name": "FshTransaction"
+									"name": "FshTransaction",
+									"type": "String"
 								}
 							},
 							{
@@ -1114,7 +1122,8 @@
 									"path": "$['d']['results'][0]['FshItemGroup']"
 								},
 								"sink": {
-									"name": "FshItemGroup"
+									"name": "FshItemGroup",
+									"type": "String"
 								}
 							},
 							{
@@ -1122,7 +1131,8 @@
 									"path": "$['d']['results'][0]['FshVasLastItem']"
 								},
 								"sink": {
-									"name": "FshVasLastItem"
+									"name": "FshVasLastItem",
+									"type": "String"
 								}
 							},
 							{
@@ -1130,7 +1140,8 @@
 									"path": "$['d']['results'][0]['FshOsStgChange']"
 								},
 								"sink": {
-									"name": "FshOsStgChange"
+									"name": "FshOsStgChange",
+									"type": "String"
 								}
 							},
 							{
@@ -1138,7 +1149,8 @@
 									"path": "$['d']['results'][0]['TmsRefUuid']"
 								},
 								"sink": {
-									"name": "TmsRefUuid"
+									"name": "TmsRefUuid",
+									"type": "String"
 								}
 							},
 							{
@@ -1146,7 +1158,8 @@
 									"path": "$['d']['results'][0]['Zapcgk']"
 								},
 								"sink": {
-									"name": "Zapcgk"
+									"name": "Zapcgk",
+									"type": "String"
 								}
 							},
 							{
@@ -1154,7 +1167,8 @@
 									"path": "$['d']['results'][0]['ApcgkExtend']"
 								},
 								"sink": {
-									"name": "ApcgkExtend"
+									"name": "ApcgkExtend",
+									"type": "String"
 								}
 							},
 							{
@@ -1162,7 +1176,8 @@
 									"path": "$['d']['results'][0]['ZbasDate']"
 								},
 								"sink": {
-									"name": "ZbasDate"
+									"name": "ZbasDate",
+									"type": "String"
 								}
 							},
 							{
@@ -1170,7 +1185,8 @@
 									"path": "$['d']['results'][0]['Zadattyp']"
 								},
 								"sink": {
-									"name": "Zadattyp"
+									"name": "Zadattyp",
+									"type": "String"
 								}
 							},
 							{
@@ -1178,7 +1194,8 @@
 									"path": "$['d']['results'][0]['ZstartDat']"
 								},
 								"sink": {
-									"name": "ZstartDat"
+									"name": "ZstartDat",
+									"type": "String"
 								}
 							},
 							{
@@ -1186,7 +1203,8 @@
 									"path": "$['d']['results'][0]['ZDev']"
 								},
 								"sink": {
-									"name": "ZDev"
+									"name": "ZDev",
+									"type": "String"
 								}
 							},
 							{
@@ -1194,7 +1212,8 @@
 									"path": "$['d']['results'][0]['Zindanx']"
 								},
 								"sink": {
-									"name": "Zindanx"
+									"name": "Zindanx",
+									"type": "String"
 								}
 							},
 							{
@@ -1202,7 +1221,8 @@
 									"path": "$['d']['results'][0]['ZlimitDat']"
 								},
 								"sink": {
-									"name": "ZlimitDat"
+									"name": "ZlimitDat",
+									"type": "String"
 								}
 							},
 							{
@@ -1210,7 +1230,8 @@
 									"path": "$['d']['results'][0]['Numerator']"
 								},
 								"sink": {
-									"name": "Numerator"
+									"name": "Numerator",
+									"type": "String"
 								}
 							},
 							{
@@ -1218,7 +1239,8 @@
 									"path": "$['d']['results'][0]['HashcalBdat']"
 								},
 								"sink": {
-									"name": "HashcalBdat"
+									"name": "HashcalBdat",
+									"type": "String"
 								}
 							},
 							{
@@ -1226,7 +1248,8 @@
 									"path": "$['d']['results'][0]['Hashcal']"
 								},
 								"sink": {
-									"name": "Hashcal"
+									"name": "Hashcal",
+									"type": "String"
 								}
 							},
 							{
@@ -1234,7 +1257,8 @@
 									"path": "$['d']['results'][0]['Negative']"
 								},
 								"sink": {
-									"name": "Negative"
+									"name": "Negative",
+									"type": "String"
 								}
 							},
 							{
@@ -1242,7 +1266,8 @@
 									"path": "$['d']['results'][0]['HashcalExists']"
 								},
 								"sink": {
-									"name": "HashcalExists"
+									"name": "HashcalExists",
+									"type": "String"
 								}
 							},
 							{
@@ -1250,7 +1275,8 @@
 									"path": "$['d']['results'][0]['KnownIndex']"
 								},
 								"sink": {
-									"name": "KnownIndex"
+									"name": "KnownIndex",
+									"type": "String"
 								}
 							},
 							{
@@ -1258,7 +1284,8 @@
 									"path": "$['d']['results'][0]['Postat']"
 								},
 								"sink": {
-									"name": "Postat"
+									"name": "Postat",
+									"type": "String"
 								}
 							},
 							{
@@ -1266,7 +1293,8 @@
 									"path": "$['d']['results'][0]['Vzskz']"
 								},
 								"sink": {
-									"name": "Vzskz"
+									"name": "Vzskz",
+									"type": "String"
 								}
 							},
 							{
@@ -1274,7 +1302,8 @@
 									"path": "$['d']['results'][0]['FshSnstStatus']"
 								},
 								"sink": {
-									"name": "FshSnstStatus"
+									"name": "FshSnstStatus",
+									"type": "String"
 								}
 							},
 							{
@@ -1282,7 +1311,8 @@
 									"path": "$['d']['results'][0]['Proce']"
 								},
 								"sink": {
-									"name": "Proce"
+									"name": "Proce",
+									"type": "String"
 								}
 							},
 							{
@@ -1290,7 +1320,8 @@
 									"path": "$['d']['results'][0]['Conc']"
 								},
 								"sink": {
-									"name": "Conc"
+									"name": "Conc",
+									"type": "String"
 								}
 							},
 							{
@@ -1298,7 +1329,8 @@
 									"path": "$['d']['results'][0]['Cont']"
 								},
 								"sink": {
-									"name": "Cont"
+									"name": "Cont",
+									"type": "String"
 								}
 							},
 							{
@@ -1306,7 +1338,8 @@
 									"path": "$['d']['results'][0]['Comp']"
 								},
 								"sink": {
-									"name": "Comp"
+									"name": "Comp",
+									"type": "String"
 								}
 							},
 							{
@@ -1314,7 +1347,8 @@
 									"path": "$['d']['results'][0]['Outr']"
 								},
 								"sink": {
-									"name": "Outr"
+									"name": "Outr",
+									"type": "String"
 								}
 							},
 							{
@@ -1322,7 +1356,8 @@
 									"path": "$['d']['results'][0]['Desp']"
 								},
 								"sink": {
-									"name": "Desp"
+									"name": "Desp",
+									"type": "String"
 								}
 							},
 							{
@@ -1330,7 +1365,8 @@
 									"path": "$['d']['results'][0]['DespDat']"
 								},
 								"sink": {
-									"name": "DespDat"
+									"name": "DespDat",
+									"type": "String"
 								}
 							},
 							{
@@ -1338,7 +1374,8 @@
 									"path": "$['d']['results'][0]['DespCargo']"
 								},
 								"sink": {
-									"name": "DespCargo"
+									"name": "DespCargo",
+									"type": "String"
 								}
 							},
 							{
@@ -1346,7 +1383,8 @@
 									"path": "$['d']['results'][0]['Pare']"
 								},
 								"sink": {
-									"name": "Pare"
+									"name": "Pare",
+									"type": "String"
 								}
 							},
 							{
@@ -1354,7 +1392,8 @@
 									"path": "$['d']['results'][0]['PareDat']"
 								},
 								"sink": {
-									"name": "PareDat"
+									"name": "PareDat",
+									"type": "String"
 								}
 							},
 							{
@@ -1362,7 +1401,8 @@
 									"path": "$['d']['results'][0]['PareCargo']"
 								},
 								"sink": {
-									"name": "PareCargo"
+									"name": "PareCargo",
+									"type": "String"
 								}
 							},
 							{
@@ -1378,7 +1418,8 @@
 									"path": "$['d']['results'][0]['PohfType']"
 								},
 								"sink": {
-									"name": "PohfType"
+									"name": "PohfType",
+									"type": "String"
 								}
 							},
 							{
@@ -1386,7 +1427,8 @@
 									"path": "$['d']['results'][0]['EqEindt']"
 								},
 								"sink": {
-									"name": "EqEindt"
+									"name": "EqEindt",
+									"type": "String"
 								}
 							},
 							{
@@ -1394,7 +1436,8 @@
 									"path": "$['d']['results'][0]['EqWerks']"
 								},
 								"sink": {
-									"name": "EqWerks"
+									"name": "EqWerks",
+									"type": "String"
 								}
 							},
 							{
@@ -1402,7 +1445,8 @@
 									"path": "$['d']['results'][0]['Fixpo']"
 								},
 								"sink": {
-									"name": "Fixpo"
+									"name": "Fixpo",
+									"type": "String"
 								}
 							},
 							{
@@ -1410,7 +1454,8 @@
 									"path": "$['d']['results'][0]['EkgrpAllow']"
 								},
 								"sink": {
-									"name": "EkgrpAllow"
+									"name": "EkgrpAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1418,7 +1463,8 @@
 									"path": "$['d']['results'][0]['WerksAllow']"
 								},
 								"sink": {
-									"name": "WerksAllow"
+									"name": "WerksAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1426,7 +1472,8 @@
 									"path": "$['d']['results'][0]['ContractAllow']"
 								},
 								"sink": {
-									"name": "ContractAllow"
+									"name": "ContractAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1434,7 +1481,8 @@
 									"path": "$['d']['results'][0]['PstypAllow']"
 								},
 								"sink": {
-									"name": "PstypAllow"
+									"name": "PstypAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1442,7 +1490,8 @@
 									"path": "$['d']['results'][0]['FixpoAllow']"
 								},
 								"sink": {
-									"name": "FixpoAllow"
+									"name": "FixpoAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1450,7 +1499,8 @@
 									"path": "$['d']['results'][0]['KeyIdAllow']"
 								},
 								"sink": {
-									"name": "KeyIdAllow"
+									"name": "KeyIdAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1458,7 +1508,8 @@
 									"path": "$['d']['results'][0]['AurelAllow']"
 								},
 								"sink": {
-									"name": "AurelAllow"
+									"name": "AurelAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1466,7 +1517,8 @@
 									"path": "$['d']['results'][0]['DelperAllow']"
 								},
 								"sink": {
-									"name": "DelperAllow"
+									"name": "DelperAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1474,7 +1526,8 @@
 									"path": "$['d']['results'][0]['EindtAllow']"
 								},
 								"sink": {
-									"name": "EindtAllow"
+									"name": "EindtAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1482,7 +1535,8 @@
 									"path": "$['d']['results'][0]['LtsnrAllow']"
 								},
 								"sink": {
-									"name": "LtsnrAllow"
+									"name": "LtsnrAllow",
+									"type": "String"
 								}
 							},
 							{
@@ -1490,7 +1544,8 @@
 									"path": "$['d']['results'][0]['OtbLevel']"
 								},
 								"sink": {
-									"name": "OtbLevel"
+									"name": "OtbLevel",
+									"type": "String"
 								}
 							},
 							{
@@ -1498,7 +1553,8 @@
 									"path": "$['d']['results'][0]['OtbCondType']"
 								},
 								"sink": {
-									"name": "OtbCondType"
+									"name": "OtbCondType",
+									"type": "String"
 								}
 							},
 							{
@@ -1506,7 +1562,8 @@
 									"path": "$['d']['results'][0]['KeyId']"
 								},
 								"sink": {
-									"name": "KeyId"
+									"name": "KeyId",
+									"type": "String"
 								}
 							},
 							{
@@ -1514,7 +1571,8 @@
 									"path": "$['d']['results'][0]['OtbValue']"
 								},
 								"sink": {
-									"name": "OtbValue"
+									"name": "OtbValue",
+									"type": "String"
 								}
 							},
 							{
@@ -1522,7 +1580,8 @@
 									"path": "$['d']['results'][0]['OtbCurr']"
 								},
 								"sink": {
-									"name": "OtbCurr"
+									"name": "OtbCurr",
+									"type": "String"
 								}
 							},
 							{
@@ -1530,7 +1589,8 @@
 									"path": "$['d']['results'][0]['OtbResValue']"
 								},
 								"sink": {
-									"name": "OtbResValue"
+									"name": "OtbResValue",
+									"type": "String"
 								}
 							},
 							{
@@ -1538,7 +1598,8 @@
 									"path": "$['d']['results'][0]['OtbSpecValue']"
 								},
 								"sink": {
-									"name": "OtbSpecValue"
+									"name": "OtbSpecValue",
+									"type": "String"
 								}
 							},
 							{
@@ -1546,7 +1607,8 @@
 									"path": "$['d']['results'][0]['SprRsnProfile']"
 								},
 								"sink": {
-									"name": "SprRsnProfile"
+									"name": "SprRsnProfile",
+									"type": "String"
 								}
 							},
 							{
@@ -1554,7 +1616,8 @@
 									"path": "$['d']['results'][0]['BudgType']"
 								},
 								"sink": {
-									"name": "BudgType"
+									"name": "BudgType",
+									"type": "String"
 								}
 							},
 							{
@@ -1562,7 +1625,8 @@
 									"path": "$['d']['results'][0]['OtbStatus']"
 								},
 								"sink": {
-									"name": "OtbStatus"
+									"name": "OtbStatus",
+									"type": "String"
 								}
 							},
 							{
@@ -1570,7 +1634,8 @@
 									"path": "$['d']['results'][0]['OtbReason']"
 								},
 								"sink": {
-									"name": "OtbReason"
+									"name": "OtbReason",
+									"type": "String"
 								}
 							},
 							{
@@ -1578,7 +1643,8 @@
 									"path": "$['d']['results'][0]['CheckType']"
 								},
 								"sink": {
-									"name": "CheckType"
+									"name": "CheckType",
+									"type": "String"
 								}
 							},
 							{
@@ -1586,7 +1652,8 @@
 									"path": "$['d']['results'][0]['ConOtbReq']"
 								},
 								"sink": {
-									"name": "ConOtbReq"
+									"name": "ConOtbReq",
+									"type": "String"
 								}
 							},
 							{
@@ -1594,7 +1661,8 @@
 									"path": "$['d']['results'][0]['ConPrebookLev']"
 								},
 								"sink": {
-									"name": "ConPrebookLev"
+									"name": "ConPrebookLev",
+									"type": "String"
 								}
 							},
 							{
@@ -1602,7 +1670,8 @@
 									"path": "$['d']['results'][0]['ConDistrLev']"
 								},
 								"sink": {
-									"name": "ConDistrLev"
+									"name": "ConDistrLev",
+									"type": "String"
 								}
 							}
 						]
