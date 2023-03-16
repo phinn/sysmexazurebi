@@ -5,6 +5,9 @@
 			"referenceName": "SAPOData",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
