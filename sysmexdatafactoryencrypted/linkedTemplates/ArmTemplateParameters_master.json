@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "sysmexdatafactoryencrypted"
+		},
+		"AzureDataLake_accountKey": {
+			"value": ""
+		},
+		"Report_connectionString": {
+			"value": ""
+		},
+		"SAPOData_password": {
+			"value": ""
+		},
+		"sysmexdw_connectionString": {
+			"value": ""
+		},
+		"AzureDataLake_properties_typeProperties_url": {
+			"value": "https://sysmexstorage.dfs.core.chinacloudapi.cn/"
+		},
+		"AzureKeyVaultSchBI_properties_typeProperties_baseUrl": {
+			"value": "https://schpowerbi.vault.azure.cn/"
+		},
+		"RestServiceAPIGW_properties_typeProperties_url": {
+			"value": "http://10.40.20.195:8083"
+		},
+		"SAPOData_properties_typeProperties_url": {
+			"value": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000/sap/opu/odata/sap"
+		},
+		"SAPOData_properties_typeProperties_userName": {
+			"value": "OData"
+		},
+		"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
+			"value": "http://10.40.20.218:8081"
+		},
+		"selfhosted_properties_typeProperties_linkedInfo_resourceId": {
+			"value": "/subscriptions/f380de5b-8c2e-49a9-b019-e89b4bf45b71/resourcegroups/powerbi/providers/Microsoft.DataFactory/factories/sysmexfactory/integrationruntimes/selfhosted"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

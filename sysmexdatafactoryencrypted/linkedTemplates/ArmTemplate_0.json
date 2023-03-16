@@ -1,0 +1,967 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "sysmexdatafactoryencrypted"
+		},
+		"AzureDataLake_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLake'"
+		},
+		"Report_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Report'"
+		},
+		"sysmexdw_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'sysmexdw'"
+		},
+		"SAPOData_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SAPOData'"
+		},
+		"AzureDataLake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sysmexstorage.dfs.core.chinacloudapi.cn/"
+		},
+		"AzureKeyVaultSchBI_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://schpowerbi.vault.azure.cn/"
+		},
+		"selfhosted_properties_typeProperties_linkedInfo_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/f380de5b-8c2e-49a9-b019-e89b4bf45b71/resourcegroups/powerbi/providers/Microsoft.DataFactory/factories/sysmexfactory/integrationruntimes/selfhosted"
+		},
+		"RestServiceAPIGW_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://10.40.20.195:8083"
+		},
+		"SAPOData_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000/sap/opu/odata/sap"
+		},
+		"SAPOData_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "OData"
+		},
+		"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://10.40.20.218:8081"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataLake')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('AzureDataLake_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('AzureDataLake_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureKeyVaultSchBI')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureKeyVault",
+				"typeProperties": {
+					"baseUrl": "[parameters('AzureKeyVaultSchBI_properties_typeProperties_baseUrl')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Report')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('Report_connectionString')]",
+					"alwaysEncryptedSettings": {
+						"alwaysEncryptedAkvAuthType": "ManagedIdentity"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/sysmexdw')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('sysmexdw_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/selfhosted')]",
+			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "SelfHosted",
+				"typeProperties": {
+					"linkedInfo": {
+						"resourceId": "[parameters('selfhosted_properties_typeProperties_linkedInfo_resourceId')]",
+						"authorizationType": "Rbac"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesDB')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Report",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "ProductNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductCategoryCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SecondProductLineCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesUnitNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesUnitName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "BasicPrice",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PlanDeliveryDays",
+						"type": "nvarchar"
+					},
+					{
+						"name": "IsDangerous",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bomsn",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CreateDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "UpdateDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "InsertTime",
+						"type": "nvarchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "ods",
+					"table": "SAPS4Deliveries"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Report')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesDB_pre4hour')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Report",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "shipToDealerNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "solidToDealerNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "deliveryDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "createdDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "createdTime",
+						"type": "nvarchar"
+					},
+					{
+						"name": "salesOrgNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "updatedDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "billingStatus",
+						"type": "nvarchar"
+					},
+					{
+						"name": "deliveryStatus",
+						"type": "nvarchar"
+					},
+					{
+						"name": "deliveryDocNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "deliveryDocItemNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "deliveryDocItemType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "productNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "productName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "productNameZH",
+						"type": "nvarchar"
+					},
+					{
+						"name": "deliveryQuantity",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "upperItemBatchNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "basicUnitQuantity",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "storageLocation",
+						"type": "nvarchar"
+					},
+					{
+						"name": "storageLocationDesc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "plantNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "batchNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "serialNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "bomsign",
+						"type": "nvarchar"
+					},
+					{
+						"name": "bomheaderMaterialNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "InsertTime",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					}
+				],
+				"typeProperties": {
+					"schema": "ods",
+					"table": "SAPS4Deliveries_pre4hour"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Report')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesDW')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "sysmexdw",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "ProductNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductCategoryCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SecondProductLineCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesUnitNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesUnitName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "BasicPrice",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PlanDeliveryDays",
+						"type": "nvarchar"
+					},
+					{
+						"name": "IsDangerous",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bomsn",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CreateDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "UpdateDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "InsertTime",
+						"type": "nvarchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "ods",
+					"table": "SAPS4Deliveries"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/sysmexdw')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesParquet')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "@getPastTime(16,'Hour','yyyyMMdd')",
+							"type": "Expression"
+						},
+						"folderPath": "SAPDeliveries",
+						"fileSystem": "saps4data"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesParquet_OneFile')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "SAPS4Deliveries",
+							"type": "Expression"
+						},
+						"folderPath": "SAPDeliveries",
+						"fileSystem": "saps4data"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": [
+					{
+						"name": "storageLocation",
+						"type": "UTF8"
+					},
+					{
+						"name": "deliveryDocNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "secondProductLineName",
+						"type": "UTF8"
+					},
+					{
+						"name": "deliveryDocItemNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "deliveryDocItemType",
+						"type": "UTF8"
+					},
+					{
+						"name": "deliveryDocItemTypeName",
+						"type": "UTF8"
+					},
+					{
+						"name": "deliveryDate",
+						"type": "UTF8"
+					},
+					{
+						"name": "deliveryQuantity",
+						"type": "UTF8"
+					},
+					{
+						"name": "salesUnit",
+						"type": "UTF8"
+					},
+					{
+						"name": "upperItemBatchNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "basicUnitQuantity",
+						"type": "UTF8"
+					},
+					{
+						"name": "unitPrice",
+						"type": "UTF8"
+					},
+					{
+						"name": "orderAmount",
+						"type": "UTF8"
+					},
+					{
+						"name": "deliveryAmount",
+						"type": "UTF8"
+					},
+					{
+						"name": "secondProductLineCode",
+						"type": "UTF8"
+					},
+					{
+						"name": "productNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "productName",
+						"type": "UTF8"
+					},
+					{
+						"name": "productLineName",
+						"type": "UTF8"
+					},
+					{
+						"name": "storageLocationDesc",
+						"type": "UTF8"
+					},
+					{
+						"name": "materialGroupName",
+						"type": "UTF8"
+					},
+					{
+						"name": "productTypeName",
+						"type": "UTF8"
+					},
+					{
+						"name": "orderNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "bomsign",
+						"type": "UTF8"
+					},
+					{
+						"name": "shipToDealerNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "solidToDealerNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "billingStatus",
+						"type": "UTF8"
+					},
+					{
+						"name": "bomheaderMaterialNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "plantNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "batchNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "serialNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "deliveryStatus",
+						"type": "UTF8"
+					},
+					{
+						"name": "productLineCode",
+						"type": "UTF8"
+					},
+					{
+						"name": "salesUnitNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "isDangerous",
+						"type": "UTF8"
+					},
+					{
+						"name": "salesOrgNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "productNameZH",
+						"type": "UTF8"
+					},
+					{
+						"name": "materialGroup",
+						"type": "UTF8"
+					},
+					{
+						"name": "orderItemNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "basicUnitNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "productType",
+						"type": "UTF8"
+					},
+					{
+						"name": "createdDate",
+						"type": "UTF8"
+					},
+					{
+						"name": "createdTime",
+						"type": "UTF8"
+					},
+					{
+						"name": "updatedDate",
+						"type": "UTF8"
+					},
+					{
+						"name": "deletionFlag",
+						"type": "UTF8"
+					},
+					{
+						"name": "updatedTime",
+						"type": "UTF8"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesParquet_prehour')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "@getPastTime(16,'Hour','yyyyMMddhh')",
+							"type": "Expression"
+						},
+						"folderPath": "SAPDeliveries",
+						"fileSystem": "saps4data"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPProductPriceDB')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Report",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "ProductNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductCategoryCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SecondProductLineCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesUnitNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesUnitName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "BasicPrice",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PlanDeliveryDays",
+						"type": "nvarchar"
+					},
+					{
+						"name": "IsDangerous",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bomsn",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CreateDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "UpdateDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "InsertTime",
+						"type": "nvarchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "ods",
+					"table": "SAPProductPriceEncrypted"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Report')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPProductPriceParquet')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "@getPastTime(16,'Hour','yyyyMMdd')",
+							"type": "Expression"
+						},
+						"folderPath": "SAPProductPrice",
+						"fileSystem": "sapdata"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/RestServiceAPIGW')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "RestService",
+				"typeProperties": {
+					"url": "[parameters('RestServiceAPIGW_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				},
+				"connectVia": {
+					"referenceName": "selfhosted",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/selfhosted')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SAPOData')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "RestService",
+				"typeProperties": {
+					"url": "[parameters('SAPOData_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Basic",
+					"userName": "[parameters('SAPOData_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SAPOData_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "selfhosted",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/selfhosted')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPProductPrice')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "RestService",
+				"typeProperties": {
+					"url": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				},
+				"connectVia": {
+					"referenceName": "selfhosted",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/selfhosted')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPDeliveries')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "RestServiceAPIGW",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/v1/sap/s4/bi/GetSAPDeliveries?startDate=20221101&endDate=20221125",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/RestServiceAPIGW')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPDeliveries_daily')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "RestServiceAPIGW",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "@concat('/v1/sap/s4/bi/GetSAPDeliveries?startDate=',getPastTime(16,'Hour','yyyy'),getPastTime(16,'Hour','MM'),getPastTime(16,'Hour','dd'),'&endDate=',getPastTime(-8,'Hour','yyyy'),getPastTime(-8,'Hour','MM'),getPastTime(-8,'Hour','dd'))",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/RestServiceAPIGW')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPEKKO')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/ZPTP_GBL_API_EKKO_SRV/EKKOSet?sap-client=110&$format=json",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SAPOData')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPProductPrice')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SourceDataset_SAPProductPrice",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/v1/mdg/GetProductListFromSAP",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SourceDataset_SAPProductPrice')]"
+			]
+		}
+	]
+}

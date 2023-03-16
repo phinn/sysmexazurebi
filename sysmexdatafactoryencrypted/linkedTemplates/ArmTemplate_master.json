@@ -1,0 +1,139 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "sysmexdatafactoryencrypted"
+		},
+		"AzureDataLake_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLake'"
+		},
+		"Report_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Report'"
+		},
+		"SAPOData_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SAPOData'"
+		},
+		"sysmexdw_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'sysmexdw'"
+		},
+		"AzureDataLake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sysmexstorage.dfs.core.chinacloudapi.cn/"
+		},
+		"AzureKeyVaultSchBI_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://schpowerbi.vault.azure.cn/"
+		},
+		"RestServiceAPIGW_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://10.40.20.195:8083"
+		},
+		"SAPOData_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000/sap/opu/odata/sap"
+		},
+		"SAPOData_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "OData"
+		},
+		"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://10.40.20.218:8081"
+		},
+		"selfhosted_properties_typeProperties_linkedInfo_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/f380de5b-8c2e-49a9-b019-e89b4bf45b71/resourcegroups/powerbi/providers/Microsoft.DataFactory/factories/sysmexfactory/integrationruntimes/selfhosted"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "sysmexdatafactoryencrypted_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLake_accountKey": {
+						"value": "[parameters('AzureDataLake_accountKey')]"
+					},
+					"Report_connectionString": {
+						"value": "[parameters('Report_connectionString')]"
+					},
+					"sysmexdw_connectionString": {
+						"value": "[parameters('sysmexdw_connectionString')]"
+					},
+					"SAPOData_password": {
+						"value": "[parameters('SAPOData_password')]"
+					},
+					"AzureDataLake_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLake_properties_typeProperties_url')]"
+					},
+					"AzureKeyVaultSchBI_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVaultSchBI_properties_typeProperties_baseUrl')]"
+					},
+					"selfhosted_properties_typeProperties_linkedInfo_resourceId": {
+						"value": "[parameters('selfhosted_properties_typeProperties_linkedInfo_resourceId')]"
+					},
+					"RestServiceAPIGW_properties_typeProperties_url": {
+						"value": "[parameters('RestServiceAPIGW_properties_typeProperties_url')]"
+					},
+					"SAPOData_properties_typeProperties_url": {
+						"value": "[parameters('SAPOData_properties_typeProperties_url')]"
+					},
+					"SAPOData_properties_typeProperties_userName": {
+						"value": "[parameters('SAPOData_properties_typeProperties_userName')]"
+					},
+					"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
+						"value": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "sysmexdatafactoryencrypted_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'sysmexdatafactoryencrypted_ArmTemplate_0')]"
+			]
+		}
+	]
+}
