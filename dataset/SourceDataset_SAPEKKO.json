@@ -1,0 +1,19 @@
+{
+	"name": "SourceDataset_SAPEKKO",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/ZPTP_GBL_API_EKKO_SRV/EKKOSet?sap-client=110&$format=json",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
