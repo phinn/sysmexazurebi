@@ -27,7 +27,7 @@
 			"value": "http://10.40.20.195:8083"
 		},
 		"SAPOData_properties_typeProperties_url": {
-			"value": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000/sap/opu/odata/sap"
+			"value": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
 		},
 		"SAPOData_properties_typeProperties_userName": {
 			"value": "OData"

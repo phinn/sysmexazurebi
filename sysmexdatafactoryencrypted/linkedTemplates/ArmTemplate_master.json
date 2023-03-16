@@ -37,7 +37,7 @@
 		},
 		"SAPOData_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000/sap/opu/odata/sap"
+			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
 		},
 		"SAPOData_properties_typeProperties_userName": {
 			"type": "string",
