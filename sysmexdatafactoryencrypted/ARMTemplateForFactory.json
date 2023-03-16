@@ -99,7 +99,7 @@
 								"mappings": [
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Mandt']"
+											"path": "[['Mandt']"
 										},
 										"sink": {
 											"name": "Mandt",
@@ -108,7 +108,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Ebeln']"
+											"path": "[['Ebeln']"
 										},
 										"sink": {
 											"name": "Ebeln",
@@ -117,7 +117,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Bukrs']"
+											"path": "[['Bukrs']"
 										},
 										"sink": {
 											"name": "Bukrs",
@@ -126,7 +126,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Bstyp']"
+											"path": "[['Bstyp']"
 										},
 										"sink": {
 											"name": "Bstyp",
@@ -135,7 +135,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Bsart']"
+											"path": "[['Bsart']"
 										},
 										"sink": {
 											"name": "Bsart",
@@ -144,7 +144,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Bsakz']"
+											"path": "[['Bsakz']"
 										},
 										"sink": {
 											"name": "Bsakz",
@@ -153,7 +153,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Loekz']"
+											"path": "[['Loekz']"
 										},
 										"sink": {
 											"name": "Loekz",
@@ -162,7 +162,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Statu']"
+											"path": "[['Statu']"
 										},
 										"sink": {
 											"name": "Statu",
@@ -171,7 +171,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Aedat']"
+											"path": "[['Aedat']"
 										},
 										"sink": {
 											"name": "Aedat",
@@ -180,7 +180,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Ernam']"
+											"path": "[['Ernam']"
 										},
 										"sink": {
 											"name": "Ernam",
@@ -189,7 +189,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Lastchangedatetime']"
+											"path": "[['Lastchangedatetime']"
 										},
 										"sink": {
 											"name": "Lastchangedatetime",
@@ -198,7 +198,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Pincr']"
+											"path": "[['Pincr']"
 										},
 										"sink": {
 											"name": "Pincr",
@@ -207,7 +207,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Lponr']"
+											"path": "[['Lponr']"
 										},
 										"sink": {
 											"name": "Lponr",
@@ -216,7 +216,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Lifnr']"
+											"path": "[['Lifnr']"
 										},
 										"sink": {
 											"name": "Lifnr",
@@ -225,7 +225,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Spras']"
+											"path": "[['Spras']"
 										},
 										"sink": {
 											"name": "Spras",
@@ -234,7 +234,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Zterm']"
+											"path": "[['Zterm']"
 										},
 										"sink": {
 											"name": "Zterm",
@@ -243,7 +243,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Zbd1t']"
+											"path": "[['Zbd1t']"
 										},
 										"sink": {
 											"name": "Zbd1t",
@@ -252,7 +252,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Zbd2t']"
+											"path": "[['Zbd2t']"
 										},
 										"sink": {
 											"name": "Zbd2t",
@@ -261,7 +261,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Zbd3t']"
+											"path": "[['Zbd3t']"
 										},
 										"sink": {
 											"name": "Zbd3t",
@@ -270,7 +270,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Zbd1p']"
+											"path": "[['Zbd1p']"
 										},
 										"sink": {
 											"name": "Zbd1p",
@@ -279,7 +279,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Zbd2p']"
+											"path": "[['Zbd2p']"
 										},
 										"sink": {
 											"name": "Zbd2p",
@@ -288,7 +288,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Ekorg']"
+											"path": "[['Ekorg']"
 										},
 										"sink": {
 											"name": "Ekorg",
@@ -297,7 +297,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Ekgrp']"
+											"path": "[['Ekgrp']"
 										},
 										"sink": {
 											"name": "Ekgrp",
@@ -306,7 +306,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Waers']"
+											"path": "[['Waers']"
 										},
 										"sink": {
 											"name": "Waers",
@@ -315,7 +315,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Wkurs']"
+											"path": "[['Wkurs']"
 										},
 										"sink": {
 											"name": "Wkurs",
@@ -324,7 +324,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Kufix']"
+											"path": "[['Kufix']"
 										},
 										"sink": {
 											"name": "Kufix",
@@ -333,7 +333,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Bedat']"
+											"path": "[['Bedat']"
 										},
 										"sink": {
 											"name": "Bedat",
@@ -342,7 +342,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Kdatb']"
+											"path": "[['Kdatb']"
 										},
 										"sink": {
 											"name": "Kdatb",
@@ -351,7 +351,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Kdate']"
+											"path": "[['Kdate']"
 										},
 										"sink": {
 											"name": "Kdate",
@@ -360,7 +360,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Bwbdt']"
+											"path": "[['Bwbdt']"
 										},
 										"sink": {
 											"name": "Bwbdt",
@@ -369,7 +369,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Angdt']"
+											"path": "[['Angdt']"
 										},
 										"sink": {
 											"name": "Angdt",
@@ -378,7 +378,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Bnddt']"
+											"path": "[['Bnddt']"
 										},
 										"sink": {
 											"name": "Bnddt",
@@ -387,7 +387,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Gwldt']"
+											"path": "[['Gwldt']"
 										},
 										"sink": {
 											"name": "Gwldt",
@@ -396,7 +396,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Ausnr']"
+											"path": "[['Ausnr']"
 										},
 										"sink": {
 											"name": "Ausnr",
@@ -405,7 +405,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Angnr']"
+											"path": "[['Angnr']"
 										},
 										"sink": {
 											"name": "Angnr",
@@ -414,7 +414,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Ihran']"
+											"path": "[['Ihran']"
 										},
 										"sink": {
 											"name": "Ihran",
@@ -423,7 +423,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Ihrez']"
+											"path": "[['Ihrez']"
 										},
 										"sink": {
 											"name": "Ihrez",
@@ -432,7 +432,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Verkf']"
+											"path": "[['Verkf']"
 										},
 										"sink": {
 											"name": "Verkf",
@@ -441,7 +441,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Telf1']"
+											"path": "[['Telf1']"
 										},
 										"sink": {
 											"name": "Telf1",
@@ -450,7 +450,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Llief']"
+											"path": "[['Llief']"
 										},
 										"sink": {
 											"name": "Llief",
@@ -459,7 +459,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Kunnr']"
+											"path": "[['Kunnr']"
 										},
 										"sink": {
 											"name": "Kunnr",
@@ -468,7 +468,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Konnr']"
+											"path": "[['Konnr']"
 										},
 										"sink": {
 											"name": "Konnr",
@@ -477,7 +477,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Abgru']"
+											"path": "[['Abgru']"
 										},
 										"sink": {
 											"name": "Abgru",
@@ -486,7 +486,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Autlf']"
+											"path": "[['Autlf']"
 										},
 										"sink": {
 											"name": "Autlf",
@@ -495,7 +495,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Weakt']"
+											"path": "[['Weakt']"
 										},
 										"sink": {
 											"name": "Weakt",
@@ -504,7 +504,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Reswk']"
+											"path": "[['Reswk']"
 										},
 										"sink": {
 											"name": "Reswk",
@@ -513,7 +513,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Lblif']"
+											"path": "[['Lblif']"
 										},
 										"sink": {
 											"name": "Lblif",
@@ -522,7 +522,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Inco1']"
+											"path": "[['Inco1']"
 										},
 										"sink": {
 											"name": "Inco1",
@@ -531,7 +531,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Inco2']"
+											"path": "[['Inco2']"
 										},
 										"sink": {
 											"name": "Inco2",
@@ -540,7 +540,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Ktwrt']"
+											"path": "[['Ktwrt']"
 										},
 										"sink": {
 											"name": "Ktwrt",
@@ -549,7 +549,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Distributiontype']"
+											"path": "[['Distributiontype']"
 										},
 										"sink": {
 											"name": "Distributiontype",
@@ -558,7 +558,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Submi']"
+											"path": "[['Submi']"
 										},
 										"sink": {
 											"name": "Submi",
@@ -567,7 +567,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Knumv']"
+											"path": "[['Knumv']"
 										},
 										"sink": {
 											"name": "Knumv",
@@ -576,7 +576,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Kalsm']"
+											"path": "[['Kalsm']"
 										},
 										"sink": {
 											"name": "Kalsm",
@@ -585,7 +585,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Stafo']"
+											"path": "[['Stafo']"
 										},
 										"sink": {
 											"name": "Stafo",
@@ -594,7 +594,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Lifre']"
+											"path": "[['Lifre']"
 										},
 										"sink": {
 											"name": "Lifre",
@@ -603,7 +603,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Exnum']"
+											"path": "[['Exnum']"
 										},
 										"sink": {
 											"name": "Exnum",
@@ -612,7 +612,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Unsez']"
+											"path": "[['Unsez']"
 										},
 										"sink": {
 											"name": "Unsez",
@@ -621,7 +621,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Logsy']"
+											"path": "[['Logsy']"
 										},
 										"sink": {
 											"name": "Logsy",
@@ -630,7 +630,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Upinc']"
+											"path": "[['Upinc']"
 										},
 										"sink": {
 											"name": "Upinc",
@@ -639,7 +639,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Stako']"
+											"path": "[['Stako']"
 										},
 										"sink": {
 											"name": "Stako",
@@ -648,7 +648,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Frggr']"
+											"path": "[['Frggr']"
 										},
 										"sink": {
 											"name": "Frggr",
@@ -657,7 +657,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Frgsx']"
+											"path": "[['Frgsx']"
 										},
 										"sink": {
 											"name": "Frgsx",
@@ -666,7 +666,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Frgke']"
+											"path": "[['Frgke']"
 										},
 										"sink": {
 											"name": "Frgke",
@@ -675,7 +675,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Frgzu']"
+											"path": "[['Frgzu']"
 										},
 										"sink": {
 											"name": "Frgzu",
@@ -684,7 +684,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Frgrl']"
+											"path": "[['Frgrl']"
 										},
 										"sink": {
 											"name": "Frgrl",
@@ -693,7 +693,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Lands']"
+											"path": "[['Lands']"
 										},
 										"sink": {
 											"name": "Lands",
@@ -702,7 +702,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Lphis']"
+											"path": "[['Lphis']"
 										},
 										"sink": {
 											"name": "Lphis",
@@ -711,7 +711,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Adrnr']"
+											"path": "[['Adrnr']"
 										},
 										"sink": {
 											"name": "Adrnr",
@@ -720,7 +720,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['StcegL']"
+											"path": "[['StcegL']"
 										},
 										"sink": {
 											"name": "StcegL",
@@ -729,7 +729,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Stceg']"
+											"path": "[['Stceg']"
 										},
 										"sink": {
 											"name": "Stceg",
@@ -738,7 +738,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Absgr']"
+											"path": "[['Absgr']"
 										},
 										"sink": {
 											"name": "Absgr",
@@ -747,7 +747,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Addnr']"
+											"path": "[['Addnr']"
 										},
 										"sink": {
 											"name": "Addnr",
@@ -756,7 +756,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Kornr']"
+											"path": "[['Kornr']"
 										},
 										"sink": {
 											"name": "Kornr",
@@ -765,7 +765,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Memory']"
+											"path": "[['Memory']"
 										},
 										"sink": {
 											"name": "Memory",
@@ -774,7 +774,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Procstat']"
+											"path": "[['Procstat']"
 										},
 										"sink": {
 											"name": "Procstat",
@@ -783,7 +783,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Rlwrt']"
+											"path": "[['Rlwrt']"
 										},
 										"sink": {
 											"name": "Rlwrt",
@@ -792,7 +792,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Revno']"
+											"path": "[['Revno']"
 										},
 										"sink": {
 											"name": "Revno",
@@ -801,7 +801,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Scmproc']"
+											"path": "[['Scmproc']"
 										},
 										"sink": {
 											"name": "Scmproc",
@@ -810,7 +810,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ReasonCode']"
+											"path": "[['ReasonCode']"
 										},
 										"sink": {
 											"name": "ReasonCode",
@@ -819,7 +819,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Memorytype']"
+											"path": "[['Memorytype']"
 										},
 										"sink": {
 											"name": "Memorytype",
@@ -828,7 +828,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Rettp']"
+											"path": "[['Rettp']"
 										},
 										"sink": {
 											"name": "Rettp",
@@ -837,7 +837,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Retpc']"
+											"path": "[['Retpc']"
 										},
 										"sink": {
 											"name": "Retpc",
@@ -846,7 +846,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Dptyp']"
+											"path": "[['Dptyp']"
 										},
 										"sink": {
 											"name": "Dptyp",
@@ -855,7 +855,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Dppct']"
+											"path": "[['Dppct']"
 										},
 										"sink": {
 											"name": "Dppct",
@@ -864,7 +864,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Dpamt']"
+											"path": "[['Dpamt']"
 										},
 										"sink": {
 											"name": "Dpamt",
@@ -873,7 +873,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Dpdat']"
+											"path": "[['Dpdat']"
 										},
 										"sink": {
 											"name": "Dpdat",
@@ -882,7 +882,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['MsrId']"
+											"path": "[['MsrId']"
 										},
 										"sink": {
 											"name": "MsrId",
@@ -891,7 +891,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['HierarchyExists']"
+											"path": "[['HierarchyExists']"
 										},
 										"sink": {
 											"name": "HierarchyExists",
@@ -900,7 +900,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ThresholdExists']"
+											"path": "[['ThresholdExists']"
 										},
 										"sink": {
 											"name": "ThresholdExists",
@@ -909,7 +909,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['LegalContract']"
+											"path": "[['LegalContract']"
 										},
 										"sink": {
 											"name": "LegalContract",
@@ -918,7 +918,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Description']"
+											"path": "[['Description']"
 										},
 										"sink": {
 											"name": "Description",
@@ -927,7 +927,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ReleaseDate']"
+											"path": "[['ReleaseDate']"
 										},
 										"sink": {
 											"name": "ReleaseDate",
@@ -936,7 +936,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Vsart']"
+											"path": "[['Vsart']"
 										},
 										"sink": {
 											"name": "Vsart",
@@ -945,7 +945,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Handoverloc']"
+											"path": "[['Handoverloc']"
 										},
 										"sink": {
 											"name": "Handoverloc",
@@ -954,7 +954,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Shipcond']"
+											"path": "[['Shipcond']"
 										},
 										"sink": {
 											"name": "Shipcond",
@@ -963,7 +963,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Incov']"
+											"path": "[['Incov']"
 										},
 										"sink": {
 											"name": "Incov",
@@ -972,7 +972,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Inco2L']"
+											"path": "[['Inco2L']"
 										},
 										"sink": {
 											"name": "Inco2L",
@@ -981,7 +981,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Inco3L']"
+											"path": "[['Inco3L']"
 										},
 										"sink": {
 											"name": "Inco3L",
@@ -990,7 +990,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Grwcu']"
+											"path": "[['Grwcu']"
 										},
 										"sink": {
 											"name": "Grwcu",
@@ -999,7 +999,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['IntraRel']"
+											"path": "[['IntraRel']"
 										},
 										"sink": {
 											"name": "IntraRel",
@@ -1008,7 +1008,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['IntraExcl']"
+											"path": "[['IntraExcl']"
 										},
 										"sink": {
 											"name": "IntraExcl",
@@ -1017,7 +1017,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['QtnErlstSubmsnDate']"
+											"path": "[['QtnErlstSubmsnDate']"
 										},
 										"sink": {
 											"name": "QtnErlstSubmsnDate",
@@ -1026,7 +1026,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['FollowonDocCat']"
+											"path": "[['FollowonDocCat']"
 										},
 										"sink": {
 											"name": "FollowonDocCat",
@@ -1035,7 +1035,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['FollowonDocType']"
+											"path": "[['FollowonDocType']"
 										},
 										"sink": {
 											"name": "FollowonDocType",
@@ -1044,7 +1044,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['DummyEkkoInclEewPs']"
+											"path": "[['DummyEkkoInclEewPs']"
 										},
 										"sink": {
 											"name": "DummyEkkoInclEewPs",
@@ -1053,7 +1053,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Externalsystem']"
+											"path": "[['Externalsystem']"
 										},
 										"sink": {
 											"name": "Externalsystem",
@@ -1062,7 +1062,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Externalreferenceid']"
+											"path": "[['Externalreferenceid']"
 										},
 										"sink": {
 											"name": "Externalreferenceid",
@@ -1071,7 +1071,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ExtRevTmstmp']"
+											"path": "[['ExtRevTmstmp']"
 										},
 										"sink": {
 											"name": "ExtRevTmstmp",
@@ -1080,7 +1080,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Iseopblocked']"
+											"path": "[['Iseopblocked']"
 										},
 										"sink": {
 											"name": "Iseopblocked",
@@ -1089,7 +1089,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Isaged']"
+											"path": "[['Isaged']"
 										},
 										"sink": {
 											"name": "Isaged",
@@ -1098,7 +1098,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ForceId']"
+											"path": "[['ForceId']"
 										},
 										"sink": {
 											"name": "ForceId",
@@ -1107,7 +1107,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ForceCnt']"
+											"path": "[['ForceCnt']"
 										},
 										"sink": {
 											"name": "ForceCnt",
@@ -1116,7 +1116,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['RelocId']"
+											"path": "[['RelocId']"
 										},
 										"sink": {
 											"name": "RelocId",
@@ -1125,7 +1125,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['RelocSeqId']"
+											"path": "[['RelocSeqId']"
 										},
 										"sink": {
 											"name": "RelocSeqId",
@@ -1134,7 +1134,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['SourceLogsys']"
+											"path": "[['SourceLogsys']"
 										},
 										"sink": {
 											"name": "SourceLogsys",
@@ -1143,7 +1143,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['FshTransaction']"
+											"path": "[['FshTransaction']"
 										},
 										"sink": {
 											"name": "FshTransaction",
@@ -1152,7 +1152,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['FshItemGroup']"
+											"path": "[['FshItemGroup']"
 										},
 										"sink": {
 											"name": "FshItemGroup",
@@ -1161,7 +1161,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['FshVasLastItem']"
+											"path": "[['FshVasLastItem']"
 										},
 										"sink": {
 											"name": "FshVasLastItem",
@@ -1170,7 +1170,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['FshOsStgChange']"
+											"path": "[['FshOsStgChange']"
 										},
 										"sink": {
 											"name": "FshOsStgChange",
@@ -1179,7 +1179,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['TmsRefUuid']"
+											"path": "[['TmsRefUuid']"
 										},
 										"sink": {
 											"name": "TmsRefUuid",
@@ -1188,7 +1188,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Zapcgk']"
+											"path": "[['Zapcgk']"
 										},
 										"sink": {
 											"name": "Zapcgk",
@@ -1197,7 +1197,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ApcgkExtend']"
+											"path": "[['ApcgkExtend']"
 										},
 										"sink": {
 											"name": "ApcgkExtend",
@@ -1206,7 +1206,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ZbasDate']"
+											"path": "[['ZbasDate']"
 										},
 										"sink": {
 											"name": "ZbasDate",
@@ -1215,7 +1215,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Zadattyp']"
+											"path": "[['Zadattyp']"
 										},
 										"sink": {
 											"name": "Zadattyp",
@@ -1224,7 +1224,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ZstartDat']"
+											"path": "[['ZstartDat']"
 										},
 										"sink": {
 											"name": "ZstartDat",
@@ -1233,7 +1233,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ZDev']"
+											"path": "[['ZDev']"
 										},
 										"sink": {
 											"name": "ZDev",
@@ -1242,7 +1242,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Zindanx']"
+											"path": "[['Zindanx']"
 										},
 										"sink": {
 											"name": "Zindanx",
@@ -1251,7 +1251,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ZlimitDat']"
+											"path": "[['ZlimitDat']"
 										},
 										"sink": {
 											"name": "ZlimitDat",
@@ -1260,7 +1260,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Numerator']"
+											"path": "[['Numerator']"
 										},
 										"sink": {
 											"name": "Numerator",
@@ -1269,7 +1269,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['HashcalBdat']"
+											"path": "[['HashcalBdat']"
 										},
 										"sink": {
 											"name": "HashcalBdat",
@@ -1278,7 +1278,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Hashcal']"
+											"path": "[['Hashcal']"
 										},
 										"sink": {
 											"name": "Hashcal",
@@ -1287,7 +1287,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Negative']"
+											"path": "[['Negative']"
 										},
 										"sink": {
 											"name": "Negative",
@@ -1296,7 +1296,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['HashcalExists']"
+											"path": "[['HashcalExists']"
 										},
 										"sink": {
 											"name": "HashcalExists",
@@ -1305,7 +1305,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['KnownIndex']"
+											"path": "[['KnownIndex']"
 										},
 										"sink": {
 											"name": "KnownIndex",
@@ -1314,7 +1314,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Postat']"
+											"path": "[['Postat']"
 										},
 										"sink": {
 											"name": "Postat",
@@ -1323,7 +1323,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Vzskz']"
+											"path": "[['Vzskz']"
 										},
 										"sink": {
 											"name": "Vzskz",
@@ -1332,7 +1332,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['FshSnstStatus']"
+											"path": "[['FshSnstStatus']"
 										},
 										"sink": {
 											"name": "FshSnstStatus",
@@ -1341,7 +1341,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Proce']"
+											"path": "[['Proce']"
 										},
 										"sink": {
 											"name": "Proce",
@@ -1350,7 +1350,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Conc']"
+											"path": "[['Conc']"
 										},
 										"sink": {
 											"name": "Conc",
@@ -1359,7 +1359,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Cont']"
+											"path": "[['Cont']"
 										},
 										"sink": {
 											"name": "Cont",
@@ -1368,7 +1368,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Comp']"
+											"path": "[['Comp']"
 										},
 										"sink": {
 											"name": "Comp",
@@ -1377,7 +1377,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Outr']"
+											"path": "[['Outr']"
 										},
 										"sink": {
 											"name": "Outr",
@@ -1386,7 +1386,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Desp']"
+											"path": "[['Desp']"
 										},
 										"sink": {
 											"name": "Desp",
@@ -1395,7 +1395,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['DespDat']"
+											"path": "[['DespDat']"
 										},
 										"sink": {
 											"name": "DespDat",
@@ -1404,7 +1404,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['DespCargo']"
+											"path": "[['DespCargo']"
 										},
 										"sink": {
 											"name": "DespCargo",
@@ -1413,7 +1413,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Pare']"
+											"path": "[['Pare']"
 										},
 										"sink": {
 											"name": "Pare",
@@ -1422,7 +1422,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['PareDat']"
+											"path": "[['PareDat']"
 										},
 										"sink": {
 											"name": "PareDat",
@@ -1431,7 +1431,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['PareCargo']"
+											"path": "[['PareCargo']"
 										},
 										"sink": {
 											"name": "PareCargo",
@@ -1440,15 +1440,16 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['PfmContract']"
+											"path": "[['PfmContract']"
 										},
 										"sink": {
-											"name": "PfmContract"
+											"name": "PfmContract",
+											"type": "String"
 										}
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['PohfType']"
+											"path": "[['PohfType']"
 										},
 										"sink": {
 											"name": "PohfType",
@@ -1457,7 +1458,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['EqEindt']"
+											"path": "[['EqEindt']"
 										},
 										"sink": {
 											"name": "EqEindt",
@@ -1466,7 +1467,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['EqWerks']"
+											"path": "[['EqWerks']"
 										},
 										"sink": {
 											"name": "EqWerks",
@@ -1475,7 +1476,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['Fixpo']"
+											"path": "[['Fixpo']"
 										},
 										"sink": {
 											"name": "Fixpo",
@@ -1484,7 +1485,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['EkgrpAllow']"
+											"path": "[['EkgrpAllow']"
 										},
 										"sink": {
 											"name": "EkgrpAllow",
@@ -1493,7 +1494,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['WerksAllow']"
+											"path": "[['WerksAllow']"
 										},
 										"sink": {
 											"name": "WerksAllow",
@@ -1502,7 +1503,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ContractAllow']"
+											"path": "[['ContractAllow']"
 										},
 										"sink": {
 											"name": "ContractAllow",
@@ -1511,7 +1512,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['PstypAllow']"
+											"path": "[['PstypAllow']"
 										},
 										"sink": {
 											"name": "PstypAllow",
@@ -1520,7 +1521,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['FixpoAllow']"
+											"path": "[['FixpoAllow']"
 										},
 										"sink": {
 											"name": "FixpoAllow",
@@ -1529,7 +1530,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['KeyIdAllow']"
+											"path": "[['KeyIdAllow']"
 										},
 										"sink": {
 											"name": "KeyIdAllow",
@@ -1538,7 +1539,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['AurelAllow']"
+											"path": "[['AurelAllow']"
 										},
 										"sink": {
 											"name": "AurelAllow",
@@ -1547,7 +1548,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['DelperAllow']"
+											"path": "[['DelperAllow']"
 										},
 										"sink": {
 											"name": "DelperAllow",
@@ -1556,7 +1557,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['EindtAllow']"
+											"path": "[['EindtAllow']"
 										},
 										"sink": {
 											"name": "EindtAllow",
@@ -1565,7 +1566,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['LtsnrAllow']"
+											"path": "[['LtsnrAllow']"
 										},
 										"sink": {
 											"name": "LtsnrAllow",
@@ -1574,7 +1575,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['OtbLevel']"
+											"path": "[['OtbLevel']"
 										},
 										"sink": {
 											"name": "OtbLevel",
@@ -1583,7 +1584,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['OtbCondType']"
+											"path": "[['OtbCondType']"
 										},
 										"sink": {
 											"name": "OtbCondType",
@@ -1592,7 +1593,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['KeyId']"
+											"path": "[['KeyId']"
 										},
 										"sink": {
 											"name": "KeyId",
@@ -1601,7 +1602,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['OtbValue']"
+											"path": "[['OtbValue']"
 										},
 										"sink": {
 											"name": "OtbValue",
@@ -1610,7 +1611,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['OtbCurr']"
+											"path": "[['OtbCurr']"
 										},
 										"sink": {
 											"name": "OtbCurr",
@@ -1619,7 +1620,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['OtbResValue']"
+											"path": "[['OtbResValue']"
 										},
 										"sink": {
 											"name": "OtbResValue",
@@ -1628,7 +1629,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['OtbSpecValue']"
+											"path": "[['OtbSpecValue']"
 										},
 										"sink": {
 											"name": "OtbSpecValue",
@@ -1637,7 +1638,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['SprRsnProfile']"
+											"path": "[['SprRsnProfile']"
 										},
 										"sink": {
 											"name": "SprRsnProfile",
@@ -1646,7 +1647,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['BudgType']"
+											"path": "[['BudgType']"
 										},
 										"sink": {
 											"name": "BudgType",
@@ -1655,7 +1656,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['OtbStatus']"
+											"path": "[['OtbStatus']"
 										},
 										"sink": {
 											"name": "OtbStatus",
@@ -1664,7 +1665,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['OtbReason']"
+											"path": "[['OtbReason']"
 										},
 										"sink": {
 											"name": "OtbReason",
@@ -1673,7 +1674,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['CheckType']"
+											"path": "[['CheckType']"
 										},
 										"sink": {
 											"name": "CheckType",
@@ -1682,7 +1683,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ConOtbReq']"
+											"path": "[['ConOtbReq']"
 										},
 										"sink": {
 											"name": "ConOtbReq",
@@ -1691,7 +1692,7 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ConPrebookLev']"
+											"path": "[['ConPrebookLev']"
 										},
 										"sink": {
 											"name": "ConPrebookLev",
@@ -1700,14 +1701,15 @@
 									},
 									{
 										"source": {
-											"path": "$['d']['results'][0]['ConDistrLev']"
+											"path": "[['ConDistrLev']"
 										},
 										"sink": {
 											"name": "ConDistrLev",
 											"type": "String"
 										}
 									}
-								]
+								],
+								"collectionReference": "$['d']['results']"
 							}
 						},
 						"inputs": [
