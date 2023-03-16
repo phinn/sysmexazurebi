@@ -12,7 +12,7 @@
 		"type": "RestResource",
 		"typeProperties": {
 			"relativeUrl": {
-				"value": "/sap/opu/odata/sap/ZPTP_GBL_API_EKKO_SRV/EKKOSet?sap-client=110&$format=json&$filter=Ebeln eq '4100026484' or Ebeln eq '4100027177'",
+				"value": "/sap/opu/odata/sap/ZPTP_GBL_API_EKKO_SRV/EKKOSet?sap-client=110&$format=json",
 				"type": "Expression"
 			}
 		},
