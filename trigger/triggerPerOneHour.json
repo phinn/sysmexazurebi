@@ -1,0 +1,24 @@
+{
+	"name": "triggerPerOneHour",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PurchaseDataExtraction",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2023-03-16T15:00:00",
+				"timeZone": "China Standard Time"
+			}
+		}
+	}
+}
