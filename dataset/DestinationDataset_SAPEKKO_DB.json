@@ -1,0 +1,20 @@
+{
+	"name": "DestinationDataset_SAPEKKO_DB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sysmexdw",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "ods",
+			"table": "SAPProductPriceEncrypted"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
