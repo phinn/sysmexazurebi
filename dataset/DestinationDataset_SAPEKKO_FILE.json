@@ -1,5 +1,5 @@
 {
-	"name": "DestinationDataset_SAPEKKO",
+	"name": "DestinationDataset_SAPEKKO_FILE",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLake",
