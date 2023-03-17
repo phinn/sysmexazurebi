@@ -12130,7 +12130,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARA_SRV/MARASet?sap-client=110&$format=json&$filter=Matnr eq '0006143' or Matnr eq '0006039'",
+						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARA_SRV/MARASet?sap-client=110&$format=json",
 						"type": "Expression"
 					}
 				},
