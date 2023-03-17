@@ -9,6 +9,12 @@
 					"referenceName": "PurchaseDataExtraction",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "FinancialDataExtraction",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
