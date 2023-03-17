@@ -1554,7 +1554,8 @@
 											"path": "[['Zkdat']"
 										},
 										"sink": {
-											"name": "Zkdat"
+											"name": "Zkdat",
+											"type": "String"
 										}
 									},
 									{
