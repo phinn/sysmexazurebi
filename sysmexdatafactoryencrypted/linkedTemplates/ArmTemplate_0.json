@@ -693,7 +693,748 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPEKKO')]",
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPEKKO_DB')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "sysmexdw",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "Mandt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ebeln",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bukrs",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bstyp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bsart",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bsakz",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Loekz",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Statu",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Aedat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ernam",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lastchangedatetime",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Pincr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lponr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lifnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Spras",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zterm",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd1t",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd2t",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd3t",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd1p",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd2p",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ekorg",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ekgrp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Waers",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Wkurs",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kufix",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bedat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kdatb",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kdate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bwbdt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Angdt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bnddt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Gwldt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ausnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Angnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ihran",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ihrez",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Verkf",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Telf1",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Llief",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kunnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Konnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Abgru",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Autlf",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Weakt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Reswk",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lblif",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Inco1",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Inco2",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ktwrt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Distributiontype",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Submi",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Knumv",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kalsm",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Stafo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lifre",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Exnum",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Unsez",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Logsy",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Upinc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Stako",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frggr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frgsx",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frgke",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frgzu",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frgrl",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lands",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lphis",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Adrnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "StcegL",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Stceg",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Absgr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Addnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kornr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Memory",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Procstat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Rlwrt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Revno",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Scmproc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ReasonCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Memorytype",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Rettp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Retpc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Dptyp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Dppct",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Dpamt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Dpdat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "MsrId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "HierarchyExists",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ThresholdExists",
+						"type": "nvarchar"
+					},
+					{
+						"name": "LegalContract",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Description",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ReleaseDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Vsart",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Handoverloc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Shipcond",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Incov",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Inco2L",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Inco3L",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Grwcu",
+						"type": "nvarchar"
+					},
+					{
+						"name": "IntraRel",
+						"type": "nvarchar"
+					},
+					{
+						"name": "IntraExcl",
+						"type": "nvarchar"
+					},
+					{
+						"name": "QtnErlstSubmsnDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FollowonDocCat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FollowonDocType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DummyEkkoInclEewPs",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Externalsystem",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Externalreferenceid",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ExtRevTmstmp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Iseopblocked",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Isaged",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ForceId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ForceCnt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RelocId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RelocSeqId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SourceLogsys",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshTransaction",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshItemGroup",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshVasLastItem",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshOsStgChange",
+						"type": "nvarchar"
+					},
+					{
+						"name": "TmsRefUuid",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zapcgk",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ApcgkExtend",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZbasDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zadattyp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZstartDat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZDev",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zindanx",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZlimitDat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Numerator",
+						"type": "nvarchar"
+					},
+					{
+						"name": "HashcalBdat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Hashcal",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Negative",
+						"type": "nvarchar"
+					},
+					{
+						"name": "HashcalExists",
+						"type": "nvarchar"
+					},
+					{
+						"name": "KnownIndex",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Postat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Vzskz",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshSnstStatus",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Proce",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Conc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Cont",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Comp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Outr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Desp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DespDat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DespCargo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Pare",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PareDat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PareCargo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PfmContract",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PohfType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EqEindt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EqWerks",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Fixpo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EkgrpAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "WerksAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ContractAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PstypAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FixpoAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "KeyIdAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "AurelAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DelperAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EindtAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "LtsnrAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbLevel",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbCondType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "KeyId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbValue",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbCurr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbResValue",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbSpecValue",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SprRsnProfile",
+						"type": "nvarchar"
+					},
+					{
+						"name": "BudgType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbStatus",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbReason",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CheckType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ConOtbReq",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ConPrebookLev",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ConDistrLev",
+						"type": "nvarchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "sap",
+					"table": "EKKO"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/sysmexdw')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPEKKO_FILE')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -1442,744 +2183,35 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPEKKO_DB')]",
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPMBEW_FILE')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "sysmexdw",
+					"referenceName": "AzureDataLake",
 					"type": "LinkedServiceReference"
 				},
 				"folder": {
 					"name": "SAP/S4/OData"
 				},
 				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "Mandt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ebeln",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bukrs",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bstyp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bsart",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bsakz",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Loekz",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Statu",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Aedat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ernam",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lastchangedatetime",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Pincr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lponr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lifnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Spras",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zterm",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd1t",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd2t",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd3t",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd1p",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd2p",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ekorg",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ekgrp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Waers",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Wkurs",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kufix",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bedat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kdatb",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kdate",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bwbdt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Angdt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bnddt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Gwldt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ausnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Angnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ihran",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ihrez",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Verkf",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Telf1",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Llief",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kunnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Konnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Abgru",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Autlf",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Weakt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Reswk",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lblif",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Inco1",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Inco2",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ktwrt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Distributiontype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Submi",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Knumv",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kalsm",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Stafo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lifre",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Exnum",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Unsez",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Logsy",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Upinc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Stako",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frggr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frgsx",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frgke",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frgzu",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frgrl",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lands",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lphis",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Adrnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "StcegL",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Stceg",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Absgr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Addnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kornr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Memory",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Procstat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Rlwrt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Revno",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Scmproc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ReasonCode",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Memorytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Rettp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Retpc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Dptyp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Dppct",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Dpamt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Dpdat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "MsrId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "HierarchyExists",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ThresholdExists",
-						"type": "nvarchar"
-					},
-					{
-						"name": "LegalContract",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Description",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ReleaseDate",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Vsart",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Handoverloc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Shipcond",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Incov",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Inco2L",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Inco3L",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Grwcu",
-						"type": "nvarchar"
-					},
-					{
-						"name": "IntraRel",
-						"type": "nvarchar"
-					},
-					{
-						"name": "IntraExcl",
-						"type": "nvarchar"
-					},
-					{
-						"name": "QtnErlstSubmsnDate",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FollowonDocCat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FollowonDocType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "DummyEkkoInclEewPs",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Externalsystem",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Externalreferenceid",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ExtRevTmstmp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Iseopblocked",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Isaged",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ForceId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ForceCnt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "RelocId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "RelocSeqId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "SourceLogsys",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshTransaction",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshItemGroup",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshVasLastItem",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshOsStgChange",
-						"type": "nvarchar"
-					},
-					{
-						"name": "TmsRefUuid",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zapcgk",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ApcgkExtend",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ZbasDate",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zadattyp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ZstartDat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ZDev",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zindanx",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ZlimitDat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Numerator",
-						"type": "nvarchar"
-					},
-					{
-						"name": "HashcalBdat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Hashcal",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Negative",
-						"type": "nvarchar"
-					},
-					{
-						"name": "HashcalExists",
-						"type": "nvarchar"
-					},
-					{
-						"name": "KnownIndex",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Postat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Vzskz",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshSnstStatus",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Proce",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Conc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Cont",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Comp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Outr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Desp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "DespDat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "DespCargo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Pare",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PareDat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PareCargo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PfmContract",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PohfType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "EqEindt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "EqWerks",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Fixpo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "EkgrpAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "WerksAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ContractAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PstypAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FixpoAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "KeyIdAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "AurelAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "DelperAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "EindtAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "LtsnrAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbLevel",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbCondType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "KeyId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbValue",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbCurr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbResValue",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbSpecValue",
-						"type": "nvarchar"
-					},
-					{
-						"name": "SprRsnProfile",
-						"type": "nvarchar"
-					},
-					{
-						"name": "BudgType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbStatus",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbReason",
-						"type": "nvarchar"
-					},
-					{
-						"name": "CheckType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ConOtbReq",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ConPrebookLev",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ConDistrLev",
-						"type": "nvarchar"
-					}
-				],
+				"type": "Parquet",
 				"typeProperties": {
-					"schema": "sap",
-					"table": "EKKO"
-				}
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "MBEW",
+							"type": "Expression"
+						},
+						"folderPath": "OData",
+						"fileSystem": "saps4data"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/sysmexdw')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
 			]
 		},
 		{
@@ -2375,29 +2407,6 @@
 				"typeProperties": {
 					"relativeUrl": {
 						"value": "/v1/sap/s4/bi/GetSAPDeliveries?startDate=20221101&endDate=20221125",
-						"type": "Expression"
-					}
-				},
-				"schema": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/RestServiceAPIGW')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPDeliveries_daily')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "RestServiceAPIGW",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "RestResource",
-				"typeProperties": {
-					"relativeUrl": {
-						"value": "@concat('/v1/sap/s4/bi/GetSAPDeliveries?startDate=',getPastTime(16,'Hour','yyyy'),getPastTime(16,'Hour','MM'),getPastTime(16,'Hour','dd'),'&endDate=',getPastTime(-8,'Hour','yyyy'),getPastTime(-8,'Hour','MM'),getPastTime(-8,'Hour','dd'))",
 						"type": "Expression"
 					}
 				},

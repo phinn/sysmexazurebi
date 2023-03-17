@@ -13,6 +13,27 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPDeliveries_daily')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "RestServiceAPIGW",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "@concat('/v1/sap/s4/bi/GetSAPDeliveries?startDate=',getPastTime(16,'Hour','yyyy'),getPastTime(16,'Hour','MM'),getPastTime(16,'Hour','dd'),'&endDate=',getPastTime(-8,'Hour','yyyy'),getPastTime(-8,'Hour','MM'),getPastTime(-8,'Hour','dd'))",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPEKKO')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -29,6 +50,30 @@
 				"typeProperties": {
 					"relativeUrl": {
 						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_EKKO_SRV/EKKOSet?sap-client=110&$format=json",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMBEW')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MBEW_SRV/MBEWSet?sap-client=110&$format=json&$filter=Matnr eq '0006143' or Matnr eq '0006039'",
 						"type": "Expression"
 					}
 				},
@@ -1722,7 +1767,933 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "DestinationDataset_SAPEKKO",
+								"referenceName": "DestinationDataset_SAPEKKO_FILE",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "CopyMBEWData",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "RestSource",
+								"httpRequestTimeout": "00:01:40",
+								"requestInterval": "00.00:00:00.010",
+								"requestMethod": "GET",
+								"paginationRules": {
+									"supportRFC5988": "true"
+								}
+							},
+							"sink": {
+								"type": "ParquetSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "ParquetWriteSettings"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"path": "[['Matnr']"
+										},
+										"sink": {
+											"name": "Matnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwkey']"
+										},
+										"sink": {
+											"name": "Bwkey"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwtar']"
+										},
+										"sink": {
+											"name": "Bwtar"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lvorm']"
+										},
+										"sink": {
+											"name": "Lvorm"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lbkum']"
+										},
+										"sink": {
+											"name": "Lbkum"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Salk3']"
+										},
+										"sink": {
+											"name": "Salk3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vprsv']"
+										},
+										"sink": {
+											"name": "Vprsv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Verpr']"
+										},
+										"sink": {
+											"name": "Verpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Stprs']"
+										},
+										"sink": {
+											"name": "Stprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Peinh']"
+										},
+										"sink": {
+											"name": "Peinh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bklas']"
+										},
+										"sink": {
+											"name": "Bklas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Salkv']"
+										},
+										"sink": {
+											"name": "Salkv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmkum']"
+										},
+										"sink": {
+											"name": "Vmkum"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmsal']"
+										},
+										"sink": {
+											"name": "Vmsal"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmvpr']"
+										},
+										"sink": {
+											"name": "Vmvpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmver']"
+										},
+										"sink": {
+											"name": "Vmver"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmstp']"
+										},
+										"sink": {
+											"name": "Vmstp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmpei']"
+										},
+										"sink": {
+											"name": "Vmpei"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmbkl']"
+										},
+										"sink": {
+											"name": "Vmbkl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmsav']"
+										},
+										"sink": {
+											"name": "Vmsav"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjkum']"
+										},
+										"sink": {
+											"name": "Vjkum"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjsal']"
+										},
+										"sink": {
+											"name": "Vjsal"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjvpr']"
+										},
+										"sink": {
+											"name": "Vjvpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjver']"
+										},
+										"sink": {
+											"name": "Vjver"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjstp']"
+										},
+										"sink": {
+											"name": "Vjstp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjpei']"
+										},
+										"sink": {
+											"name": "Vjpei"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjbkl']"
+										},
+										"sink": {
+											"name": "Vjbkl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjsav']"
+										},
+										"sink": {
+											"name": "Vjsav"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lfgja']"
+										},
+										"sink": {
+											"name": "Lfgja"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lfmon']"
+										},
+										"sink": {
+											"name": "Lfmon"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwtty']"
+										},
+										"sink": {
+											"name": "Bwtty"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Stprv']"
+										},
+										"sink": {
+											"name": "Stprv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Laepr']"
+										},
+										"sink": {
+											"name": "Laepr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zkprs']"
+										},
+										"sink": {
+											"name": "Zkprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zkdat']"
+										},
+										"sink": {
+											"name": "Zkdat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Timestamp']"
+										},
+										"sink": {
+											"name": "Timestamp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwprs']"
+										},
+										"sink": {
+											"name": "Bwprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwprh']"
+										},
+										"sink": {
+											"name": "Bwprh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjbws']"
+										},
+										"sink": {
+											"name": "Vjbws"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjbwh']"
+										},
+										"sink": {
+											"name": "Vjbwh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vvjsl']"
+										},
+										"sink": {
+											"name": "Vvjsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vvjlb']"
+										},
+										"sink": {
+											"name": "Vvjlb"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vvmlb']"
+										},
+										"sink": {
+											"name": "Vvmlb"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vvsal']"
+										},
+										"sink": {
+											"name": "Vvsal"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zplpr']"
+										},
+										"sink": {
+											"name": "Zplpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zplp1']"
+										},
+										"sink": {
+											"name": "Zplp1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zplp2']"
+										},
+										"sink": {
+											"name": "Zplp2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zplp3']"
+										},
+										"sink": {
+											"name": "Zplp3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zpld1']"
+										},
+										"sink": {
+											"name": "Zpld1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zpld2']"
+										},
+										"sink": {
+											"name": "Zpld2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zpld3']"
+										},
+										"sink": {
+											"name": "Zpld3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pperz']"
+										},
+										"sink": {
+											"name": "Pperz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pperl']"
+										},
+										"sink": {
+											"name": "Pperl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pperv']"
+										},
+										"sink": {
+											"name": "Pperv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalkz']"
+										},
+										"sink": {
+											"name": "Kalkz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalkl']"
+										},
+										"sink": {
+											"name": "Kalkl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalkv']"
+										},
+										"sink": {
+											"name": "Kalkv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalsc']"
+										},
+										"sink": {
+											"name": "Kalsc"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xlifo']"
+										},
+										"sink": {
+											"name": "Xlifo"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mypol']"
+										},
+										"sink": {
+											"name": "Mypol"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwph1']"
+										},
+										"sink": {
+											"name": "Bwph1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwps1']"
+										},
+										"sink": {
+											"name": "Bwps1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Abwkz']"
+										},
+										"sink": {
+											"name": "Abwkz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pstat']"
+										},
+										"sink": {
+											"name": "Pstat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kaln1']"
+										},
+										"sink": {
+											"name": "Kaln1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalnr']"
+										},
+										"sink": {
+											"name": "Kalnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwva1']"
+										},
+										"sink": {
+											"name": "Bwva1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwva2']"
+										},
+										"sink": {
+											"name": "Bwva2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwva3']"
+										},
+										"sink": {
+											"name": "Bwva3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vers1']"
+										},
+										"sink": {
+											"name": "Vers1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vers2']"
+										},
+										"sink": {
+											"name": "Vers2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vers3']"
+										},
+										"sink": {
+											"name": "Vers3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hrkft']"
+										},
+										"sink": {
+											"name": "Hrkft"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kosgr']"
+										},
+										"sink": {
+											"name": "Kosgr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pprdz']"
+										},
+										"sink": {
+											"name": "Pprdz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pprdl']"
+										},
+										"sink": {
+											"name": "Pprdl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pprdv']"
+										},
+										"sink": {
+											"name": "Pprdv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pdatz']"
+										},
+										"sink": {
+											"name": "Pdatz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pdatl']"
+										},
+										"sink": {
+											"name": "Pdatl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pdatv']"
+										},
+										"sink": {
+											"name": "Pdatv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ekalr']"
+										},
+										"sink": {
+											"name": "Ekalr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vplpr']"
+										},
+										"sink": {
+											"name": "Vplpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mlmaa']"
+										},
+										"sink": {
+											"name": "Mlmaa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mlast']"
+										},
+										"sink": {
+											"name": "Mlast"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lplpr']"
+										},
+										"sink": {
+											"name": "Lplpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vksal']"
+										},
+										"sink": {
+											"name": "Vksal"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hkmat']"
+										},
+										"sink": {
+											"name": "Hkmat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sperw']"
+										},
+										"sink": {
+											"name": "Sperw"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kziwl']"
+										},
+										"sink": {
+											"name": "Kziwl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Wlinl']"
+										},
+										"sink": {
+											"name": "Wlinl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Abciw']"
+										},
+										"sink": {
+											"name": "Abciw"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwspa']"
+										},
+										"sink": {
+											"name": "Bwspa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lplpx']"
+										},
+										"sink": {
+											"name": "Lplpx"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vplpx']"
+										},
+										"sink": {
+											"name": "Vplpx"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fplpx']"
+										},
+										"sink": {
+											"name": "Fplpx"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lbwst']"
+										},
+										"sink": {
+											"name": "Lbwst"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vbwst']"
+										},
+										"sink": {
+											"name": "Vbwst"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fbwst']"
+										},
+										"sink": {
+											"name": "Fbwst"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Eklas']"
+										},
+										"sink": {
+											"name": "Eklas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Qklas']"
+										},
+										"sink": {
+											"name": "Qklas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mtuse']"
+										},
+										"sink": {
+											"name": "Mtuse"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mtorg']"
+										},
+										"sink": {
+											"name": "Mtorg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ownpr']"
+										},
+										"sink": {
+											"name": "Ownpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xbewm']"
+										},
+										"sink": {
+											"name": "Xbewm"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwpei']"
+										},
+										"sink": {
+											"name": "Bwpei"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mbrue']"
+										},
+										"sink": {
+											"name": "Mbrue"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Oklas']"
+										},
+										"sink": {
+											"name": "Oklas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['DummyValInclEewPs']"
+										},
+										"sink": {
+											"name": "DummyValInclEewPs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Oippinv']"
+										},
+										"sink": {
+											"name": "Oippinv"
+										}
+									}
+								],
+								"collectionReference": "$['d']['results']"
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_SAPMBEW",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_SAPMBEW_FILE",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1739,7 +2710,8 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/SourceDataset_SAPEKKO')]"
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_SAPEKKO')]",
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_SAPMBEW')]"
 			]
 		},
 		{
@@ -5264,7 +6236,9 @@
 				"annotations": [],
 				"lastPublishTime": "2023-01-31T02:09:46Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_SAPDeliveries_daily')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/per4hour')]",
@@ -5294,6 +6268,36 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/SyncS4_SAPDeliveries_pre4hour')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/triggerPerOneHour')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "PurchaseDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 1,
+						"startTime": "2023-03-16T15:00:00",
+						"timeZone": "China Standard Time"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/PurchaseDataExtraction')]"
 			]
 		}
 	]

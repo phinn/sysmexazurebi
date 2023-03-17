@@ -1721,7 +1721,933 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "DestinationDataset_SAPEKKO",
+								"referenceName": "DestinationDataset_SAPEKKO_FILE",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "CopyMBEWData",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "RestSource",
+								"httpRequestTimeout": "00:01:40",
+								"requestInterval": "00.00:00:00.010",
+								"requestMethod": "GET",
+								"paginationRules": {
+									"supportRFC5988": "true"
+								}
+							},
+							"sink": {
+								"type": "ParquetSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "ParquetWriteSettings"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"path": "[['Matnr']"
+										},
+										"sink": {
+											"name": "Matnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwkey']"
+										},
+										"sink": {
+											"name": "Bwkey"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwtar']"
+										},
+										"sink": {
+											"name": "Bwtar"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lvorm']"
+										},
+										"sink": {
+											"name": "Lvorm"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lbkum']"
+										},
+										"sink": {
+											"name": "Lbkum"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Salk3']"
+										},
+										"sink": {
+											"name": "Salk3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vprsv']"
+										},
+										"sink": {
+											"name": "Vprsv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Verpr']"
+										},
+										"sink": {
+											"name": "Verpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Stprs']"
+										},
+										"sink": {
+											"name": "Stprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Peinh']"
+										},
+										"sink": {
+											"name": "Peinh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bklas']"
+										},
+										"sink": {
+											"name": "Bklas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Salkv']"
+										},
+										"sink": {
+											"name": "Salkv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmkum']"
+										},
+										"sink": {
+											"name": "Vmkum"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmsal']"
+										},
+										"sink": {
+											"name": "Vmsal"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmvpr']"
+										},
+										"sink": {
+											"name": "Vmvpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmver']"
+										},
+										"sink": {
+											"name": "Vmver"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmstp']"
+										},
+										"sink": {
+											"name": "Vmstp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmpei']"
+										},
+										"sink": {
+											"name": "Vmpei"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmbkl']"
+										},
+										"sink": {
+											"name": "Vmbkl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmsav']"
+										},
+										"sink": {
+											"name": "Vmsav"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjkum']"
+										},
+										"sink": {
+											"name": "Vjkum"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjsal']"
+										},
+										"sink": {
+											"name": "Vjsal"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjvpr']"
+										},
+										"sink": {
+											"name": "Vjvpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjver']"
+										},
+										"sink": {
+											"name": "Vjver"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjstp']"
+										},
+										"sink": {
+											"name": "Vjstp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjpei']"
+										},
+										"sink": {
+											"name": "Vjpei"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjbkl']"
+										},
+										"sink": {
+											"name": "Vjbkl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjsav']"
+										},
+										"sink": {
+											"name": "Vjsav"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lfgja']"
+										},
+										"sink": {
+											"name": "Lfgja"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lfmon']"
+										},
+										"sink": {
+											"name": "Lfmon"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwtty']"
+										},
+										"sink": {
+											"name": "Bwtty"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Stprv']"
+										},
+										"sink": {
+											"name": "Stprv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Laepr']"
+										},
+										"sink": {
+											"name": "Laepr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zkprs']"
+										},
+										"sink": {
+											"name": "Zkprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zkdat']"
+										},
+										"sink": {
+											"name": "Zkdat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Timestamp']"
+										},
+										"sink": {
+											"name": "Timestamp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwprs']"
+										},
+										"sink": {
+											"name": "Bwprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwprh']"
+										},
+										"sink": {
+											"name": "Bwprh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjbws']"
+										},
+										"sink": {
+											"name": "Vjbws"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vjbwh']"
+										},
+										"sink": {
+											"name": "Vjbwh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vvjsl']"
+										},
+										"sink": {
+											"name": "Vvjsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vvjlb']"
+										},
+										"sink": {
+											"name": "Vvjlb"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vvmlb']"
+										},
+										"sink": {
+											"name": "Vvmlb"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vvsal']"
+										},
+										"sink": {
+											"name": "Vvsal"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zplpr']"
+										},
+										"sink": {
+											"name": "Zplpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zplp1']"
+										},
+										"sink": {
+											"name": "Zplp1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zplp2']"
+										},
+										"sink": {
+											"name": "Zplp2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zplp3']"
+										},
+										"sink": {
+											"name": "Zplp3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zpld1']"
+										},
+										"sink": {
+											"name": "Zpld1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zpld2']"
+										},
+										"sink": {
+											"name": "Zpld2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zpld3']"
+										},
+										"sink": {
+											"name": "Zpld3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pperz']"
+										},
+										"sink": {
+											"name": "Pperz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pperl']"
+										},
+										"sink": {
+											"name": "Pperl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pperv']"
+										},
+										"sink": {
+											"name": "Pperv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalkz']"
+										},
+										"sink": {
+											"name": "Kalkz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalkl']"
+										},
+										"sink": {
+											"name": "Kalkl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalkv']"
+										},
+										"sink": {
+											"name": "Kalkv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalsc']"
+										},
+										"sink": {
+											"name": "Kalsc"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xlifo']"
+										},
+										"sink": {
+											"name": "Xlifo"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mypol']"
+										},
+										"sink": {
+											"name": "Mypol"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwph1']"
+										},
+										"sink": {
+											"name": "Bwph1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwps1']"
+										},
+										"sink": {
+											"name": "Bwps1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Abwkz']"
+										},
+										"sink": {
+											"name": "Abwkz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pstat']"
+										},
+										"sink": {
+											"name": "Pstat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kaln1']"
+										},
+										"sink": {
+											"name": "Kaln1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalnr']"
+										},
+										"sink": {
+											"name": "Kalnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwva1']"
+										},
+										"sink": {
+											"name": "Bwva1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwva2']"
+										},
+										"sink": {
+											"name": "Bwva2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwva3']"
+										},
+										"sink": {
+											"name": "Bwva3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vers1']"
+										},
+										"sink": {
+											"name": "Vers1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vers2']"
+										},
+										"sink": {
+											"name": "Vers2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vers3']"
+										},
+										"sink": {
+											"name": "Vers3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hrkft']"
+										},
+										"sink": {
+											"name": "Hrkft"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kosgr']"
+										},
+										"sink": {
+											"name": "Kosgr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pprdz']"
+										},
+										"sink": {
+											"name": "Pprdz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pprdl']"
+										},
+										"sink": {
+											"name": "Pprdl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pprdv']"
+										},
+										"sink": {
+											"name": "Pprdv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pdatz']"
+										},
+										"sink": {
+											"name": "Pdatz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pdatl']"
+										},
+										"sink": {
+											"name": "Pdatl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pdatv']"
+										},
+										"sink": {
+											"name": "Pdatv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ekalr']"
+										},
+										"sink": {
+											"name": "Ekalr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vplpr']"
+										},
+										"sink": {
+											"name": "Vplpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mlmaa']"
+										},
+										"sink": {
+											"name": "Mlmaa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mlast']"
+										},
+										"sink": {
+											"name": "Mlast"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lplpr']"
+										},
+										"sink": {
+											"name": "Lplpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vksal']"
+										},
+										"sink": {
+											"name": "Vksal"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hkmat']"
+										},
+										"sink": {
+											"name": "Hkmat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sperw']"
+										},
+										"sink": {
+											"name": "Sperw"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kziwl']"
+										},
+										"sink": {
+											"name": "Kziwl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Wlinl']"
+										},
+										"sink": {
+											"name": "Wlinl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Abciw']"
+										},
+										"sink": {
+											"name": "Abciw"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwspa']"
+										},
+										"sink": {
+											"name": "Bwspa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lplpx']"
+										},
+										"sink": {
+											"name": "Lplpx"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vplpx']"
+										},
+										"sink": {
+											"name": "Vplpx"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fplpx']"
+										},
+										"sink": {
+											"name": "Fplpx"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lbwst']"
+										},
+										"sink": {
+											"name": "Lbwst"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vbwst']"
+										},
+										"sink": {
+											"name": "Vbwst"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fbwst']"
+										},
+										"sink": {
+											"name": "Fbwst"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Eklas']"
+										},
+										"sink": {
+											"name": "Eklas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Qklas']"
+										},
+										"sink": {
+											"name": "Qklas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mtuse']"
+										},
+										"sink": {
+											"name": "Mtuse"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mtorg']"
+										},
+										"sink": {
+											"name": "Mtorg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ownpr']"
+										},
+										"sink": {
+											"name": "Ownpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xbewm']"
+										},
+										"sink": {
+											"name": "Xbewm"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwpei']"
+										},
+										"sink": {
+											"name": "Bwpei"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mbrue']"
+										},
+										"sink": {
+											"name": "Mbrue"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Oklas']"
+										},
+										"sink": {
+											"name": "Oklas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['DummyValInclEewPs']"
+										},
+										"sink": {
+											"name": "DummyValInclEewPs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Oippinv']"
+										},
+										"sink": {
+											"name": "Oippinv"
+										}
+									}
+								],
+								"collectionReference": "$['d']['results']"
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_SAPMBEW",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_SAPMBEW_FILE",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -1739,7 +2665,9 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SourceDataset_SAPEKKO')]",
-				"[concat(variables('factoryId'), '/datasets/DestinationDataset_SAPEKKO')]"
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_SAPEKKO_FILE')]",
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_SAPMBEW')]",
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_SAPMBEW_FILE')]"
 			]
 		},
 		{
@@ -5848,7 +6776,748 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPEKKO')]",
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPEKKO_DB')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "sysmexdw",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "Mandt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ebeln",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bukrs",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bstyp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bsart",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bsakz",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Loekz",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Statu",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Aedat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ernam",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lastchangedatetime",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Pincr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lponr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lifnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Spras",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zterm",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd1t",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd2t",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd3t",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd1p",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zbd2p",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ekorg",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ekgrp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Waers",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Wkurs",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kufix",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bedat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kdatb",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kdate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bwbdt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Angdt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bnddt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Gwldt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ausnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Angnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ihran",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ihrez",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Verkf",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Telf1",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Llief",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kunnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Konnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Abgru",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Autlf",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Weakt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Reswk",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lblif",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Inco1",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Inco2",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Ktwrt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Distributiontype",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Submi",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Knumv",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kalsm",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Stafo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lifre",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Exnum",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Unsez",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Logsy",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Upinc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Stako",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frggr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frgsx",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frgke",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frgzu",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Frgrl",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lands",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Lphis",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Adrnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "StcegL",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Stceg",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Absgr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Addnr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Kornr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Memory",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Procstat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Rlwrt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Revno",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Scmproc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ReasonCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Memorytype",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Rettp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Retpc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Dptyp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Dppct",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Dpamt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Dpdat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "MsrId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "HierarchyExists",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ThresholdExists",
+						"type": "nvarchar"
+					},
+					{
+						"name": "LegalContract",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Description",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ReleaseDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Vsart",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Handoverloc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Shipcond",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Incov",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Inco2L",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Inco3L",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Grwcu",
+						"type": "nvarchar"
+					},
+					{
+						"name": "IntraRel",
+						"type": "nvarchar"
+					},
+					{
+						"name": "IntraExcl",
+						"type": "nvarchar"
+					},
+					{
+						"name": "QtnErlstSubmsnDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FollowonDocCat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FollowonDocType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DummyEkkoInclEewPs",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Externalsystem",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Externalreferenceid",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ExtRevTmstmp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Iseopblocked",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Isaged",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ForceId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ForceCnt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RelocId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RelocSeqId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SourceLogsys",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshTransaction",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshItemGroup",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshVasLastItem",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshOsStgChange",
+						"type": "nvarchar"
+					},
+					{
+						"name": "TmsRefUuid",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zapcgk",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ApcgkExtend",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZbasDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zadattyp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZstartDat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZDev",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Zindanx",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZlimitDat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Numerator",
+						"type": "nvarchar"
+					},
+					{
+						"name": "HashcalBdat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Hashcal",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Negative",
+						"type": "nvarchar"
+					},
+					{
+						"name": "HashcalExists",
+						"type": "nvarchar"
+					},
+					{
+						"name": "KnownIndex",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Postat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Vzskz",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FshSnstStatus",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Proce",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Conc",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Cont",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Comp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Outr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Desp",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DespDat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DespCargo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Pare",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PareDat",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PareCargo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PfmContract",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PohfType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EqEindt",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EqWerks",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Fixpo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EkgrpAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "WerksAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ContractAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PstypAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FixpoAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "KeyIdAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "AurelAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DelperAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EindtAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "LtsnrAllow",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbLevel",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbCondType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "KeyId",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbValue",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbCurr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbResValue",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbSpecValue",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SprRsnProfile",
+						"type": "nvarchar"
+					},
+					{
+						"name": "BudgType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbStatus",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OtbReason",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CheckType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ConOtbReq",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ConPrebookLev",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ConDistrLev",
+						"type": "nvarchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "sap",
+					"table": "EKKO"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/sysmexdw')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPEKKO_FILE')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -6597,744 +8266,35 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPEKKO_DB')]",
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPMBEW_FILE')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "sysmexdw",
+					"referenceName": "AzureDataLake",
 					"type": "LinkedServiceReference"
 				},
 				"folder": {
 					"name": "SAP/S4/OData"
 				},
 				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "Mandt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ebeln",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bukrs",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bstyp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bsart",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bsakz",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Loekz",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Statu",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Aedat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ernam",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lastchangedatetime",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Pincr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lponr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lifnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Spras",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zterm",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd1t",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd2t",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd3t",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd1p",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zbd2p",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ekorg",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ekgrp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Waers",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Wkurs",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kufix",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bedat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kdatb",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kdate",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bwbdt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Angdt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Bnddt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Gwldt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ausnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Angnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ihran",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ihrez",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Verkf",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Telf1",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Llief",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kunnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Konnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Abgru",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Autlf",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Weakt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Reswk",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lblif",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Inco1",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Inco2",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Ktwrt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Distributiontype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Submi",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Knumv",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kalsm",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Stafo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lifre",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Exnum",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Unsez",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Logsy",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Upinc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Stako",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frggr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frgsx",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frgke",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frgzu",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Frgrl",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lands",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Lphis",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Adrnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "StcegL",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Stceg",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Absgr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Addnr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Kornr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Memory",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Procstat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Rlwrt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Revno",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Scmproc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ReasonCode",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Memorytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Rettp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Retpc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Dptyp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Dppct",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Dpamt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Dpdat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "MsrId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "HierarchyExists",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ThresholdExists",
-						"type": "nvarchar"
-					},
-					{
-						"name": "LegalContract",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Description",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ReleaseDate",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Vsart",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Handoverloc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Shipcond",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Incov",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Inco2L",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Inco3L",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Grwcu",
-						"type": "nvarchar"
-					},
-					{
-						"name": "IntraRel",
-						"type": "nvarchar"
-					},
-					{
-						"name": "IntraExcl",
-						"type": "nvarchar"
-					},
-					{
-						"name": "QtnErlstSubmsnDate",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FollowonDocCat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FollowonDocType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "DummyEkkoInclEewPs",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Externalsystem",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Externalreferenceid",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ExtRevTmstmp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Iseopblocked",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Isaged",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ForceId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ForceCnt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "RelocId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "RelocSeqId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "SourceLogsys",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshTransaction",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshItemGroup",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshVasLastItem",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshOsStgChange",
-						"type": "nvarchar"
-					},
-					{
-						"name": "TmsRefUuid",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zapcgk",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ApcgkExtend",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ZbasDate",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zadattyp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ZstartDat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ZDev",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Zindanx",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ZlimitDat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Numerator",
-						"type": "nvarchar"
-					},
-					{
-						"name": "HashcalBdat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Hashcal",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Negative",
-						"type": "nvarchar"
-					},
-					{
-						"name": "HashcalExists",
-						"type": "nvarchar"
-					},
-					{
-						"name": "KnownIndex",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Postat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Vzskz",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FshSnstStatus",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Proce",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Conc",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Cont",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Comp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Outr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Desp",
-						"type": "nvarchar"
-					},
-					{
-						"name": "DespDat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "DespCargo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Pare",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PareDat",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PareCargo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PfmContract",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PohfType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "EqEindt",
-						"type": "nvarchar"
-					},
-					{
-						"name": "EqWerks",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Fixpo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "EkgrpAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "WerksAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ContractAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "PstypAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FixpoAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "KeyIdAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "AurelAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "DelperAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "EindtAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "LtsnrAllow",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbLevel",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbCondType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "KeyId",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbValue",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbCurr",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbResValue",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbSpecValue",
-						"type": "nvarchar"
-					},
-					{
-						"name": "SprRsnProfile",
-						"type": "nvarchar"
-					},
-					{
-						"name": "BudgType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbStatus",
-						"type": "nvarchar"
-					},
-					{
-						"name": "OtbReason",
-						"type": "nvarchar"
-					},
-					{
-						"name": "CheckType",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ConOtbReq",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ConPrebookLev",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ConDistrLev",
-						"type": "nvarchar"
-					}
-				],
+				"type": "Parquet",
 				"typeProperties": {
-					"schema": "sap",
-					"table": "EKKO"
-				}
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "MBEW",
+							"type": "Expression"
+						},
+						"folderPath": "OData",
+						"fileSystem": "saps4data"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/sysmexdw')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
 			]
 		},
 		{
@@ -7511,6 +8471,32 @@
 				"typeProperties": {
 					"relativeUrl": {
 						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_EKKO_SRV/EKKOSet?sap-client=110&$format=json",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SAPOData')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMBEW')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MBEW_SRV/MBEWSet?sap-client=110&$format=json&$filter=Matnr eq '0006143' or Matnr eq '0006039'",
 						"type": "Expression"
 					}
 				},
@@ -7698,6 +8684,36 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/SyncS4_SAPDeliveries_pre4hour')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/triggerPerOneHour')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "PurchaseDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 1,
+						"startTime": "2023-03-16T15:00:00",
+						"timeZone": "China Standard Time"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/PurchaseDataExtraction')]"
 			]
 		},
 		{
