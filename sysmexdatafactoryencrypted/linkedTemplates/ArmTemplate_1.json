@@ -4,7 +4,7 @@
 	"parameters": {
 		"factoryName": {
 			"type": "string",
-			"metadata": "Data Factory name",
+			"metadata": "数据工厂名称",
 			"defaultValue": "sysmexdatafactoryencrypted"
 		}
 	},
@@ -9224,6 +9224,13 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "MaterialDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -9238,7 +9245,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/PurchaseDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/FinancialDataExtraction')]"
+				"[concat(variables('factoryId'), '/pipelines/FinancialDataExtraction')]",
+				"[concat(variables('factoryId'), '/pipelines/MaterialDataExtraction')]"
 			]
 		}
 	]

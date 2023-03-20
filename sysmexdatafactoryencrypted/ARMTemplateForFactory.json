@@ -4,24 +4,24 @@
 	"parameters": {
 		"factoryName": {
 			"type": "string",
-			"metadata": "Data Factory name",
+			"metadata": "数据工厂名称",
 			"defaultValue": "sysmexdatafactoryencrypted"
 		},
 		"AzureDataLake_accountKey": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLake'"
+			"metadata": "“AzureDataLake”的“accountKey”的安全字符串"
 		},
 		"Report_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'Report'"
+			"metadata": "“Report”的“connectionString”的安全字符串"
 		},
 		"SAPOData_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'SAPOData'"
+			"metadata": "“SAPOData”的“password”的安全字符串"
 		},
 		"sysmexdw_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'sysmexdw'"
+			"metadata": "“sysmexdw”的“connectionString”的安全字符串"
 		},
 		"AzureDataLake_properties_typeProperties_url": {
 			"type": "string",
@@ -12367,6 +12367,13 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "MaterialDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -12381,7 +12388,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/PurchaseDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/FinancialDataExtraction')]"
+				"[concat(variables('factoryId'), '/pipelines/FinancialDataExtraction')]",
+				"[concat(variables('factoryId'), '/pipelines/MaterialDataExtraction')]"
 			]
 		},
 		{

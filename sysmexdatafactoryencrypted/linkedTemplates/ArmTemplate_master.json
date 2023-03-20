@@ -4,24 +4,24 @@
 	"parameters": {
 		"factoryName": {
 			"type": "string",
-			"metadata": "Data Factory name",
+			"metadata": "数据工厂名称",
 			"defaultValue": "sysmexdatafactoryencrypted"
 		},
 		"AzureDataLake_accountKey": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLake'"
+			"metadata": "“AzureDataLake”的“accountKey”的安全字符串"
 		},
 		"Report_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'Report'"
+			"metadata": "“Report”的“connectionString”的安全字符串"
 		},
 		"SAPOData_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'SAPOData'"
+			"metadata": "“SAPOData”的“password”的安全字符串"
 		},
 		"sysmexdw_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'sysmexdw'"
+			"metadata": "“sysmexdw”的“connectionString”的安全字符串"
 		},
 		"AzureDataLake_properties_typeProperties_url": {
 			"type": "string",
@@ -53,11 +53,11 @@
 		},
 		"containerUri": {
 			"type": "string",
-			"metadata": "URI to storage account containing linked ARM templates"
+			"metadata": "包含链接 ARM 模板的存储帐户的 URI"
 		},
 		"containerSasToken": {
 			"type": "string",
-			"metadata": "Sas token to storage account containing linked ARM templates"
+			"metadata": "包含链接 ARM 模板的存储帐户的 SAS 令牌"
 		}
 	},
 	"variables": {
