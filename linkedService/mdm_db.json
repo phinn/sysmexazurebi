@@ -1,0 +1,16 @@
+{
+	"name": "mdm_db",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "MySql",
+		"typeProperties": {
+			"connectionString": "server=rm-bp1gk2aw08inw3rai.mysql.rds.aliyuncs.com;port=3306;database=mdm_prd;user=mdmprdreadonly;sslmode=1;usesystemtruststore=1",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwNzU4MGZkOS1mYjAxLTRkNmEtYjQ4NC1hZDE1ODg0NzJhOTMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhosted",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
