@@ -99,9 +99,6 @@
 					},
 					"selfhosted_properties_typeProperties_linkedInfo_resourceId": {
 						"value": "[parameters('selfhosted_properties_typeProperties_linkedInfo_resourceId')]"
-					},
-					"RestServiceAPIGW_properties_typeProperties_url": {
-						"value": "[parameters('RestServiceAPIGW_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -126,6 +123,9 @@
 					},
 					"mdm_db_connectionString": {
 						"value": "[parameters('mdm_db_connectionString')]"
+					},
+					"RestServiceAPIGW_properties_typeProperties_url": {
+						"value": "[parameters('RestServiceAPIGW_properties_typeProperties_url')]"
 					},
 					"SAPOData_properties_typeProperties_url": {
 						"value": "[parameters('SAPOData_properties_typeProperties_url')]"
