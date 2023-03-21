@@ -17067,6 +17067,13 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "SalesDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -17083,7 +17090,8 @@
 				"[concat(variables('factoryId'), '/pipelines/PurchaseDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/FinancialDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/MaterialDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/ProductDataExtraction')]"
+				"[concat(variables('factoryId'), '/pipelines/ProductDataExtraction')]",
+				"[concat(variables('factoryId'), '/pipelines/SalesDataExtraction')]"
 			]
 		},
 		{
