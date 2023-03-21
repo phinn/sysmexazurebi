@@ -7,9 +7,21 @@
 			"metadata": "数据工厂名称",
 			"defaultValue": "sysmexdatafactoryencrypted"
 		},
+		"SAPOData_password": {
+			"type": "secureString",
+			"metadata": "“SAPOData”的“password”的安全字符串"
+		},
 		"mdm_db_connectionString": {
 			"type": "secureString",
 			"metadata": "“mdm_db”的“connectionString”的安全字符串"
+		},
+		"SAPOData_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
+		},
+		"SAPOData_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "OData"
 		},
 		"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
 			"type": "string",
@@ -20,6 +32,30 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/SAPOData')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "RestService",
+				"typeProperties": {
+					"url": "[parameters('SAPOData_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Basic",
+					"userName": "[parameters('SAPOData_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SAPOData_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "selfhosted",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPProductPrice')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -143,7 +179,9 @@
 				},
 				"schema": []
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SAPOData')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMARA')]",
@@ -167,7 +205,35 @@
 				},
 				"schema": []
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SAPOData')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMARC')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARC_SRV/MARCSet?sap-client=110&$format=json&$filter=Matnr eq '0006143' or Matnr eq '0006039'",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SAPOData')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMBEW')]",
@@ -191,7 +257,9 @@
 				},
 				"schema": []
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SAPOData')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPProductPrice')]",
@@ -9969,60 +10037,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/SyncS4_SAPDeliveries_pre4hour')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/triggerPerOneHour')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "PurchaseDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
-							"referenceName": "FinancialDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
-							"referenceName": "MaterialDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
-							"referenceName": "ProductDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Hour",
-						"interval": 1,
-						"startTime": "2023-03-16T15:00:00",
-						"timeZone": "China Standard Time"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/PurchaseDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/FinancialDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/MaterialDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/ProductDataExtraction')]"
 			]
 		}
 	]

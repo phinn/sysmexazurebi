@@ -91,9 +91,6 @@
 					"sysmexdw_connectionString": {
 						"value": "[parameters('sysmexdw_connectionString')]"
 					},
-					"SAPOData_password": {
-						"value": "[parameters('SAPOData_password')]"
-					},
 					"AzureDataLake_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLake_properties_typeProperties_url')]"
 					},
@@ -105,12 +102,6 @@
 					},
 					"RestServiceAPIGW_properties_typeProperties_url": {
 						"value": "[parameters('RestServiceAPIGW_properties_typeProperties_url')]"
-					},
-					"SAPOData_properties_typeProperties_url": {
-						"value": "[parameters('SAPOData_properties_typeProperties_url')]"
-					},
-					"SAPOData_properties_typeProperties_userName": {
-						"value": "[parameters('SAPOData_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -130,8 +121,17 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"SAPOData_password": {
+						"value": "[parameters('SAPOData_password')]"
+					},
 					"mdm_db_connectionString": {
 						"value": "[parameters('mdm_db_connectionString')]"
+					},
+					"SAPOData_properties_typeProperties_url": {
+						"value": "[parameters('SAPOData_properties_typeProperties_url')]"
+					},
+					"SAPOData_properties_typeProperties_userName": {
+						"value": "[parameters('SAPOData_properties_typeProperties_userName')]"
 					},
 					"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
 						"value": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]"
@@ -140,6 +140,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'sysmexdatafactoryencrypted_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "sysmexdatafactoryencrypted_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'sysmexdatafactoryencrypted_ArmTemplate_1')]"
 			]
 		}
 	]
