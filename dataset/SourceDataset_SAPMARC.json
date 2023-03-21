@@ -1,0 +1,22 @@
+{
+	"name": "SourceDataset_SAPMARC",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARC_SRV/MARCSet?sap-client=110&$format=json&$filter=Matnr eq '0006143' or Matnr eq '0006039'",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
