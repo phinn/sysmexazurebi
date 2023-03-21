@@ -1,0 +1,25 @@
+{
+	"name": "DestinationDataset_MDM_Product_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MDM"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "t_product",
+				"folderPath": "mdm_prd",
+				"fileSystem": "mdm"
+			},
+			"compressionCodec": "gzip"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

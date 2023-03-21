@@ -10,6 +10,9 @@
 		},
 		"annotations": [],
 		"type": "MySqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"tableName": "`t_product`"
+		}
 	}
 }
