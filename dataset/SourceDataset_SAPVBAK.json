@@ -1,0 +1,22 @@
+{
+	"name": "SourceDataset_SAPVBAK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBAK_SRV/VBAKSet?sap-client=110&$format=json&$filter=Vbeln eq '1000015123' or Vbeln eq '1000015122'",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
