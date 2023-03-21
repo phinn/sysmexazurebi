@@ -30,6 +30,635 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "product_mdm_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_mdm_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_name_zh",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_name_zh",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "salesunit_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "salesunit_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "salesunit_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "salesunit_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_line_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_line_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_category_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_category_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_category_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_category_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "bom_sign",
+									"type": "String"
+								},
+								"sink": {
+									"name": "bom_sign",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "dangerous_sign",
+									"type": "String"
+								},
+								"sink": {
+									"name": "dangerous_sign",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "deleted_sign",
+									"type": "String"
+								},
+								"sink": {
+									"name": "deleted_sign",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "is_quality_control",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "is_quality_control",
+									"type": "Int32",
+									"physicalType": "INT_32"
+								}
+							},
+							{
+								"source": {
+									"name": "is_calibrator",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "is_calibrator",
+									"type": "Int32",
+									"physicalType": "INT_32"
+								}
+							},
+							{
+								"source": {
+									"name": "register_certificate_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "register_certificate_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "register_certificate_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "register_certificate_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_desc",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_desc",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "production_place",
+									"type": "String"
+								},
+								"sink": {
+									"name": "production_place",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "production_vendor",
+									"type": "String"
+								},
+								"sink": {
+									"name": "production_vendor",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "supplier",
+									"type": "String"
+								},
+								"sink": {
+									"name": "supplier",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "volume",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "volume",
+									"type": "Decimal",
+									"physicalType": "DECIMAL"
+								}
+							},
+							{
+								"source": {
+									"name": "weight",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "weight",
+									"type": "Decimal",
+									"physicalType": "DECIMAL"
+								}
+							},
+							{
+								"source": {
+									"name": "volume_unit_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "volume_unit_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "weight_unit_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "weight_unit_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "temperature_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "temperature_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "temperature_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "temperature_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "plan_delivery_days",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "plan_delivery_days",
+									"type": "Int32",
+									"physicalType": "INT_32"
+								}
+							},
+							{
+								"source": {
+									"name": "medical_instruments_sign",
+									"type": "String"
+								},
+								"sink": {
+									"name": "medical_instruments_sign",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "jan_code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "jan_code",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "storage_condition_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "storage_condition_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "storage_condition_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "storage_condition_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "owner",
+									"type": "String"
+								},
+								"sink": {
+									"name": "owner",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "remark",
+									"type": "String"
+								},
+								"sink": {
+									"name": "remark",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "is_common",
+									"type": "String"
+								},
+								"sink": {
+									"name": "is_common",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "tenant_id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "tenant_id",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "create_time",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "create_time",
+									"type": "DateTime",
+									"physicalType": "INT_96"
+								}
+							},
+							{
+								"source": {
+									"name": "create_user_id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "create_user_id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "modify_time",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "modify_time",
+									"type": "DateTime",
+									"physicalType": "INT_96"
+								}
+							},
+							{
+								"source": {
+									"name": "modify_user_id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "modify_user_id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "update_time",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "update_time",
+									"type": "DateTime",
+									"physicalType": "INT_96"
+								}
+							},
+							{
+								"source": {
+									"name": "update_user_id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "update_user_id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "tombstone",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "tombstone",
+									"type": "Int32",
+									"physicalType": "INT_32"
+								}
+							},
+							{
+								"source": {
+									"name": "approved_status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "approved_status",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "external_material_group",
+									"type": "String"
+								},
+								"sink": {
+									"name": "external_material_group",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "external_material_group_desc",
+									"type": "String"
+								},
+								"sink": {
+									"name": "external_material_group_desc",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "general_item_category_group",
+									"type": "String"
+								},
+								"sink": {
+									"name": "general_item_category_group",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "general_item_category_group_desc",
+									"type": "String"
+								},
+								"sink": {
+									"name": "general_item_category_group_desc",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "labor",
+									"type": "String"
+								},
+								"sink": {
+									"name": "labor",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "labor_desc",
+									"type": "String"
+								},
+								"sink": {
+									"name": "labor_desc",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "material_group",
+									"type": "String"
+								},
+								"sink": {
+									"name": "material_group",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "material_group_desc",
+									"type": "String"
+								},
+								"sink": {
+									"name": "material_group_desc",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_hierarchy",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_hierarchy",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_hierarchy_desc",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_hierarchy_desc",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "nmpa_class",
+									"type": "String"
+								},
+								"sink": {
+									"name": "nmpa_class",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "is_md",
+									"type": "String"
+								},
+								"sink": {
+									"name": "is_md",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "keep",
+									"type": "String"
+								},
+								"sink": {
+									"name": "keep",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
