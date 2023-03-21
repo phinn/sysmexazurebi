@@ -111,9 +111,6 @@
 					},
 					"SAPOData_properties_typeProperties_userName": {
 						"value": "[parameters('SAPOData_properties_typeProperties_userName')]"
-					},
-					"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
-						"value": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -135,6 +132,9 @@
 					},
 					"mdm_db_connectionString": {
 						"value": "[parameters('mdm_db_connectionString')]"
+					},
+					"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
+						"value": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]"
 					}
 				}
 			},

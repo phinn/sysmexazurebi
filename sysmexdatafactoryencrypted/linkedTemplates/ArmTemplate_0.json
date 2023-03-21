@@ -46,10 +46,6 @@
 		"SAPOData_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "OData"
-		},
-		"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "http://10.40.20.218:8081"
 		}
 	},
 	"variables": {
@@ -129,6 +125,35 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_MDM_Product_File')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "MDM"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "t_product",
+						"folderPath": "mdm_prd",
+						"fileSystem": "mdm"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesDB')]",
@@ -3111,27 +3136,6 @@
 						"type": "SecureString",
 						"value": "[parameters('SAPOData_password')]"
 					}
-				},
-				"connectVia": {
-					"referenceName": "selfhosted",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/selfhosted')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPProductPrice')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "RestService",
-				"typeProperties": {
-					"url": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]",
-					"enableServerCertificateValidation": true,
-					"authenticationType": "Anonymous"
 				},
 				"connectVia": {
 					"referenceName": "selfhosted",
