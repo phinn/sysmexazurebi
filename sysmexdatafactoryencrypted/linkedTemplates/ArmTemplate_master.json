@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "“SAPOData”的“password”的安全字符串"
 		},
+		"mdm_db_connectionString": {
+			"type": "secureString",
+			"metadata": "“mdm_db”的“connectionString”的安全字符串"
+		},
 		"sysmexdw_connectionString": {
 			"type": "secureString",
 			"metadata": "“sysmexdw”的“connectionString”的安全字符串"
@@ -128,6 +132,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"mdm_db_connectionString": {
+						"value": "[parameters('mdm_db_connectionString')]"
 					}
 				}
 			},

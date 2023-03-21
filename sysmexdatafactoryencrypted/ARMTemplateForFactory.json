@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "“SAPOData”的“password”的安全字符串"
 		},
+		"mdm_db_connectionString": {
+			"type": "secureString",
+			"metadata": "“mdm_db”的“connectionString”的安全字符串"
+		},
 		"sysmexdw_connectionString": {
 			"type": "secureString",
 			"metadata": "“sysmexdw”的“connectionString”的安全字符串"
@@ -12043,6 +12047,27 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_MDM_Product')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "mdm_db",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "MDM"
+				},
+				"annotations": [],
+				"type": "MySqlTable",
+				"schema": [],
+				"typeProperties": {}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/mdm_db')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPDeliveries')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -12293,6 +12318,25 @@
 					"url": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]",
 					"enableServerCertificateValidation": true,
 					"authenticationType": "Anonymous"
+				},
+				"connectVia": {
+					"referenceName": "selfhosted",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/selfhosted')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/mdm_db')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "MySql",
+				"typeProperties": {
+					"connectionString": "[parameters('mdm_db_connectionString')]"
 				},
 				"connectVia": {
 					"referenceName": "selfhosted",
