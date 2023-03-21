@@ -1,0 +1,15 @@
+{
+	"name": "SourceDataset_MDM_Product",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "mdm_db",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MDM"
+		},
+		"annotations": [],
+		"type": "MySqlTable",
+		"schema": []
+	}
+}
