@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyMDMProduct",
+				"name": "CopyMDMProductBasicData",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -675,6 +675,612 @@
 				"outputs": [
 					{
 						"referenceName": "DestinationDataset_MDM_Product_File",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "CopyMDMProductPlantData",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "MySqlSource"
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "product_mdm_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_mdm_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "plant_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "plant_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "profit_center_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "profit_center_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "profit_center_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "profit_center_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "adc_sign",
+									"type": "String"
+								},
+								"sink": {
+									"name": "adc_sign",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "plan_delivery_days",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "plan_delivery_days",
+									"type": "Int32",
+									"physicalType": "INT_32"
+								}
+							},
+							{
+								"source": {
+									"name": "safety_stock",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "safety_stock",
+									"type": "Decimal",
+									"physicalType": "DECIMAL"
+								}
+							},
+							{
+								"source": {
+									"name": "minimum_safety_stock",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "minimum_safety_stock",
+									"type": "Decimal",
+									"physicalType": "DECIMAL"
+								}
+							},
+							{
+								"source": {
+									"name": "deleted_sign",
+									"type": "String"
+								},
+								"sink": {
+									"name": "deleted_sign",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "purchasing_group_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "purchasing_group_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "tenant_id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "tenant_id",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "create_time",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "create_time",
+									"type": "DateTime",
+									"physicalType": "INT_96"
+								}
+							},
+							{
+								"source": {
+									"name": "create_user_id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "create_user_id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "modify_time",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "modify_time",
+									"type": "DateTime",
+									"physicalType": "INT_96"
+								}
+							},
+							{
+								"source": {
+									"name": "modify_user_id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "modify_user_id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "update_time",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "update_time",
+									"type": "DateTime",
+									"physicalType": "INT_96"
+								}
+							},
+							{
+								"source": {
+									"name": "update_user_id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "update_user_id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "tombstone",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "tombstone",
+									"type": "Int32",
+									"physicalType": "INT_32"
+								}
+							},
+							{
+								"source": {
+									"name": "approved_status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "approved_status",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_MDM_ProductPlantView",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_MDM_ProductPlantView_File",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "CopyMDMProductSalesData",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "MySqlSource"
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "product_mdm_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_mdm_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "sales_org_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sales_org_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "distribution_channel_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "distribution_channel_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "sales_unit_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sales_unit_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "sales_unit_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sales_unit_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "delivery_plant_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "delivery_plant_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "minimum_order_quantity",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "minimum_order_quantity",
+									"type": "Decimal",
+									"physicalType": "DECIMAL"
+								}
+							},
+							{
+								"source": {
+									"name": "minimum_delivery_quantity",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "minimum_delivery_quantity",
+									"type": "Decimal",
+									"physicalType": "DECIMAL"
+								}
+							},
+							{
+								"source": {
+									"name": "delivery_unit_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "delivery_unit_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "deleted_sign",
+									"type": "String"
+								},
+								"sink": {
+									"name": "deleted_sign",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "material_price_group_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "material_price_group_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "material_price_group_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "material_price_group_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_hierarchy_no",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_hierarchy_no",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "product_hierarchy_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "product_hierarchy_name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "material_statistics_group",
+									"type": "String"
+								},
+								"sink": {
+									"name": "material_statistics_group",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "material_statistics_group_desc",
+									"type": "String"
+								},
+								"sink": {
+									"name": "material_statistics_group_desc",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "tenant_id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "tenant_id",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "create_time",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "create_time",
+									"type": "DateTime",
+									"physicalType": "INT_96"
+								}
+							},
+							{
+								"source": {
+									"name": "create_user_id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "create_user_id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "modify_time",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "modify_time",
+									"type": "DateTime",
+									"physicalType": "INT_96"
+								}
+							},
+							{
+								"source": {
+									"name": "modify_user_id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "modify_user_id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "update_time",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "update_time",
+									"type": "DateTime",
+									"physicalType": "INT_96"
+								}
+							},
+							{
+								"source": {
+									"name": "update_user_id",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "update_user_id",
+									"type": "Int64",
+									"physicalType": "INT_64"
+								}
+							},
+							{
+								"source": {
+									"name": "tombstone",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "tombstone",
+									"type": "Int32",
+									"physicalType": "INT_32"
+								}
+							},
+							{
+								"source": {
+									"name": "approved_status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "approved_status",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_MDM_ProductSalesView",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_MDM_ProductSalesView_File",
 						"type": "DatasetReference"
 					}
 				]
