@@ -22162,7 +22162,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBAK_SRV/VBAKSet?sap-client=110&$format=json",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBAK_SRV/VBAKSet?sap-client=110&$format=json&$filter=Vbeln eq '1000015122' or Vbeln eq '1000015123'",
 						"type": "Expression"
 					}
 				},
