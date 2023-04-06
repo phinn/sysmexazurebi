@@ -7,7 +7,7 @@
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
-					"timeout": "0.12:00:00",
+					"timeout": "7:00:00",
 					"retry": 0,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "RestSource",
-						"httpRequestTimeout": "00:01:40",
+						"httpRequestTimeout": "07:00:00",
 						"requestInterval": "00.00:00:00.010",
 						"requestMethod": "GET",
 						"paginationRules": {
