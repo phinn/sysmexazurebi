@@ -17,6 +17,9 @@
 		"mdm_db_connectionString": {
 			"value": ""
 		},
+		"oa_db_connectionString": {
+			"value": ""
+		},
 		"sysmexdw_connectionString": {
 			"value": ""
 		},

@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "“mdm_db”的“connectionString”的安全字符串"
 		},
+		"oa_db_connectionString": {
+			"type": "secureString",
+			"metadata": "“oa_db”的“connectionString”的安全字符串"
+		},
 		"sysmexdw_connectionString": {
 			"type": "secureString",
 			"metadata": "“sysmexdw”的“connectionString”的安全字符串"
@@ -123,6 +127,9 @@
 					},
 					"mdm_db_connectionString": {
 						"value": "[parameters('mdm_db_connectionString')]"
+					},
+					"oa_db_connectionString": {
+						"value": "[parameters('oa_db_connectionString')]"
 					},
 					"RestServiceAPIGW_properties_typeProperties_url": {
 						"value": "[parameters('RestServiceAPIGW_properties_typeProperties_url')]"

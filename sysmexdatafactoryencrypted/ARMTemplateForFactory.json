@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "“mdm_db”的“connectionString”的安全字符串"
 		},
+		"oa_db_connectionString": {
+			"type": "secureString",
+			"metadata": "“oa_db”的“connectionString”的安全字符串"
+		},
 		"sysmexdw_connectionString": {
 			"type": "secureString",
 			"metadata": "“sysmexdw”的“connectionString”的安全字符串"
@@ -60,6 +64,215 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AnnualContractDataExtraction')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "CopyView_MDM_CustomerSalesRegionData",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "SqlServerSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "ParquetSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "ParquetWriteSettings"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "OANo",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "OANo",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "FiscalYear",
+											"type": "Decimal",
+											"physicalType": "decimal",
+											"scale": 0,
+											"precision": 4
+										},
+										"sink": {
+											"name": "FiscalYear",
+											"type": "Decimal",
+											"physicalType": "DECIMAL"
+										}
+									},
+									{
+										"source": {
+											"name": "CustomerNo",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "CustomerNo",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "CustomerNoS4",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "CustomerNoS4",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "CustomerName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "CustomerName",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "CustomerRelated",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "CustomerRelated",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "ProvinceName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "ProvinceName",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "CityName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "CityName",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "DistrictName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "DistrictName",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "ProductLineNo",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "ProductLineNo",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "ProductLineName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "ProductLineName",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									}
+								],
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_OA_CustomerSalesRegion",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_OA_CustomerSalesRegion",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"folder": {
+					"name": "OA"
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_OA_CustomerSalesRegion')]",
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_OA_CustomerSalesRegion')]"
+			]
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/FinancialDataExtraction')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
@@ -16710,6 +16923,82 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_OA_CustomerSalesRegion')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "OA"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "View_MDM_CustomerSalesRegion",
+						"folderPath": "mdm",
+						"fileSystem": "oasystem"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": [
+					{
+						"name": "OANo",
+						"type": "UTF8"
+					},
+					{
+						"name": "FiscalYear",
+						"type": "DECIMAL",
+						"precision": 4,
+						"scale": 0
+					},
+					{
+						"name": "CustomerNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "CustomerNoS4",
+						"type": "UTF8"
+					},
+					{
+						"name": "CustomerName",
+						"type": "UTF8"
+					},
+					{
+						"name": "CustomerRelated",
+						"type": "UTF8"
+					},
+					{
+						"name": "ProvinceName",
+						"type": "UTF8"
+					},
+					{
+						"name": "CityName",
+						"type": "UTF8"
+					},
+					{
+						"name": "DistrictName",
+						"type": "UTF8"
+					},
+					{
+						"name": "ProductLineNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "ProductLineName",
+						"type": "UTF8"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesDB')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -21993,6 +22282,77 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_OA_CustomerSalesRegion')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "oa_db",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "OA"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "OANo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FiscalYear",
+						"type": "decimal",
+						"precision": 4,
+						"scale": 0
+					},
+					{
+						"name": "CustomerNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CustomerNoS4",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CustomerName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CustomerRelated",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProvinceName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CityName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DistrictName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineName",
+						"type": "nvarchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "View_MDM_CustomerSalesRegionFromRiskControlTable"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/oa_db')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPDeliveries')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -22351,6 +22711,25 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/oa_db')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('oa_db_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "selfhosted",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/selfhosted')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/sysmexdw')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -22472,6 +22851,13 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "AnnualContractDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -22490,7 +22876,8 @@
 				"[concat(variables('factoryId'), '/pipelines/MaterialDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/ProductDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/SalesDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/SalesItemDataExtraction')]"
+				"[concat(variables('factoryId'), '/pipelines/SalesItemDataExtraction')]",
+				"[concat(variables('factoryId'), '/pipelines/AnnualContractDataExtraction')]"
 			]
 		},
 		{

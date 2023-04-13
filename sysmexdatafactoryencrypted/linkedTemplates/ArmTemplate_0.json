@@ -227,6 +227,82 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_OA_CustomerSalesRegion')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "OA"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "View_MDM_CustomerSalesRegion",
+						"folderPath": "mdm",
+						"fileSystem": "oasystem"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": [
+					{
+						"name": "OANo",
+						"type": "UTF8"
+					},
+					{
+						"name": "FiscalYear",
+						"type": "DECIMAL",
+						"precision": 4,
+						"scale": 0
+					},
+					{
+						"name": "CustomerNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "CustomerNoS4",
+						"type": "UTF8"
+					},
+					{
+						"name": "CustomerName",
+						"type": "UTF8"
+					},
+					{
+						"name": "CustomerRelated",
+						"type": "UTF8"
+					},
+					{
+						"name": "ProvinceName",
+						"type": "UTF8"
+					},
+					{
+						"name": "CityName",
+						"type": "UTF8"
+					},
+					{
+						"name": "DistrictName",
+						"type": "UTF8"
+					},
+					{
+						"name": "ProductLineNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "ProductLineName",
+						"type": "UTF8"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesDB')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -3771,38 +3847,6 @@
 						"type": "UTF8"
 					}
 				]
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPMBEW_FILE')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureDataLake",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "SAP/S4/OData"
-				},
-				"annotations": [],
-				"type": "Parquet",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobFSLocation",
-						"fileName": {
-							"value": "MBEW",
-							"type": "Expression"
-						},
-						"folderPath": "OData",
-						"fileSystem": "saps4data"
-					},
-					"compressionCodec": "gzip"
-				},
-				"schema": []
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
