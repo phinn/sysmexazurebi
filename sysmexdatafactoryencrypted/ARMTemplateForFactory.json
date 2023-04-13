@@ -926,7 +926,8 @@
 											"path": "[['Stzzu']"
 										},
 										"sink": {
-											"name": "Stzzu"
+											"name": "Stzzu",
+											"type": "String"
 										}
 									},
 									{
@@ -934,7 +935,8 @@
 											"path": "[['Btgew']"
 										},
 										"sink": {
-											"name": "Btgew"
+											"name": "Btgew",
+											"type": "String"
 										}
 									},
 									{
@@ -942,7 +944,8 @@
 											"path": "[['Ntgew']"
 										},
 										"sink": {
-											"name": "Ntgew"
+											"name": "Ntgew",
+											"type": "String"
 										}
 									},
 									{
@@ -950,7 +953,8 @@
 											"path": "[['Gewei']"
 										},
 										"sink": {
-											"name": "Gewei"
+											"name": "Gewei",
+											"type": "String"
 										}
 									},
 									{
@@ -958,7 +962,8 @@
 											"path": "[['Volum']"
 										},
 										"sink": {
-											"name": "Volum"
+											"name": "Volum",
+											"type": "String"
 										}
 									},
 									{
@@ -966,7 +971,8 @@
 											"path": "[['Voleh']"
 										},
 										"sink": {
-											"name": "Voleh"
+											"name": "Voleh",
+											"type": "String"
 										}
 									},
 									{
@@ -974,7 +980,8 @@
 											"path": "[['Anzpk']"
 										},
 										"sink": {
-											"name": "Anzpk"
+											"name": "Anzpk",
+											"type": "String"
 										}
 									},
 									{
@@ -982,7 +989,8 @@
 											"path": "[['Berot']"
 										},
 										"sink": {
-											"name": "Berot"
+											"name": "Berot",
+											"type": "String"
 										}
 									},
 									{
@@ -990,7 +998,8 @@
 											"path": "[['Lfuhr']"
 										},
 										"sink": {
-											"name": "Lfuhr"
+											"name": "Lfuhr",
+											"type": "String"
 										}
 									},
 									{
@@ -998,7 +1007,8 @@
 											"path": "[['Grulg']"
 										},
 										"sink": {
-											"name": "Grulg"
+											"name": "Grulg",
+											"type": "String"
 										}
 									},
 									{
@@ -1006,7 +1016,8 @@
 											"path": "[['Lstel']"
 										},
 										"sink": {
-											"name": "Lstel"
+											"name": "Lstel",
+											"type": "String"
 										}
 									},
 									{
@@ -1014,7 +1025,8 @@
 											"path": "[['Tragr']"
 										},
 										"sink": {
-											"name": "Tragr"
+											"name": "Tragr",
+											"type": "String"
 										}
 									},
 									{
@@ -1022,7 +1034,8 @@
 											"path": "[['Fkarv']"
 										},
 										"sink": {
-											"name": "Fkarv"
+											"name": "Fkarv",
+											"type": "String"
 										}
 									},
 									{
@@ -1030,7 +1043,8 @@
 											"path": "[['Fkdat']"
 										},
 										"sink": {
-											"name": "Fkdat"
+											"name": "Fkdat",
+											"type": "String"
 										}
 									},
 									{
@@ -1038,7 +1052,8 @@
 											"path": "[['Perfk']"
 										},
 										"sink": {
-											"name": "Perfk"
+											"name": "Perfk",
+											"type": "String"
 										}
 									},
 									{
@@ -1046,7 +1061,8 @@
 											"path": "[['Routa']"
 										},
 										"sink": {
-											"name": "Routa"
+											"name": "Routa",
+											"type": "String"
 										}
 									},
 									{
@@ -1054,7 +1070,8 @@
 											"path": "[['Stafo']"
 										},
 										"sink": {
-											"name": "Stafo"
+											"name": "Stafo",
+											"type": "String"
 										}
 									},
 									{
@@ -1062,7 +1079,8 @@
 											"path": "[['Kalsm']"
 										},
 										"sink": {
-											"name": "Kalsm"
+											"name": "Kalsm",
+											"type": "String"
 										}
 									},
 									{
@@ -1070,7 +1088,8 @@
 											"path": "[['Knumv']"
 										},
 										"sink": {
-											"name": "Knumv"
+											"name": "Knumv",
+											"type": "String"
 										}
 									},
 									{
@@ -1078,7 +1097,8 @@
 											"path": "[['Waerk']"
 										},
 										"sink": {
-											"name": "Waerk"
+											"name": "Waerk",
+											"type": "String"
 										}
 									},
 									{
@@ -1086,7 +1106,8 @@
 											"path": "[['Vkbur']"
 										},
 										"sink": {
-											"name": "Vkbur"
+											"name": "Vkbur",
+											"type": "String"
 										}
 									},
 									{
@@ -1094,7 +1115,8 @@
 											"path": "[['Vbeak']"
 										},
 										"sink": {
-											"name": "Vbeak"
+											"name": "Vbeak",
+											"type": "String"
 										}
 									},
 									{
@@ -1102,7 +1124,8 @@
 											"path": "[['Zukrl']"
 										},
 										"sink": {
-											"name": "Zukrl"
+											"name": "Zukrl",
+											"type": "String"
 										}
 									},
 									{
@@ -1110,7 +1133,8 @@
 											"path": "[['Verur']"
 										},
 										"sink": {
-											"name": "Verur"
+											"name": "Verur",
+											"type": "String"
 										}
 									},
 									{
@@ -1118,7 +1142,8 @@
 											"path": "[['Commn']"
 										},
 										"sink": {
-											"name": "Commn"
+											"name": "Commn",
+											"type": "String"
 										}
 									},
 									{
@@ -1126,7 +1151,8 @@
 											"path": "[['Stwae']"
 										},
 										"sink": {
-											"name": "Stwae"
+											"name": "Stwae",
+											"type": "String"
 										}
 									},
 									{
@@ -1134,7 +1160,8 @@
 											"path": "[['Stcur']"
 										},
 										"sink": {
-											"name": "Stcur"
+											"name": "Stcur",
+											"type": "String"
 										}
 									},
 									{
@@ -1142,7 +1169,8 @@
 											"path": "[['Exnum']"
 										},
 										"sink": {
-											"name": "Exnum"
+											"name": "Exnum",
+											"type": "String"
 										}
 									},
 									{
@@ -1150,7 +1178,8 @@
 											"path": "[['Aenam']"
 										},
 										"sink": {
-											"name": "Aenam"
+											"name": "Aenam",
+											"type": "String"
 										}
 									},
 									{
@@ -1158,7 +1187,8 @@
 											"path": "[['Aedat']"
 										},
 										"sink": {
-											"name": "Aedat"
+											"name": "Aedat",
+											"type": "String"
 										}
 									},
 									{
@@ -1166,7 +1196,8 @@
 											"path": "[['Lgnum']"
 										},
 										"sink": {
-											"name": "Lgnum"
+											"name": "Lgnum",
+											"type": "String"
 										}
 									},
 									{
@@ -1174,7 +1205,8 @@
 											"path": "[['Lispl']"
 										},
 										"sink": {
-											"name": "Lispl"
+											"name": "Lispl",
+											"type": "String"
 										}
 									},
 									{
@@ -1182,7 +1214,8 @@
 											"path": "[['Vkoiv']"
 										},
 										"sink": {
-											"name": "Vkoiv"
+											"name": "Vkoiv",
+											"type": "String"
 										}
 									},
 									{
@@ -1190,7 +1223,8 @@
 											"path": "[['Vtwiv']"
 										},
 										"sink": {
-											"name": "Vtwiv"
+											"name": "Vtwiv",
+											"type": "String"
 										}
 									},
 									{
@@ -1198,7 +1232,8 @@
 											"path": "[['Spaiv']"
 										},
 										"sink": {
-											"name": "Spaiv"
+											"name": "Spaiv",
+											"type": "String"
 										}
 									},
 									{
@@ -1206,7 +1241,8 @@
 											"path": "[['Fkaiv']"
 										},
 										"sink": {
-											"name": "Fkaiv"
+											"name": "Fkaiv",
+											"type": "String"
 										}
 									},
 									{
@@ -1214,7 +1250,8 @@
 											"path": "[['Pioiv']"
 										},
 										"sink": {
-											"name": "Pioiv"
+											"name": "Pioiv",
+											"type": "String"
 										}
 									},
 									{
@@ -1222,7 +1259,8 @@
 											"path": "[['Fkdiv']"
 										},
 										"sink": {
-											"name": "Fkdiv"
+											"name": "Fkdiv",
+											"type": "String"
 										}
 									},
 									{
@@ -1230,7 +1268,8 @@
 											"path": "[['Kuniv']"
 										},
 										"sink": {
-											"name": "Kuniv"
+											"name": "Kuniv",
+											"type": "String"
 										}
 									},
 									{
@@ -1238,7 +1277,8 @@
 											"path": "[['Kkber']"
 										},
 										"sink": {
-											"name": "Kkber"
+											"name": "Kkber",
+											"type": "String"
 										}
 									},
 									{
@@ -1246,7 +1286,8 @@
 											"path": "[['Knkli']"
 										},
 										"sink": {
-											"name": "Knkli"
+											"name": "Knkli",
+											"type": "String"
 										}
 									},
 									{
@@ -1254,7 +1295,8 @@
 											"path": "[['Grupp']"
 										},
 										"sink": {
-											"name": "Grupp"
+											"name": "Grupp",
+											"type": "String"
 										}
 									},
 									{
@@ -1262,7 +1304,8 @@
 											"path": "[['Sbgrp']"
 										},
 										"sink": {
-											"name": "Sbgrp"
+											"name": "Sbgrp",
+											"type": "String"
 										}
 									},
 									{
@@ -1270,7 +1313,8 @@
 											"path": "[['Ctlpc']"
 										},
 										"sink": {
-											"name": "Ctlpc"
+											"name": "Ctlpc",
+											"type": "String"
 										}
 									},
 									{
@@ -1278,7 +1322,8 @@
 											"path": "[['Cmwae']"
 										},
 										"sink": {
-											"name": "Cmwae"
+											"name": "Cmwae",
+											"type": "String"
 										}
 									},
 									{
@@ -1286,7 +1331,8 @@
 											"path": "[['Amtbl']"
 										},
 										"sink": {
-											"name": "Amtbl"
+											"name": "Amtbl",
+											"type": "String"
 										}
 									},
 									{
@@ -1294,7 +1340,8 @@
 											"path": "[['Bolnr']"
 										},
 										"sink": {
-											"name": "Bolnr"
+											"name": "Bolnr",
+											"type": "String"
 										}
 									},
 									{
@@ -1302,7 +1349,8 @@
 											"path": "[['Lifnr']"
 										},
 										"sink": {
-											"name": "Lifnr"
+											"name": "Lifnr",
+											"type": "String"
 										}
 									},
 									{
@@ -1310,7 +1358,8 @@
 											"path": "[['Traty']"
 										},
 										"sink": {
-											"name": "Traty"
+											"name": "Traty",
+											"type": "String"
 										}
 									},
 									{
@@ -1318,7 +1367,8 @@
 											"path": "[['Traid']"
 										},
 										"sink": {
-											"name": "Traid"
+											"name": "Traid",
+											"type": "String"
 										}
 									},
 									{
@@ -1326,7 +1376,8 @@
 											"path": "[['Cmfre']"
 										},
 										"sink": {
-											"name": "Cmfre"
+											"name": "Cmfre",
+											"type": "String"
 										}
 									},
 									{
@@ -1334,7 +1385,8 @@
 											"path": "[['Cmngv']"
 										},
 										"sink": {
-											"name": "Cmngv"
+											"name": "Cmngv",
+											"type": "String"
 										}
 									},
 									{
@@ -1342,7 +1394,8 @@
 											"path": "[['Xabln']"
 										},
 										"sink": {
-											"name": "Xabln"
+											"name": "Xabln",
+											"type": "String"
 										}
 									},
 									{
@@ -1350,7 +1403,8 @@
 											"path": "[['Bldat']"
 										},
 										"sink": {
-											"name": "Bldat"
+											"name": "Bldat",
+											"type": "String"
 										}
 									},
 									{
@@ -1358,7 +1412,8 @@
 											"path": "[['WadatIst']"
 										},
 										"sink": {
-											"name": "WadatIst"
+											"name": "WadatIst",
+											"type": "String"
 										}
 									},
 									{
@@ -1366,7 +1421,8 @@
 											"path": "[['Trspg']"
 										},
 										"sink": {
-											"name": "Trspg"
+											"name": "Trspg",
+											"type": "String"
 										}
 									},
 									{
@@ -1374,7 +1430,8 @@
 											"path": "[['Tpsid']"
 										},
 										"sink": {
-											"name": "Tpsid"
+											"name": "Tpsid",
+											"type": "String"
 										}
 									},
 									{
@@ -1382,7 +1439,8 @@
 											"path": "[['Lifex']"
 										},
 										"sink": {
-											"name": "Lifex"
+											"name": "Lifex",
+											"type": "String"
 										}
 									},
 									{
@@ -1390,7 +1448,8 @@
 											"path": "[['Ternr']"
 										},
 										"sink": {
-											"name": "Ternr"
+											"name": "Ternr",
+											"type": "String"
 										}
 									},
 									{
@@ -1398,7 +1457,8 @@
 											"path": "[['KalsmCh']"
 										},
 										"sink": {
-											"name": "KalsmCh"
+											"name": "KalsmCh",
+											"type": "String"
 										}
 									},
 									{
@@ -1406,7 +1466,8 @@
 											"path": "[['Klief']"
 										},
 										"sink": {
-											"name": "Klief"
+											"name": "Klief",
+											"type": "String"
 										}
 									},
 									{
@@ -1414,7 +1475,8 @@
 											"path": "[['Kalsp']"
 										},
 										"sink": {
-											"name": "Kalsp"
+											"name": "Kalsp",
+											"type": "String"
 										}
 									},
 									{
@@ -1422,7 +1484,8 @@
 											"path": "[['Knump']"
 										},
 										"sink": {
-											"name": "Knump"
+											"name": "Knump",
+											"type": "String"
 										}
 									},
 									{
@@ -1430,7 +1493,8 @@
 											"path": "[['Netwr']"
 										},
 										"sink": {
-											"name": "Netwr"
+											"name": "Netwr",
+											"type": "String"
 										}
 									},
 									{
@@ -1438,7 +1502,8 @@
 											"path": "[['Aulwe']"
 										},
 										"sink": {
-											"name": "Aulwe"
+											"name": "Aulwe",
+											"type": "String"
 										}
 									},
 									{
@@ -1446,7 +1511,8 @@
 											"path": "[['Werks']"
 										},
 										"sink": {
-											"name": "Werks"
+											"name": "Werks",
+											"type": "String"
 										}
 									},
 									{
@@ -1454,7 +1520,8 @@
 											"path": "[['Lcnum']"
 										},
 										"sink": {
-											"name": "Lcnum"
+											"name": "Lcnum",
+											"type": "String"
 										}
 									},
 									{
@@ -1462,7 +1529,8 @@
 											"path": "[['Abssc']"
 										},
 										"sink": {
-											"name": "Abssc"
+											"name": "Abssc",
+											"type": "String"
 										}
 									},
 									{
@@ -1470,7 +1538,8 @@
 											"path": "[['Kouhr']"
 										},
 										"sink": {
-											"name": "Kouhr"
+											"name": "Kouhr",
+											"type": "String"
 										}
 									},
 									{
@@ -1478,7 +1547,8 @@
 											"path": "[['Tduhr']"
 										},
 										"sink": {
-											"name": "Tduhr"
+											"name": "Tduhr",
+											"type": "String"
 										}
 									},
 									{
@@ -1486,7 +1556,8 @@
 											"path": "[['Lduhr']"
 										},
 										"sink": {
-											"name": "Lduhr"
+											"name": "Lduhr",
+											"type": "String"
 										}
 									},
 									{
@@ -1494,7 +1565,8 @@
 											"path": "[['Wauhr']"
 										},
 										"sink": {
-											"name": "Wauhr"
+											"name": "Wauhr",
+											"type": "String"
 										}
 									},
 									{
@@ -1502,7 +1574,8 @@
 											"path": "[['Lgtor']"
 										},
 										"sink": {
-											"name": "Lgtor"
+											"name": "Lgtor",
+											"type": "String"
 										}
 									},
 									{
@@ -1510,7 +1583,8 @@
 											"path": "[['Lgbzo']"
 										},
 										"sink": {
-											"name": "Lgbzo"
+											"name": "Lgbzo",
+											"type": "String"
 										}
 									},
 									{
@@ -1518,7 +1592,8 @@
 											"path": "[['Akwae']"
 										},
 										"sink": {
-											"name": "Akwae"
+											"name": "Akwae",
+											"type": "String"
 										}
 									},
 									{
@@ -1526,7 +1601,8 @@
 											"path": "[['Akkur']"
 										},
 										"sink": {
-											"name": "Akkur"
+											"name": "Akkur",
+											"type": "String"
 										}
 									},
 									{
@@ -1534,7 +1610,8 @@
 											"path": "[['Akprz']"
 										},
 										"sink": {
-											"name": "Akprz"
+											"name": "Akprz",
+											"type": "String"
 										}
 									},
 									{
@@ -1542,7 +1619,8 @@
 											"path": "[['Proli']"
 										},
 										"sink": {
-											"name": "Proli"
+											"name": "Proli",
+											"type": "String"
 										}
 									},
 									{
@@ -1550,7 +1628,8 @@
 											"path": "[['Xblnr']"
 										},
 										"sink": {
-											"name": "Xblnr"
+											"name": "Xblnr",
+											"type": "String"
 										}
 									},
 									{
@@ -1558,7 +1637,8 @@
 											"path": "[['Handle']"
 										},
 										"sink": {
-											"name": "Handle"
+											"name": "Handle",
+											"type": "String"
 										}
 									},
 									{
@@ -1566,7 +1646,8 @@
 											"path": "[['Tsegfl']"
 										},
 										"sink": {
-											"name": "Tsegfl"
+											"name": "Tsegfl",
+											"type": "String"
 										}
 									},
 									{
@@ -1574,7 +1655,8 @@
 											"path": "[['Tsegtp']"
 										},
 										"sink": {
-											"name": "Tsegtp"
+											"name": "Tsegtp",
+											"type": "String"
 										}
 									},
 									{
@@ -1582,7 +1664,8 @@
 											"path": "[['Tzonis']"
 										},
 										"sink": {
-											"name": "Tzonis"
+											"name": "Tzonis",
+											"type": "String"
 										}
 									},
 									{
@@ -1590,7 +1673,8 @@
 											"path": "[['Tzonrc']"
 										},
 										"sink": {
-											"name": "Tzonrc"
+											"name": "Tzonrc",
+											"type": "String"
 										}
 									},
 									{
@@ -1598,7 +1682,8 @@
 											"path": "[['ContDg']"
 										},
 										"sink": {
-											"name": "ContDg"
+											"name": "ContDg",
+											"type": "String"
 										}
 									},
 									{
