@@ -257,6 +257,314 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "CopyView_MDM_CustomerAnnualContract",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "SqlServerSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "ParquetSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "ParquetWriteSettings"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "PriceTypeName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "PriceTypeName",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "DealerName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "DealerName",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "RelatedDealer",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "RelatedDealer",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "OldDealerName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "OldDealerName",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "DealerNo",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "DealerNo",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "OA_SN",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "OA_SN",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "DealerType",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "DealerType",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "ServiceType",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "ServiceType",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "FiscalYear",
+											"type": "Decimal",
+											"physicalType": "decimal",
+											"scale": 0,
+											"precision": 4
+										},
+										"sink": {
+											"name": "FiscalYear",
+											"type": "Decimal",
+											"physicalType": "DECIMAL"
+										}
+									},
+									{
+										"source": {
+											"name": "DeletionFlag",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "DeletionFlag",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "PriceTypeNo",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "PriceTypeNo",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "ContractStatus",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "ContractStatus",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "ModifyType",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "ModifyType",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "ValidateFrom",
+											"type": "DateTime",
+											"physicalType": "datetime"
+										},
+										"sink": {
+											"name": "ValidateFrom",
+											"type": "DateTime",
+											"physicalType": "INT_96"
+										}
+									},
+									{
+										"source": {
+											"name": "ValidateTo",
+											"type": "DateTime",
+											"physicalType": "datetime"
+										},
+										"sink": {
+											"name": "ValidateTo",
+											"type": "DateTime",
+											"physicalType": "INT_96"
+										}
+									},
+									{
+										"source": {
+											"name": "DealerNoS4",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "DealerNoS4",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "CreatedDate",
+											"type": "DateTime",
+											"physicalType": "datetime"
+										},
+										"sink": {
+											"name": "CreatedDate",
+											"type": "DateTime",
+											"physicalType": "INT_96"
+										}
+									},
+									{
+										"source": {
+											"name": "ModifiedDate",
+											"type": "DateTime",
+											"physicalType": "datetime"
+										},
+										"sink": {
+											"name": "ModifiedDate",
+											"type": "DateTime",
+											"physicalType": "INT_96"
+										}
+									},
+									{
+										"source": {
+											"name": "Applier",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "Applier",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "SalesArea",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "SalesArea",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									},
+									{
+										"source": {
+											"name": "SalesOffice",
+											"type": "String",
+											"physicalType": "nvarchar"
+										},
+										"sink": {
+											"name": "SalesOffice",
+											"type": "String",
+											"physicalType": "UTF8"
+										}
+									}
+								],
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_OA_CustomerAnnualContract",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_OA_CustomerAnnualContract",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
 					}
 				],
 				"policy": {
@@ -270,7 +578,9 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SourceDataset_OA_CustomerSalesRegion')]",
-				"[concat(variables('factoryId'), '/datasets/DestinationDataset_OA_CustomerSalesRegion')]"
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_OA_CustomerSalesRegion')]",
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_OA_CustomerAnnualContract')]",
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_OA_CustomerAnnualContract')]"
 			]
 		},
 		{
@@ -16923,6 +17233,82 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_OA_CustomerAnnualContract')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "OA"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "View_MDM_CustomerAnnualContract",
+						"folderPath": "mdm",
+						"fileSystem": "oasystem"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": [
+					{
+						"name": "OANo",
+						"type": "UTF8"
+					},
+					{
+						"name": "FiscalYear",
+						"type": "DECIMAL",
+						"precision": 4,
+						"scale": 0
+					},
+					{
+						"name": "CustomerNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "CustomerNoS4",
+						"type": "UTF8"
+					},
+					{
+						"name": "CustomerName",
+						"type": "UTF8"
+					},
+					{
+						"name": "CustomerRelated",
+						"type": "UTF8"
+					},
+					{
+						"name": "ProvinceName",
+						"type": "UTF8"
+					},
+					{
+						"name": "CityName",
+						"type": "UTF8"
+					},
+					{
+						"name": "DistrictName",
+						"type": "UTF8"
+					},
+					{
+						"name": "ProductLineNo",
+						"type": "UTF8"
+					},
+					{
+						"name": "ProductLineName",
+						"type": "UTF8"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_OA_CustomerSalesRegion')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -22279,6 +22665,125 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/mdm_db')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_OA_CustomerAnnualContract')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "oa_db",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "OA"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "PriceTypeName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DealerName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RelatedDealer",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OldDealerName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DealerNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OA_SN",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DealerType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ServiceType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FiscalYear",
+						"type": "decimal",
+						"precision": 4,
+						"scale": 0
+					},
+					{
+						"name": "DeletionFlag",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PriceTypeNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ContractStatus",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ModifyType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ValidateFrom",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "ValidateTo",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "DealerNoS4",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CreatedDate",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "ModifiedDate",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "Applier",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesArea",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesOffice",
+						"type": "nvarchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "View_MDM_CustomerAnnualContract_All"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/oa_db')]"
 			]
 		},
 		{
