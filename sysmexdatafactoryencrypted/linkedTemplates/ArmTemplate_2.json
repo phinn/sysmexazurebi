@@ -13,6 +13,30 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPEKO')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_EKPO_SRV/EKPOSet?sap-client=110&$format=json&$filter=Ebeln eq '4100026484' or Ebeln eq '4100027177'",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMARA')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -17192,36 +17216,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/SyncS4_SAPDeliveries_pre4hour')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/triggerPerDay')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "ProductLineDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Hour",
-						"interval": 24,
-						"startTime": "2023-03-22T05:35:00",
-						"timeZone": "China Standard Time"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/ProductLineDataExtraction')]"
 			]
 		}
 	]

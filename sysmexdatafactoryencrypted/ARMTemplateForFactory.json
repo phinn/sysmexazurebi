@@ -22930,6 +22930,32 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPEKO')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_EKPO_SRV/EKPOSet?sap-client=110&$format=json&$filter=Ebeln eq '4100026484' or Ebeln eq '4100027177'",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SAPOData')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMARA')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
