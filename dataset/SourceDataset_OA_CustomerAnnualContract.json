@@ -1,0 +1,114 @@
+{
+	"name": "SourceDataset_OA_CustomerAnnualContract",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "oa_db",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "OA"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "PriceTypeName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DealerName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RelatedDealer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OldDealerName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DealerNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OA_SN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DealerType",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ServiceType",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FiscalYear",
+				"type": "decimal",
+				"precision": 4,
+				"scale": 0
+			},
+			{
+				"name": "DeletionFlag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PriceTypeNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ContractStatus",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ModifyType",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ValidateFrom",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ValidateTo",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DealerNoS4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CreatedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Applier",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SalesArea",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SalesOffice",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "View_MDM_CustomerAnnualContract_All"
+		}
+	}
+}
