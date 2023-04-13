@@ -1,0 +1,22 @@
+{
+	"name": "SourceDataset_SAPEKO",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/sap/opu/odata/sap/ZPTP_GBL_API_EKPO_SRV/EKPOSet?sap-client=110&$format=json&$filter=Ebeln eq '4100026484' or Ebeln eq '4100027177'",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
