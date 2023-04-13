@@ -1,0 +1,66 @@
+{
+	"name": "SourceDataset_OA_CustomerSalesRegion",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "oa_db",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "OA"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "OANo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FiscalYear",
+				"type": "decimal",
+				"precision": 4,
+				"scale": 0
+			},
+			{
+				"name": "CustomerNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CustomerNoS4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CustomerName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CustomerRelated",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ProvinceName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CityName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DistrictName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ProductLineNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ProductLineName",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "View_MDM_CustomerSalesRegionFromRiskControlTable"
+		}
+	}
+}

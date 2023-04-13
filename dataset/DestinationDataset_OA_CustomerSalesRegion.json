@@ -1,0 +1,71 @@
+{
+	"name": "DestinationDataset_OA_CustomerSalesRegion",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "OA"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "View_MDM_CustomerSalesRegion",
+				"folderPath": "mdm",
+				"fileSystem": "oasystem"
+			},
+			"compressionCodec": "gzip"
+		},
+		"schema": [
+			{
+				"name": "OANo",
+				"type": "UTF8"
+			},
+			{
+				"name": "FiscalYear",
+				"type": "DECIMAL",
+				"precision": 4,
+				"scale": 0
+			},
+			{
+				"name": "CustomerNo",
+				"type": "UTF8"
+			},
+			{
+				"name": "CustomerNoS4",
+				"type": "UTF8"
+			},
+			{
+				"name": "CustomerName",
+				"type": "UTF8"
+			},
+			{
+				"name": "CustomerRelated",
+				"type": "UTF8"
+			},
+			{
+				"name": "ProvinceName",
+				"type": "UTF8"
+			},
+			{
+				"name": "CityName",
+				"type": "UTF8"
+			},
+			{
+				"name": "DistrictName",
+				"type": "UTF8"
+			},
+			{
+				"name": "ProductLineNo",
+				"type": "UTF8"
+			},
+			{
+				"name": "ProductLineName",
+				"type": "UTF8"
+			}
+		]
+	}
+}
