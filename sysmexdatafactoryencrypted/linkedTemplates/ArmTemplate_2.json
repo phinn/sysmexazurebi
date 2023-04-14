@@ -3571,7 +3571,8 @@
 											"path": "[['Matkl']"
 										},
 										"sink": {
-											"name": "Matkl"
+											"name": "Matkl",
+											"type": "String"
 										}
 									},
 									{
