@@ -51,6 +51,12 @@
 					"referenceName": "PurchaseItemDataExtraction",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "DeliveryNotesItemDataExtraction",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
