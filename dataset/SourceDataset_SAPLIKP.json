@@ -12,7 +12,7 @@
 		"type": "RestResource",
 		"typeProperties": {
 			"relativeUrl": {
-				"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIKP_SRV/LIKPSet?sap-client=110&$format=json&$filter=Vbeln eq '5000000099' or Vbeln eq '5000000100'",
+				"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIKP_SRV/LIKPSet?sap-client=110&$format=json",
 				"type": "Expression"
 			}
 		},
