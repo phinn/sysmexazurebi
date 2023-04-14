@@ -36637,6 +36637,13 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "DeliveryNotesDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -36658,7 +36665,8 @@
 				"[concat(variables('factoryId'), '/pipelines/SalesItemDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/AnnualContractDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/PurchaseItemDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/DeliveryNotesItemDataExtraction')]"
+				"[concat(variables('factoryId'), '/pipelines/DeliveryNotesItemDataExtraction')]",
+				"[concat(variables('factoryId'), '/pipelines/DeliveryNotesDataExtraction')]"
 			]
 		},
 		{
