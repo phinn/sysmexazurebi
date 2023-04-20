@@ -7577,7 +7577,8 @@
 											"path": "[['Dataaging']"
 										},
 										"sink": {
-											"name": "Dataaging"
+											"name": "Dataaging",
+											"type": "String"
 										}
 									},
 									{
@@ -7585,7 +7586,8 @@
 											"path": "[['Accas']"
 										},
 										"sink": {
-											"name": "Accas"
+											"name": "Accas",
+											"type": "String"
 										}
 									},
 									{
@@ -7593,7 +7595,8 @@
 											"path": "[['AccasSender']"
 										},
 										"sink": {
-											"name": "AccasSender"
+											"name": "AccasSender",
+											"type": "String"
 										}
 									},
 									{
@@ -7601,7 +7604,8 @@
 											"path": "[['Accasty']"
 										},
 										"sink": {
-											"name": "Accasty"
+											"name": "Accasty",
+											"type": "String"
 										}
 									},
 									{
@@ -7609,7 +7613,8 @@
 											"path": "[['AccastySender']"
 										},
 										"sink": {
-											"name": "AccastySender"
+											"name": "AccastySender",
+											"type": "String"
 										}
 									},
 									{
@@ -7617,7 +7622,8 @@
 											"path": "[['AcdocCopaEewDummyPa']"
 										},
 										"sink": {
-											"name": "AcdocCopaEewDummyPa"
+											"name": "AcdocCopaEewDummyPa",
+											"type": "String"
 										}
 									},
 									{
@@ -7625,7 +7631,8 @@
 											"path": "[['AcdocEewDummy']"
 										},
 										"sink": {
-											"name": "AcdocEewDummy"
+											"name": "AcdocEewDummy",
+											"type": "String"
 										}
 									},
 									{
@@ -7633,7 +7640,8 @@
 											"path": "[['Acritmtype']"
 										},
 										"sink": {
-											"name": "Acritmtype"
+											"name": "Acritmtype",
+											"type": "String"
 										}
 									},
 									{
@@ -7641,7 +7649,8 @@
 											"path": "[['Acrlogsys']"
 										},
 										"sink": {
-											"name": "Acrlogsys"
+											"name": "Acrlogsys",
+											"type": "String"
 										}
 									},
 									{
@@ -7649,7 +7658,8 @@
 											"path": "[['AcrobjId']"
 										},
 										"sink": {
-											"name": "AcrobjId"
+											"name": "AcrobjId",
+											"type": "String"
 										}
 									},
 									{
@@ -7657,7 +7667,8 @@
 											"path": "[['Acrobjtype']"
 										},
 										"sink": {
-											"name": "Acrobjtype"
+											"name": "Acrobjtype",
+											"type": "String"
 										}
 									},
 									{
@@ -7665,7 +7676,8 @@
 											"path": "[['AcrsobjId']"
 										},
 										"sink": {
-											"name": "AcrsobjId"
+											"name": "AcrsobjId",
+											"type": "String"
 										}
 									},
 									{
@@ -7673,7 +7685,8 @@
 											"path": "[['Acrvaldat']"
 										},
 										"sink": {
-											"name": "Acrvaldat"
+											"name": "Acrvaldat",
+											"type": "String"
 										}
 									},
 									{
@@ -7681,7 +7694,8 @@
 											"path": "[['Afabe']"
 										},
 										"sink": {
-											"name": "Afabe"
+											"name": "Afabe",
+											"type": "String"
 										}
 									},
 									{
@@ -7689,7 +7703,8 @@
 											"path": "[['Anbwa']"
 										},
 										"sink": {
-											"name": "Anbwa"
+											"name": "Anbwa",
+											"type": "String"
 										}
 									},
 									{
@@ -7697,7 +7712,8 @@
 											"path": "[['Anlgr']"
 										},
 										"sink": {
-											"name": "Anlgr"
+											"name": "Anlgr",
+											"type": "String"
 										}
 									},
 									{
@@ -7705,7 +7721,8 @@
 											"path": "[['Anlgr2']"
 										},
 										"sink": {
-											"name": "Anlgr2"
+											"name": "Anlgr2",
+											"type": "String"
 										}
 									},
 									{
@@ -7713,7 +7730,8 @@
 											"path": "[['Anlkl']"
 										},
 										"sink": {
-											"name": "Anlkl"
+											"name": "Anlkl",
+											"type": "String"
 										}
 									},
 									{
@@ -7721,7 +7739,8 @@
 											"path": "[['Anln1']"
 										},
 										"sink": {
-											"name": "Anln1"
+											"name": "Anln1",
+											"type": "String"
 										}
 									},
 									{
@@ -7729,7 +7748,8 @@
 											"path": "[['Anln2']"
 										},
 										"sink": {
-											"name": "Anln2"
+											"name": "Anln2",
+											"type": "String"
 										}
 									},
 									{
@@ -7737,7 +7757,8 @@
 											"path": "[['Arbid']"
 										},
 										"sink": {
-											"name": "Arbid"
+											"name": "Arbid",
+											"type": "String"
 										}
 									},
 									{
@@ -7745,7 +7766,8 @@
 											"path": "[['ArtnrgPa']"
 										},
 										"sink": {
-											"name": "ArtnrgPa"
+											"name": "ArtnrgPa",
+											"type": "String"
 										}
 									},
 									{
@@ -7753,7 +7775,8 @@
 											"path": "[['Artpr']"
 										},
 										"sink": {
-											"name": "Artpr"
+											"name": "Artpr",
+											"type": "String"
 										}
 									},
 									{
@@ -7761,7 +7784,8 @@
 											"path": "[['AuartPa']"
 										},
 										"sink": {
-											"name": "AuartPa"
+											"name": "AuartPa",
+											"type": "String"
 										}
 									},
 									{
@@ -7769,7 +7793,8 @@
 											"path": "[['Aufnr']"
 										},
 										"sink": {
-											"name": "Aufnr"
+											"name": "Aufnr",
+											"type": "String"
 										}
 									},
 									{
@@ -7777,7 +7802,8 @@
 											"path": "[['AufnrOrg']"
 										},
 										"sink": {
-											"name": "AufnrOrg"
+											"name": "AufnrOrg",
+											"type": "String"
 										}
 									},
 									{
@@ -7785,7 +7811,8 @@
 											"path": "[['Aufps']"
 										},
 										"sink": {
-											"name": "Aufps"
+											"name": "Aufps",
+											"type": "String"
 										}
 									},
 									{
@@ -7793,7 +7820,8 @@
 											"path": "[['Augbl']"
 										},
 										"sink": {
-											"name": "Augbl"
+											"name": "Augbl",
+											"type": "String"
 										}
 									},
 									{
@@ -7801,7 +7829,8 @@
 											"path": "[['Augdt']"
 										},
 										"sink": {
-											"name": "Augdt"
+											"name": "Augdt",
+											"type": "String"
 										}
 									},
 									{
@@ -7809,7 +7838,8 @@
 											"path": "[['Auggj']"
 										},
 										"sink": {
-											"name": "Auggj"
+											"name": "Auggj",
+											"type": "String"
 										}
 									},
 									{
@@ -7817,7 +7847,8 @@
 											"path": "[['Autyp']"
 										},
 										"sink": {
-											"name": "Autyp"
+											"name": "Autyp",
+											"type": "String"
 										}
 									},
 									{
@@ -7825,7 +7856,8 @@
 											"path": "[['Awitem']"
 										},
 										"sink": {
-											"name": "Awitem"
+											"name": "Awitem",
+											"type": "String"
 										}
 									},
 									{
@@ -7833,7 +7865,8 @@
 											"path": "[['Awitgrp']"
 										},
 										"sink": {
-											"name": "Awitgrp"
+											"name": "Awitgrp",
+											"type": "String"
 										}
 									},
 									{
@@ -7841,7 +7874,8 @@
 											"path": "[['Aworg']"
 										},
 										"sink": {
-											"name": "Aworg"
+											"name": "Aworg",
+											"type": "String"
 										}
 									},
 									{
@@ -7849,7 +7883,8 @@
 											"path": "[['AworgRev']"
 										},
 										"sink": {
-											"name": "AworgRev"
+											"name": "AworgRev",
+											"type": "String"
 										}
 									},
 									{
@@ -7857,7 +7892,8 @@
 											"path": "[['Awref']"
 										},
 										"sink": {
-											"name": "Awref"
+											"name": "Awref",
+											"type": "String"
 										}
 									},
 									{
@@ -7865,7 +7901,8 @@
 											"path": "[['AwrefRev']"
 										},
 										"sink": {
-											"name": "AwrefRev"
+											"name": "AwrefRev",
+											"type": "String"
 										}
 									},
 									{
@@ -7873,7 +7910,8 @@
 											"path": "[['Awsys']"
 										},
 										"sink": {
-											"name": "Awsys"
+											"name": "Awsys",
+											"type": "String"
 										}
 									},
 									{
@@ -7881,7 +7919,8 @@
 											"path": "[['Awtyp']"
 										},
 										"sink": {
-											"name": "Awtyp"
+											"name": "Awtyp",
+											"type": "String"
 										}
 									},
 									{
@@ -7889,7 +7928,8 @@
 											"path": "[['AwtypRev']"
 										},
 										"sink": {
-											"name": "AwtypRev"
+											"name": "AwtypRev",
+											"type": "String"
 										}
 									},
 									{
@@ -7897,7 +7937,8 @@
 											"path": "[['BdgtAccount']"
 										},
 										"sink": {
-											"name": "BdgtAccount"
+											"name": "BdgtAccount",
+											"type": "String"
 										}
 									},
 									{
@@ -7905,7 +7946,8 @@
 											"path": "[['BdgtAccountCocode']"
 										},
 										"sink": {
-											"name": "BdgtAccountCocode"
+											"name": "BdgtAccountCocode",
+											"type": "String"
 										}
 									},
 									{
@@ -7913,7 +7955,8 @@
 											"path": "[['BdgtCnsmpnAmountType']"
 										},
 										"sink": {
-											"name": "BdgtCnsmpnAmountType"
+											"name": "BdgtCnsmpnAmountType",
+											"type": "String"
 										}
 									},
 									{
@@ -7921,7 +7964,8 @@
 											"path": "[['BdgtCnsmpnDate']"
 										},
 										"sink": {
-											"name": "BdgtCnsmpnDate"
+											"name": "BdgtCnsmpnDate",
+											"type": "String"
 										}
 									},
 									{
@@ -7929,7 +7973,8 @@
 											"path": "[['BdgtCnsmpnPeriod']"
 										},
 										"sink": {
-											"name": "BdgtCnsmpnPeriod"
+											"name": "BdgtCnsmpnPeriod",
+											"type": "String"
 										}
 									},
 									{
@@ -7937,7 +7982,8 @@
 											"path": "[['BdgtCnsmpnType']"
 										},
 										"sink": {
-											"name": "BdgtCnsmpnType"
+											"name": "BdgtCnsmpnType",
+											"type": "String"
 										}
 									},
 									{
@@ -7945,7 +7991,8 @@
 											"path": "[['BdgtCnsmpnYear']"
 										},
 										"sink": {
-											"name": "BdgtCnsmpnYear"
+											"name": "BdgtCnsmpnYear",
+											"type": "String"
 										}
 									},
 									{
@@ -7953,7 +8000,8 @@
 											"path": "[['BdgtRelevant']"
 										},
 										"sink": {
-											"name": "BdgtRelevant"
+											"name": "BdgtRelevant",
+											"type": "String"
 										}
 									},
 									{
@@ -7961,7 +8009,8 @@
 											"path": "[['Belnr']"
 										},
 										"sink": {
-											"name": "Belnr"
+											"name": "Belnr",
+											"type": "String"
 										}
 									},
 									{
@@ -7969,7 +8018,8 @@
 											"path": "[['Beltp']"
 										},
 										"sink": {
-											"name": "Beltp"
+											"name": "Beltp",
+											"type": "String"
 										}
 									},
 									{
@@ -7977,7 +8027,8 @@
 											"path": "[['Bemot']"
 										},
 										"sink": {
-											"name": "Bemot"
+											"name": "Bemot",
+											"type": "String"
 										}
 									},
 									{
@@ -7985,7 +8036,8 @@
 											"path": "[['Billm']"
 										},
 										"sink": {
-											"name": "Billm"
+											"name": "Billm",
+											"type": "String"
 										}
 									},
 									{
@@ -7993,7 +8045,8 @@
 											"path": "[['Blart']"
 										},
 										"sink": {
-											"name": "Blart"
+											"name": "Blart",
+											"type": "String"
 										}
 									},
 									{
@@ -8001,7 +8054,8 @@
 											"path": "[['Bldat']"
 										},
 										"sink": {
-											"name": "Bldat"
+											"name": "Bldat",
+											"type": "String"
 										}
 									},
 									{
@@ -8009,7 +8063,8 @@
 											"path": "[['Brsch']"
 										},
 										"sink": {
-											"name": "Brsch"
+											"name": "Brsch",
+											"type": "String"
 										}
 									},
 									{
@@ -8017,7 +8072,8 @@
 											"path": "[['Bschl']"
 										},
 										"sink": {
-											"name": "Bschl"
+											"name": "Bschl",
+											"type": "String"
 										}
 									},
 									{
@@ -8025,7 +8081,8 @@
 											"path": "[['Bsl']"
 										},
 										"sink": {
-											"name": "Bsl"
+											"name": "Bsl",
+											"type": "String"
 										}
 									},
 									{
@@ -8033,7 +8090,8 @@
 											"path": "[['Bslalt']"
 										},
 										"sink": {
-											"name": "Bslalt"
+											"name": "Bslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -8041,7 +8099,8 @@
 											"path": "[['Bslext']"
 										},
 										"sink": {
-											"name": "Bslext"
+											"name": "Bslext",
+											"type": "String"
 										}
 									},
 									{
@@ -8049,7 +8108,8 @@
 											"path": "[['Bstat']"
 										},
 										"sink": {
-											"name": "Bstat"
+											"name": "Bstat",
+											"type": "String"
 										}
 									},
 									{
@@ -8057,7 +8117,8 @@
 											"path": "[['Bttype']"
 										},
 										"sink": {
-											"name": "Bttype"
+											"name": "Bttype",
+											"type": "String"
 										}
 									},
 									{
@@ -8065,7 +8126,8 @@
 											"path": "[['Btype']"
 										},
 										"sink": {
-											"name": "Btype"
+											"name": "Btype",
+											"type": "String"
 										}
 									},
 									{
@@ -8073,7 +8135,8 @@
 											"path": "[['Budat']"
 										},
 										"sink": {
-											"name": "Budat"
+											"name": "Budat",
+											"type": "String"
 										}
 									},
 									{
@@ -8081,7 +8144,8 @@
 											"path": "[['BukrsSender']"
 										},
 										"sink": {
-											"name": "BukrsSender"
+											"name": "BukrsSender",
+											"type": "String"
 										}
 									},
 									{
@@ -8089,7 +8153,8 @@
 											"path": "[['Buzei']"
 										},
 										"sink": {
-											"name": "Buzei"
+											"name": "Buzei",
+											"type": "String"
 										}
 									},
 									{
@@ -8097,7 +8162,8 @@
 											"path": "[['Bwkey']"
 										},
 										"sink": {
-											"name": "Bwkey"
+											"name": "Bwkey",
+											"type": "String"
 										}
 									},
 									{
@@ -8105,7 +8171,8 @@
 											"path": "[['Bwstrat']"
 										},
 										"sink": {
-											"name": "Bwstrat"
+											"name": "Bwstrat",
+											"type": "String"
 										}
 									},
 									{
@@ -8113,7 +8180,8 @@
 											"path": "[['Bwtar']"
 										},
 										"sink": {
-											"name": "Bwtar"
+											"name": "Bwtar",
+											"type": "String"
 										}
 									},
 									{
@@ -8121,7 +8189,8 @@
 											"path": "[['Bzdat']"
 										},
 										"sink": {
-											"name": "Bzdat"
+											"name": "Bzdat",
+											"type": "String"
 										}
 									},
 									{
@@ -8129,7 +8198,8 @@
 											"path": "[['Bzirk']"
 										},
 										"sink": {
-											"name": "Bzirk"
+											"name": "Bzirk",
+											"type": "String"
 										}
 									},
 									{
@@ -8137,7 +8207,8 @@
 											"path": "[['Cbobjnr']"
 										},
 										"sink": {
-											"name": "Cbobjnr"
+											"name": "Cbobjnr",
+											"type": "String"
 										}
 									},
 									{
@@ -8145,7 +8216,8 @@
 											"path": "[['Cbracct']"
 										},
 										"sink": {
-											"name": "Cbracct"
+											"name": "Cbracct",
+											"type": "String"
 										}
 									},
 									{
@@ -8153,7 +8225,8 @@
 											"path": "[['Cbrunid']"
 										},
 										"sink": {
-											"name": "Cbrunid"
+											"name": "Cbrunid",
+											"type": "String"
 										}
 									},
 									{
@@ -8161,7 +8234,8 @@
 											"path": "[['ChargPa']"
 										},
 										"sink": {
-											"name": "ChargPa"
+											"name": "ChargPa",
+											"type": "String"
 										}
 									},
 									{
@@ -8169,7 +8243,8 @@
 											"path": "[['ClosingRunId']"
 										},
 										"sink": {
-											"name": "ClosingRunId"
+											"name": "ClosingRunId",
+											"type": "String"
 										}
 									},
 									{
@@ -8177,7 +8252,8 @@
 											"path": "[['CoAccastyN1']"
 										},
 										"sink": {
-											"name": "CoAccastyN1"
+											"name": "CoAccastyN1",
+											"type": "String"
 										}
 									},
 									{
@@ -8185,7 +8261,8 @@
 											"path": "[['CoAccastyN2']"
 										},
 										"sink": {
-											"name": "CoAccastyN2"
+											"name": "CoAccastyN2",
+											"type": "String"
 										}
 									},
 									{
@@ -8193,7 +8270,8 @@
 											"path": "[['CoAccastyN3']"
 										},
 										"sink": {
-											"name": "CoAccastyN3"
+											"name": "CoAccastyN3",
+											"type": "String"
 										}
 									},
 									{
@@ -8201,7 +8279,8 @@
 											"path": "[['CoBeknz']"
 										},
 										"sink": {
-											"name": "CoBeknz"
+											"name": "CoBeknz",
+											"type": "String"
 										}
 									},
 									{
@@ -8209,7 +8288,8 @@
 											"path": "[['CoBelkz']"
 										},
 										"sink": {
-											"name": "CoBelkz"
+											"name": "CoBelkz",
+											"type": "String"
 										}
 									},
 									{
@@ -8217,7 +8297,8 @@
 											"path": "[['CoBelnr']"
 										},
 										"sink": {
-											"name": "CoBelnr"
+											"name": "CoBelnr",
+											"type": "String"
 										}
 									},
 									{
@@ -8225,7 +8306,8 @@
 											"path": "[['CoBuzei']"
 										},
 										"sink": {
-											"name": "CoBuzei"
+											"name": "CoBuzei",
+											"type": "String"
 										}
 									},
 									{
@@ -8233,7 +8315,8 @@
 											"path": "[['CoBuzei1']"
 										},
 										"sink": {
-											"name": "CoBuzei1"
+											"name": "CoBuzei1",
+											"type": "String"
 										}
 									},
 									{
@@ -8241,7 +8324,8 @@
 											"path": "[['CoBuzei2']"
 										},
 										"sink": {
-											"name": "CoBuzei2"
+											"name": "CoBuzei2",
+											"type": "String"
 										}
 									},
 									{
@@ -8249,7 +8333,8 @@
 											"path": "[['CoBuzei5']"
 										},
 										"sink": {
-											"name": "CoBuzei5"
+											"name": "CoBuzei5",
+											"type": "String"
 										}
 									},
 									{
@@ -8257,7 +8342,8 @@
 											"path": "[['CoBuzei6']"
 										},
 										"sink": {
-											"name": "CoBuzei6"
+											"name": "CoBuzei6",
+											"type": "String"
 										}
 									},
 									{
@@ -8265,7 +8351,8 @@
 											"path": "[['CoBuzei7']"
 										},
 										"sink": {
-											"name": "CoBuzei7"
+											"name": "CoBuzei7",
+											"type": "String"
 										}
 									},
 									{
@@ -8273,7 +8360,8 @@
 											"path": "[['CoMefbtr']"
 										},
 										"sink": {
-											"name": "CoMefbtr"
+											"name": "CoMefbtr",
+											"type": "String"
 										}
 									},
 									{
@@ -8281,7 +8369,8 @@
 											"path": "[['CoMegbtr']"
 										},
 										"sink": {
-											"name": "CoMegbtr"
+											"name": "CoMegbtr",
+											"type": "String"
 										}
 									},
 									{
@@ -8289,7 +8378,8 @@
 											"path": "[['CoMeinh']"
 										},
 										"sink": {
-											"name": "CoMeinh"
+											"name": "CoMeinh",
+											"type": "String"
 										}
 									},
 									{
@@ -8297,7 +8387,8 @@
 											"path": "[['CoOsl']"
 										},
 										"sink": {
-											"name": "CoOsl"
+											"name": "CoOsl",
+											"type": "String"
 										}
 									},
 									{
@@ -8305,7 +8396,8 @@
 											"path": "[['CoRefbz']"
 										},
 										"sink": {
-											"name": "CoRefbz"
+											"name": "CoRefbz",
+											"type": "String"
 										}
 									},
 									{
@@ -8313,7 +8405,8 @@
 											"path": "[['CoRefbz1']"
 										},
 										"sink": {
-											"name": "CoRefbz1"
+											"name": "CoRefbz1",
+											"type": "String"
 										}
 									},
 									{
@@ -8321,7 +8414,8 @@
 											"path": "[['CoRefbz2']"
 										},
 										"sink": {
-											"name": "CoRefbz2"
+											"name": "CoRefbz2",
+											"type": "String"
 										}
 									},
 									{
@@ -8329,7 +8423,8 @@
 											"path": "[['CoRefbz5']"
 										},
 										"sink": {
-											"name": "CoRefbz5"
+											"name": "CoRefbz5",
+											"type": "String"
 										}
 									},
 									{
@@ -8337,7 +8432,8 @@
 											"path": "[['CoRefbz6']"
 										},
 										"sink": {
-											"name": "CoRefbz6"
+											"name": "CoRefbz6",
+											"type": "String"
 										}
 									},
 									{
@@ -8345,7 +8441,8 @@
 											"path": "[['CoRefbz7']"
 										},
 										"sink": {
-											"name": "CoRefbz7"
+											"name": "CoRefbz7",
+											"type": "String"
 										}
 									},
 									{
@@ -8353,7 +8450,8 @@
 											"path": "[['CoZlenr']"
 										},
 										"sink": {
-											"name": "CoZlenr"
+											"name": "CoZlenr",
+											"type": "String"
 										}
 									},
 									{
@@ -8361,7 +8459,8 @@
 											"path": "[['CocoNum']"
 										},
 										"sink": {
-											"name": "CocoNum"
+											"name": "CocoNum",
+											"type": "String"
 										}
 									},
 									{
@@ -8369,7 +8468,8 @@
 											"path": "[['Csl']"
 										},
 										"sink": {
-											"name": "Csl"
+											"name": "Csl",
+											"type": "String"
 										}
 									},
 									{
@@ -8377,7 +8477,8 @@
 											"path": "[['Cslalt']"
 										},
 										"sink": {
-											"name": "Cslalt"
+											"name": "Cslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -8385,7 +8486,8 @@
 											"path": "[['Cslext']"
 										},
 										"sink": {
-											"name": "Cslext"
+											"name": "Cslext",
+											"type": "String"
 										}
 									},
 									{
@@ -8393,7 +8495,8 @@
 											"path": "[['Dabrz']"
 										},
 										"sink": {
-											"name": "Dabrz"
+											"name": "Dabrz",
+											"type": "String"
 										}
 									},
 									{
@@ -8401,7 +8504,8 @@
 											"path": "[['DeprPeriod']"
 										},
 										"sink": {
-											"name": "DeprPeriod"
+											"name": "DeprPeriod",
+											"type": "String"
 										}
 									},
 									{
@@ -8409,7 +8513,8 @@
 											"path": "[['Docln']"
 										},
 										"sink": {
-											"name": "Docln"
+											"name": "Docln",
+											"type": "String"
 										}
 									},
 									{
@@ -8417,7 +8522,8 @@
 											"path": "[['DocnrLd']"
 										},
 										"sink": {
-											"name": "DocnrLd"
+											"name": "DocnrLd",
+											"type": "String"
 										}
 									},
 									{
@@ -8425,7 +8531,8 @@
 											"path": "[['Drcrk']"
 										},
 										"sink": {
-											"name": "Drcrk"
+											"name": "Drcrk",
+											"type": "String"
 										}
 									},
 									{
@@ -8433,7 +8540,8 @@
 											"path": "[['Dsl']"
 										},
 										"sink": {
-											"name": "Dsl"
+											"name": "Dsl",
+											"type": "String"
 										}
 									},
 									{
@@ -8441,7 +8549,8 @@
 											"path": "[['Dslalt']"
 										},
 										"sink": {
-											"name": "Dslalt"
+											"name": "Dslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -8449,7 +8558,8 @@
 											"path": "[['Dslext']"
 										},
 										"sink": {
-											"name": "Dslext"
+											"name": "Dslext",
+											"type": "String"
 										}
 									},
 									{
@@ -8457,7 +8567,8 @@
 											"path": "[['DummyInclEewCobl']"
 										},
 										"sink": {
-											"name": "DummyInclEewCobl"
+											"name": "DummyInclEewCobl",
+											"type": "String"
 										}
 									},
 									{
@@ -8465,7 +8576,8 @@
 											"path": "[['DummyMrktSgmntEewPs']"
 										},
 										"sink": {
-											"name": "DummyMrktSgmntEewPs"
+											"name": "DummyMrktSgmntEewPs",
+											"type": "String"
 										}
 									},
 									{
@@ -8473,7 +8585,8 @@
 											"path": "[['Ebeln']"
 										},
 										"sink": {
-											"name": "Ebeln"
+											"name": "Ebeln",
+											"type": "String"
 										}
 									},
 									{
@@ -8481,7 +8594,8 @@
 											"path": "[['EbelnLogsys']"
 										},
 										"sink": {
-											"name": "EbelnLogsys"
+											"name": "EbelnLogsys",
+											"type": "String"
 										}
 									},
 									{
@@ -8489,7 +8603,8 @@
 											"path": "[['Ebelp']"
 										},
 										"sink": {
-											"name": "Ebelp"
+											"name": "Ebelp",
+											"type": "String"
 										}
 									},
 									{
@@ -8497,7 +8612,8 @@
 											"path": "[['Egrup']"
 										},
 										"sink": {
-											"name": "Egrup"
+											"name": "Egrup",
+											"type": "String"
 										}
 									},
 									{
@@ -8505,7 +8621,8 @@
 											"path": "[['Eprctr']"
 										},
 										"sink": {
-											"name": "Eprctr"
+											"name": "Eprctr",
+											"type": "String"
 										}
 									},
 									{
@@ -8513,7 +8630,8 @@
 											"path": "[['Equnr']"
 										},
 										"sink": {
-											"name": "Equnr"
+											"name": "Equnr",
+											"type": "String"
 										}
 									},
 									{
@@ -8521,7 +8639,8 @@
 											"path": "[['Erkrs']"
 										},
 										"sink": {
-											"name": "Erkrs"
+											"name": "Erkrs",
+											"type": "String"
 										}
 									},
 									{
@@ -8529,7 +8648,8 @@
 											"path": "[['Erlkz']"
 										},
 										"sink": {
-											"name": "Erlkz"
+											"name": "Erlkz",
+											"type": "String"
 										}
 									},
 									{
@@ -8537,7 +8657,8 @@
 											"path": "[['Esl']"
 										},
 										"sink": {
-											"name": "Esl"
+											"name": "Esl",
+											"type": "String"
 										}
 									},
 									{
@@ -8545,7 +8666,8 @@
 											"path": "[['Eslalt']"
 										},
 										"sink": {
-											"name": "Eslalt"
+											"name": "Eslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -8553,7 +8675,8 @@
 											"path": "[['Eslext']"
 										},
 										"sink": {
-											"name": "Eslext"
+											"name": "Eslext",
+											"type": "String"
 										}
 									},
 									{
@@ -8561,7 +8684,8 @@
 											"path": "[['Etype']"
 										},
 										"sink": {
-											"name": "Etype"
+											"name": "Etype",
+											"type": "String"
 										}
 									},
 									{
@@ -8569,7 +8693,8 @@
 											"path": "[['ExtwgPa']"
 										},
 										"sink": {
-											"name": "ExtwgPa"
+											"name": "ExtwgPa",
+											"type": "String"
 										}
 									},
 									{
@@ -8577,7 +8702,8 @@
 											"path": "[['Fbuda']"
 										},
 										"sink": {
-											"name": "Fbuda"
+											"name": "Fbuda",
+											"type": "String"
 										}
 									},
 									{
@@ -8585,7 +8711,8 @@
 											"path": "[['Fikrs']"
 										},
 										"sink": {
-											"name": "Fikrs"
+											"name": "Fikrs",
+											"type": "String"
 										}
 									},
 									{
@@ -8593,7 +8720,8 @@
 											"path": "[['Fiscyearper']"
 										},
 										"sink": {
-											"name": "Fiscyearper"
+											"name": "Fiscyearper",
+											"type": "String"
 										}
 									},
 									{
@@ -8601,7 +8729,8 @@
 											"path": "[['Fistl']"
 										},
 										"sink": {
-											"name": "Fistl"
+											"name": "Fistl",
+											"type": "String"
 										}
 									},
 									{
@@ -8609,7 +8738,8 @@
 											"path": "[['FkaraPa']"
 										},
 										"sink": {
-											"name": "FkaraPa"
+											"name": "FkaraPa",
+											"type": "String"
 										}
 									},
 									{
@@ -8617,7 +8747,8 @@
 											"path": "[['Fkart']"
 										},
 										"sink": {
-											"name": "Fkart"
+											"name": "Fkart",
+											"type": "String"
 										}
 									},
 									{
@@ -8625,7 +8756,8 @@
 											"path": "[['Fsl']"
 										},
 										"sink": {
-											"name": "Fsl"
+											"name": "Fsl",
+											"type": "String"
 										}
 									},
 									{
@@ -8633,7 +8765,8 @@
 											"path": "[['Fslalt']"
 										},
 										"sink": {
-											"name": "Fslalt"
+											"name": "Fslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -8641,7 +8774,8 @@
 											"path": "[['Fslext']"
 										},
 										"sink": {
-											"name": "Fslext"
+											"name": "Fslext",
+											"type": "String"
 										}
 									},
 									{
@@ -8649,7 +8783,8 @@
 											"path": "[['FupAction']"
 										},
 										"sink": {
-											"name": "FupAction"
+											"name": "FupAction",
+											"type": "String"
 										}
 									},
 									{
@@ -8657,7 +8792,8 @@
 											"path": "[['Gjahr']"
 										},
 										"sink": {
-											"name": "Gjahr"
+											"name": "Gjahr",
+											"type": "String"
 										}
 									},
 									{
@@ -8665,7 +8801,8 @@
 											"path": "[['Gkoar']"
 										},
 										"sink": {
-											"name": "Gkoar"
+											"name": "Gkoar",
+											"type": "String"
 										}
 									},
 									{
@@ -8673,7 +8810,8 @@
 											"path": "[['Gkont']"
 										},
 										"sink": {
-											"name": "Gkont"
+											"name": "Gkont",
+											"type": "String"
 										}
 									},
 									{
@@ -8681,7 +8819,8 @@
 											"path": "[['GlaccountType']"
 										},
 										"sink": {
-											"name": "GlaccountType"
+											"name": "GlaccountType",
+											"type": "String"
 										}
 									},
 									{
@@ -8689,7 +8828,8 @@
 											"path": "[['Gsl']"
 										},
 										"sink": {
-											"name": "Gsl"
+											"name": "Gsl",
+											"type": "String"
 										}
 									},
 									{
@@ -8697,7 +8837,8 @@
 											"path": "[['Gslalt']"
 										},
 										"sink": {
-											"name": "Gslalt"
+											"name": "Gslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -8705,7 +8846,8 @@
 											"path": "[['Gslext']"
 										},
 										"sink": {
-											"name": "Gslext"
+											"name": "Gslext",
+											"type": "String"
 										}
 									},
 									{
@@ -8713,7 +8855,8 @@
 											"path": "[['Hbkid']"
 										},
 										"sink": {
-											"name": "Hbkid"
+											"name": "Hbkid",
+											"type": "String"
 										}
 									},
 									{
@@ -8721,7 +8864,8 @@
 											"path": "[['Hkgrp']"
 										},
 										"sink": {
-											"name": "Hkgrp"
+											"name": "Hkgrp",
+											"type": "String"
 										}
 									},
 									{
@@ -8729,7 +8873,8 @@
 											"path": "[['Hktid']"
 										},
 										"sink": {
-											"name": "Hktid"
+											"name": "Hktid",
+											"type": "String"
 										}
 									},
 									{
@@ -8737,7 +8882,8 @@
 											"path": "[['Hpeinh']"
 										},
 										"sink": {
-											"name": "Hpeinh"
+											"name": "Hpeinh",
+											"type": "String"
 										}
 									},
 									{
@@ -8745,7 +8891,8 @@
 											"path": "[['Hpvprs']"
 										},
 										"sink": {
-											"name": "Hpvprs"
+											"name": "Hpvprs",
+											"type": "String"
 										}
 									},
 									{
@@ -8753,7 +8900,8 @@
 											"path": "[['Hrkft']"
 										},
 										"sink": {
-											"name": "Hrkft"
+											"name": "Hrkft",
+											"type": "String"
 										}
 									},
 									{
@@ -8761,7 +8909,8 @@
 											"path": "[['Hsalk3']"
 										},
 										"sink": {
-											"name": "Hsalk3"
+											"name": "Hsalk3",
+											"type": "String"
 										}
 									},
 									{
@@ -8769,7 +8918,8 @@
 											"path": "[['Hsalkv']"
 										},
 										"sink": {
-											"name": "Hsalkv"
+											"name": "Hsalkv",
+											"type": "String"
 										}
 									},
 									{
@@ -8777,7 +8927,8 @@
 											"path": "[['Hsl']"
 										},
 										"sink": {
-											"name": "Hsl"
+											"name": "Hsl",
+											"type": "String"
 										}
 									},
 									{
@@ -8785,7 +8936,8 @@
 											"path": "[['Hslalt']"
 										},
 										"sink": {
-											"name": "Hslalt"
+											"name": "Hslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -8793,7 +8945,8 @@
 											"path": "[['Hslext']"
 										},
 										"sink": {
-											"name": "Hslext"
+											"name": "Hslext",
+											"type": "String"
 										}
 									},
 									{
@@ -8801,7 +8954,8 @@
 											"path": "[['Hstprs']"
 										},
 										"sink": {
-											"name": "Hstprs"
+											"name": "Hstprs",
+											"type": "String"
 										}
 									},
 									{
@@ -8809,7 +8963,8 @@
 											"path": "[['Hvksal']"
 										},
 										"sink": {
-											"name": "Hvksal"
+											"name": "Hvksal",
+											"type": "String"
 										}
 									},
 									{
@@ -8817,7 +8972,8 @@
 											"path": "[['Hvkwrt']"
 										},
 										"sink": {
-											"name": "Hvkwrt"
+											"name": "Hvkwrt",
+											"type": "String"
 										}
 									},
 									{
@@ -8825,7 +8981,8 @@
 											"path": "[['Ilart']"
 										},
 										"sink": {
-											"name": "Ilart"
+											"name": "Ilart",
+											"type": "String"
 										}
 									},
 									{
@@ -8833,7 +8990,8 @@
 											"path": "[['InvMovCateg']"
 										},
 										"sink": {
-											"name": "InvMovCateg"
+											"name": "InvMovCateg",
+											"type": "String"
 										}
 									},
 									{
@@ -8841,7 +8999,8 @@
 											"path": "[['Istru']"
 										},
 										"sink": {
-											"name": "Istru"
+											"name": "Istru",
+											"type": "String"
 										}
 									},
 									{
@@ -8849,7 +9008,8 @@
 											"path": "[['Jvactivity']"
 										},
 										"sink": {
-											"name": "Jvactivity"
+											"name": "Jvactivity",
+											"type": "String"
 										}
 									},
 									{
@@ -8857,7 +9017,8 @@
 											"path": "[['Kalnr']"
 										},
 										"sink": {
-											"name": "Kalnr"
+											"name": "Kalnr",
+											"type": "String"
 										}
 									},
 									{
@@ -8865,7 +9026,8 @@
 											"path": "[['Kdauf']"
 										},
 										"sink": {
-											"name": "Kdauf"
+											"name": "Kdauf",
+											"type": "String"
 										}
 									},
 									{
@@ -8873,7 +9035,8 @@
 											"path": "[['Kdgrp']"
 										},
 										"sink": {
-											"name": "Kdgrp"
+											"name": "Kdgrp",
+											"type": "String"
 										}
 									},
 									{
@@ -8881,7 +9044,8 @@
 											"path": "[['Kdpos']"
 										},
 										"sink": {
-											"name": "Kdpos"
+											"name": "Kdpos",
+											"type": "String"
 										}
 									},
 									{
@@ -8889,7 +9053,8 @@
 											"path": "[['Kfsl']"
 										},
 										"sink": {
-											"name": "Kfsl"
+											"name": "Kfsl",
+											"type": "String"
 										}
 									},
 									{
@@ -8897,7 +9062,8 @@
 											"path": "[['Kfsl2']"
 										},
 										"sink": {
-											"name": "Kfsl2"
+											"name": "Kfsl2",
+											"type": "String"
 										}
 									},
 									{
@@ -8905,7 +9071,8 @@
 											"path": "[['Kfsl3']"
 										},
 										"sink": {
-											"name": "Kfsl3"
+											"name": "Kfsl3",
+											"type": "String"
 										}
 									},
 									{
@@ -8913,7 +9080,8 @@
 											"path": "[['KmmaklPa']"
 										},
 										"sink": {
-											"name": "KmmaklPa"
+											"name": "KmmaklPa",
+											"type": "String"
 										}
 									},
 									{
@@ -8921,7 +9089,8 @@
 											"path": "[['KmvtnrPa']"
 										},
 										"sink": {
-											"name": "KmvtnrPa"
+											"name": "KmvtnrPa",
+											"type": "String"
 										}
 									},
 									{
@@ -8929,7 +9098,8 @@
 											"path": "[['Koart']"
 										},
 										"sink": {
-											"name": "Koart"
+											"name": "Koart",
+											"type": "String"
 										}
 									},
 									{
@@ -8937,7 +9107,8 @@
 											"path": "[['Kokrs']"
 										},
 										"sink": {
-											"name": "Kokrs"
+											"name": "Kokrs",
+											"type": "String"
 										}
 									},
 									{
@@ -8945,7 +9116,8 @@
 											"path": "[['Konzs']"
 										},
 										"sink": {
-											"name": "Konzs"
+											"name": "Konzs",
+											"type": "String"
 										}
 									},
 									{
@@ -8953,7 +9125,8 @@
 											"path": "[['Kpeinh']"
 										},
 										"sink": {
-											"name": "Kpeinh"
+											"name": "Kpeinh",
+											"type": "String"
 										}
 									},
 									{
@@ -8961,7 +9134,8 @@
 											"path": "[['Kpvprs']"
 										},
 										"sink": {
-											"name": "Kpvprs"
+											"name": "Kpvprs",
+											"type": "String"
 										}
 									},
 									{
@@ -8969,7 +9143,8 @@
 											"path": "[['Ksalk3']"
 										},
 										"sink": {
-											"name": "Ksalk3"
+											"name": "Ksalk3",
+											"type": "String"
 										}
 									},
 									{
@@ -8977,7 +9152,8 @@
 											"path": "[['Ksalkv']"
 										},
 										"sink": {
-											"name": "Ksalkv"
+											"name": "Ksalkv",
+											"type": "String"
 										}
 									},
 									{
@@ -8985,7 +9161,8 @@
 											"path": "[['Ksl']"
 										},
 										"sink": {
-											"name": "Ksl"
+											"name": "Ksl",
+											"type": "String"
 										}
 									},
 									{
@@ -8993,7 +9170,8 @@
 											"path": "[['Kslalt']"
 										},
 										"sink": {
-											"name": "Kslalt"
+											"name": "Kslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -9001,7 +9179,8 @@
 											"path": "[['Kslext']"
 										},
 										"sink": {
-											"name": "Kslext"
+											"name": "Kslext",
+											"type": "String"
 										}
 									},
 									{
@@ -9009,7 +9188,8 @@
 											"path": "[['Kstprs']"
 										},
 										"sink": {
-											"name": "Kstprs"
+											"name": "Kstprs",
+											"type": "String"
 										}
 									},
 									{
@@ -9017,7 +9197,8 @@
 											"path": "[['Kstrg']"
 										},
 										"sink": {
-											"name": "Kstrg"
+											"name": "Kstrg",
+											"type": "String"
 										}
 									},
 									{
@@ -9025,7 +9206,8 @@
 											"path": "[['Ktogr']"
 										},
 										"sink": {
-											"name": "Ktogr"
+											"name": "Ktogr",
+											"type": "String"
 										}
 									},
 									{
@@ -9033,7 +9215,8 @@
 											"path": "[['Ktop2']"
 										},
 										"sink": {
-											"name": "Ktop2"
+											"name": "Ktop2",
+											"type": "String"
 										}
 									},
 									{
@@ -9041,7 +9224,8 @@
 											"path": "[['Ktopl']"
 										},
 										"sink": {
-											"name": "Ktopl"
+											"name": "Ktopl",
+											"type": "String"
 										}
 									},
 									{
@@ -9049,7 +9233,8 @@
 											"path": "[['Ktosl']"
 										},
 										"sink": {
-											"name": "Ktosl"
+											"name": "Ktosl",
+											"type": "String"
 										}
 									},
 									{
@@ -9057,7 +9242,8 @@
 											"path": "[['Kunnr']"
 										},
 										"sink": {
-											"name": "Kunnr"
+											"name": "Kunnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9065,7 +9251,8 @@
 											"path": "[['Kunre']"
 										},
 										"sink": {
-											"name": "Kunre"
+											"name": "Kunre",
+											"type": "String"
 										}
 									},
 									{
@@ -9073,7 +9260,8 @@
 											"path": "[['KunrgPa']"
 										},
 										"sink": {
-											"name": "KunrgPa"
+											"name": "KunrgPa",
+											"type": "String"
 										}
 									},
 									{
@@ -9081,7 +9269,8 @@
 											"path": "[['Kunwe']"
 										},
 										"sink": {
-											"name": "Kunwe"
+											"name": "Kunwe",
+											"type": "String"
 										}
 									},
 									{
@@ -9089,7 +9278,8 @@
 											"path": "[['Kzbws']"
 										},
 										"sink": {
-											"name": "Kzbws"
+											"name": "Kzbws",
+											"type": "String"
 										}
 									},
 									{
@@ -9097,7 +9287,8 @@
 											"path": "[['Land1']"
 										},
 										"sink": {
-											"name": "Land1"
+											"name": "Land1",
+											"type": "String"
 										}
 									},
 									{
@@ -9105,7 +9296,8 @@
 											"path": "[['Lbkum']"
 										},
 										"sink": {
-											"name": "Lbkum"
+											"name": "Lbkum",
+											"type": "String"
 										}
 									},
 									{
@@ -9113,7 +9305,8 @@
 											"path": "[['LgortPa']"
 										},
 										"sink": {
-											"name": "LgortPa"
+											"name": "LgortPa",
+											"type": "String"
 										}
 									},
 									{
@@ -9121,7 +9314,8 @@
 											"path": "[['Lifnr']"
 										},
 										"sink": {
-											"name": "Lifnr"
+											"name": "Lifnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9129,7 +9323,8 @@
 											"path": "[['Linetype']"
 										},
 										"sink": {
-											"name": "Linetype"
+											"name": "Linetype",
+											"type": "String"
 										}
 									},
 									{
@@ -9137,7 +9332,8 @@
 											"path": "[['Logsyso']"
 										},
 										"sink": {
-											"name": "Logsyso"
+											"name": "Logsyso",
+											"type": "String"
 										}
 									},
 									{
@@ -9145,7 +9341,8 @@
 											"path": "[['Logsysp']"
 										},
 										"sink": {
-											"name": "Logsysp"
+											"name": "Logsysp",
+											"type": "String"
 										}
 									},
 									{
@@ -9153,7 +9350,8 @@
 											"path": "[['Lokkt']"
 										},
 										"sink": {
-											"name": "Lokkt"
+											"name": "Lokkt",
+											"type": "String"
 										}
 									},
 									{
@@ -9161,7 +9359,8 @@
 											"path": "[['Lstar']"
 										},
 										"sink": {
-											"name": "Lstar"
+											"name": "Lstar",
+											"type": "String"
 										}
 									},
 									{
@@ -9169,7 +9368,8 @@
 											"path": "[['MatKdauf']"
 										},
 										"sink": {
-											"name": "MatKdauf"
+											"name": "MatKdauf",
+											"type": "String"
 										}
 									},
 									{
@@ -9177,7 +9377,8 @@
 											"path": "[['MatKdpos']"
 										},
 										"sink": {
-											"name": "MatKdpos"
+											"name": "MatKdpos",
+											"type": "String"
 										}
 									},
 									{
@@ -9185,7 +9386,8 @@
 											"path": "[['MatLifnr']"
 										},
 										"sink": {
-											"name": "MatLifnr"
+											"name": "MatLifnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9193,7 +9395,8 @@
 											"path": "[['MatPsPosid']"
 										},
 										"sink": {
-											"name": "MatPsPosid"
+											"name": "MatPsPosid",
+											"type": "String"
 										}
 									},
 									{
@@ -9201,7 +9404,8 @@
 											"path": "[['MatPspnr']"
 										},
 										"sink": {
-											"name": "MatPspnr"
+											"name": "MatPspnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9209,7 +9413,8 @@
 											"path": "[['Matkl']"
 										},
 										"sink": {
-											"name": "Matkl"
+											"name": "Matkl",
+											"type": "String"
 										}
 									},
 									{
@@ -9217,7 +9422,8 @@
 											"path": "[['MatklMm']"
 										},
 										"sink": {
-											"name": "MatklMm"
+											"name": "MatklMm",
+											"type": "String"
 										}
 									},
 									{
@@ -9225,7 +9431,8 @@
 											"path": "[['Matnr']"
 										},
 										"sink": {
-											"name": "Matnr"
+											"name": "Matnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9233,7 +9440,8 @@
 											"path": "[['MatnrCopa']"
 										},
 										"sink": {
-											"name": "MatnrCopa"
+											"name": "MatnrCopa",
+											"type": "String"
 										}
 									},
 									{
@@ -9241,7 +9449,8 @@
 											"path": "[['MatnrPa']"
 										},
 										"sink": {
-											"name": "MatnrPa"
+											"name": "MatnrPa",
+											"type": "String"
 										}
 									},
 									{
@@ -9249,7 +9458,8 @@
 											"path": "[['Maufnr']"
 										},
 										"sink": {
-											"name": "Maufnr"
+											"name": "Maufnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9257,7 +9467,8 @@
 											"path": "[['Measure']"
 										},
 										"sink": {
-											"name": "Measure"
+											"name": "Measure",
+											"type": "String"
 										}
 									},
 									{
@@ -9265,7 +9476,8 @@
 											"path": "[['Mfsl']"
 										},
 										"sink": {
-											"name": "Mfsl"
+											"name": "Mfsl",
+											"type": "String"
 										}
 									},
 									{
@@ -9273,7 +9485,8 @@
 											"path": "[['MigDocln']"
 										},
 										"sink": {
-											"name": "MigDocln"
+											"name": "MigDocln",
+											"type": "String"
 										}
 									},
 									{
@@ -9281,7 +9494,8 @@
 											"path": "[['MigSource']"
 										},
 										"sink": {
-											"name": "MigSource"
+											"name": "MigSource",
+											"type": "String"
 										}
 									},
 									{
@@ -9289,7 +9503,8 @@
 											"path": "[['Mlast']"
 										},
 										"sink": {
-											"name": "Mlast"
+											"name": "Mlast",
+											"type": "String"
 										}
 									},
 									{
@@ -9297,7 +9512,8 @@
 											"path": "[['Mlcateg']"
 										},
 										"sink": {
-											"name": "Mlcateg"
+											"name": "Mlcateg",
+											"type": "String"
 										}
 									},
 									{
@@ -9305,7 +9521,8 @@
 											"path": "[['Mlposnr']"
 										},
 										"sink": {
-											"name": "Mlposnr"
+											"name": "Mlposnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9313,7 +9530,8 @@
 											"path": "[['Mlptyp']"
 										},
 										"sink": {
-											"name": "Mlptyp"
+											"name": "Mlptyp",
+											"type": "String"
 										}
 									},
 									{
@@ -9321,7 +9539,8 @@
 											"path": "[['Movcat']"
 										},
 										"sink": {
-											"name": "Movcat"
+											"name": "Movcat",
+											"type": "String"
 										}
 									},
 									{
@@ -9329,7 +9548,8 @@
 											"path": "[['Msl']"
 										},
 										"sink": {
-											"name": "Msl"
+											"name": "Msl",
+											"type": "String"
 										}
 									},
 									{
@@ -9337,7 +9557,8 @@
 											"path": "[['Muvflg']"
 										},
 										"sink": {
-											"name": "Muvflg"
+											"name": "Muvflg",
+											"type": "String"
 										}
 									},
 									{
@@ -9345,7 +9566,8 @@
 											"path": "[['Mvgr1Pa']"
 										},
 										"sink": {
-											"name": "Mvgr1Pa"
+											"name": "Mvgr1Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -9353,7 +9575,8 @@
 											"path": "[['Mwskz']"
 										},
 										"sink": {
-											"name": "Mwskz"
+											"name": "Mwskz",
+											"type": "String"
 										}
 									},
 									{
@@ -9361,7 +9584,8 @@
 											"path": "[['Netdt']"
 										},
 										"sink": {
-											"name": "Netdt"
+											"name": "Netdt",
+											"type": "String"
 										}
 									},
 									{
@@ -9369,7 +9593,8 @@
 											"path": "[['Nplnr']"
 										},
 										"sink": {
-											"name": "Nplnr"
+											"name": "Nplnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9377,7 +9602,8 @@
 											"path": "[['NplnrVorgn']"
 										},
 										"sink": {
-											"name": "NplnrVorgn"
+											"name": "NplnrVorgn",
+											"type": "String"
 										}
 									},
 									{
@@ -9385,7 +9611,8 @@
 											"path": "[['Objnr']"
 										},
 										"sink": {
-											"name": "Objnr"
+											"name": "Objnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9393,7 +9620,8 @@
 											"path": "[['ObjnrHk']"
 										},
 										"sink": {
-											"name": "ObjnrHk"
+											"name": "ObjnrHk",
+											"type": "String"
 										}
 									},
 									{
@@ -9401,7 +9629,8 @@
 											"path": "[['ObsReason']"
 										},
 										"sink": {
-											"name": "ObsReason"
+											"name": "ObsReason",
+											"type": "String"
 										}
 									},
 									{
@@ -9409,7 +9638,8 @@
 											"path": "[['Opeinh']"
 										},
 										"sink": {
-											"name": "Opeinh"
+											"name": "Opeinh",
+											"type": "String"
 										}
 									},
 									{
@@ -9417,7 +9647,8 @@
 											"path": "[['Opvprs']"
 										},
 										"sink": {
-											"name": "Opvprs"
+											"name": "Opvprs",
+											"type": "String"
 										}
 									},
 									{
@@ -9425,7 +9656,8 @@
 											"path": "[['Osalk3']"
 										},
 										"sink": {
-											"name": "Osalk3"
+											"name": "Osalk3",
+											"type": "String"
 										}
 									},
 									{
@@ -9433,7 +9665,8 @@
 											"path": "[['Osalkv']"
 										},
 										"sink": {
-											"name": "Osalkv"
+											"name": "Osalkv",
+											"type": "String"
 										}
 									},
 									{
@@ -9441,7 +9674,8 @@
 											"path": "[['Osl']"
 										},
 										"sink": {
-											"name": "Osl"
+											"name": "Osl",
+											"type": "String"
 										}
 									},
 									{
@@ -9449,7 +9683,8 @@
 											"path": "[['Oslalt']"
 										},
 										"sink": {
-											"name": "Oslalt"
+											"name": "Oslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -9457,7 +9692,8 @@
 											"path": "[['Oslext']"
 										},
 										"sink": {
-											"name": "Oslext"
+											"name": "Oslext",
+											"type": "String"
 										}
 									},
 									{
@@ -9465,7 +9701,8 @@
 											"path": "[['Ostprs']"
 										},
 										"sink": {
-											"name": "Ostprs"
+											"name": "Ostprs",
+											"type": "String"
 										}
 									},
 									{
@@ -9473,7 +9710,8 @@
 											"path": "[['Overtimecat']"
 										},
 										"sink": {
-											"name": "Overtimecat"
+											"name": "Overtimecat",
+											"type": "String"
 										}
 									},
 									{
@@ -9481,7 +9719,8 @@
 											"path": "[['Paccas']"
 										},
 										"sink": {
-											"name": "Paccas"
+											"name": "Paccas",
+											"type": "String"
 										}
 									},
 									{
@@ -9489,7 +9728,8 @@
 											"path": "[['Paccasty']"
 										},
 										"sink": {
-											"name": "Paccasty"
+											"name": "Paccasty",
+											"type": "String"
 										}
 									},
 									{
@@ -9497,7 +9737,8 @@
 											"path": "[['Panl1']"
 										},
 										"sink": {
-											"name": "Panl1"
+											"name": "Panl1",
+											"type": "String"
 										}
 									},
 									{
@@ -9505,7 +9746,8 @@
 											"path": "[['Panl2']"
 										},
 										"sink": {
-											"name": "Panl2"
+											"name": "Panl2",
+											"type": "String"
 										}
 									},
 									{
@@ -9513,7 +9755,8 @@
 											"path": "[['Paobjnr']"
 										},
 										"sink": {
-											"name": "Paobjnr"
+											"name": "Paobjnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9521,7 +9764,8 @@
 											"path": "[['Parob1']"
 										},
 										"sink": {
-											"name": "Parob1"
+											"name": "Parob1",
+											"type": "String"
 										}
 									},
 									{
@@ -9529,7 +9773,8 @@
 											"path": "[['Parobsrc']"
 										},
 										"sink": {
-											"name": "Parobsrc"
+											"name": "Parobsrc",
+											"type": "String"
 										}
 									},
 									{
@@ -9537,7 +9782,8 @@
 											"path": "[['Paufnr']"
 										},
 										"sink": {
-											"name": "Paufnr"
+											"name": "Paufnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9545,7 +9791,8 @@
 											"path": "[['Pautyp']"
 										},
 										"sink": {
-											"name": "Pautyp"
+											"name": "Pautyp",
+											"type": "String"
 										}
 									},
 									{
@@ -9553,7 +9800,8 @@
 											"path": "[['Pbukrs']"
 										},
 										"sink": {
-											"name": "Pbukrs"
+											"name": "Pbukrs",
+											"type": "String"
 										}
 									},
 									{
@@ -9561,7 +9809,8 @@
 											"path": "[['Pdabrz']"
 										},
 										"sink": {
-											"name": "Pdabrz"
+											"name": "Pdabrz",
+											"type": "String"
 										}
 									},
 									{
@@ -9569,7 +9818,8 @@
 											"path": "[['Pegrup']"
 										},
 										"sink": {
-											"name": "Pegrup"
+											"name": "Pegrup",
+											"type": "String"
 										}
 									},
 									{
@@ -9577,7 +9827,8 @@
 											"path": "[['Perart']"
 										},
 										"sink": {
-											"name": "Perart"
+											"name": "Perart",
+											"type": "String"
 										}
 									},
 									{
@@ -9585,7 +9836,8 @@
 											"path": "[['Periv']"
 										},
 										"sink": {
-											"name": "Periv"
+											"name": "Periv",
+											"type": "String"
 										}
 									},
 									{
@@ -9593,7 +9845,8 @@
 											"path": "[['Pernr']"
 										},
 										"sink": {
-											"name": "Pernr"
+											"name": "Pernr",
+											"type": "String"
 										}
 									},
 									{
@@ -9601,7 +9854,8 @@
 											"path": "[['Pfsl']"
 										},
 										"sink": {
-											"name": "Pfsl"
+											"name": "Pfsl",
+											"type": "String"
 										}
 									},
 									{
@@ -9609,7 +9863,8 @@
 											"path": "[['Pfsl2']"
 										},
 										"sink": {
-											"name": "Pfsl2"
+											"name": "Pfsl2",
+											"type": "String"
 										}
 									},
 									{
@@ -9617,7 +9872,8 @@
 											"path": "[['Pfsl3']"
 										},
 										"sink": {
-											"name": "Pfsl3"
+											"name": "Pfsl3",
+											"type": "String"
 										}
 									},
 									{
@@ -9625,7 +9881,8 @@
 											"path": "[['Pkdauf']"
 										},
 										"sink": {
-											"name": "Pkdauf"
+											"name": "Pkdauf",
+											"type": "String"
 										}
 									},
 									{
@@ -9633,7 +9890,8 @@
 											"path": "[['Pkdpos']"
 										},
 										"sink": {
-											"name": "Pkdpos"
+											"name": "Pkdpos",
+											"type": "String"
 										}
 									},
 									{
@@ -9641,7 +9899,8 @@
 											"path": "[['Pkstrg']"
 										},
 										"sink": {
-											"name": "Pkstrg"
+											"name": "Pkstrg",
+											"type": "String"
 										}
 									},
 									{
@@ -9649,7 +9908,8 @@
 											"path": "[['PlannedPartsWork']"
 										},
 										"sink": {
-											"name": "PlannedPartsWork"
+											"name": "PlannedPartsWork",
+											"type": "String"
 										}
 									},
 									{
@@ -9657,7 +9917,8 @@
 											"path": "[['Plknz']"
 										},
 										"sink": {
-											"name": "Plknz"
+											"name": "Plknz",
+											"type": "String"
 										}
 									},
 									{
@@ -9665,7 +9926,8 @@
 											"path": "[['Plstar']"
 										},
 										"sink": {
-											"name": "Plstar"
+											"name": "Plstar",
+											"type": "String"
 										}
 									},
 									{
@@ -9673,7 +9935,8 @@
 											"path": "[['Pnplnr']"
 										},
 										"sink": {
-											"name": "Pnplnr"
+											"name": "Pnplnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9681,7 +9944,8 @@
 											"path": "[['PnplnrVorgn']"
 										},
 										"sink": {
-											"name": "PnplnrVorgn"
+											"name": "PnplnrVorgn",
+											"type": "String"
 										}
 									},
 									{
@@ -9689,7 +9953,8 @@
 											"path": "[['Pom']"
 										},
 										"sink": {
-											"name": "Pom"
+											"name": "Pom",
+											"type": "String"
 										}
 									},
 									{
@@ -9697,7 +9962,8 @@
 											"path": "[['Poper']"
 										},
 										"sink": {
-											"name": "Poper"
+											"name": "Poper",
+											"type": "String"
 										}
 									},
 									{
@@ -9705,7 +9971,8 @@
 											"path": "[['Ppaobjnr']"
 										},
 										"sink": {
-											"name": "Ppaobjnr"
+											"name": "Ppaobjnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9713,7 +9980,8 @@
 											"path": "[['Pprctr']"
 										},
 										"sink": {
-											"name": "Pprctr"
+											"name": "Pprctr",
+											"type": "String"
 										}
 									},
 									{
@@ -9721,7 +9989,8 @@
 											"path": "[['Pprznr']"
 										},
 										"sink": {
-											"name": "Pprznr"
+											"name": "Pprznr",
+											"type": "String"
 										}
 									},
 									{
@@ -9729,7 +9998,8 @@
 											"path": "[['PpsPosid']"
 										},
 										"sink": {
-											"name": "PpsPosid"
+											"name": "PpsPosid",
+											"type": "String"
 										}
 									},
 									{
@@ -9737,7 +10007,8 @@
 											"path": "[['PpsPrjPnr']"
 										},
 										"sink": {
-											"name": "PpsPrjPnr"
+											"name": "PpsPrjPnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9745,7 +10016,8 @@
 											"path": "[['PpsPspPnr']"
 										},
 										"sink": {
-											"name": "PpsPspPnr"
+											"name": "PpsPspPnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9753,7 +10025,8 @@
 											"path": "[['PpsPspid']"
 										},
 										"sink": {
-											"name": "PpsPspid"
+											"name": "PpsPspid",
+											"type": "String"
 										}
 									},
 									{
@@ -9761,7 +10034,8 @@
 											"path": "[['Prctr']"
 										},
 										"sink": {
-											"name": "Prctr"
+											"name": "Prctr",
+											"type": "String"
 										}
 									},
 									{
@@ -9769,7 +10043,8 @@
 											"path": "[['PrdhaPa']"
 										},
 										"sink": {
-											"name": "PrdhaPa"
+											"name": "PrdhaPa",
+											"type": "String"
 										}
 									},
 									{
@@ -9777,7 +10052,8 @@
 											"path": "[['PrecAwitem']"
 										},
 										"sink": {
-											"name": "PrecAwitem"
+											"name": "PrecAwitem",
+											"type": "String"
 										}
 									},
 									{
@@ -9785,7 +10061,8 @@
 											"path": "[['PrecAwmult']"
 										},
 										"sink": {
-											"name": "PrecAwmult"
+											"name": "PrecAwmult",
+											"type": "String"
 										}
 									},
 									{
@@ -9793,7 +10070,8 @@
 											"path": "[['PrecAworg']"
 										},
 										"sink": {
-											"name": "PrecAworg"
+											"name": "PrecAworg",
+											"type": "String"
 										}
 									},
 									{
@@ -9801,7 +10079,8 @@
 											"path": "[['PrecAwref']"
 										},
 										"sink": {
-											"name": "PrecAwref"
+											"name": "PrecAwref",
+											"type": "String"
 										}
 									},
 									{
@@ -9809,7 +10088,8 @@
 											"path": "[['PrecAwsys']"
 										},
 										"sink": {
-											"name": "PrecAwsys"
+											"name": "PrecAwsys",
+											"type": "String"
 										}
 									},
 									{
@@ -9817,7 +10097,8 @@
 											"path": "[['PrecAwtyp']"
 										},
 										"sink": {
-											"name": "PrecAwtyp"
+											"name": "PrecAwtyp",
+											"type": "String"
 										}
 									},
 									{
@@ -9825,7 +10106,8 @@
 											"path": "[['PrecBelnr']"
 										},
 										"sink": {
-											"name": "PrecBelnr"
+											"name": "PrecBelnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9833,7 +10115,8 @@
 											"path": "[['PrecBukrs']"
 										},
 										"sink": {
-											"name": "PrecBukrs"
+											"name": "PrecBukrs",
+											"type": "String"
 										}
 									},
 									{
@@ -9841,7 +10124,8 @@
 											"path": "[['PrecDocln']"
 										},
 										"sink": {
-											"name": "PrecDocln"
+											"name": "PrecDocln",
+											"type": "String"
 										}
 									},
 									{
@@ -9849,7 +10133,8 @@
 											"path": "[['PrecGjahr']"
 										},
 										"sink": {
-											"name": "PrecGjahr"
+											"name": "PrecGjahr",
+											"type": "String"
 										}
 									},
 									{
@@ -9857,7 +10142,8 @@
 											"path": "[['PrecSubta']"
 										},
 										"sink": {
-											"name": "PrecSubta"
+											"name": "PrecSubta",
+											"type": "String"
 										}
 									},
 									{
@@ -9865,7 +10151,8 @@
 											"path": "[['Precnnr']"
 										},
 										"sink": {
-											"name": "Precnnr"
+											"name": "Precnnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9873,7 +10160,8 @@
 											"path": "[['Priok']"
 										},
 										"sink": {
-											"name": "Priok"
+											"name": "Priok",
+											"type": "String"
 										}
 									},
 									{
@@ -9881,7 +10169,8 @@
 											"path": "[['ProdhPa']"
 										},
 										"sink": {
-											"name": "ProdhPa"
+											"name": "ProdhPa",
+											"type": "String"
 										}
 									},
 									{
@@ -9889,7 +10178,8 @@
 											"path": "[['Prodper']"
 										},
 										"sink": {
-											"name": "Prodper"
+											"name": "Prodper",
+											"type": "String"
 										}
 									},
 									{
@@ -9897,7 +10187,8 @@
 											"path": "[['ProzsPn']"
 										},
 										"sink": {
-											"name": "ProzsPn"
+											"name": "ProzsPn",
+											"type": "String"
 										}
 									},
 									{
@@ -9905,7 +10196,8 @@
 											"path": "[['Prznr']"
 										},
 										"sink": {
-											"name": "Prznr"
+											"name": "Prznr",
+											"type": "String"
 										}
 									},
 									{
@@ -9913,7 +10205,8 @@
 											"path": "[['PsPosid']"
 										},
 										"sink": {
-											"name": "PsPosid"
+											"name": "PsPosid",
+											"type": "String"
 										}
 									},
 									{
@@ -9921,7 +10214,8 @@
 											"path": "[['PsPrjPnr']"
 										},
 										"sink": {
-											"name": "PsPrjPnr"
+											"name": "PsPrjPnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9929,7 +10223,8 @@
 											"path": "[['PsPspPnr']"
 										},
 										"sink": {
-											"name": "PsPspPnr"
+											"name": "PsPspPnr",
+											"type": "String"
 										}
 									},
 									{
@@ -9937,7 +10232,8 @@
 											"path": "[['PsPspid']"
 										},
 										"sink": {
-											"name": "PsPspid"
+											"name": "PsPspid",
+											"type": "String"
 										}
 									},
 									{
@@ -9945,7 +10241,8 @@
 											"path": "[['Pscope']"
 										},
 										"sink": {
-											"name": "Pscope"
+											"name": "Pscope",
+											"type": "String"
 										}
 									},
 									{
@@ -9953,7 +10250,8 @@
 											"path": "[['Psegment']"
 										},
 										"sink": {
-											"name": "Psegment"
+											"name": "Psegment",
+											"type": "String"
 										}
 									},
 									{
@@ -9961,7 +10259,8 @@
 											"path": "[['Psempsl']"
 										},
 										"sink": {
-											"name": "Psempsl"
+											"name": "Psempsl",
+											"type": "String"
 										}
 									},
 									{
@@ -9969,7 +10268,8 @@
 											"path": "[['PserviceDocId']"
 										},
 										"sink": {
-											"name": "PserviceDocId"
+											"name": "PserviceDocId",
+											"type": "String"
 										}
 									},
 									{
@@ -9977,7 +10277,8 @@
 											"path": "[['PserviceDocItemId']"
 										},
 										"sink": {
-											"name": "PserviceDocItemId"
+											"name": "PserviceDocItemId",
+											"type": "String"
 										}
 									},
 									{
@@ -9985,7 +10286,8 @@
 											"path": "[['PserviceDocType']"
 										},
 										"sink": {
-											"name": "PserviceDocType"
+											"name": "PserviceDocType",
+											"type": "String"
 										}
 									},
 									{
@@ -9993,7 +10295,8 @@
 											"path": "[['Psgenr']"
 										},
 										"sink": {
-											"name": "Psgenr"
+											"name": "Psgenr",
+											"type": "String"
 										}
 									},
 									{
@@ -10001,7 +10304,8 @@
 											"path": "[['Psgrnr']"
 										},
 										"sink": {
-											"name": "Psgrnr"
+											"name": "Psgrnr",
+											"type": "String"
 										}
 									},
 									{
@@ -10009,7 +10313,8 @@
 											"path": "[['Psl']"
 										},
 										"sink": {
-											"name": "Psl"
+											"name": "Psl",
+											"type": "String"
 										}
 									},
 									{
@@ -10017,7 +10322,8 @@
 											"path": "[['Psl2']"
 										},
 										"sink": {
-											"name": "Psl2"
+											"name": "Psl2",
+											"type": "String"
 										}
 									},
 									{
@@ -10025,7 +10331,8 @@
 											"path": "[['Psl3']"
 										},
 										"sink": {
-											"name": "Psl3"
+											"name": "Psl3",
+											"type": "String"
 										}
 									},
 									{
@@ -10033,7 +10340,8 @@
 											"path": "[['Psmenr']"
 										},
 										"sink": {
-											"name": "Psmenr"
+											"name": "Psmenr",
+											"type": "String"
 										}
 									},
 									{
@@ -10041,7 +10349,8 @@
 											"path": "[['Psnksl']"
 										},
 										"sink": {
-											"name": "Psnksl"
+											"name": "Psnksl",
+											"type": "String"
 										}
 									},
 									{
@@ -10049,7 +10358,8 @@
 											"path": "[['PstyvPa']"
 										},
 										"sink": {
-											"name": "PstyvPa"
+											"name": "PstyvPa",
+											"type": "String"
 										}
 									},
 									{
@@ -10057,7 +10367,8 @@
 											"path": "[['Pswenr']"
 										},
 										"sink": {
-											"name": "Pswenr"
+											"name": "Pswenr",
+											"type": "String"
 										}
 									},
 									{
@@ -10065,7 +10376,8 @@
 											"path": "[['Pvname']"
 										},
 										"sink": {
-											"name": "Pvname"
+											"name": "Pvname",
+											"type": "String"
 										}
 									},
 									{
@@ -10073,7 +10385,8 @@
 											"path": "[['Qmnum']"
 										},
 										"sink": {
-											"name": "Qmnum"
+											"name": "Qmnum",
+											"type": "String"
 										}
 									},
 									{
@@ -10081,7 +10394,8 @@
 											"path": "[['Qsbvalt']"
 										},
 										"sink": {
-											"name": "Qsbvalt"
+											"name": "Qsbvalt",
+											"type": "String"
 										}
 									},
 									{
@@ -10089,7 +10403,8 @@
 											"path": "[['Qsprocess']"
 										},
 										"sink": {
-											"name": "Qsprocess"
+											"name": "Qsprocess",
+											"type": "String"
 										}
 									},
 									{
@@ -10097,7 +10412,8 @@
 											"path": "[['Quant1']"
 										},
 										"sink": {
-											"name": "Quant1"
+											"name": "Quant1",
+											"type": "String"
 										}
 									},
 									{
@@ -10105,7 +10421,8 @@
 											"path": "[['Quant2']"
 										},
 										"sink": {
-											"name": "Quant2"
+											"name": "Quant2",
+											"type": "String"
 										}
 									},
 									{
@@ -10113,7 +10430,8 @@
 											"path": "[['Quant3']"
 										},
 										"sink": {
-											"name": "Quant3"
+											"name": "Quant3",
+											"type": "String"
 										}
 									},
 									{
@@ -10121,7 +10439,8 @@
 											"path": "[['Qunit1']"
 										},
 										"sink": {
-											"name": "Qunit1"
+											"name": "Qunit1",
+											"type": "String"
 										}
 									},
 									{
@@ -10129,7 +10448,8 @@
 											"path": "[['Qunit2']"
 										},
 										"sink": {
-											"name": "Qunit2"
+											"name": "Qunit2",
+											"type": "String"
 										}
 									},
 									{
@@ -10137,7 +10457,8 @@
 											"path": "[['Qunit3']"
 										},
 										"sink": {
-											"name": "Qunit3"
+											"name": "Qunit3",
+											"type": "String"
 										}
 									},
 									{
@@ -10145,7 +10466,8 @@
 											"path": "[['Racct']"
 										},
 										"sink": {
-											"name": "Racct"
+											"name": "Racct",
+											"type": "String"
 										}
 									},
 									{
@@ -10153,7 +10475,8 @@
 											"path": "[['RacctSender']"
 										},
 										"sink": {
-											"name": "RacctSender"
+											"name": "RacctSender",
+											"type": "String"
 										}
 									},
 									{
@@ -10161,7 +10484,8 @@
 											"path": "[['Rassc']"
 										},
 										"sink": {
-											"name": "Rassc"
+											"name": "Rassc",
+											"type": "String"
 										}
 									},
 									{
@@ -10169,7 +10493,8 @@
 											"path": "[['Rbcur']"
 										},
 										"sink": {
-											"name": "Rbcur"
+											"name": "Rbcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10177,7 +10502,8 @@
 											"path": "[['Rbest']"
 										},
 										"sink": {
-											"name": "Rbest"
+											"name": "Rbest",
+											"type": "String"
 										}
 									},
 									{
@@ -10185,7 +10511,8 @@
 											"path": "[['RbudgetPd']"
 										},
 										"sink": {
-											"name": "RbudgetPd"
+											"name": "RbudgetPd",
+											"type": "String"
 										}
 									},
 									{
@@ -10193,7 +10520,8 @@
 											"path": "[['Rbukrs']"
 										},
 										"sink": {
-											"name": "Rbukrs"
+											"name": "Rbukrs",
+											"type": "String"
 										}
 									},
 									{
@@ -10201,7 +10529,8 @@
 											"path": "[['Rbusa']"
 										},
 										"sink": {
-											"name": "Rbusa"
+											"name": "Rbusa",
+											"type": "String"
 										}
 									},
 									{
@@ -10209,7 +10538,8 @@
 											"path": "[['Rccur']"
 										},
 										"sink": {
-											"name": "Rccur"
+											"name": "Rccur",
+											"type": "String"
 										}
 									},
 									{
@@ -10217,7 +10547,8 @@
 											"path": "[['Rcntr']"
 										},
 										"sink": {
-											"name": "Rcntr"
+											"name": "Rcntr",
+											"type": "String"
 										}
 									},
 									{
@@ -10225,7 +10556,8 @@
 											"path": "[['RcoOcur']"
 										},
 										"sink": {
-											"name": "RcoOcur"
+											"name": "RcoOcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10233,7 +10565,8 @@
 											"path": "[['Rdcur']"
 										},
 										"sink": {
-											"name": "Rdcur"
+											"name": "Rdcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10241,7 +10574,8 @@
 											"path": "[['ReAccount']"
 										},
 										"sink": {
-											"name": "ReAccount"
+											"name": "ReAccount",
+											"type": "String"
 										}
 									},
 									{
@@ -10249,7 +10583,8 @@
 											"path": "[['ReBukrs']"
 										},
 										"sink": {
-											"name": "ReBukrs"
+											"name": "ReBukrs",
+											"type": "String"
 										}
 									},
 									{
@@ -10257,7 +10592,8 @@
 											"path": "[['Rebzg']"
 										},
 										"sink": {
-											"name": "Rebzg"
+											"name": "Rebzg",
+											"type": "String"
 										}
 									},
 									{
@@ -10265,7 +10601,8 @@
 											"path": "[['Rebzj']"
 										},
 										"sink": {
-											"name": "Rebzj"
+											"name": "Rebzj",
+											"type": "String"
 										}
 									},
 									{
@@ -10273,7 +10610,8 @@
 											"path": "[['Rebzt']"
 										},
 										"sink": {
-											"name": "Rebzt"
+											"name": "Rebzt",
+											"type": "String"
 										}
 									},
 									{
@@ -10281,7 +10619,8 @@
 											"path": "[['Rebzz']"
 										},
 										"sink": {
-											"name": "Rebzz"
+											"name": "Rebzz",
+											"type": "String"
 										}
 									},
 									{
@@ -10289,7 +10628,8 @@
 											"path": "[['Recid']"
 										},
 										"sink": {
-											"name": "Recid"
+											"name": "Recid",
+											"type": "String"
 										}
 									},
 									{
@@ -10297,7 +10637,8 @@
 											"path": "[['Recnnr']"
 										},
 										"sink": {
-											"name": "Recnnr"
+											"name": "Recnnr",
+											"type": "String"
 										}
 									},
 									{
@@ -10305,7 +10646,8 @@
 											"path": "[['Recur']"
 										},
 										"sink": {
-											"name": "Recur"
+											"name": "Recur",
+											"type": "String"
 										}
 									},
 									{
@@ -10313,7 +10655,8 @@
 											"path": "[['Rfarea']"
 										},
 										"sink": {
-											"name": "Rfarea"
+											"name": "Rfarea",
+											"type": "String"
 										}
 									},
 									{
@@ -10321,7 +10664,8 @@
 											"path": "[['Rfcur']"
 										},
 										"sink": {
-											"name": "Rfcur"
+											"name": "Rfcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10329,7 +10673,8 @@
 											"path": "[['Rfund']"
 										},
 										"sink": {
-											"name": "Rfund"
+											"name": "Rfund",
+											"type": "String"
 										}
 									},
 									{
@@ -10337,7 +10682,8 @@
 											"path": "[['Rgcur']"
 										},
 										"sink": {
-											"name": "Rgcur"
+											"name": "Rgcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10345,7 +10691,8 @@
 											"path": "[['RgrantNbr']"
 										},
 										"sink": {
-											"name": "RgrantNbr"
+											"name": "RgrantNbr",
+											"type": "String"
 										}
 									},
 									{
@@ -10353,7 +10700,8 @@
 											"path": "[['Rhcur']"
 										},
 										"sink": {
-											"name": "Rhcur"
+											"name": "Rhcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10361,7 +10709,8 @@
 											"path": "[['Rhoart']"
 										},
 										"sink": {
-											"name": "Rhoart"
+											"name": "Rhoart",
+											"type": "String"
 										}
 									},
 									{
@@ -10369,7 +10718,8 @@
 											"path": "[['RiskClass']"
 										},
 										"sink": {
-											"name": "RiskClass"
+											"name": "RiskClass",
+											"type": "String"
 										}
 									},
 									{
@@ -10377,7 +10727,8 @@
 											"path": "[['Riunit']"
 										},
 										"sink": {
-											"name": "Riunit"
+											"name": "Riunit",
+											"type": "String"
 										}
 									},
 									{
@@ -10385,7 +10736,8 @@
 											"path": "[['Rkcur']"
 										},
 										"sink": {
-											"name": "Rkcur"
+											"name": "Rkcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10393,7 +10745,8 @@
 											"path": "[['Rldnr']"
 										},
 										"sink": {
-											"name": "Rldnr"
+											"name": "Rldnr",
+											"type": "String"
 										}
 									},
 									{
@@ -10401,7 +10754,8 @@
 											"path": "[['Rmsl']"
 										},
 										"sink": {
-											"name": "Rmsl"
+											"name": "Rmsl",
+											"type": "String"
 										}
 									},
 									{
@@ -10409,7 +10763,8 @@
 											"path": "[['Rmvct']"
 										},
 										"sink": {
-											"name": "Rmvct"
+											"name": "Rmvct",
+											"type": "String"
 										}
 									},
 									{
@@ -10417,7 +10772,8 @@
 											"path": "[['Rocur']"
 										},
 										"sink": {
-											"name": "Rocur"
+											"name": "Rocur",
+											"type": "String"
 										}
 									},
 									{
@@ -10425,7 +10781,8 @@
 											"path": "[['Rrcty']"
 										},
 										"sink": {
-											"name": "Rrcty"
+											"name": "Rrcty",
+											"type": "String"
 										}
 									},
 									{
@@ -10433,7 +10790,8 @@
 											"path": "[['Rrunit']"
 										},
 										"sink": {
-											"name": "Rrunit"
+											"name": "Rrunit",
+											"type": "String"
 										}
 									},
 									{
@@ -10441,7 +10799,8 @@
 											"path": "[['Rsrce']"
 										},
 										"sink": {
-											"name": "Rsrce"
+											"name": "Rsrce",
+											"type": "String"
 										}
 									},
 									{
@@ -10449,7 +10808,8 @@
 											"path": "[['Rtcur']"
 										},
 										"sink": {
-											"name": "Rtcur"
+											"name": "Rtcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10457,7 +10817,8 @@
 											"path": "[['Runit']"
 										},
 										"sink": {
-											"name": "Runit"
+											"name": "Runit",
+											"type": "String"
 										}
 									},
 									{
@@ -10465,7 +10826,8 @@
 											"path": "[['Rvcur']"
 										},
 										"sink": {
-											"name": "Rvcur"
+											"name": "Rvcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10473,7 +10835,8 @@
 											"path": "[['Rvunit']"
 										},
 										"sink": {
-											"name": "Rvunit"
+											"name": "Rvunit",
+											"type": "String"
 										}
 									},
 									{
@@ -10481,7 +10844,8 @@
 											"path": "[['Rwcur']"
 										},
 										"sink": {
-											"name": "Rwcur"
+											"name": "Rwcur",
+											"type": "String"
 										}
 									},
 									{
@@ -10489,7 +10853,8 @@
 											"path": "[['Ryear']"
 										},
 										"sink": {
-											"name": "Ryear"
+											"name": "Ryear",
+											"type": "String"
 										}
 									},
 									{
@@ -10497,7 +10862,8 @@
 											"path": "[['SRecind']"
 										},
 										"sink": {
-											"name": "SRecind"
+											"name": "SRecind",
+											"type": "String"
 										}
 									},
 									{
@@ -10505,7 +10871,8 @@
 											"path": "[['SbudgetPd']"
 										},
 										"sink": {
-											"name": "SbudgetPd"
+											"name": "SbudgetPd",
+											"type": "String"
 										}
 									},
 									{
@@ -10513,7 +10880,8 @@
 											"path": "[['Sbusa']"
 										},
 										"sink": {
-											"name": "Sbusa"
+											"name": "Sbusa",
+											"type": "String"
 										}
 									},
 									{
@@ -10521,7 +10889,8 @@
 											"path": "[['Scntr']"
 										},
 										"sink": {
-											"name": "Scntr"
+											"name": "Scntr",
+											"type": "String"
 										}
 									},
 									{
@@ -10529,7 +10898,8 @@
 											"path": "[['Scope']"
 										},
 										"sink": {
-											"name": "Scope"
+											"name": "Scope",
+											"type": "String"
 										}
 									},
 									{
@@ -10537,7 +10907,8 @@
 											"path": "[['SdmVersion']"
 										},
 										"sink": {
-											"name": "SdmVersion"
+											"name": "SdmVersion",
+											"type": "String"
 										}
 									},
 									{
@@ -10545,7 +10916,8 @@
 											"path": "[['Segment']"
 										},
 										"sink": {
-											"name": "Segment"
+											"name": "Segment",
+											"type": "String"
 										}
 									},
 									{
@@ -10553,7 +10925,8 @@
 											"path": "[['Sempsl']"
 										},
 										"sink": {
-											"name": "Sempsl"
+											"name": "Sempsl",
+											"type": "String"
 										}
 									},
 									{
@@ -10561,7 +10934,8 @@
 											"path": "[['ServiceContractId']"
 										},
 										"sink": {
-											"name": "ServiceContractId"
+											"name": "ServiceContractId",
+											"type": "String"
 										}
 									},
 									{
@@ -10569,7 +10943,8 @@
 											"path": "[['ServiceContractItemId']"
 										},
 										"sink": {
-											"name": "ServiceContractItemId"
+											"name": "ServiceContractItemId",
+											"type": "String"
 										}
 									},
 									{
@@ -10577,7 +10952,8 @@
 											"path": "[['ServiceContractType']"
 										},
 										"sink": {
-											"name": "ServiceContractType"
+											"name": "ServiceContractType",
+											"type": "String"
 										}
 									},
 									{
@@ -10585,7 +10961,8 @@
 											"path": "[['ServiceDocId']"
 										},
 										"sink": {
-											"name": "ServiceDocId"
+											"name": "ServiceDocId",
+											"type": "String"
 										}
 									},
 									{
@@ -10593,7 +10970,8 @@
 											"path": "[['ServiceDocItemId']"
 										},
 										"sink": {
-											"name": "ServiceDocItemId"
+											"name": "ServiceDocItemId",
+											"type": "String"
 										}
 									},
 									{
@@ -10601,7 +10979,8 @@
 											"path": "[['ServiceDocType']"
 										},
 										"sink": {
-											"name": "ServiceDocType"
+											"name": "ServiceDocType",
+											"type": "String"
 										}
 									},
 									{
@@ -10609,7 +10988,8 @@
 											"path": "[['SettlementRule']"
 										},
 										"sink": {
-											"name": "SettlementRule"
+											"name": "SettlementRule",
+											"type": "String"
 										}
 									},
 									{
@@ -10617,7 +10997,8 @@
 											"path": "[['Sfarea']"
 										},
 										"sink": {
-											"name": "Sfarea"
+											"name": "Sfarea",
+											"type": "String"
 										}
 									},
 									{
@@ -10625,7 +11006,8 @@
 											"path": "[['Sfund']"
 										},
 										"sink": {
-											"name": "Sfund"
+											"name": "Sfund",
+											"type": "String"
 										}
 									},
 									{
@@ -10633,7 +11015,8 @@
 											"path": "[['Sgenr']"
 										},
 										"sink": {
-											"name": "Sgenr"
+											"name": "Sgenr",
+											"type": "String"
 										}
 									},
 									{
@@ -10641,7 +11024,8 @@
 											"path": "[['SgrantNbr']"
 										},
 										"sink": {
-											"name": "SgrantNbr"
+											"name": "SgrantNbr",
+											"type": "String"
 										}
 									},
 									{
@@ -10649,7 +11033,8 @@
 											"path": "[['Sgrnr']"
 										},
 										"sink": {
-											"name": "Sgrnr"
+											"name": "Sgrnr",
+											"type": "String"
 										}
 									},
 									{
@@ -10657,7 +11042,8 @@
 											"path": "[['Sgtxt']"
 										},
 										"sink": {
-											"name": "Sgtxt"
+											"name": "Sgtxt",
+											"type": "String"
 										}
 									},
 									{
@@ -10665,7 +11051,8 @@
 											"path": "[['Slalittype']"
 										},
 										"sink": {
-											"name": "Slalittype"
+											"name": "Slalittype",
+											"type": "String"
 										}
 									},
 									{
@@ -10673,7 +11060,8 @@
 											"path": "[['Smenr']"
 										},
 										"sink": {
-											"name": "Smenr"
+											"name": "Smenr",
+											"type": "String"
 										}
 									},
 									{
@@ -10681,7 +11069,8 @@
 											"path": "[['Snksl']"
 										},
 										"sink": {
-											"name": "Snksl"
+											"name": "Snksl",
+											"type": "String"
 										}
 									},
 									{
@@ -10689,7 +11078,8 @@
 											"path": "[['Sobkz']"
 										},
 										"sink": {
-											"name": "Sobkz"
+											"name": "Sobkz",
+											"type": "String"
 										}
 									},
 									{
@@ -10697,7 +11087,8 @@
 											"path": "[['Spart']"
 										},
 										"sink": {
-											"name": "Spart"
+											"name": "Spart",
+											"type": "String"
 										}
 									},
 									{
@@ -10705,7 +11096,8 @@
 											"path": "[['SrcAwitem']"
 										},
 										"sink": {
-											"name": "SrcAwitem"
+											"name": "SrcAwitem",
+											"type": "String"
 										}
 									},
 									{
@@ -10713,7 +11105,8 @@
 											"path": "[['SrcAworg']"
 										},
 										"sink": {
-											"name": "SrcAworg"
+											"name": "SrcAworg",
+											"type": "String"
 										}
 									},
 									{
@@ -10721,7 +11114,8 @@
 											"path": "[['SrcAwref']"
 										},
 										"sink": {
-											"name": "SrcAwref"
+											"name": "SrcAwref",
+											"type": "String"
 										}
 									},
 									{
@@ -10729,7 +11123,8 @@
 											"path": "[['SrcAwsubit']"
 										},
 										"sink": {
-											"name": "SrcAwsubit"
+											"name": "SrcAwsubit",
+											"type": "String"
 										}
 									},
 									{
@@ -10737,7 +11132,8 @@
 											"path": "[['SrcAwsys']"
 										},
 										"sink": {
-											"name": "SrcAwsys"
+											"name": "SrcAwsys",
+											"type": "String"
 										}
 									},
 									{
@@ -10745,7 +11141,8 @@
 											"path": "[['SrcAwtyp']"
 										},
 										"sink": {
-											"name": "SrcAwtyp"
+											"name": "SrcAwtyp",
+											"type": "String"
 										}
 									},
 									{
@@ -10753,7 +11150,8 @@
 											"path": "[['Subta']"
 										},
 										"sink": {
-											"name": "Subta"
+											"name": "Subta",
+											"type": "String"
 										}
 									},
 									{
@@ -10761,7 +11159,8 @@
 											"path": "[['SubtaRev']"
 										},
 										"sink": {
-											"name": "SubtaRev"
+											"name": "SubtaRev",
+											"type": "String"
 										}
 									},
 									{
@@ -10769,7 +11168,8 @@
 											"path": "[['Swenr']"
 										},
 										"sink": {
-											"name": "Swenr"
+											"name": "Swenr",
+											"type": "String"
 										}
 									},
 									{
@@ -10777,7 +11177,8 @@
 											"path": "[['Timestamp']"
 										},
 										"sink": {
-											"name": "Timestamp"
+											"name": "Timestamp",
+											"type": "String"
 										}
 									},
 									{
@@ -10785,7 +11186,8 @@
 											"path": "[['Tplnr']"
 										},
 										"sink": {
-											"name": "Tplnr"
+											"name": "Tplnr",
+											"type": "String"
 										}
 									},
 									{
@@ -10793,7 +11195,8 @@
 											"path": "[['Tsl']"
 										},
 										"sink": {
-											"name": "Tsl"
+											"name": "Tsl",
+											"type": "String"
 										}
 									},
 									{
@@ -10801,7 +11204,8 @@
 											"path": "[['UbzdtPn']"
 										},
 										"sink": {
-											"name": "UbzdtPn"
+											"name": "UbzdtPn",
+											"type": "String"
 										}
 									},
 									{
@@ -10809,7 +11213,8 @@
 											"path": "[['Ukostl']"
 										},
 										"sink": {
-											"name": "Ukostl"
+											"name": "Ukostl",
+											"type": "String"
 										}
 									},
 									{
@@ -10817,7 +11222,8 @@
 											"path": "[['Ulstar']"
 										},
 										"sink": {
-											"name": "Ulstar"
+											"name": "Ulstar",
+											"type": "String"
 										}
 									},
 									{
@@ -10825,7 +11231,8 @@
 											"path": "[['Umskz']"
 										},
 										"sink": {
-											"name": "Umskz"
+											"name": "Umskz",
+											"type": "String"
 										}
 									},
 									{
@@ -10833,7 +11240,8 @@
 											"path": "[['UpmatPa']"
 										},
 										"sink": {
-											"name": "UpmatPa"
+											"name": "UpmatPa",
+											"type": "String"
 										}
 									},
 									{
@@ -10841,7 +11249,8 @@
 											"path": "[['Uprctr']"
 										},
 										"sink": {
-											"name": "Uprctr"
+											"name": "Uprctr",
+											"type": "String"
 										}
 									},
 									{
@@ -10849,7 +11258,8 @@
 											"path": "[['Uprznr']"
 										},
 										"sink": {
-											"name": "Uprznr"
+											"name": "Uprznr",
+											"type": "String"
 										}
 									},
 									{
@@ -10857,7 +11267,8 @@
 											"path": "[['Usnam']"
 										},
 										"sink": {
-											"name": "Usnam"
+											"name": "Usnam",
+											"type": "String"
 										}
 									},
 									{
@@ -10865,7 +11276,8 @@
 											"path": "[['Uspob']"
 										},
 										"sink": {
-											"name": "Uspob"
+											"name": "Uspob",
+											"type": "String"
 										}
 									},
 									{
@@ -10873,7 +11285,8 @@
 											"path": "[['Uvorn']"
 										},
 										"sink": {
-											"name": "Uvorn"
+											"name": "Uvorn",
+											"type": "String"
 										}
 									},
 									{
@@ -10881,7 +11294,8 @@
 											"path": "[['ValobjId']"
 										},
 										"sink": {
-											"name": "ValobjId"
+											"name": "ValobjId",
+											"type": "String"
 										}
 									},
 									{
@@ -10889,7 +11303,8 @@
 											"path": "[['Valobjtype']"
 										},
 										"sink": {
-											"name": "Valobjtype"
+											"name": "Valobjtype",
+											"type": "String"
 										}
 									},
 									{
@@ -10897,7 +11312,8 @@
 											"path": "[['ValsobjId']"
 										},
 										"sink": {
-											"name": "ValsobjId"
+											"name": "ValsobjId",
+											"type": "String"
 										}
 									},
 									{
@@ -10905,7 +11321,8 @@
 											"path": "[['Valut']"
 										},
 										"sink": {
-											"name": "Valut"
+											"name": "Valut",
+											"type": "String"
 										}
 									},
 									{
@@ -10913,7 +11330,8 @@
 											"path": "[['VbelnPa']"
 										},
 										"sink": {
-											"name": "VbelnPa"
+											"name": "VbelnPa",
+											"type": "String"
 										}
 									},
 									{
@@ -10921,7 +11339,8 @@
 											"path": "[['VkausPa']"
 										},
 										"sink": {
-											"name": "VkausPa"
+											"name": "VkausPa",
+											"type": "String"
 										}
 									},
 									{
@@ -10929,7 +11348,8 @@
 											"path": "[['VkburPa']"
 										},
 										"sink": {
-											"name": "VkburPa"
+											"name": "VkburPa",
+											"type": "String"
 										}
 									},
 									{
@@ -10937,7 +11357,8 @@
 											"path": "[['VkgrpPa']"
 										},
 										"sink": {
-											"name": "VkgrpPa"
+											"name": "VkgrpPa",
+											"type": "String"
 										}
 									},
 									{
@@ -10945,7 +11366,8 @@
 											"path": "[['Vkorg']"
 										},
 										"sink": {
-											"name": "Vkorg"
+											"name": "Vkorg",
+											"type": "String"
 										}
 									},
 									{
@@ -10953,7 +11375,8 @@
 											"path": "[['Vmfsl']"
 										},
 										"sink": {
-											"name": "Vmfsl"
+											"name": "Vmfsl",
+											"type": "String"
 										}
 									},
 									{
@@ -10961,7 +11384,8 @@
 											"path": "[['Vmsl']"
 										},
 										"sink": {
-											"name": "Vmsl"
+											"name": "Vmsl",
+											"type": "String"
 										}
 									},
 									{
@@ -10969,7 +11393,8 @@
 											"path": "[['Vname']"
 										},
 										"sink": {
-											"name": "Vname"
+											"name": "Vname",
+											"type": "String"
 										}
 									},
 									{
@@ -10977,7 +11402,8 @@
 											"path": "[['Vorgn']"
 										},
 										"sink": {
-											"name": "Vorgn"
+											"name": "Vorgn",
+											"type": "String"
 										}
 									},
 									{
@@ -10985,7 +11411,8 @@
 											"path": "[['Vornr']"
 										},
 										"sink": {
-											"name": "Vornr"
+											"name": "Vornr",
+											"type": "String"
 										}
 									},
 									{
@@ -10993,7 +11420,8 @@
 											"path": "[['Vpeinh']"
 										},
 										"sink": {
-											"name": "Vpeinh"
+											"name": "Vpeinh",
+											"type": "String"
 										}
 									},
 									{
@@ -11001,7 +11429,8 @@
 											"path": "[['Vprsv']"
 										},
 										"sink": {
-											"name": "Vprsv"
+											"name": "Vprsv",
+											"type": "String"
 										}
 									},
 									{
@@ -11009,7 +11438,8 @@
 											"path": "[['Vptnr']"
 										},
 										"sink": {
-											"name": "Vptnr"
+											"name": "Vptnr",
+											"type": "String"
 										}
 									},
 									{
@@ -11017,7 +11447,8 @@
 											"path": "[['Vpvprs']"
 										},
 										"sink": {
-											"name": "Vpvprs"
+											"name": "Vpvprs",
+											"type": "String"
 										}
 									},
 									{
@@ -11025,7 +11456,8 @@
 											"path": "[['Vrgng']"
 										},
 										"sink": {
-											"name": "Vrgng"
+											"name": "Vrgng",
+											"type": "String"
 										}
 									},
 									{
@@ -11033,7 +11465,8 @@
 											"path": "[['Vsalk3']"
 										},
 										"sink": {
-											"name": "Vsalk3"
+											"name": "Vsalk3",
+											"type": "String"
 										}
 									},
 									{
@@ -11041,7 +11474,8 @@
 											"path": "[['Vsalkv']"
 										},
 										"sink": {
-											"name": "Vsalkv"
+											"name": "Vsalkv",
+											"type": "String"
 										}
 									},
 									{
@@ -11049,7 +11483,8 @@
 											"path": "[['Vsl']"
 										},
 										"sink": {
-											"name": "Vsl"
+											"name": "Vsl",
+											"type": "String"
 										}
 									},
 									{
@@ -11057,7 +11492,8 @@
 											"path": "[['Vslalt']"
 										},
 										"sink": {
-											"name": "Vslalt"
+											"name": "Vslalt",
+											"type": "String"
 										}
 									},
 									{
@@ -11065,7 +11501,8 @@
 											"path": "[['Vslext']"
 										},
 										"sink": {
-											"name": "Vslext"
+											"name": "Vslext",
+											"type": "String"
 										}
 									},
 									{
@@ -11073,7 +11510,8 @@
 											"path": "[['VstelPa']"
 										},
 										"sink": {
-											"name": "VstelPa"
+											"name": "VstelPa",
+											"type": "String"
 										}
 									},
 									{
@@ -11081,7 +11519,8 @@
 											"path": "[['Vstprs']"
 										},
 										"sink": {
-											"name": "Vstprs"
+											"name": "Vstprs",
+											"type": "String"
 										}
 									},
 									{
@@ -11089,7 +11528,8 @@
 											"path": "[['Vtstamp']"
 										},
 										"sink": {
-											"name": "Vtstamp"
+											"name": "Vtstamp",
+											"type": "String"
 										}
 									},
 									{
@@ -11097,7 +11537,8 @@
 											"path": "[['Vtweg']"
 										},
 										"sink": {
-											"name": "Vtweg"
+											"name": "Vtweg",
+											"type": "String"
 										}
 									},
 									{
@@ -11105,7 +11546,8 @@
 											"path": "[['Werks']"
 										},
 										"sink": {
-											"name": "Werks"
+											"name": "Werks",
+											"type": "String"
 										}
 									},
 									{
@@ -11113,7 +11555,8 @@
 											"path": "[['WorkItemId']"
 										},
 										"sink": {
-											"name": "WorkItemId"
+											"name": "WorkItemId",
+											"type": "String"
 										}
 									},
 									{
@@ -11121,7 +11564,8 @@
 											"path": "[['Wsl']"
 										},
 										"sink": {
-											"name": "Wsl"
+											"name": "Wsl",
+											"type": "String"
 										}
 									},
 									{
@@ -11129,7 +11573,8 @@
 											"path": "[['Wsl2']"
 										},
 										"sink": {
-											"name": "Wsl2"
+											"name": "Wsl2",
+											"type": "String"
 										}
 									},
 									{
@@ -11137,7 +11582,8 @@
 											"path": "[['Wsl3']"
 										},
 										"sink": {
-											"name": "Wsl3"
+											"name": "Wsl3",
+											"type": "String"
 										}
 									},
 									{
@@ -11145,7 +11591,8 @@
 											"path": "[['Ww001Pa']"
 										},
 										"sink": {
-											"name": "Ww001Pa"
+											"name": "Ww001Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11153,7 +11600,8 @@
 											"path": "[['Ww002Pa']"
 										},
 										"sink": {
-											"name": "Ww002Pa"
+											"name": "Ww002Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11161,7 +11609,8 @@
 											"path": "[['Ww003Pa']"
 										},
 										"sink": {
-											"name": "Ww003Pa"
+											"name": "Ww003Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11169,7 +11618,8 @@
 											"path": "[['Ww004Pa']"
 										},
 										"sink": {
-											"name": "Ww004Pa"
+											"name": "Ww004Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11177,7 +11627,8 @@
 											"path": "[['Ww005Pa']"
 										},
 										"sink": {
-											"name": "Ww005Pa"
+											"name": "Ww005Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11185,7 +11636,8 @@
 											"path": "[['Ww006Pa']"
 										},
 										"sink": {
-											"name": "Ww006Pa"
+											"name": "Ww006Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11193,7 +11645,8 @@
 											"path": "[['Ww007Pa']"
 										},
 										"sink": {
-											"name": "Ww007Pa"
+											"name": "Ww007Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11201,7 +11654,8 @@
 											"path": "[['Ww008Pa']"
 										},
 										"sink": {
-											"name": "Ww008Pa"
+											"name": "Ww008Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11209,7 +11663,8 @@
 											"path": "[['Ww009Pa']"
 										},
 										"sink": {
-											"name": "Ww009Pa"
+											"name": "Ww009Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11217,7 +11672,8 @@
 											"path": "[['Ww010Pa']"
 										},
 										"sink": {
-											"name": "Ww010Pa"
+											"name": "Ww010Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11225,7 +11681,8 @@
 											"path": "[['Ww011Pa']"
 										},
 										"sink": {
-											"name": "Ww011Pa"
+											"name": "Ww011Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11233,7 +11690,8 @@
 											"path": "[['Ww012Pa']"
 										},
 										"sink": {
-											"name": "Ww012Pa"
+											"name": "Ww012Pa",
+											"type": "String"
 										}
 									},
 									{
@@ -11241,7 +11699,8 @@
 											"path": "[['Wwert']"
 										},
 										"sink": {
-											"name": "Wwert"
+											"name": "Wwert",
+											"type": "String"
 										}
 									},
 									{
@@ -11249,7 +11708,8 @@
 											"path": "[['WwmctPa']"
 										},
 										"sink": {
-											"name": "WwmctPa"
+											"name": "WwmctPa",
+											"type": "String"
 										}
 									},
 									{
@@ -11257,7 +11717,8 @@
 											"path": "[['WwqctPa']"
 										},
 										"sink": {
-											"name": "WwqctPa"
+											"name": "WwqctPa",
+											"type": "String"
 										}
 									},
 									{
@@ -11265,7 +11726,8 @@
 											"path": "[['Xcommitment']"
 										},
 										"sink": {
-											"name": "Xcommitment"
+											"name": "Xcommitment",
+											"type": "String"
 										}
 									},
 									{
@@ -11273,7 +11735,8 @@
 											"path": "[['XmanpropvalPn']"
 										},
 										"sink": {
-											"name": "XmanpropvalPn"
+											"name": "XmanpropvalPn",
+											"type": "String"
 										}
 									},
 									{
@@ -11281,7 +11744,8 @@
 											"path": "[['Xobew']"
 										},
 										"sink": {
-											"name": "Xobew"
+											"name": "Xobew",
+											"type": "String"
 										}
 									},
 									{
@@ -11289,7 +11753,8 @@
 											"path": "[['Xopvw']"
 										},
 										"sink": {
-											"name": "Xopvw"
+											"name": "Xopvw",
+											"type": "String"
 										}
 									},
 									{
@@ -11297,7 +11762,8 @@
 											"path": "[['XpaobjnrCoRel']"
 										},
 										"sink": {
-											"name": "XpaobjnrCoRel"
+											"name": "XpaobjnrCoRel",
+											"type": "String"
 										}
 									},
 									{
@@ -11305,7 +11771,8 @@
 											"path": "[['Xreversed']"
 										},
 										"sink": {
-											"name": "Xreversed"
+											"name": "Xreversed",
+											"type": "String"
 										}
 									},
 									{
@@ -11313,7 +11780,8 @@
 											"path": "[['Xreversing']"
 										},
 										"sink": {
-											"name": "Xreversing"
+											"name": "Xreversing",
+											"type": "String"
 										}
 									},
 									{
@@ -11321,7 +11789,8 @@
 											"path": "[['Xsecondary']"
 										},
 										"sink": {
-											"name": "Xsecondary"
+											"name": "Xsecondary",
+											"type": "String"
 										}
 									},
 									{
@@ -11329,7 +11798,8 @@
 											"path": "[['Xsettled']"
 										},
 										"sink": {
-											"name": "Xsettled"
+											"name": "Xsettled",
+											"type": "String"
 										}
 									},
 									{
@@ -11337,7 +11807,8 @@
 											"path": "[['Xsettling']"
 										},
 										"sink": {
-											"name": "Xsettling"
+											"name": "Xsettling",
+											"type": "String"
 										}
 									},
 									{
@@ -11345,7 +11816,8 @@
 											"path": "[['Xsplitmod']"
 										},
 										"sink": {
-											"name": "Xsplitmod"
+											"name": "Xsplitmod",
+											"type": "String"
 										}
 									},
 									{
@@ -11353,7 +11825,8 @@
 											"path": "[['Xtruerev']"
 										},
 										"sink": {
-											"name": "Xtruerev"
+											"name": "Xtruerev",
+											"type": "String"
 										}
 									},
 									{
@@ -11361,7 +11834,8 @@
 											"path": "[['XvabgPn']"
 										},
 										"sink": {
-											"name": "XvabgPn"
+											"name": "XvabgPn",
+											"type": "String"
 										}
 									},
 									{
@@ -11369,7 +11843,8 @@
 											"path": "[['Zekkn']"
 										},
 										"sink": {
-											"name": "Zekkn"
+											"name": "Zekkn",
+											"type": "String"
 										}
 									},
 									{
@@ -11377,7 +11852,8 @@
 											"path": "[['Zuonr']"
 										},
 										"sink": {
-											"name": "Zuonr"
+											"name": "Zuonr",
+											"type": "String"
 										}
 									},
 									{
@@ -11385,7 +11861,8 @@
 											"path": "[['ZzCfPa']"
 										},
 										"sink": {
-											"name": "ZzCfPa"
+											"name": "ZzCfPa",
+											"type": "String"
 										}
 									},
 									{
@@ -11393,7 +11870,8 @@
 											"path": "[['ZzRpPa']"
 										},
 										"sink": {
-											"name": "ZzRpPa"
+											"name": "ZzRpPa",
+											"type": "String"
 										}
 									}
 								],
