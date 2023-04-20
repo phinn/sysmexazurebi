@@ -1,0 +1,745 @@
+{
+	"name": "DestinationDataset_SAPACDOCA_FILE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "VBAP",
+					"type": "Expression"
+				},
+				"folderPath": "OData",
+				"fileSystem": "saps4data"
+			},
+			"compressionCodec": "gzip"
+		},
+		"schema": [
+			{
+				"name": "Mandt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ebeln",
+				"type": "UTF8"
+			},
+			{
+				"name": "Bukrs",
+				"type": "UTF8"
+			},
+			{
+				"name": "Bstyp",
+				"type": "UTF8"
+			},
+			{
+				"name": "Bsart",
+				"type": "UTF8"
+			},
+			{
+				"name": "Bsakz",
+				"type": "UTF8"
+			},
+			{
+				"name": "Loekz",
+				"type": "UTF8"
+			},
+			{
+				"name": "Statu",
+				"type": "UTF8"
+			},
+			{
+				"name": "Aedat",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ernam",
+				"type": "UTF8"
+			},
+			{
+				"name": "Lastchangedatetime",
+				"type": "UTF8"
+			},
+			{
+				"name": "Pincr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Lponr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Lifnr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Spras",
+				"type": "UTF8"
+			},
+			{
+				"name": "Zterm",
+				"type": "UTF8"
+			},
+			{
+				"name": "Zbd1t",
+				"type": "UTF8"
+			},
+			{
+				"name": "Zbd2t",
+				"type": "UTF8"
+			},
+			{
+				"name": "Zbd3t",
+				"type": "UTF8"
+			},
+			{
+				"name": "Zbd1p",
+				"type": "UTF8"
+			},
+			{
+				"name": "Zbd2p",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ekorg",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ekgrp",
+				"type": "UTF8"
+			},
+			{
+				"name": "Waers",
+				"type": "UTF8"
+			},
+			{
+				"name": "Wkurs",
+				"type": "UTF8"
+			},
+			{
+				"name": "Kufix",
+				"type": "UTF8"
+			},
+			{
+				"name": "Bedat",
+				"type": "UTF8"
+			},
+			{
+				"name": "Kdatb",
+				"type": "UTF8"
+			},
+			{
+				"name": "Kdate",
+				"type": "UTF8"
+			},
+			{
+				"name": "Bwbdt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Angdt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Bnddt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Gwldt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ausnr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Angnr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ihran",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ihrez",
+				"type": "UTF8"
+			},
+			{
+				"name": "Verkf",
+				"type": "UTF8"
+			},
+			{
+				"name": "Telf1",
+				"type": "UTF8"
+			},
+			{
+				"name": "Llief",
+				"type": "UTF8"
+			},
+			{
+				"name": "Kunnr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Konnr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Abgru",
+				"type": "UTF8"
+			},
+			{
+				"name": "Autlf",
+				"type": "UTF8"
+			},
+			{
+				"name": "Weakt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Reswk",
+				"type": "UTF8"
+			},
+			{
+				"name": "Lblif",
+				"type": "UTF8"
+			},
+			{
+				"name": "Inco1",
+				"type": "UTF8"
+			},
+			{
+				"name": "Inco2",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ktwrt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Distributiontype",
+				"type": "UTF8"
+			},
+			{
+				"name": "Submi",
+				"type": "UTF8"
+			},
+			{
+				"name": "Knumv",
+				"type": "UTF8"
+			},
+			{
+				"name": "Kalsm",
+				"type": "UTF8"
+			},
+			{
+				"name": "Stafo",
+				"type": "UTF8"
+			},
+			{
+				"name": "Lifre",
+				"type": "UTF8"
+			},
+			{
+				"name": "Exnum",
+				"type": "UTF8"
+			},
+			{
+				"name": "Unsez",
+				"type": "UTF8"
+			},
+			{
+				"name": "Logsy",
+				"type": "UTF8"
+			},
+			{
+				"name": "Upinc",
+				"type": "UTF8"
+			},
+			{
+				"name": "Stako",
+				"type": "UTF8"
+			},
+			{
+				"name": "Frggr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Frgsx",
+				"type": "UTF8"
+			},
+			{
+				"name": "Frgke",
+				"type": "UTF8"
+			},
+			{
+				"name": "Frgzu",
+				"type": "UTF8"
+			},
+			{
+				"name": "Frgrl",
+				"type": "UTF8"
+			},
+			{
+				"name": "Lands",
+				"type": "UTF8"
+			},
+			{
+				"name": "Lphis",
+				"type": "UTF8"
+			},
+			{
+				"name": "Adrnr",
+				"type": "UTF8"
+			},
+			{
+				"name": "StcegL",
+				"type": "UTF8"
+			},
+			{
+				"name": "Stceg",
+				"type": "UTF8"
+			},
+			{
+				"name": "Absgr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Addnr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Kornr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Memory",
+				"type": "UTF8"
+			},
+			{
+				"name": "Procstat",
+				"type": "UTF8"
+			},
+			{
+				"name": "Rlwrt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Revno",
+				"type": "UTF8"
+			},
+			{
+				"name": "Scmproc",
+				"type": "UTF8"
+			},
+			{
+				"name": "ReasonCode",
+				"type": "UTF8"
+			},
+			{
+				"name": "Memorytype",
+				"type": "UTF8"
+			},
+			{
+				"name": "Rettp",
+				"type": "UTF8"
+			},
+			{
+				"name": "Retpc",
+				"type": "UTF8"
+			},
+			{
+				"name": "Dptyp",
+				"type": "UTF8"
+			},
+			{
+				"name": "Dppct",
+				"type": "UTF8"
+			},
+			{
+				"name": "Dpamt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Dpdat",
+				"type": "UTF8"
+			},
+			{
+				"name": "MsrId",
+				"type": "UTF8"
+			},
+			{
+				"name": "HierarchyExists",
+				"type": "UTF8"
+			},
+			{
+				"name": "ThresholdExists",
+				"type": "UTF8"
+			},
+			{
+				"name": "LegalContract",
+				"type": "UTF8"
+			},
+			{
+				"name": "Description",
+				"type": "UTF8"
+			},
+			{
+				"name": "ReleaseDate",
+				"type": "UTF8"
+			},
+			{
+				"name": "Vsart",
+				"type": "UTF8"
+			},
+			{
+				"name": "Handoverloc",
+				"type": "UTF8"
+			},
+			{
+				"name": "Shipcond",
+				"type": "UTF8"
+			},
+			{
+				"name": "Incov",
+				"type": "UTF8"
+			},
+			{
+				"name": "Inco2L",
+				"type": "UTF8"
+			},
+			{
+				"name": "Inco3L",
+				"type": "UTF8"
+			},
+			{
+				"name": "Grwcu",
+				"type": "UTF8"
+			},
+			{
+				"name": "IntraRel",
+				"type": "UTF8"
+			},
+			{
+				"name": "IntraExcl",
+				"type": "UTF8"
+			},
+			{
+				"name": "QtnErlstSubmsnDate",
+				"type": "UTF8"
+			},
+			{
+				"name": "FollowonDocCat",
+				"type": "UTF8"
+			},
+			{
+				"name": "FollowonDocType",
+				"type": "UTF8"
+			},
+			{
+				"name": "DummyEkkoInclEewPs",
+				"type": "UTF8"
+			},
+			{
+				"name": "Externalsystem",
+				"type": "UTF8"
+			},
+			{
+				"name": "Externalreferenceid",
+				"type": "UTF8"
+			},
+			{
+				"name": "ExtRevTmstmp",
+				"type": "UTF8"
+			},
+			{
+				"name": "Iseopblocked",
+				"type": "UTF8"
+			},
+			{
+				"name": "Isaged",
+				"type": "UTF8"
+			},
+			{
+				"name": "ForceId",
+				"type": "UTF8"
+			},
+			{
+				"name": "ForceCnt",
+				"type": "UTF8"
+			},
+			{
+				"name": "RelocId",
+				"type": "UTF8"
+			},
+			{
+				"name": "RelocSeqId",
+				"type": "UTF8"
+			},
+			{
+				"name": "SourceLogsys",
+				"type": "UTF8"
+			},
+			{
+				"name": "FshTransaction",
+				"type": "UTF8"
+			},
+			{
+				"name": "FshItemGroup",
+				"type": "UTF8"
+			},
+			{
+				"name": "FshVasLastItem",
+				"type": "UTF8"
+			},
+			{
+				"name": "FshOsStgChange",
+				"type": "UTF8"
+			},
+			{
+				"name": "TmsRefUuid",
+				"type": "UTF8"
+			},
+			{
+				"name": "Zapcgk",
+				"type": "UTF8"
+			},
+			{
+				"name": "ApcgkExtend",
+				"type": "UTF8"
+			},
+			{
+				"name": "ZbasDate",
+				"type": "UTF8"
+			},
+			{
+				"name": "Zadattyp",
+				"type": "UTF8"
+			},
+			{
+				"name": "ZstartDat",
+				"type": "UTF8"
+			},
+			{
+				"name": "ZDev",
+				"type": "UTF8"
+			},
+			{
+				"name": "Zindanx",
+				"type": "UTF8"
+			},
+			{
+				"name": "ZlimitDat",
+				"type": "UTF8"
+			},
+			{
+				"name": "Numerator",
+				"type": "UTF8"
+			},
+			{
+				"name": "HashcalBdat",
+				"type": "UTF8"
+			},
+			{
+				"name": "Hashcal",
+				"type": "UTF8"
+			},
+			{
+				"name": "Negative",
+				"type": "UTF8"
+			},
+			{
+				"name": "HashcalExists",
+				"type": "UTF8"
+			},
+			{
+				"name": "KnownIndex",
+				"type": "UTF8"
+			},
+			{
+				"name": "Postat",
+				"type": "UTF8"
+			},
+			{
+				"name": "Vzskz",
+				"type": "UTF8"
+			},
+			{
+				"name": "FshSnstStatus",
+				"type": "UTF8"
+			},
+			{
+				"name": "Proce",
+				"type": "UTF8"
+			},
+			{
+				"name": "Conc",
+				"type": "UTF8"
+			},
+			{
+				"name": "Cont",
+				"type": "UTF8"
+			},
+			{
+				"name": "Comp",
+				"type": "UTF8"
+			},
+			{
+				"name": "Outr",
+				"type": "UTF8"
+			},
+			{
+				"name": "Desp",
+				"type": "UTF8"
+			},
+			{
+				"name": "DespDat",
+				"type": "UTF8"
+			},
+			{
+				"name": "DespCargo",
+				"type": "UTF8"
+			},
+			{
+				"name": "Pare",
+				"type": "UTF8"
+			},
+			{
+				"name": "PareDat",
+				"type": "UTF8"
+			},
+			{
+				"name": "PareCargo",
+				"type": "UTF8"
+			},
+			{
+				"name": "PfmContract",
+				"type": "UTF8"
+			},
+			{
+				"name": "PohfType",
+				"type": "UTF8"
+			},
+			{
+				"name": "EqEindt",
+				"type": "UTF8"
+			},
+			{
+				"name": "EqWerks",
+				"type": "UTF8"
+			},
+			{
+				"name": "Fixpo",
+				"type": "UTF8"
+			},
+			{
+				"name": "EkgrpAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "WerksAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "ContractAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "PstypAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "FixpoAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "KeyIdAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "AurelAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "DelperAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "EindtAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "LtsnrAllow",
+				"type": "UTF8"
+			},
+			{
+				"name": "OtbLevel",
+				"type": "UTF8"
+			},
+			{
+				"name": "OtbCondType",
+				"type": "UTF8"
+			},
+			{
+				"name": "KeyId",
+				"type": "UTF8"
+			},
+			{
+				"name": "OtbValue",
+				"type": "UTF8"
+			},
+			{
+				"name": "OtbCurr",
+				"type": "UTF8"
+			},
+			{
+				"name": "OtbResValue",
+				"type": "UTF8"
+			},
+			{
+				"name": "OtbSpecValue",
+				"type": "UTF8"
+			},
+			{
+				"name": "SprRsnProfile",
+				"type": "UTF8"
+			},
+			{
+				"name": "BudgType",
+				"type": "UTF8"
+			},
+			{
+				"name": "OtbStatus",
+				"type": "UTF8"
+			},
+			{
+				"name": "OtbReason",
+				"type": "UTF8"
+			},
+			{
+				"name": "CheckType",
+				"type": "UTF8"
+			},
+			{
+				"name": "ConOtbReq",
+				"type": "UTF8"
+			},
+			{
+				"name": "ConPrebookLev",
+				"type": "UTF8"
+			},
+			{
+				"name": "ConDistrLev",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

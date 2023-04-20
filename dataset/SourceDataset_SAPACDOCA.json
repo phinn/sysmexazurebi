@@ -1,0 +1,22 @@
+{
+	"name": "SourceDataset_SAPACDOCA",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?$filter=Belnr eq '5000000001' or Belnr eq '5000000002'&sap-client=110&$format=json",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
