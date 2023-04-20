@@ -7532,6 +7532,3905 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/FinancialVoucherDataExtraction')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "CopyACDOCAData",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "RestSource",
+								"httpRequestTimeout": "01:00:00",
+								"requestInterval": "00.00:00:00.010",
+								"requestMethod": "GET",
+								"paginationRules": {
+									"supportRFC5988": "true"
+								}
+							},
+							"sink": {
+								"type": "ParquetSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "ParquetWriteSettings"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"path": "[['Dataaging']"
+										},
+										"sink": {
+											"name": "Dataaging"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Accas']"
+										},
+										"sink": {
+											"name": "Accas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AccasSender']"
+										},
+										"sink": {
+											"name": "AccasSender"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Accasty']"
+										},
+										"sink": {
+											"name": "Accasty"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AccastySender']"
+										},
+										"sink": {
+											"name": "AccastySender"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AcdocCopaEewDummyPa']"
+										},
+										"sink": {
+											"name": "AcdocCopaEewDummyPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AcdocEewDummy']"
+										},
+										"sink": {
+											"name": "AcdocEewDummy"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Acritmtype']"
+										},
+										"sink": {
+											"name": "Acritmtype"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Acrlogsys']"
+										},
+										"sink": {
+											"name": "Acrlogsys"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AcrobjId']"
+										},
+										"sink": {
+											"name": "AcrobjId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Acrobjtype']"
+										},
+										"sink": {
+											"name": "Acrobjtype"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AcrsobjId']"
+										},
+										"sink": {
+											"name": "AcrsobjId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Acrvaldat']"
+										},
+										"sink": {
+											"name": "Acrvaldat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Afabe']"
+										},
+										"sink": {
+											"name": "Afabe"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Anbwa']"
+										},
+										"sink": {
+											"name": "Anbwa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Anlgr']"
+										},
+										"sink": {
+											"name": "Anlgr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Anlgr2']"
+										},
+										"sink": {
+											"name": "Anlgr2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Anlkl']"
+										},
+										"sink": {
+											"name": "Anlkl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Anln1']"
+										},
+										"sink": {
+											"name": "Anln1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Anln2']"
+										},
+										"sink": {
+											"name": "Anln2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Arbid']"
+										},
+										"sink": {
+											"name": "Arbid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ArtnrgPa']"
+										},
+										"sink": {
+											"name": "ArtnrgPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Artpr']"
+										},
+										"sink": {
+											"name": "Artpr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AuartPa']"
+										},
+										"sink": {
+											"name": "AuartPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Aufnr']"
+										},
+										"sink": {
+											"name": "Aufnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AufnrOrg']"
+										},
+										"sink": {
+											"name": "AufnrOrg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Aufps']"
+										},
+										"sink": {
+											"name": "Aufps"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Augbl']"
+										},
+										"sink": {
+											"name": "Augbl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Augdt']"
+										},
+										"sink": {
+											"name": "Augdt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Auggj']"
+										},
+										"sink": {
+											"name": "Auggj"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Autyp']"
+										},
+										"sink": {
+											"name": "Autyp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Awitem']"
+										},
+										"sink": {
+											"name": "Awitem"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Awitgrp']"
+										},
+										"sink": {
+											"name": "Awitgrp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Aworg']"
+										},
+										"sink": {
+											"name": "Aworg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AworgRev']"
+										},
+										"sink": {
+											"name": "AworgRev"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Awref']"
+										},
+										"sink": {
+											"name": "Awref"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AwrefRev']"
+										},
+										"sink": {
+											"name": "AwrefRev"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Awsys']"
+										},
+										"sink": {
+											"name": "Awsys"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Awtyp']"
+										},
+										"sink": {
+											"name": "Awtyp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['AwtypRev']"
+										},
+										"sink": {
+											"name": "AwtypRev"
+										}
+									},
+									{
+										"source": {
+											"path": "[['BdgtAccount']"
+										},
+										"sink": {
+											"name": "BdgtAccount"
+										}
+									},
+									{
+										"source": {
+											"path": "[['BdgtAccountCocode']"
+										},
+										"sink": {
+											"name": "BdgtAccountCocode"
+										}
+									},
+									{
+										"source": {
+											"path": "[['BdgtCnsmpnAmountType']"
+										},
+										"sink": {
+											"name": "BdgtCnsmpnAmountType"
+										}
+									},
+									{
+										"source": {
+											"path": "[['BdgtCnsmpnDate']"
+										},
+										"sink": {
+											"name": "BdgtCnsmpnDate"
+										}
+									},
+									{
+										"source": {
+											"path": "[['BdgtCnsmpnPeriod']"
+										},
+										"sink": {
+											"name": "BdgtCnsmpnPeriod"
+										}
+									},
+									{
+										"source": {
+											"path": "[['BdgtCnsmpnType']"
+										},
+										"sink": {
+											"name": "BdgtCnsmpnType"
+										}
+									},
+									{
+										"source": {
+											"path": "[['BdgtCnsmpnYear']"
+										},
+										"sink": {
+											"name": "BdgtCnsmpnYear"
+										}
+									},
+									{
+										"source": {
+											"path": "[['BdgtRelevant']"
+										},
+										"sink": {
+											"name": "BdgtRelevant"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Belnr']"
+										},
+										"sink": {
+											"name": "Belnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Beltp']"
+										},
+										"sink": {
+											"name": "Beltp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bemot']"
+										},
+										"sink": {
+											"name": "Bemot"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Billm']"
+										},
+										"sink": {
+											"name": "Billm"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Blart']"
+										},
+										"sink": {
+											"name": "Blart"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bldat']"
+										},
+										"sink": {
+											"name": "Bldat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Brsch']"
+										},
+										"sink": {
+											"name": "Brsch"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bschl']"
+										},
+										"sink": {
+											"name": "Bschl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bsl']"
+										},
+										"sink": {
+											"name": "Bsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bslalt']"
+										},
+										"sink": {
+											"name": "Bslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bslext']"
+										},
+										"sink": {
+											"name": "Bslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bstat']"
+										},
+										"sink": {
+											"name": "Bstat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bttype']"
+										},
+										"sink": {
+											"name": "Bttype"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Btype']"
+										},
+										"sink": {
+											"name": "Btype"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Budat']"
+										},
+										"sink": {
+											"name": "Budat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['BukrsSender']"
+										},
+										"sink": {
+											"name": "BukrsSender"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Buzei']"
+										},
+										"sink": {
+											"name": "Buzei"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwkey']"
+										},
+										"sink": {
+											"name": "Bwkey"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwstrat']"
+										},
+										"sink": {
+											"name": "Bwstrat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bwtar']"
+										},
+										"sink": {
+											"name": "Bwtar"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bzdat']"
+										},
+										"sink": {
+											"name": "Bzdat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Bzirk']"
+										},
+										"sink": {
+											"name": "Bzirk"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Cbobjnr']"
+										},
+										"sink": {
+											"name": "Cbobjnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Cbracct']"
+										},
+										"sink": {
+											"name": "Cbracct"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Cbrunid']"
+										},
+										"sink": {
+											"name": "Cbrunid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ChargPa']"
+										},
+										"sink": {
+											"name": "ChargPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ClosingRunId']"
+										},
+										"sink": {
+											"name": "ClosingRunId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoAccastyN1']"
+										},
+										"sink": {
+											"name": "CoAccastyN1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoAccastyN2']"
+										},
+										"sink": {
+											"name": "CoAccastyN2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoAccastyN3']"
+										},
+										"sink": {
+											"name": "CoAccastyN3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoBeknz']"
+										},
+										"sink": {
+											"name": "CoBeknz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoBelkz']"
+										},
+										"sink": {
+											"name": "CoBelkz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoBelnr']"
+										},
+										"sink": {
+											"name": "CoBelnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoBuzei']"
+										},
+										"sink": {
+											"name": "CoBuzei"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoBuzei1']"
+										},
+										"sink": {
+											"name": "CoBuzei1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoBuzei2']"
+										},
+										"sink": {
+											"name": "CoBuzei2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoBuzei5']"
+										},
+										"sink": {
+											"name": "CoBuzei5"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoBuzei6']"
+										},
+										"sink": {
+											"name": "CoBuzei6"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoBuzei7']"
+										},
+										"sink": {
+											"name": "CoBuzei7"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoMefbtr']"
+										},
+										"sink": {
+											"name": "CoMefbtr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoMegbtr']"
+										},
+										"sink": {
+											"name": "CoMegbtr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoMeinh']"
+										},
+										"sink": {
+											"name": "CoMeinh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoOsl']"
+										},
+										"sink": {
+											"name": "CoOsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoRefbz']"
+										},
+										"sink": {
+											"name": "CoRefbz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoRefbz1']"
+										},
+										"sink": {
+											"name": "CoRefbz1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoRefbz2']"
+										},
+										"sink": {
+											"name": "CoRefbz2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoRefbz5']"
+										},
+										"sink": {
+											"name": "CoRefbz5"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoRefbz6']"
+										},
+										"sink": {
+											"name": "CoRefbz6"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoRefbz7']"
+										},
+										"sink": {
+											"name": "CoRefbz7"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CoZlenr']"
+										},
+										"sink": {
+											"name": "CoZlenr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CocoNum']"
+										},
+										"sink": {
+											"name": "CocoNum"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Csl']"
+										},
+										"sink": {
+											"name": "Csl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Cslalt']"
+										},
+										"sink": {
+											"name": "Cslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Cslext']"
+										},
+										"sink": {
+											"name": "Cslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Dabrz']"
+										},
+										"sink": {
+											"name": "Dabrz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['DeprPeriod']"
+										},
+										"sink": {
+											"name": "DeprPeriod"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Docln']"
+										},
+										"sink": {
+											"name": "Docln"
+										}
+									},
+									{
+										"source": {
+											"path": "[['DocnrLd']"
+										},
+										"sink": {
+											"name": "DocnrLd"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Drcrk']"
+										},
+										"sink": {
+											"name": "Drcrk"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Dsl']"
+										},
+										"sink": {
+											"name": "Dsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Dslalt']"
+										},
+										"sink": {
+											"name": "Dslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Dslext']"
+										},
+										"sink": {
+											"name": "Dslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['DummyInclEewCobl']"
+										},
+										"sink": {
+											"name": "DummyInclEewCobl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['DummyMrktSgmntEewPs']"
+										},
+										"sink": {
+											"name": "DummyMrktSgmntEewPs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ebeln']"
+										},
+										"sink": {
+											"name": "Ebeln"
+										}
+									},
+									{
+										"source": {
+											"path": "[['EbelnLogsys']"
+										},
+										"sink": {
+											"name": "EbelnLogsys"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ebelp']"
+										},
+										"sink": {
+											"name": "Ebelp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Egrup']"
+										},
+										"sink": {
+											"name": "Egrup"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Eprctr']"
+										},
+										"sink": {
+											"name": "Eprctr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Equnr']"
+										},
+										"sink": {
+											"name": "Equnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Erkrs']"
+										},
+										"sink": {
+											"name": "Erkrs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Erlkz']"
+										},
+										"sink": {
+											"name": "Erlkz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Esl']"
+										},
+										"sink": {
+											"name": "Esl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Eslalt']"
+										},
+										"sink": {
+											"name": "Eslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Eslext']"
+										},
+										"sink": {
+											"name": "Eslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Etype']"
+										},
+										"sink": {
+											"name": "Etype"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ExtwgPa']"
+										},
+										"sink": {
+											"name": "ExtwgPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fbuda']"
+										},
+										"sink": {
+											"name": "Fbuda"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fikrs']"
+										},
+										"sink": {
+											"name": "Fikrs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fiscyearper']"
+										},
+										"sink": {
+											"name": "Fiscyearper"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fistl']"
+										},
+										"sink": {
+											"name": "Fistl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['FkaraPa']"
+										},
+										"sink": {
+											"name": "FkaraPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fkart']"
+										},
+										"sink": {
+											"name": "Fkart"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fsl']"
+										},
+										"sink": {
+											"name": "Fsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fslalt']"
+										},
+										"sink": {
+											"name": "Fslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Fslext']"
+										},
+										"sink": {
+											"name": "Fslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['FupAction']"
+										},
+										"sink": {
+											"name": "FupAction"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Gjahr']"
+										},
+										"sink": {
+											"name": "Gjahr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Gkoar']"
+										},
+										"sink": {
+											"name": "Gkoar"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Gkont']"
+										},
+										"sink": {
+											"name": "Gkont"
+										}
+									},
+									{
+										"source": {
+											"path": "[['GlaccountType']"
+										},
+										"sink": {
+											"name": "GlaccountType"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Gsl']"
+										},
+										"sink": {
+											"name": "Gsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Gslalt']"
+										},
+										"sink": {
+											"name": "Gslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Gslext']"
+										},
+										"sink": {
+											"name": "Gslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hbkid']"
+										},
+										"sink": {
+											"name": "Hbkid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hkgrp']"
+										},
+										"sink": {
+											"name": "Hkgrp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hktid']"
+										},
+										"sink": {
+											"name": "Hktid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hpeinh']"
+										},
+										"sink": {
+											"name": "Hpeinh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hpvprs']"
+										},
+										"sink": {
+											"name": "Hpvprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hrkft']"
+										},
+										"sink": {
+											"name": "Hrkft"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hsalk3']"
+										},
+										"sink": {
+											"name": "Hsalk3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hsalkv']"
+										},
+										"sink": {
+											"name": "Hsalkv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hsl']"
+										},
+										"sink": {
+											"name": "Hsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hslalt']"
+										},
+										"sink": {
+											"name": "Hslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hslext']"
+										},
+										"sink": {
+											"name": "Hslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hstprs']"
+										},
+										"sink": {
+											"name": "Hstprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hvksal']"
+										},
+										"sink": {
+											"name": "Hvksal"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Hvkwrt']"
+										},
+										"sink": {
+											"name": "Hvkwrt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ilart']"
+										},
+										"sink": {
+											"name": "Ilart"
+										}
+									},
+									{
+										"source": {
+											"path": "[['InvMovCateg']"
+										},
+										"sink": {
+											"name": "InvMovCateg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Istru']"
+										},
+										"sink": {
+											"name": "Istru"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Jvactivity']"
+										},
+										"sink": {
+											"name": "Jvactivity"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kalnr']"
+										},
+										"sink": {
+											"name": "Kalnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kdauf']"
+										},
+										"sink": {
+											"name": "Kdauf"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kdgrp']"
+										},
+										"sink": {
+											"name": "Kdgrp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kdpos']"
+										},
+										"sink": {
+											"name": "Kdpos"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kfsl']"
+										},
+										"sink": {
+											"name": "Kfsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kfsl2']"
+										},
+										"sink": {
+											"name": "Kfsl2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kfsl3']"
+										},
+										"sink": {
+											"name": "Kfsl3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['KmmaklPa']"
+										},
+										"sink": {
+											"name": "KmmaklPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['KmvtnrPa']"
+										},
+										"sink": {
+											"name": "KmvtnrPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Koart']"
+										},
+										"sink": {
+											"name": "Koart"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kokrs']"
+										},
+										"sink": {
+											"name": "Kokrs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Konzs']"
+										},
+										"sink": {
+											"name": "Konzs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kpeinh']"
+										},
+										"sink": {
+											"name": "Kpeinh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kpvprs']"
+										},
+										"sink": {
+											"name": "Kpvprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ksalk3']"
+										},
+										"sink": {
+											"name": "Ksalk3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ksalkv']"
+										},
+										"sink": {
+											"name": "Ksalkv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ksl']"
+										},
+										"sink": {
+											"name": "Ksl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kslalt']"
+										},
+										"sink": {
+											"name": "Kslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kslext']"
+										},
+										"sink": {
+											"name": "Kslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kstprs']"
+										},
+										"sink": {
+											"name": "Kstprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kstrg']"
+										},
+										"sink": {
+											"name": "Kstrg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ktogr']"
+										},
+										"sink": {
+											"name": "Ktogr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ktop2']"
+										},
+										"sink": {
+											"name": "Ktop2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ktopl']"
+										},
+										"sink": {
+											"name": "Ktopl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ktosl']"
+										},
+										"sink": {
+											"name": "Ktosl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kunnr']"
+										},
+										"sink": {
+											"name": "Kunnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kunre']"
+										},
+										"sink": {
+											"name": "Kunre"
+										}
+									},
+									{
+										"source": {
+											"path": "[['KunrgPa']"
+										},
+										"sink": {
+											"name": "KunrgPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kunwe']"
+										},
+										"sink": {
+											"name": "Kunwe"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Kzbws']"
+										},
+										"sink": {
+											"name": "Kzbws"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Land1']"
+										},
+										"sink": {
+											"name": "Land1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lbkum']"
+										},
+										"sink": {
+											"name": "Lbkum"
+										}
+									},
+									{
+										"source": {
+											"path": "[['LgortPa']"
+										},
+										"sink": {
+											"name": "LgortPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lifnr']"
+										},
+										"sink": {
+											"name": "Lifnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Linetype']"
+										},
+										"sink": {
+											"name": "Linetype"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Logsyso']"
+										},
+										"sink": {
+											"name": "Logsyso"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Logsysp']"
+										},
+										"sink": {
+											"name": "Logsysp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lokkt']"
+										},
+										"sink": {
+											"name": "Lokkt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Lstar']"
+										},
+										"sink": {
+											"name": "Lstar"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MatKdauf']"
+										},
+										"sink": {
+											"name": "MatKdauf"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MatKdpos']"
+										},
+										"sink": {
+											"name": "MatKdpos"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MatLifnr']"
+										},
+										"sink": {
+											"name": "MatLifnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MatPsPosid']"
+										},
+										"sink": {
+											"name": "MatPsPosid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MatPspnr']"
+										},
+										"sink": {
+											"name": "MatPspnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Matkl']"
+										},
+										"sink": {
+											"name": "Matkl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MatklMm']"
+										},
+										"sink": {
+											"name": "MatklMm"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Matnr']"
+										},
+										"sink": {
+											"name": "Matnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MatnrCopa']"
+										},
+										"sink": {
+											"name": "MatnrCopa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MatnrPa']"
+										},
+										"sink": {
+											"name": "MatnrPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Maufnr']"
+										},
+										"sink": {
+											"name": "Maufnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Measure']"
+										},
+										"sink": {
+											"name": "Measure"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mfsl']"
+										},
+										"sink": {
+											"name": "Mfsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MigDocln']"
+										},
+										"sink": {
+											"name": "MigDocln"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MigSource']"
+										},
+										"sink": {
+											"name": "MigSource"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mlast']"
+										},
+										"sink": {
+											"name": "Mlast"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mlcateg']"
+										},
+										"sink": {
+											"name": "Mlcateg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mlposnr']"
+										},
+										"sink": {
+											"name": "Mlposnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mlptyp']"
+										},
+										"sink": {
+											"name": "Mlptyp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Movcat']"
+										},
+										"sink": {
+											"name": "Movcat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Msl']"
+										},
+										"sink": {
+											"name": "Msl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Muvflg']"
+										},
+										"sink": {
+											"name": "Muvflg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mvgr1Pa']"
+										},
+										"sink": {
+											"name": "Mvgr1Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Mwskz']"
+										},
+										"sink": {
+											"name": "Mwskz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Netdt']"
+										},
+										"sink": {
+											"name": "Netdt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Nplnr']"
+										},
+										"sink": {
+											"name": "Nplnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['NplnrVorgn']"
+										},
+										"sink": {
+											"name": "NplnrVorgn"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Objnr']"
+										},
+										"sink": {
+											"name": "Objnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ObjnrHk']"
+										},
+										"sink": {
+											"name": "ObjnrHk"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ObsReason']"
+										},
+										"sink": {
+											"name": "ObsReason"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Opeinh']"
+										},
+										"sink": {
+											"name": "Opeinh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Opvprs']"
+										},
+										"sink": {
+											"name": "Opvprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Osalk3']"
+										},
+										"sink": {
+											"name": "Osalk3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Osalkv']"
+										},
+										"sink": {
+											"name": "Osalkv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Osl']"
+										},
+										"sink": {
+											"name": "Osl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Oslalt']"
+										},
+										"sink": {
+											"name": "Oslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Oslext']"
+										},
+										"sink": {
+											"name": "Oslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ostprs']"
+										},
+										"sink": {
+											"name": "Ostprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Overtimecat']"
+										},
+										"sink": {
+											"name": "Overtimecat"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Paccas']"
+										},
+										"sink": {
+											"name": "Paccas"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Paccasty']"
+										},
+										"sink": {
+											"name": "Paccasty"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Panl1']"
+										},
+										"sink": {
+											"name": "Panl1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Panl2']"
+										},
+										"sink": {
+											"name": "Panl2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Paobjnr']"
+										},
+										"sink": {
+											"name": "Paobjnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Parob1']"
+										},
+										"sink": {
+											"name": "Parob1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Parobsrc']"
+										},
+										"sink": {
+											"name": "Parobsrc"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Paufnr']"
+										},
+										"sink": {
+											"name": "Paufnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pautyp']"
+										},
+										"sink": {
+											"name": "Pautyp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pbukrs']"
+										},
+										"sink": {
+											"name": "Pbukrs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pdabrz']"
+										},
+										"sink": {
+											"name": "Pdabrz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pegrup']"
+										},
+										"sink": {
+											"name": "Pegrup"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Perart']"
+										},
+										"sink": {
+											"name": "Perart"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Periv']"
+										},
+										"sink": {
+											"name": "Periv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pernr']"
+										},
+										"sink": {
+											"name": "Pernr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pfsl']"
+										},
+										"sink": {
+											"name": "Pfsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pfsl2']"
+										},
+										"sink": {
+											"name": "Pfsl2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pfsl3']"
+										},
+										"sink": {
+											"name": "Pfsl3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pkdauf']"
+										},
+										"sink": {
+											"name": "Pkdauf"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pkdpos']"
+										},
+										"sink": {
+											"name": "Pkdpos"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pkstrg']"
+										},
+										"sink": {
+											"name": "Pkstrg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PlannedPartsWork']"
+										},
+										"sink": {
+											"name": "PlannedPartsWork"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Plknz']"
+										},
+										"sink": {
+											"name": "Plknz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Plstar']"
+										},
+										"sink": {
+											"name": "Plstar"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pnplnr']"
+										},
+										"sink": {
+											"name": "Pnplnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PnplnrVorgn']"
+										},
+										"sink": {
+											"name": "PnplnrVorgn"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pom']"
+										},
+										"sink": {
+											"name": "Pom"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Poper']"
+										},
+										"sink": {
+											"name": "Poper"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ppaobjnr']"
+										},
+										"sink": {
+											"name": "Ppaobjnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pprctr']"
+										},
+										"sink": {
+											"name": "Pprctr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pprznr']"
+										},
+										"sink": {
+											"name": "Pprznr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PpsPosid']"
+										},
+										"sink": {
+											"name": "PpsPosid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PpsPrjPnr']"
+										},
+										"sink": {
+											"name": "PpsPrjPnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PpsPspPnr']"
+										},
+										"sink": {
+											"name": "PpsPspPnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PpsPspid']"
+										},
+										"sink": {
+											"name": "PpsPspid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Prctr']"
+										},
+										"sink": {
+											"name": "Prctr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrdhaPa']"
+										},
+										"sink": {
+											"name": "PrdhaPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecAwitem']"
+										},
+										"sink": {
+											"name": "PrecAwitem"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecAwmult']"
+										},
+										"sink": {
+											"name": "PrecAwmult"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecAworg']"
+										},
+										"sink": {
+											"name": "PrecAworg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecAwref']"
+										},
+										"sink": {
+											"name": "PrecAwref"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecAwsys']"
+										},
+										"sink": {
+											"name": "PrecAwsys"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecAwtyp']"
+										},
+										"sink": {
+											"name": "PrecAwtyp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecBelnr']"
+										},
+										"sink": {
+											"name": "PrecBelnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecBukrs']"
+										},
+										"sink": {
+											"name": "PrecBukrs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecDocln']"
+										},
+										"sink": {
+											"name": "PrecDocln"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecGjahr']"
+										},
+										"sink": {
+											"name": "PrecGjahr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PrecSubta']"
+										},
+										"sink": {
+											"name": "PrecSubta"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Precnnr']"
+										},
+										"sink": {
+											"name": "Precnnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Priok']"
+										},
+										"sink": {
+											"name": "Priok"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ProdhPa']"
+										},
+										"sink": {
+											"name": "ProdhPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Prodper']"
+										},
+										"sink": {
+											"name": "Prodper"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ProzsPn']"
+										},
+										"sink": {
+											"name": "ProzsPn"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Prznr']"
+										},
+										"sink": {
+											"name": "Prznr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PsPosid']"
+										},
+										"sink": {
+											"name": "PsPosid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PsPrjPnr']"
+										},
+										"sink": {
+											"name": "PsPrjPnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PsPspPnr']"
+										},
+										"sink": {
+											"name": "PsPspPnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PsPspid']"
+										},
+										"sink": {
+											"name": "PsPspid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pscope']"
+										},
+										"sink": {
+											"name": "Pscope"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Psegment']"
+										},
+										"sink": {
+											"name": "Psegment"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Psempsl']"
+										},
+										"sink": {
+											"name": "Psempsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PserviceDocId']"
+										},
+										"sink": {
+											"name": "PserviceDocId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PserviceDocItemId']"
+										},
+										"sink": {
+											"name": "PserviceDocItemId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PserviceDocType']"
+										},
+										"sink": {
+											"name": "PserviceDocType"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Psgenr']"
+										},
+										"sink": {
+											"name": "Psgenr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Psgrnr']"
+										},
+										"sink": {
+											"name": "Psgrnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Psl']"
+										},
+										"sink": {
+											"name": "Psl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Psl2']"
+										},
+										"sink": {
+											"name": "Psl2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Psl3']"
+										},
+										"sink": {
+											"name": "Psl3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Psmenr']"
+										},
+										"sink": {
+											"name": "Psmenr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Psnksl']"
+										},
+										"sink": {
+											"name": "Psnksl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PstyvPa']"
+										},
+										"sink": {
+											"name": "PstyvPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pswenr']"
+										},
+										"sink": {
+											"name": "Pswenr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Pvname']"
+										},
+										"sink": {
+											"name": "Pvname"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Qmnum']"
+										},
+										"sink": {
+											"name": "Qmnum"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Qsbvalt']"
+										},
+										"sink": {
+											"name": "Qsbvalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Qsprocess']"
+										},
+										"sink": {
+											"name": "Qsprocess"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Quant1']"
+										},
+										"sink": {
+											"name": "Quant1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Quant2']"
+										},
+										"sink": {
+											"name": "Quant2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Quant3']"
+										},
+										"sink": {
+											"name": "Quant3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Qunit1']"
+										},
+										"sink": {
+											"name": "Qunit1"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Qunit2']"
+										},
+										"sink": {
+											"name": "Qunit2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Qunit3']"
+										},
+										"sink": {
+											"name": "Qunit3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Racct']"
+										},
+										"sink": {
+											"name": "Racct"
+										}
+									},
+									{
+										"source": {
+											"path": "[['RacctSender']"
+										},
+										"sink": {
+											"name": "RacctSender"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rassc']"
+										},
+										"sink": {
+											"name": "Rassc"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rbcur']"
+										},
+										"sink": {
+											"name": "Rbcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rbest']"
+										},
+										"sink": {
+											"name": "Rbest"
+										}
+									},
+									{
+										"source": {
+											"path": "[['RbudgetPd']"
+										},
+										"sink": {
+											"name": "RbudgetPd"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rbukrs']"
+										},
+										"sink": {
+											"name": "Rbukrs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rbusa']"
+										},
+										"sink": {
+											"name": "Rbusa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rccur']"
+										},
+										"sink": {
+											"name": "Rccur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rcntr']"
+										},
+										"sink": {
+											"name": "Rcntr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['RcoOcur']"
+										},
+										"sink": {
+											"name": "RcoOcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rdcur']"
+										},
+										"sink": {
+											"name": "Rdcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ReAccount']"
+										},
+										"sink": {
+											"name": "ReAccount"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ReBukrs']"
+										},
+										"sink": {
+											"name": "ReBukrs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rebzg']"
+										},
+										"sink": {
+											"name": "Rebzg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rebzj']"
+										},
+										"sink": {
+											"name": "Rebzj"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rebzt']"
+										},
+										"sink": {
+											"name": "Rebzt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rebzz']"
+										},
+										"sink": {
+											"name": "Rebzz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Recid']"
+										},
+										"sink": {
+											"name": "Recid"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Recnnr']"
+										},
+										"sink": {
+											"name": "Recnnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Recur']"
+										},
+										"sink": {
+											"name": "Recur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rfarea']"
+										},
+										"sink": {
+											"name": "Rfarea"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rfcur']"
+										},
+										"sink": {
+											"name": "Rfcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rfund']"
+										},
+										"sink": {
+											"name": "Rfund"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rgcur']"
+										},
+										"sink": {
+											"name": "Rgcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['RgrantNbr']"
+										},
+										"sink": {
+											"name": "RgrantNbr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rhcur']"
+										},
+										"sink": {
+											"name": "Rhcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rhoart']"
+										},
+										"sink": {
+											"name": "Rhoart"
+										}
+									},
+									{
+										"source": {
+											"path": "[['RiskClass']"
+										},
+										"sink": {
+											"name": "RiskClass"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Riunit']"
+										},
+										"sink": {
+											"name": "Riunit"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rkcur']"
+										},
+										"sink": {
+											"name": "Rkcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rldnr']"
+										},
+										"sink": {
+											"name": "Rldnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rmsl']"
+										},
+										"sink": {
+											"name": "Rmsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rmvct']"
+										},
+										"sink": {
+											"name": "Rmvct"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rocur']"
+										},
+										"sink": {
+											"name": "Rocur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rrcty']"
+										},
+										"sink": {
+											"name": "Rrcty"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rrunit']"
+										},
+										"sink": {
+											"name": "Rrunit"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rsrce']"
+										},
+										"sink": {
+											"name": "Rsrce"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rtcur']"
+										},
+										"sink": {
+											"name": "Rtcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Runit']"
+										},
+										"sink": {
+											"name": "Runit"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rvcur']"
+										},
+										"sink": {
+											"name": "Rvcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rvunit']"
+										},
+										"sink": {
+											"name": "Rvunit"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Rwcur']"
+										},
+										"sink": {
+											"name": "Rwcur"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ryear']"
+										},
+										"sink": {
+											"name": "Ryear"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SRecind']"
+										},
+										"sink": {
+											"name": "SRecind"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SbudgetPd']"
+										},
+										"sink": {
+											"name": "SbudgetPd"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sbusa']"
+										},
+										"sink": {
+											"name": "Sbusa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Scntr']"
+										},
+										"sink": {
+											"name": "Scntr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Scope']"
+										},
+										"sink": {
+											"name": "Scope"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SdmVersion']"
+										},
+										"sink": {
+											"name": "SdmVersion"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Segment']"
+										},
+										"sink": {
+											"name": "Segment"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sempsl']"
+										},
+										"sink": {
+											"name": "Sempsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ServiceContractId']"
+										},
+										"sink": {
+											"name": "ServiceContractId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ServiceContractItemId']"
+										},
+										"sink": {
+											"name": "ServiceContractItemId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ServiceContractType']"
+										},
+										"sink": {
+											"name": "ServiceContractType"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ServiceDocId']"
+										},
+										"sink": {
+											"name": "ServiceDocId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ServiceDocItemId']"
+										},
+										"sink": {
+											"name": "ServiceDocItemId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ServiceDocType']"
+										},
+										"sink": {
+											"name": "ServiceDocType"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SettlementRule']"
+										},
+										"sink": {
+											"name": "SettlementRule"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sfarea']"
+										},
+										"sink": {
+											"name": "Sfarea"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sfund']"
+										},
+										"sink": {
+											"name": "Sfund"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sgenr']"
+										},
+										"sink": {
+											"name": "Sgenr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SgrantNbr']"
+										},
+										"sink": {
+											"name": "SgrantNbr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sgrnr']"
+										},
+										"sink": {
+											"name": "Sgrnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sgtxt']"
+										},
+										"sink": {
+											"name": "Sgtxt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Slalittype']"
+										},
+										"sink": {
+											"name": "Slalittype"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Smenr']"
+										},
+										"sink": {
+											"name": "Smenr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Snksl']"
+										},
+										"sink": {
+											"name": "Snksl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Sobkz']"
+										},
+										"sink": {
+											"name": "Sobkz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Spart']"
+										},
+										"sink": {
+											"name": "Spart"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SrcAwitem']"
+										},
+										"sink": {
+											"name": "SrcAwitem"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SrcAworg']"
+										},
+										"sink": {
+											"name": "SrcAworg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SrcAwref']"
+										},
+										"sink": {
+											"name": "SrcAwref"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SrcAwsubit']"
+										},
+										"sink": {
+											"name": "SrcAwsubit"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SrcAwsys']"
+										},
+										"sink": {
+											"name": "SrcAwsys"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SrcAwtyp']"
+										},
+										"sink": {
+											"name": "SrcAwtyp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Subta']"
+										},
+										"sink": {
+											"name": "Subta"
+										}
+									},
+									{
+										"source": {
+											"path": "[['SubtaRev']"
+										},
+										"sink": {
+											"name": "SubtaRev"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Swenr']"
+										},
+										"sink": {
+											"name": "Swenr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Timestamp']"
+										},
+										"sink": {
+											"name": "Timestamp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Tplnr']"
+										},
+										"sink": {
+											"name": "Tplnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Tsl']"
+										},
+										"sink": {
+											"name": "Tsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['UbzdtPn']"
+										},
+										"sink": {
+											"name": "UbzdtPn"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ukostl']"
+										},
+										"sink": {
+											"name": "Ukostl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ulstar']"
+										},
+										"sink": {
+											"name": "Ulstar"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Umskz']"
+										},
+										"sink": {
+											"name": "Umskz"
+										}
+									},
+									{
+										"source": {
+											"path": "[['UpmatPa']"
+										},
+										"sink": {
+											"name": "UpmatPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Uprctr']"
+										},
+										"sink": {
+											"name": "Uprctr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Uprznr']"
+										},
+										"sink": {
+											"name": "Uprznr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Usnam']"
+										},
+										"sink": {
+											"name": "Usnam"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Uspob']"
+										},
+										"sink": {
+											"name": "Uspob"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Uvorn']"
+										},
+										"sink": {
+											"name": "Uvorn"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ValobjId']"
+										},
+										"sink": {
+											"name": "ValobjId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Valobjtype']"
+										},
+										"sink": {
+											"name": "Valobjtype"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ValsobjId']"
+										},
+										"sink": {
+											"name": "ValsobjId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Valut']"
+										},
+										"sink": {
+											"name": "Valut"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VbelnPa']"
+										},
+										"sink": {
+											"name": "VbelnPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VkausPa']"
+										},
+										"sink": {
+											"name": "VkausPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VkburPa']"
+										},
+										"sink": {
+											"name": "VkburPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VkgrpPa']"
+										},
+										"sink": {
+											"name": "VkgrpPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vkorg']"
+										},
+										"sink": {
+											"name": "Vkorg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmfsl']"
+										},
+										"sink": {
+											"name": "Vmfsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vmsl']"
+										},
+										"sink": {
+											"name": "Vmsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vname']"
+										},
+										"sink": {
+											"name": "Vname"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vorgn']"
+										},
+										"sink": {
+											"name": "Vorgn"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vornr']"
+										},
+										"sink": {
+											"name": "Vornr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vpeinh']"
+										},
+										"sink": {
+											"name": "Vpeinh"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vprsv']"
+										},
+										"sink": {
+											"name": "Vprsv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vptnr']"
+										},
+										"sink": {
+											"name": "Vptnr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vpvprs']"
+										},
+										"sink": {
+											"name": "Vpvprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vrgng']"
+										},
+										"sink": {
+											"name": "Vrgng"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vsalk3']"
+										},
+										"sink": {
+											"name": "Vsalk3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vsalkv']"
+										},
+										"sink": {
+											"name": "Vsalkv"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vsl']"
+										},
+										"sink": {
+											"name": "Vsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vslalt']"
+										},
+										"sink": {
+											"name": "Vslalt"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vslext']"
+										},
+										"sink": {
+											"name": "Vslext"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VstelPa']"
+										},
+										"sink": {
+											"name": "VstelPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vstprs']"
+										},
+										"sink": {
+											"name": "Vstprs"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vtstamp']"
+										},
+										"sink": {
+											"name": "Vtstamp"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Vtweg']"
+										},
+										"sink": {
+											"name": "Vtweg"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Werks']"
+										},
+										"sink": {
+											"name": "Werks"
+										}
+									},
+									{
+										"source": {
+											"path": "[['WorkItemId']"
+										},
+										"sink": {
+											"name": "WorkItemId"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Wsl']"
+										},
+										"sink": {
+											"name": "Wsl"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Wsl2']"
+										},
+										"sink": {
+											"name": "Wsl2"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Wsl3']"
+										},
+										"sink": {
+											"name": "Wsl3"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww001Pa']"
+										},
+										"sink": {
+											"name": "Ww001Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww002Pa']"
+										},
+										"sink": {
+											"name": "Ww002Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww003Pa']"
+										},
+										"sink": {
+											"name": "Ww003Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww004Pa']"
+										},
+										"sink": {
+											"name": "Ww004Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww005Pa']"
+										},
+										"sink": {
+											"name": "Ww005Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww006Pa']"
+										},
+										"sink": {
+											"name": "Ww006Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww007Pa']"
+										},
+										"sink": {
+											"name": "Ww007Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww008Pa']"
+										},
+										"sink": {
+											"name": "Ww008Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww009Pa']"
+										},
+										"sink": {
+											"name": "Ww009Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww010Pa']"
+										},
+										"sink": {
+											"name": "Ww010Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww011Pa']"
+										},
+										"sink": {
+											"name": "Ww011Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Ww012Pa']"
+										},
+										"sink": {
+											"name": "Ww012Pa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Wwert']"
+										},
+										"sink": {
+											"name": "Wwert"
+										}
+									},
+									{
+										"source": {
+											"path": "[['WwmctPa']"
+										},
+										"sink": {
+											"name": "WwmctPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['WwqctPa']"
+										},
+										"sink": {
+											"name": "WwqctPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xcommitment']"
+										},
+										"sink": {
+											"name": "Xcommitment"
+										}
+									},
+									{
+										"source": {
+											"path": "[['XmanpropvalPn']"
+										},
+										"sink": {
+											"name": "XmanpropvalPn"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xobew']"
+										},
+										"sink": {
+											"name": "Xobew"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xopvw']"
+										},
+										"sink": {
+											"name": "Xopvw"
+										}
+									},
+									{
+										"source": {
+											"path": "[['XpaobjnrCoRel']"
+										},
+										"sink": {
+											"name": "XpaobjnrCoRel"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xreversed']"
+										},
+										"sink": {
+											"name": "Xreversed"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xreversing']"
+										},
+										"sink": {
+											"name": "Xreversing"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xsecondary']"
+										},
+										"sink": {
+											"name": "Xsecondary"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xsettled']"
+										},
+										"sink": {
+											"name": "Xsettled"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xsettling']"
+										},
+										"sink": {
+											"name": "Xsettling"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xsplitmod']"
+										},
+										"sink": {
+											"name": "Xsplitmod"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Xtruerev']"
+										},
+										"sink": {
+											"name": "Xtruerev"
+										}
+									},
+									{
+										"source": {
+											"path": "[['XvabgPn']"
+										},
+										"sink": {
+											"name": "XvabgPn"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zekkn']"
+										},
+										"sink": {
+											"name": "Zekkn"
+										}
+									},
+									{
+										"source": {
+											"path": "[['Zuonr']"
+										},
+										"sink": {
+											"name": "Zuonr"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ZzCfPa']"
+										},
+										"sink": {
+											"name": "ZzCfPa"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ZzRpPa']"
+										},
+										"sink": {
+											"name": "ZzRpPa"
+										}
+									}
+								],
+								"collectionReference": "$['d']['results']"
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_SAPACDOCA",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_SAPACDOCA_FILE",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_SAPACDOCA')]",
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_SAPACDOCA_FILE')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/MaterialDataExtraction')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -26736,6 +30635,755 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPACDOCA_FILE')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "VBAP",
+							"type": "Expression"
+						},
+						"folderPath": "OData",
+						"fileSystem": "saps4data"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": [
+					{
+						"name": "Mandt",
+						"type": "UTF8"
+					},
+					{
+						"name": "Ebeln",
+						"type": "UTF8"
+					},
+					{
+						"name": "Bukrs",
+						"type": "UTF8"
+					},
+					{
+						"name": "Bstyp",
+						"type": "UTF8"
+					},
+					{
+						"name": "Bsart",
+						"type": "UTF8"
+					},
+					{
+						"name": "Bsakz",
+						"type": "UTF8"
+					},
+					{
+						"name": "Loekz",
+						"type": "UTF8"
+					},
+					{
+						"name": "Statu",
+						"type": "UTF8"
+					},
+					{
+						"name": "Aedat",
+						"type": "UTF8"
+					},
+					{
+						"name": "Ernam",
+						"type": "UTF8"
+					},
+					{
+						"name": "Lastchangedatetime",
+						"type": "UTF8"
+					},
+					{
+						"name": "Pincr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Lponr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Lifnr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Spras",
+						"type": "UTF8"
+					},
+					{
+						"name": "Zterm",
+						"type": "UTF8"
+					},
+					{
+						"name": "Zbd1t",
+						"type": "UTF8"
+					},
+					{
+						"name": "Zbd2t",
+						"type": "UTF8"
+					},
+					{
+						"name": "Zbd3t",
+						"type": "UTF8"
+					},
+					{
+						"name": "Zbd1p",
+						"type": "UTF8"
+					},
+					{
+						"name": "Zbd2p",
+						"type": "UTF8"
+					},
+					{
+						"name": "Ekorg",
+						"type": "UTF8"
+					},
+					{
+						"name": "Ekgrp",
+						"type": "UTF8"
+					},
+					{
+						"name": "Waers",
+						"type": "UTF8"
+					},
+					{
+						"name": "Wkurs",
+						"type": "UTF8"
+					},
+					{
+						"name": "Kufix",
+						"type": "UTF8"
+					},
+					{
+						"name": "Bedat",
+						"type": "UTF8"
+					},
+					{
+						"name": "Kdatb",
+						"type": "UTF8"
+					},
+					{
+						"name": "Kdate",
+						"type": "UTF8"
+					},
+					{
+						"name": "Bwbdt",
+						"type": "UTF8"
+					},
+					{
+						"name": "Angdt",
+						"type": "UTF8"
+					},
+					{
+						"name": "Bnddt",
+						"type": "UTF8"
+					},
+					{
+						"name": "Gwldt",
+						"type": "UTF8"
+					},
+					{
+						"name": "Ausnr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Angnr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Ihran",
+						"type": "UTF8"
+					},
+					{
+						"name": "Ihrez",
+						"type": "UTF8"
+					},
+					{
+						"name": "Verkf",
+						"type": "UTF8"
+					},
+					{
+						"name": "Telf1",
+						"type": "UTF8"
+					},
+					{
+						"name": "Llief",
+						"type": "UTF8"
+					},
+					{
+						"name": "Kunnr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Konnr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Abgru",
+						"type": "UTF8"
+					},
+					{
+						"name": "Autlf",
+						"type": "UTF8"
+					},
+					{
+						"name": "Weakt",
+						"type": "UTF8"
+					},
+					{
+						"name": "Reswk",
+						"type": "UTF8"
+					},
+					{
+						"name": "Lblif",
+						"type": "UTF8"
+					},
+					{
+						"name": "Inco1",
+						"type": "UTF8"
+					},
+					{
+						"name": "Inco2",
+						"type": "UTF8"
+					},
+					{
+						"name": "Ktwrt",
+						"type": "UTF8"
+					},
+					{
+						"name": "Distributiontype",
+						"type": "UTF8"
+					},
+					{
+						"name": "Submi",
+						"type": "UTF8"
+					},
+					{
+						"name": "Knumv",
+						"type": "UTF8"
+					},
+					{
+						"name": "Kalsm",
+						"type": "UTF8"
+					},
+					{
+						"name": "Stafo",
+						"type": "UTF8"
+					},
+					{
+						"name": "Lifre",
+						"type": "UTF8"
+					},
+					{
+						"name": "Exnum",
+						"type": "UTF8"
+					},
+					{
+						"name": "Unsez",
+						"type": "UTF8"
+					},
+					{
+						"name": "Logsy",
+						"type": "UTF8"
+					},
+					{
+						"name": "Upinc",
+						"type": "UTF8"
+					},
+					{
+						"name": "Stako",
+						"type": "UTF8"
+					},
+					{
+						"name": "Frggr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Frgsx",
+						"type": "UTF8"
+					},
+					{
+						"name": "Frgke",
+						"type": "UTF8"
+					},
+					{
+						"name": "Frgzu",
+						"type": "UTF8"
+					},
+					{
+						"name": "Frgrl",
+						"type": "UTF8"
+					},
+					{
+						"name": "Lands",
+						"type": "UTF8"
+					},
+					{
+						"name": "Lphis",
+						"type": "UTF8"
+					},
+					{
+						"name": "Adrnr",
+						"type": "UTF8"
+					},
+					{
+						"name": "StcegL",
+						"type": "UTF8"
+					},
+					{
+						"name": "Stceg",
+						"type": "UTF8"
+					},
+					{
+						"name": "Absgr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Addnr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Kornr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Memory",
+						"type": "UTF8"
+					},
+					{
+						"name": "Procstat",
+						"type": "UTF8"
+					},
+					{
+						"name": "Rlwrt",
+						"type": "UTF8"
+					},
+					{
+						"name": "Revno",
+						"type": "UTF8"
+					},
+					{
+						"name": "Scmproc",
+						"type": "UTF8"
+					},
+					{
+						"name": "ReasonCode",
+						"type": "UTF8"
+					},
+					{
+						"name": "Memorytype",
+						"type": "UTF8"
+					},
+					{
+						"name": "Rettp",
+						"type": "UTF8"
+					},
+					{
+						"name": "Retpc",
+						"type": "UTF8"
+					},
+					{
+						"name": "Dptyp",
+						"type": "UTF8"
+					},
+					{
+						"name": "Dppct",
+						"type": "UTF8"
+					},
+					{
+						"name": "Dpamt",
+						"type": "UTF8"
+					},
+					{
+						"name": "Dpdat",
+						"type": "UTF8"
+					},
+					{
+						"name": "MsrId",
+						"type": "UTF8"
+					},
+					{
+						"name": "HierarchyExists",
+						"type": "UTF8"
+					},
+					{
+						"name": "ThresholdExists",
+						"type": "UTF8"
+					},
+					{
+						"name": "LegalContract",
+						"type": "UTF8"
+					},
+					{
+						"name": "Description",
+						"type": "UTF8"
+					},
+					{
+						"name": "ReleaseDate",
+						"type": "UTF8"
+					},
+					{
+						"name": "Vsart",
+						"type": "UTF8"
+					},
+					{
+						"name": "Handoverloc",
+						"type": "UTF8"
+					},
+					{
+						"name": "Shipcond",
+						"type": "UTF8"
+					},
+					{
+						"name": "Incov",
+						"type": "UTF8"
+					},
+					{
+						"name": "Inco2L",
+						"type": "UTF8"
+					},
+					{
+						"name": "Inco3L",
+						"type": "UTF8"
+					},
+					{
+						"name": "Grwcu",
+						"type": "UTF8"
+					},
+					{
+						"name": "IntraRel",
+						"type": "UTF8"
+					},
+					{
+						"name": "IntraExcl",
+						"type": "UTF8"
+					},
+					{
+						"name": "QtnErlstSubmsnDate",
+						"type": "UTF8"
+					},
+					{
+						"name": "FollowonDocCat",
+						"type": "UTF8"
+					},
+					{
+						"name": "FollowonDocType",
+						"type": "UTF8"
+					},
+					{
+						"name": "DummyEkkoInclEewPs",
+						"type": "UTF8"
+					},
+					{
+						"name": "Externalsystem",
+						"type": "UTF8"
+					},
+					{
+						"name": "Externalreferenceid",
+						"type": "UTF8"
+					},
+					{
+						"name": "ExtRevTmstmp",
+						"type": "UTF8"
+					},
+					{
+						"name": "Iseopblocked",
+						"type": "UTF8"
+					},
+					{
+						"name": "Isaged",
+						"type": "UTF8"
+					},
+					{
+						"name": "ForceId",
+						"type": "UTF8"
+					},
+					{
+						"name": "ForceCnt",
+						"type": "UTF8"
+					},
+					{
+						"name": "RelocId",
+						"type": "UTF8"
+					},
+					{
+						"name": "RelocSeqId",
+						"type": "UTF8"
+					},
+					{
+						"name": "SourceLogsys",
+						"type": "UTF8"
+					},
+					{
+						"name": "FshTransaction",
+						"type": "UTF8"
+					},
+					{
+						"name": "FshItemGroup",
+						"type": "UTF8"
+					},
+					{
+						"name": "FshVasLastItem",
+						"type": "UTF8"
+					},
+					{
+						"name": "FshOsStgChange",
+						"type": "UTF8"
+					},
+					{
+						"name": "TmsRefUuid",
+						"type": "UTF8"
+					},
+					{
+						"name": "Zapcgk",
+						"type": "UTF8"
+					},
+					{
+						"name": "ApcgkExtend",
+						"type": "UTF8"
+					},
+					{
+						"name": "ZbasDate",
+						"type": "UTF8"
+					},
+					{
+						"name": "Zadattyp",
+						"type": "UTF8"
+					},
+					{
+						"name": "ZstartDat",
+						"type": "UTF8"
+					},
+					{
+						"name": "ZDev",
+						"type": "UTF8"
+					},
+					{
+						"name": "Zindanx",
+						"type": "UTF8"
+					},
+					{
+						"name": "ZlimitDat",
+						"type": "UTF8"
+					},
+					{
+						"name": "Numerator",
+						"type": "UTF8"
+					},
+					{
+						"name": "HashcalBdat",
+						"type": "UTF8"
+					},
+					{
+						"name": "Hashcal",
+						"type": "UTF8"
+					},
+					{
+						"name": "Negative",
+						"type": "UTF8"
+					},
+					{
+						"name": "HashcalExists",
+						"type": "UTF8"
+					},
+					{
+						"name": "KnownIndex",
+						"type": "UTF8"
+					},
+					{
+						"name": "Postat",
+						"type": "UTF8"
+					},
+					{
+						"name": "Vzskz",
+						"type": "UTF8"
+					},
+					{
+						"name": "FshSnstStatus",
+						"type": "UTF8"
+					},
+					{
+						"name": "Proce",
+						"type": "UTF8"
+					},
+					{
+						"name": "Conc",
+						"type": "UTF8"
+					},
+					{
+						"name": "Cont",
+						"type": "UTF8"
+					},
+					{
+						"name": "Comp",
+						"type": "UTF8"
+					},
+					{
+						"name": "Outr",
+						"type": "UTF8"
+					},
+					{
+						"name": "Desp",
+						"type": "UTF8"
+					},
+					{
+						"name": "DespDat",
+						"type": "UTF8"
+					},
+					{
+						"name": "DespCargo",
+						"type": "UTF8"
+					},
+					{
+						"name": "Pare",
+						"type": "UTF8"
+					},
+					{
+						"name": "PareDat",
+						"type": "UTF8"
+					},
+					{
+						"name": "PareCargo",
+						"type": "UTF8"
+					},
+					{
+						"name": "PfmContract",
+						"type": "UTF8"
+					},
+					{
+						"name": "PohfType",
+						"type": "UTF8"
+					},
+					{
+						"name": "EqEindt",
+						"type": "UTF8"
+					},
+					{
+						"name": "EqWerks",
+						"type": "UTF8"
+					},
+					{
+						"name": "Fixpo",
+						"type": "UTF8"
+					},
+					{
+						"name": "EkgrpAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "WerksAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "ContractAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "PstypAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "FixpoAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "KeyIdAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "AurelAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "DelperAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "EindtAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "LtsnrAllow",
+						"type": "UTF8"
+					},
+					{
+						"name": "OtbLevel",
+						"type": "UTF8"
+					},
+					{
+						"name": "OtbCondType",
+						"type": "UTF8"
+					},
+					{
+						"name": "KeyId",
+						"type": "UTF8"
+					},
+					{
+						"name": "OtbValue",
+						"type": "UTF8"
+					},
+					{
+						"name": "OtbCurr",
+						"type": "UTF8"
+					},
+					{
+						"name": "OtbResValue",
+						"type": "UTF8"
+					},
+					{
+						"name": "OtbSpecValue",
+						"type": "UTF8"
+					},
+					{
+						"name": "SprRsnProfile",
+						"type": "UTF8"
+					},
+					{
+						"name": "BudgType",
+						"type": "UTF8"
+					},
+					{
+						"name": "OtbStatus",
+						"type": "UTF8"
+					},
+					{
+						"name": "OtbReason",
+						"type": "UTF8"
+					},
+					{
+						"name": "CheckType",
+						"type": "UTF8"
+					},
+					{
+						"name": "ConOtbReq",
+						"type": "UTF8"
+					},
+					{
+						"name": "ConPrebookLev",
+						"type": "UTF8"
+					},
+					{
+						"name": "ConDistrLev",
+						"type": "UTF8"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLake')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesDB')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -36037,6 +40685,32 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/oa_db')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPACDOCA')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?$filter=Belnr eq '5000000001' or Belnr eq '5000000002'&sap-client=110&$format=json",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SAPOData')]"
 			]
 		},
 		{
