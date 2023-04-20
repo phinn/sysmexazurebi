@@ -41181,7 +41181,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?$filter=Belnr eq '5000000001' or Belnr eq '5000000002'&sap-client=110&$format=json",
+						"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json",
 						"type": "Expression"
 					}
 				},
@@ -41796,6 +41796,13 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "FinancialVoucherDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -41818,7 +41825,8 @@
 				"[concat(variables('factoryId'), '/pipelines/AnnualContractDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/PurchaseItemDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/DeliveryNotesItemDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/DeliveryNotesDataExtraction')]"
+				"[concat(variables('factoryId'), '/pipelines/DeliveryNotesDataExtraction')]",
+				"[concat(variables('factoryId'), '/pipelines/FinancialVoucherDataExtraction')]"
 			]
 		},
 		{
