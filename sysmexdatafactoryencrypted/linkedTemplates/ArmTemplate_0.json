@@ -396,7 +396,7 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": {
-							"value": "VBAP",
+							"value": "ACDOCA",
 							"type": "Expression"
 						},
 						"folderPath": "OData",
