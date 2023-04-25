@@ -469,7 +469,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARD_SRV/MARDSet?sap-client=110&$format=json&filter=Werks eq '4220'",
+						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARD_SRV/MARDSet?sap-client=110&$format=json&filter=Werks eq '4220' and Labst ne 0",
 						"type": "Expression"
 					}
 				},
