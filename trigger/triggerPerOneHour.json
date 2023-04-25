@@ -69,6 +69,12 @@
 					"referenceName": "FinancialVoucherDataExtraction",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "PurchaseItemConfirmDataExtraction",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
