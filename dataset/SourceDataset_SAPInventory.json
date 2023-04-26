@@ -1,0 +1,22 @@
+{
+	"name": "SourceDataset_SAPInventory",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestServiceAPIGW",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/Rest"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/v1/sap/s4/inventory/SyncInventoryCommonData",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
