@@ -2,13 +2,19 @@
 	"name": "SAPODataLink",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
+		"parameters": {
+			"sap-client": {
+				"type": "string",
+				"defaultValue": "110"
+			}
+		},
 		"annotations": [],
 		"type": "OData",
 		"typeProperties": {
 			"url": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000",
 			"authenticationType": "Basic",
 			"userName": "OData",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkOGZjNWU0ZC0yODMwLTQ0ZDYtYWUwYS04NTVhMDU5MzE3MWMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzMWYzNzkzYy03NDcyLTQ1NzktYWIyZC1iNTlhYTliYTM0Y2QiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "selfhosted",
