@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "“SAPOData”的“password”的安全字符串"
 		},
+		"SAPODataLink_password": {
+			"type": "secureString",
+			"metadata": "“SAPODataLink”的“password”的安全字符串"
+		},
 		"mdm_db_connectionString": {
 			"type": "secureString",
 			"metadata": "“mdm_db”的“connectionString”的安全字符串"
@@ -48,6 +52,14 @@
 			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
 		},
 		"SAPOData_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "OData"
+		},
+		"SAPODataLink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
+		},
+		"SAPODataLink_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "OData"
 		},
@@ -125,6 +137,9 @@
 					"SAPOData_password": {
 						"value": "[parameters('SAPOData_password')]"
 					},
+					"SAPODataLink_password": {
+						"value": "[parameters('SAPODataLink_password')]"
+					},
 					"mdm_db_connectionString": {
 						"value": "[parameters('mdm_db_connectionString')]"
 					},
@@ -139,6 +154,12 @@
 					},
 					"SAPOData_properties_typeProperties_userName": {
 						"value": "[parameters('SAPOData_properties_typeProperties_userName')]"
+					},
+					"SAPODataLink_properties_typeProperties_url": {
+						"value": "[parameters('SAPODataLink_properties_typeProperties_url')]"
+					},
+					"SAPODataLink_properties_typeProperties_userName": {
+						"value": "[parameters('SAPODataLink_properties_typeProperties_userName')]"
 					},
 					"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
 						"value": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]"
@@ -187,6 +208,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'sysmexdatafactoryencrypted_ArmTemplate_2')]"
+			]
+		},
+		{
+			"name": "sysmexdatafactoryencrypted_ArmTemplate_4",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_4.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'sysmexdatafactoryencrypted_ArmTemplate_3')]"
 			]
 		}
 	]
