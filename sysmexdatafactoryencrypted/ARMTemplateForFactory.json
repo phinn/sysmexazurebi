@@ -45714,13 +45714,6 @@
 					},
 					{
 						"pipelineReference": {
-							"referenceName": "InventoryDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
 							"referenceName": "RestInventoryDataExtraction",
 							"type": "PipelineReference"
 						},
@@ -45750,7 +45743,6 @@
 				"[concat(variables('factoryId'), '/pipelines/DeliveryNotesDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/FinancialVoucherDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/PurchaseItemConfirmDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/InventoryDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/RestInventoryDataExtraction')]"
 			]
 		},

@@ -162,13 +162,6 @@
 					},
 					{
 						"pipelineReference": {
-							"referenceName": "InventoryDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
 							"referenceName": "RestInventoryDataExtraction",
 							"type": "PipelineReference"
 						},
