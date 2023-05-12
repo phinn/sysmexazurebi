@@ -9,10 +9,10 @@
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Basic",
 			"userName": "OData",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyZDJiYjllMS0wZGRiLTRmYjQtYmYwNS04OTYyZWExMDc5ZTAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJiZTc0NDg2Ni0yNGI1LTRmYjUtOGYyZC05OWY2MTAwOTkxNWQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
-			"referenceName": "selfhosted",
+			"referenceName": "selfhostedForSAP",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
