@@ -46939,7 +46939,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBEP_SRV/VBEPSet?sap-client=110&$format=json&$filter=Vbeln eq '1000015122' or Vbeln eq '1000015123'",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBEP_SRV/VBEPSet?sap-client=110&$format=json",
 						"type": "Expression"
 					}
 				},
@@ -47034,12 +47034,12 @@
 					}
 				},
 				"connectVia": {
-					"referenceName": "selfhosted",
+					"referenceName": "selfhostedForSAP",
 					"type": "IntegrationRuntimeReference"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/selfhosted')]"
+				"[concat(variables('factoryId'), '/integrationRuntimes/selfhostedForSAP')]"
 			]
 		},
 		{
@@ -47297,6 +47297,13 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "SalesScheduleLineItemDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -47322,7 +47329,8 @@
 				"[concat(variables('factoryId'), '/pipelines/DeliveryNotesDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/FinancialVoucherDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/PurchaseItemConfirmDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/RestInventoryDataExtraction')]"
+				"[concat(variables('factoryId'), '/pipelines/RestInventoryDataExtraction')]",
+				"[concat(variables('factoryId'), '/pipelines/SalesScheduleLineItemDataExtraction')]"
 			]
 		},
 		{
@@ -47337,6 +47345,16 @@
 						"authorizationType": "Rbac"
 					}
 				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/selfhostedForSAP')]",
+			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "SelfHosted",
+				"typeProperties": {}
 			},
 			"dependsOn": []
 		}
