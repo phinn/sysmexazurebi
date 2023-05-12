@@ -13,6 +13,27 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_MDM_Product')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "mdm_db",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "MDM"
+				},
+				"annotations": [],
+				"type": "MySqlTable",
+				"schema": [],
+				"typeProperties": {
+					"tableName": "`t_product`"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_MDM_ProductLine')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -581,30 +602,6 @@
 				"typeProperties": {
 					"relativeUrl": {
 						"value": "/v1/mdg/GetProductListFromSAP",
-						"type": "Expression"
-					}
-				},
-				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPVBAK')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SAPOData",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "SAP/S4/OData"
-				},
-				"annotations": [],
-				"type": "RestResource",
-				"typeProperties": {
-					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBAK_SRV/VBAKSet?sap-client=110&$format=json",
 						"type": "Expression"
 					}
 				},
