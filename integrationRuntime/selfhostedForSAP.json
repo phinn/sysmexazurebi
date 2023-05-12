@@ -1,0 +1,6 @@
+{
+	"name": "selfhostedForSAP",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
