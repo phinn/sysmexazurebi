@@ -140,9 +140,6 @@
 					"SAPODataLink_password": {
 						"value": "[parameters('SAPODataLink_password')]"
 					},
-					"mdm_db_connectionString": {
-						"value": "[parameters('mdm_db_connectionString')]"
-					},
 					"RestServiceAPIGW_properties_typeProperties_url": {
 						"value": "[parameters('RestServiceAPIGW_properties_typeProperties_url')]"
 					},
@@ -180,6 +177,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"mdm_db_connectionString": {
+						"value": "[parameters('mdm_db_connectionString')]"
 					},
 					"oa_db_connectionString": {
 						"value": "[parameters('oa_db_connectionString')]"

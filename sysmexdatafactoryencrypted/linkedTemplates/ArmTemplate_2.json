@@ -7,6 +7,10 @@
 			"metadata": "数据工厂名称",
 			"defaultValue": "sysmexdatafactoryencrypted"
 		},
+		"mdm_db_connectionString": {
+			"type": "secureString",
+			"metadata": "“mdm_db”的“connectionString”的安全字符串"
+		},
 		"oa_db_connectionString": {
 			"type": "secureString",
 			"metadata": "“oa_db”的“connectionString”的安全字符串"
@@ -16,6 +20,23 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/mdm_db')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "MySql",
+				"typeProperties": {
+					"connectionString": "[parameters('mdm_db_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "selfhosted",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/oa_db')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -52,7 +73,9 @@
 					"tableName": "`t_product`"
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/mdm_db')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_MDM_ProductLine')]",
@@ -73,7 +96,9 @@
 					"tableName": "`t_product_line`"
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/mdm_db')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_MDM_ProductPlantView')]",
@@ -94,7 +119,9 @@
 					"tableName": "`t_product_plant`"
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/mdm_db')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_MDM_ProductSalesView')]",
@@ -115,7 +142,9 @@
 					"tableName": "`t_product_sales`"
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/mdm_db')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_OA_CustomerAnnualContract')]",
@@ -470,6 +499,30 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPLFA1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_LFA1_SRV/LFA1Set?sap-client=110&$format=json&$filter=Lifnr eq '1000004781' or Lifnr eq '1000004637'",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPLIKP')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -558,54 +611,6 @@
 				"typeProperties": {
 					"relativeUrl": {
 						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARC_SRV/MARCSet?sap-client=110&$format=json",
-						"type": "Expression"
-					}
-				},
-				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMARD')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SAPOData",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "SAP/S4/OData"
-				},
-				"annotations": [],
-				"type": "RestResource",
-				"typeProperties": {
-					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARD_SRV/MARDSet?sap-client=110&$format=json&filter=Werks eq '4220' and Labst ne 0",
-						"type": "Expression"
-					}
-				},
-				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMBEW')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SAPOData",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "SAP/S4/OData"
-				},
-				"annotations": [],
-				"type": "RestResource",
-				"typeProperties": {
-					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MBEW_SRV/MBEWSet?sap-client=110&$format=json",
 						"type": "Expression"
 					}
 				},
