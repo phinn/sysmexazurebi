@@ -72,12 +72,6 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "PurchaseItemConfirmDataExtraction",
-					"type": "PipelineReference"
-				}
-			},
-			{
-				"pipelineReference": {
 					"referenceName": "RestInventoryDataExtraction",
 					"type": "PipelineReference"
 				}
