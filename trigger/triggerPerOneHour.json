@@ -42,12 +42,6 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "DeliveryNotesDataExtraction",
-					"type": "PipelineReference"
-				}
-			},
-			{
-				"pipelineReference": {
 					"referenceName": "FinancialVoucherDataExtraction",
 					"type": "PipelineReference"
 				}
