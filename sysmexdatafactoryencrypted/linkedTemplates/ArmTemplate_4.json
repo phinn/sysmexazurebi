@@ -16663,13 +16663,6 @@
 					},
 					{
 						"pipelineReference": {
-							"referenceName": "DeliveryNotesDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
 							"referenceName": "FinancialVoucherDataExtraction",
 							"type": "PipelineReference"
 						},
@@ -16697,6 +16690,34 @@
 				"[concat(variables('factoryId'), '/pipelines/SalesDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/RestInventoryDataExtraction')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/triggerPerOnePointFiveHour')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "DeliveryNotesDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Minute",
+						"interval": 90,
+						"startTime": "2023-05-15T06:55:00Z",
+						"timeZone": "UTC"
+					}
+				}
+			},
+			"dependsOn": []
 		}
 	]
 }
