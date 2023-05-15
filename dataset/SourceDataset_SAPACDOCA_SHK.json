@@ -1,0 +1,22 @@
+{
+	"name": "SourceDataset_SAPACDOCA_SHK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4003' and AuartPa ne null",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
