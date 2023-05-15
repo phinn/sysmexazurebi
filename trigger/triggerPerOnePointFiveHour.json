@@ -1,0 +1,24 @@
+{
+	"name": "triggerPerOnePointFiveHour",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "DeliveryNotesDataExtraction",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 90,
+				"startTime": "2023-05-15T06:55:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
