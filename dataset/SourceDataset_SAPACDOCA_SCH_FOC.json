@@ -1,5 +1,5 @@
 {
-	"name": "SourceDataset_SAPACDOCA",
+	"name": "SourceDataset_SAPACDOCA_SCH_FOC",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SAPOData",
