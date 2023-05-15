@@ -1,0 +1,22 @@
+{
+	"name": "SourceDataset_SAPLFA1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/sap/opu/odata/sap/ZPTP_GBL_API_LFA1_SRV/LFA1Set?sap-client=110&$format=json&$filter=Lifnr eq '1000004781' or Lifnr eq '1000004637'",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
