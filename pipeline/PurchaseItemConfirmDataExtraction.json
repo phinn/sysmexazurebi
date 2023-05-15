@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyEKData",
+				"name": "CopyEKESData",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
