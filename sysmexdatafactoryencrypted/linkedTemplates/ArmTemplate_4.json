@@ -13,6 +13,957 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/RestInventoryDataExtraction')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "CopyInventoryData",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "RestSource",
+								"httpRequestTimeout": "01:00:00",
+								"requestInterval": "00.00:00:00.010",
+								"requestMethod": "POST",
+								"requestBody": {
+									"value": "{\n    \"Request\": {\n        \"MaterialData\": [\n            {\n                \"MATNR\": \"\"\n            }\n        ],\n        \"PlantData\": [\n            {\n                \"WERKS\": \"\"\n            }\n        ],\n        \"StorLocData\": [\n            {\n                \"LGORT\": \"\"\n            }\n        ],\n        \"BatchData\": [\n            {\n                \"CHARG\": \"\"\n            }\n        ],\n        \"SerialNoData\": [\n            {\n                \"ATWRT\": \"\"\n            }\n        ],\n        \"ProdHierarData\": [\n            {\n                \"PRDHA\": \"\"\n            }\n        ],\n        \"MatTypeData\": [\n            {\n                \"MTART\": \"\"\n            }\n        ],\n        \"MatGroupData\": [\n            {\n                \"MATKL\": \"\"\n            }\n        ],\n        \"ProfitCenterData\": [\n            {\n                \"PRCTR\": \"\"\n            }\n        ],\n        \"PurchGroupData\": [\n            {\n                \"EKGRP\": \"\"\n            }\n        ],\n        \"ManufaDateData\": [\n            {\n                \"HSDAT\": \"\"\n            }\n        ],\n        \"VendorData\": [\n            {\n                \"LIFNR\": \"\"\n            }\n        ],\n        \"ManufacturerData\": [\n            {\n                \"MFRNR\": \"\"\n            }\n        ],\n        \"VendorBatchData\": [\n            {\n                \"LICHA\": \"\"\n            }\n        ]\n    }\n}",
+									"type": "Expression"
+								},
+								"additionalHeaders": {
+									"Content-Type": "application/json",
+									"accessToken": "4d1d950e-9bc0-4df0-ac6d-c71ef2abbd87",
+									"env": "Production"
+								},
+								"paginationRules": {
+									"supportRFC5988": "true"
+								}
+							},
+							"sink": {
+								"type": "ParquetSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "ParquetWriteSettings"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"path": "[['HSDAT']"
+										},
+										"sink": {
+											"name": "HSDAT",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['WERKS']"
+										},
+										"sink": {
+											"name": "WERKS",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['WGBEZ_ZH']"
+										},
+										"sink": {
+											"name": "WGBEZ_ZH",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['WGBEZ_EN']"
+										},
+										"sink": {
+											"name": "WGBEZ_EN",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MANUFNAME_EN']"
+										},
+										"sink": {
+											"name": "MANUFNAME_EN",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MTART']"
+										},
+										"sink": {
+											"name": "MTART",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VENDNAME_EN']"
+										},
+										"sink": {
+											"name": "VENDNAME_EN",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MAKTX_ZH']"
+										},
+										"sink": {
+											"name": "MAKTX_ZH",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PRCTR']"
+										},
+										"sink": {
+											"name": "PRCTR",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VTEXT_ZH']"
+										},
+										"sink": {
+											"name": "VTEXT_ZH",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['LICHA']"
+										},
+										"sink": {
+											"name": "LICHA",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VENDNAME_ZH']"
+										},
+										"sink": {
+											"name": "VENDNAME_ZH",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MTBEZ_EN']"
+										},
+										"sink": {
+											"name": "MTBEZ_EN",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VTEXT_EN']"
+										},
+										"sink": {
+											"name": "VTEXT_EN",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CINSM']"
+										},
+										"sink": {
+											"name": "CINSM",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['VFDAT']"
+										},
+										"sink": {
+											"name": "VFDAT",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MANUFNAME_ZH']"
+										},
+										"sink": {
+											"name": "MANUFNAME_ZH",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['LGOBE']"
+										},
+										"sink": {
+											"name": "LGOBE",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ZRESERVE_QTY']"
+										},
+										"sink": {
+											"name": "ZRESERVE_QTY",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['EKGRP']"
+										},
+										"sink": {
+											"name": "EKGRP",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['EKNAM']"
+										},
+										"sink": {
+											"name": "EKNAM",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CLABS']"
+										},
+										"sink": {
+											"name": "CLABS",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['PRDHA']"
+										},
+										"sink": {
+											"name": "PRDHA",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ZAVAL_QTY']"
+										},
+										"sink": {
+											"name": "ZAVAL_QTY",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['LTEXT_EN']"
+										},
+										"sink": {
+											"name": "LTEXT_EN",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CSPEM']"
+										},
+										"sink": {
+											"name": "CSPEM",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MATKL']"
+										},
+										"sink": {
+											"name": "MATKL",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['LIFNR']"
+										},
+										"sink": {
+											"name": "LIFNR",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ZOPEN_DEL_QTY']"
+										},
+										"sink": {
+											"name": "ZOPEN_DEL_QTY",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['NAME1_EN']"
+										},
+										"sink": {
+											"name": "NAME1_EN",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ATWRT']"
+										},
+										"sink": {
+											"name": "ATWRT",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MTBEZ_ZH']"
+										},
+										"sink": {
+											"name": "MTBEZ_ZH",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['CHARG']"
+										},
+										"sink": {
+											"name": "CHARG",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['LGORT']"
+										},
+										"sink": {
+											"name": "LGORT",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MATNR']"
+										},
+										"sink": {
+											"name": "MATNR",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['NAME1_ZH']"
+										},
+										"sink": {
+											"name": "NAME1_ZH",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MFRNR']"
+										},
+										"sink": {
+											"name": "MFRNR",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MAXDIM_UOM']"
+										},
+										"sink": {
+											"name": "MAXDIM_UOM",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['MAKTX_EN']"
+										},
+										"sink": {
+											"name": "MAKTX_EN",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['LTEXT_ZH']"
+										},
+										"sink": {
+											"name": "LTEXT_ZH",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "[['ZBALV_QTY']"
+										},
+										"sink": {
+											"name": "ZBALV_QTY",
+											"type": "String"
+										}
+									}
+								],
+								"collectionReference": "$['error']['Response']['CommonData']"
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_SAPInventory",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_SAPInventory_FILE",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"folder": {
+					"name": "SAP/S4/Rest"
+				},
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SAPProductPrice')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "GetAccessToken",
+						"type": "WebActivity",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"url": "http://10.40.20.218:8081/Auth/GetAccessToken?systemNo=bi",
+							"connectVia": {
+								"referenceName": "selfhosted",
+								"type": "IntegrationRuntimeReference"
+							},
+							"method": "GET",
+							"headers": {}
+						}
+					},
+					{
+						"name": "SetAccessToken",
+						"type": "SetVariable",
+						"dependsOn": [
+							{
+								"activity": "GetAccessToken",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"userProperties": [],
+						"typeProperties": {
+							"variableName": "AccessToken",
+							"value": {
+								"value": "@activity('GetAccessToken').output.Response",
+								"type": "Expression"
+							}
+						}
+					},
+					{
+						"name": "CopySAPProductPrice",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "SetAccessToken",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "RestSource",
+								"httpRequestTimeout": "10:00:00",
+								"requestInterval": "00.00:00:00.010",
+								"requestMethod": "GET",
+								"additionalHeaders": {
+									"accessToken": {
+										"value": "@variables('AccessToken')",
+										"type": "Expression"
+									},
+									"env": "Production"
+								},
+								"paginationRules": {
+									"supportRFC5988": "true"
+								}
+							},
+							"sink": {
+								"type": "ParquetSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "ParquetWriteSettings"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"path": "$['secondProductLineCode']"
+										},
+										"sink": {
+											"name": "secondProductLineCode",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['productCategoryCode']"
+										},
+										"sink": {
+											"name": "productCategoryCode",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['productNo']"
+										},
+										"sink": {
+											"name": "productNo",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['productName']"
+										},
+										"sink": {
+											"name": "productName",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['productLineCode']"
+										},
+										"sink": {
+											"name": "productLineCode",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['productLineName']"
+										},
+										"sink": {
+											"name": "productLineName",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['salesUnitName']"
+										},
+										"sink": {
+											"name": "salesUnitName",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['salesUnitNo']"
+										},
+										"sink": {
+											"name": "salesUnitNo",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['basicPrice']"
+										},
+										"sink": {
+											"name": "basicPrice",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['planDeliveryDays']"
+										},
+										"sink": {
+											"name": "planDeliveryDays",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['updateDate']"
+										},
+										"sink": {
+											"name": "updateDate",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['createDate']"
+										},
+										"sink": {
+											"name": "createDate",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['isDangerous']"
+										},
+										"sink": {
+											"name": "isDangerous",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['bomsn']"
+										},
+										"sink": {
+											"name": "bomsn",
+											"type": "String"
+										}
+									}
+								]
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_SAPProductPrice",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_SAPProductPriceParquet",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					},
+					{
+						"name": "CopyFromDataLakeToDatabase",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "CopySAPProductPrice",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "ParquetSource",
+								"additionalColumns": [
+									{
+										"name": "InsertTime",
+										"value": {
+											"value": "@getPastTime(16,'Hour','yyyy-MM-dd')",
+											"type": "Expression"
+										}
+									}
+								],
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
+							},
+							"sink": {
+								"type": "SqlServerSink"
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "productNo",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "ProductNo",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "productName",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "ProductName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "productCategoryCode",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "ProductCategoryCode",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "productLineCode",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "ProductLineCode",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "productLineName",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "ProductLineName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "secondProductLineCode",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "SecondProductLineCode",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "salesUnitNo",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "SalesUnitNo",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "salesUnitName",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "SalesUnitName",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "basicPrice",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "BasicPrice",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "planDeliveryDays",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "PlanDeliveryDays",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "isDangerous",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "IsDangerous",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "bomsn",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "Bomsn",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "createDate",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "CreateDate",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "updateDate",
+											"type": "String",
+											"physicalType": "UTF8"
+										},
+										"sink": {
+											"name": "UpdateDate",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "InsertTime"
+										},
+										"sink": {
+											"name": "InsertTime",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									}
+								],
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "DestinationDataset_SAPProductPriceParquet",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_SAPProductPriceDB",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"variables": {
+					"AccessToken": {
+						"type": "String"
+					}
+				},
+				"annotations": [],
+				"lastPublishTime": "2021-12-02T06:45:56Z"
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SalesDataExtraction')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -11475,13 +12426,6 @@
 					},
 					{
 						"pipelineReference": {
-							"referenceName": "PurchaseItemDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
 							"referenceName": "DeliveryNotesItemDataExtraction",
 							"type": "PipelineReference"
 						},
@@ -11497,13 +12441,6 @@
 					{
 						"pipelineReference": {
 							"referenceName": "FinancialVoucherDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
-							"referenceName": "PurchaseItemConfirmDataExtraction",
 							"type": "PipelineReference"
 						},
 						"parameters": {}
@@ -11536,6 +12473,7 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/SalesDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/SalesItemDataExtraction')]",
+				"[concat(variables('factoryId'), '/pipelines/RestInventoryDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/SalesScheduleLineItemDataExtraction')]"
 			]
 		}

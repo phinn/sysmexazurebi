@@ -154,9 +154,6 @@
 					},
 					"SAPODataLink_properties_typeProperties_userName": {
 						"value": "[parameters('SAPODataLink_properties_typeProperties_userName')]"
-					},
-					"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
-						"value": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -183,6 +180,9 @@
 					},
 					"oa_db_connectionString": {
 						"value": "[parameters('oa_db_connectionString')]"
+					},
+					"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
+						"value": "[parameters('SourceDataset_SAPProductPrice_properties_typeProperties_url')]"
 					}
 				}
 			},
