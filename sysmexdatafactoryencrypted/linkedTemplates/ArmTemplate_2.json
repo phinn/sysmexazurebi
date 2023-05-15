@@ -7,6 +7,10 @@
 			"metadata": "数据工厂名称",
 			"defaultValue": "sysmexdatafactoryencrypted"
 		},
+		"SAPODataLink_password": {
+			"type": "secureString",
+			"metadata": "“SAPODataLink”的“password”的安全字符串"
+		},
 		"mdm_db_connectionString": {
 			"type": "secureString",
 			"metadata": "“mdm_db”的“connectionString”的安全字符串"
@@ -14,6 +18,14 @@
 		"oa_db_connectionString": {
 			"type": "secureString",
 			"metadata": "“oa_db”的“connectionString”的安全字符串"
+		},
+		"SAPODataLink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
+		},
+		"SAPODataLink_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "OData"
 		},
 		"SourceDataset_SAPProductPrice_properties_typeProperties_url": {
 			"type": "string",
@@ -24,6 +36,29 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/SAPODataLink')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "OData",
+				"typeProperties": {
+					"url": "[parameters('SAPODataLink_properties_typeProperties_url')]",
+					"authenticationType": "Basic",
+					"userName": "[parameters('SAPODataLink_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SAPODataLink_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "selfhosted",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPProductPrice')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -360,7 +395,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPACDOCA')]",
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPACDOCA_SCH_FOC')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -376,6 +411,30 @@
 				"typeProperties": {
 					"relativeUrl": {
 						"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4002' and Racct ge '5000000000' and Racct le '5999999999'",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPACDOCA_SHK')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4003' and AuartPa ne null",
 						"type": "Expression"
 					}
 				},
@@ -562,54 +621,6 @@
 				"typeProperties": {
 					"relativeUrl": {
 						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_LFA1_SRV/LFA1Set?sap-client=110&$format=json",
-						"type": "Expression"
-					}
-				},
-				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPLIKP')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SAPOData",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "SAP/S4/OData"
-				},
-				"annotations": [],
-				"type": "RestResource",
-				"typeProperties": {
-					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIKP_SRV/LIKPSet?sap-client=110&$format=json",
-						"type": "Expression"
-					}
-				},
-				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPLIPS')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SAPOData",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "SAP/S4/OData"
-				},
-				"annotations": [],
-				"type": "RestResource",
-				"typeProperties": {
-					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json",
 						"type": "Expression"
 					}
 				},
