@@ -5107,6 +5107,398 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "CopyEKESData",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "CopyEKPOData",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:10:00",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "['Mandt']"
+								},
+								"sink": {
+									"name": "Mandt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ebeln']"
+								},
+								"sink": {
+									"name": "Ebeln",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ebelp']"
+								},
+								"sink": {
+									"name": "Ebelp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Etens']"
+								},
+								"sink": {
+									"name": "Etens",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ebtyp']"
+								},
+								"sink": {
+									"name": "Ebtyp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Eindt']"
+								},
+								"sink": {
+									"name": "Eindt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Lpein']"
+								},
+								"sink": {
+									"name": "Lpein",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Uzeit']"
+								},
+								"sink": {
+									"name": "Uzeit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Erdat']"
+								},
+								"sink": {
+									"name": "Erdat",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ezeit']"
+								},
+								"sink": {
+									"name": "Ezeit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Menge']"
+								},
+								"sink": {
+									"name": "Menge",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Dabmg']"
+								},
+								"sink": {
+									"name": "Dabmg",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Estkz']"
+								},
+								"sink": {
+									"name": "Estkz",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Loekz']"
+								},
+								"sink": {
+									"name": "Loekz",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kzdis']"
+								},
+								"sink": {
+									"name": "Kzdis",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Xblnr']"
+								},
+								"sink": {
+									"name": "Xblnr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Vbeln']"
+								},
+								"sink": {
+									"name": "Vbeln",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Vbelp']"
+								},
+								"sink": {
+									"name": "Vbelp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Mprof']"
+								},
+								"sink": {
+									"name": "Mprof",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ematn']"
+								},
+								"sink": {
+									"name": "Ematn",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Mahnz']"
+								},
+								"sink": {
+									"name": "Mahnz",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Charg']"
+								},
+								"sink": {
+									"name": "Charg",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Uecha']"
+								},
+								"sink": {
+									"name": "Uecha",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['RefEtens']"
+								},
+								"sink": {
+									"name": "RefEtens",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Imwrk']"
+								},
+								"sink": {
+									"name": "Imwrk",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['VbelnSt']"
+								},
+								"sink": {
+									"name": "VbelnSt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['VbelpSt']"
+								},
+								"sink": {
+									"name": "VbelpSt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Handoverdate']"
+								},
+								"sink": {
+									"name": "Handoverdate",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Handovertime']"
+								},
+								"sink": {
+									"name": "Handovertime",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['SgtScat']"
+								},
+								"sink": {
+									"name": "SgtScat",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Msgtstmp']"
+								},
+								"sink": {
+									"name": "Msgtstmp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['cwm_menge']"
+								},
+								"sink": {
+									"name": "cwm_menge",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['cwm_dabmg']"
+								},
+								"sink": {
+									"name": "cwm_dabmg",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Dataaging']"
+								},
+								"sink": {
+									"name": "Dataaging",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['FshSallocQty']"
+								},
+								"sink": {
+									"name": "FshSallocQty",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ormng']"
+								},
+								"sink": {
+									"name": "Ormng",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['TmsRefUuid']"
+								},
+								"sink": {
+									"name": "TmsRefUuid",
+									"type": "String"
+								}
+							}
+						],
+						"collectionReference": "$['d']['results']"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_SAPEKES",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_SAPEKES_FILE",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"folder": {

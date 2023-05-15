@@ -48,12 +48,6 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "PurchaseItemDataExtraction",
-					"type": "PipelineReference"
-				}
-			},
-			{
-				"pipelineReference": {
 					"referenceName": "DeliveryNotesItemDataExtraction",
 					"type": "PipelineReference"
 				}
