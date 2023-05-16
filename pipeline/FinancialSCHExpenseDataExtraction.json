@@ -1,13 +1,13 @@
 {
-	"name": "FinancialVoucherDataExtraction",
+	"name": "FinancialSCHExpenseDataExtraction",
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyACDOCAData",
+				"name": "CopyACDOCA_SCH_ExpenseData",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
-					"timeout": "0.12:00:00",
+					"timeout": "1:00:00",
 					"retry": 1,
 					"retryIntervalInSeconds": 60,
 					"secureOutput": false,

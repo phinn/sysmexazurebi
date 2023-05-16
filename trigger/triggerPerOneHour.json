@@ -30,7 +30,7 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "FinancialVoucherDataExtraction",
+					"referenceName": "FinancialSCHExpenseDataExtraction",
 					"type": "PipelineReference"
 				}
 			},

@@ -1,5 +1,5 @@
 {
-	"name": "SourceDataset_SAPMARD",
+	"name": "SourceDataset_SAPBKPF",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SAPOData",
@@ -12,7 +12,7 @@
 		"type": "RestResource",
 		"typeProperties": {
 			"relativeUrl": {
-				"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARD_SRV/MARDSet?sap-client=110&$format=json&filter=(Werks eq '4220' or Werks eq '4210') and Labst ne 0",
+				"value": "/sap/opu/odata/sap/ZRTR_GBL_API_BKPF_SRV/BKPFSet?sap-client=110&$format=json&$filter=Belnr eq '5000000001' or Belnr eq '5000000002'",
 				"type": "Expression"
 			}
 		},
