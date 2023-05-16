@@ -1,0 +1,44 @@
+{
+	"name": "SAPDataExtraction",
+	"properties": {
+		"activities": [
+			{
+				"name": "SalesDataExtraction",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "SalesDataExtraction",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "PurchaseDataExtraction",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "SalesDataExtraction",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PurchaseDataExtraction",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": []
+	}
+}
