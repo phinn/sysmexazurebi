@@ -4345,7 +4345,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_SAPACDOCA_SCH_FOC",
+						"referenceName": "SourceDataset_SAPACDOCA_SCH_Expense",
 						"type": "DatasetReference"
 					}
 				],
