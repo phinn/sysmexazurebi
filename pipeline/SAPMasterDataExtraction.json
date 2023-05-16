@@ -1,6 +1,132 @@
 {
 	"name": "SAPMasterDataExtraction",
 	"properties": {
+		"activities": [
+			{
+				"name": "CopyCEPCTData",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "['Mandt']"
+								},
+								"sink": {
+									"name": "Mandt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Spras']"
+								},
+								"sink": {
+									"name": "Spras",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Prctr']"
+								},
+								"sink": {
+									"name": "Prctr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Datbi']"
+								},
+								"sink": {
+									"name": "Datbi",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kokrs']"
+								},
+								"sink": {
+									"name": "Kokrs",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ktext']"
+								},
+								"sink": {
+									"name": "Ktext",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ltext']"
+								},
+								"sink": {
+									"name": "Ltext",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Mctxt']"
+								},
+								"sink": {
+									"name": "Mctxt",
+									"type": "String"
+								}
+							}
+						],
+						"collectionReference": "$['d']['results']"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_SAPCEPCT",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_SAPCEPCT_FILE",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
 		"folder": {
 			"name": "SAP/S4/OData"
 		},
