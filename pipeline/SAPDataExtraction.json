@@ -34,6 +34,46 @@
 					},
 					"waitOnCompletion": true
 				}
+			},
+			{
+				"name": "DeliveryNotesDataExtraction",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "PurchaseDataExtraction",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "DeliveryNotesDataExtraction",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "RestInventoryDataExtraction",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "DeliveryNotesDataExtraction",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "RestInventoryDataExtraction",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
 			}
 		],
 		"folder": {

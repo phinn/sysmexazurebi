@@ -30,12 +30,6 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "SalesDataExtraction",
-					"type": "PipelineReference"
-				}
-			},
-			{
-				"pipelineReference": {
 					"referenceName": "AnnualContractDataExtraction",
 					"type": "PipelineReference"
 				}
