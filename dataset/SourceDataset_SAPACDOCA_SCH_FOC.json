@@ -1,0 +1,22 @@
+{
+	"name": "SourceDataset_SAPACDOCA_SCH_FOC",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4002' and AuartPa eq 'ZCFF'&$select=Racct,Usnam,Umskz,Bschl,Belnr,Lifnr,Sgtxt,Aufnr,Rcntr,Rassc,Matnr,Bldat,Budat,Wsl,Rwcur,Hsl,Rhcur,Msl",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
