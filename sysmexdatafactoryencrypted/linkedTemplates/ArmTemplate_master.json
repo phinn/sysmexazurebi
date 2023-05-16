@@ -133,18 +133,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"SAPOData_password": {
-						"value": "[parameters('SAPOData_password')]"
-					},
-					"RestServiceAPIGW_properties_typeProperties_url": {
-						"value": "[parameters('RestServiceAPIGW_properties_typeProperties_url')]"
-					},
-					"SAPOData_properties_typeProperties_url": {
-						"value": "[parameters('SAPOData_properties_typeProperties_url')]"
-					},
-					"SAPOData_properties_typeProperties_userName": {
-						"value": "[parameters('SAPOData_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -166,6 +154,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"SAPOData_password": {
+						"value": "[parameters('SAPOData_password')]"
+					},
 					"SAPODataLink_password": {
 						"value": "[parameters('SAPODataLink_password')]"
 					},
@@ -174,6 +165,15 @@
 					},
 					"oa_db_connectionString": {
 						"value": "[parameters('oa_db_connectionString')]"
+					},
+					"RestServiceAPIGW_properties_typeProperties_url": {
+						"value": "[parameters('RestServiceAPIGW_properties_typeProperties_url')]"
+					},
+					"SAPOData_properties_typeProperties_url": {
+						"value": "[parameters('SAPOData_properties_typeProperties_url')]"
+					},
+					"SAPOData_properties_typeProperties_userName": {
+						"value": "[parameters('SAPOData_properties_typeProperties_userName')]"
 					},
 					"SAPODataLink_properties_typeProperties_url": {
 						"value": "[parameters('SAPODataLink_properties_typeProperties_url')]"
@@ -228,6 +228,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'sysmexdatafactoryencrypted_ArmTemplate_3')]"
+			]
+		},
+		{
+			"name": "sysmexdatafactoryencrypted_ArmTemplate_5",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_5.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'sysmexdatafactoryencrypted_ArmTemplate_4')]"
 			]
 		}
 	]
