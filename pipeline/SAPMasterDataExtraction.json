@@ -1,0 +1,9 @@
+{
+	"name": "SAPMasterDataExtraction",
+	"properties": {
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": []
+	}
+}
