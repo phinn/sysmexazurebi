@@ -1,0 +1,22 @@
+{
+	"name": "SourceDataset_SAPACDOCA_Expense_SHKSJNSWX",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs ne '4002' and  Racct ge '5000000000' and Racct le '5999999999'",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

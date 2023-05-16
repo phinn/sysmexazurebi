@@ -27,6 +27,12 @@
 					"referenceName": "SAPMasterDataExtraction",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "FinancialExpense_SHKSJNSWXDataExtraction_copy1",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
