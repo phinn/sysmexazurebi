@@ -1,9 +1,9 @@
 {
-	"name": "FinancialSCHExpenseDataExtraction",
+	"name": "FinancialSCH_FOCDataExtraction",
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyACDOCA_SCH_ExpenseData",
+				"name": "CopyACDOCA_SCH_FOCData",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -4345,13 +4345,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_SAPACDOCA_SCH_Expense",
+						"referenceName": "SourceDataset_SAPACDOCA_SCH_FOC",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_SAPACDOCA_FILE",
+						"referenceName": "DestinationDataset_SAPACDOCA_SCH_FOC_FILE",
 						"type": "DatasetReference"
 					}
 				]

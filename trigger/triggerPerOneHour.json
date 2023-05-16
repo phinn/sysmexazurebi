@@ -30,7 +30,7 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "FinancialSCHExpenseDataExtraction",
+					"referenceName": "FinancialSCH_FOCDataExtraction",
 					"type": "PipelineReference"
 				}
 			},
