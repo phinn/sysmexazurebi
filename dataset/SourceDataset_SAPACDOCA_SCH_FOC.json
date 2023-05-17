@@ -12,7 +12,7 @@
 		"type": "RestResource",
 		"typeProperties": {
 			"relativeUrl": {
-				"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4002' and Rbukrs eq '4002' and  Racct ge '5000000000' and Racct le '5999999999' or  AuartPa eq 'ZCFF'",
+				"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4002' and (Racct ge '5000000000' and Racct le '5999999999' or  AuartPa eq 'ZCFF')",
 				"type": "Expression"
 			}
 		},
