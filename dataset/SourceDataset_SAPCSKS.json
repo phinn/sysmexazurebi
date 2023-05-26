@@ -1,0 +1,23 @@
+{
+	"name": "SourceDataset_SAPCSKS",
+	"properties": {
+		"description": "成本中心主数据",
+		"linkedServiceName": {
+			"referenceName": "SAPOData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "/sap/opu/odata/sap/ZRTR_GBL_API_CSKS_SRV/CSKSSet?sap-client=110&$format=json",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
