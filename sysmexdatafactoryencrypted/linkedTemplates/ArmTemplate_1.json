@@ -13,6 +13,86 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesDB')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Report",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "ProductNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductCategoryCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ProductLineName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SecondProductLineCode",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesUnitNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesUnitName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "BasicPrice",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PlanDeliveryDays",
+						"type": "nvarchar"
+					},
+					{
+						"name": "IsDangerous",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bomsn",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CreateDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "UpdateDate",
+						"type": "nvarchar"
+					},
+					{
+						"name": "InsertTime",
+						"type": "nvarchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "ods",
+					"table": "SAPS4Deliveries"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPDeliveriesDB_pre4hour')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -11129,33 +11209,6 @@
 					"schema": "ods",
 					"table": "SAPProductPriceEncrypted"
 				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPProductPriceParquet')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureDataLake",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "Parquet",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobFSLocation",
-						"fileName": {
-							"value": "@getPastTime(16,'Hour','yyyyMMdd')",
-							"type": "Expression"
-						},
-						"folderPath": "SAPProductPrice",
-						"fileSystem": "sapdata"
-					},
-					"compressionCodec": "gzip"
-				},
-				"schema": []
 			},
 			"dependsOn": []
 		}
