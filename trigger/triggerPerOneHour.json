@@ -12,12 +12,6 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "MaterialDataExtraction",
-					"type": "PipelineReference"
-				}
-			},
-			{
-				"pipelineReference": {
 					"referenceName": "ProductDataExtraction",
 					"type": "PipelineReference"
 				}
