@@ -33,6 +33,12 @@
 					"referenceName": "FinancialExpense_SHKSJNSWXDataExtraction_copy1",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "MaterialDataExtraction",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
