@@ -27333,6 +27333,27 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "MaterialFactoryDataExtraction",
+						"type": "ExecutePipeline",
+						"dependsOn": [
+							{
+								"activity": "CopyMARAData",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"userProperties": [],
+						"typeProperties": {
+							"pipeline": {
+								"referenceName": "MaterialFactoryDataExtraction",
+								"type": "PipelineReference"
+							},
+							"waitOnCompletion": true,
+							"parameters": {}
+						}
 					}
 				],
 				"policy": {
@@ -27346,7 +27367,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SourceDataset_SAPMARA')]",
-				"[concat(variables('factoryId'), '/datasets/DestinationDataset_SAPMARA_FILE')]"
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_SAPMARA_FILE')]",
+				"[concat(variables('factoryId'), '/pipelines/MaterialFactoryDataExtraction')]"
 			]
 		},
 		{
@@ -80648,6 +80670,13 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "MaterialDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -80665,7 +80694,8 @@
 				"[concat(variables('factoryId'), '/pipelines/VendorDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/FinancialSHKVoucherDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/SAPMasterDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/FinancialExpense_SHKSJNSWXDataExtraction_copy1')]"
+				"[concat(variables('factoryId'), '/pipelines/FinancialExpense_SHKSJNSWXDataExtraction_copy1')]",
+				"[concat(variables('factoryId'), '/pipelines/MaterialDataExtraction')]"
 			]
 		},
 		{
@@ -80679,13 +80709,6 @@
 					{
 						"pipelineReference": {
 							"referenceName": "FinancialDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
-							"referenceName": "MaterialDataExtraction",
 							"type": "PipelineReference"
 						},
 						"parameters": {}
@@ -80731,7 +80754,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/FinancialDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/MaterialDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/ProductDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/AnnualContractDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/FinancialSCH_FOCDataExtraction')]",
