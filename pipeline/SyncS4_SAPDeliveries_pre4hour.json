@@ -502,7 +502,8 @@
 									"path": "$['deliveryDocTypeNo']"
 								},
 								"sink": {
-									"name": "deliveryDocTypeNo"
+									"name": "deliveryDocTypeNo",
+									"type": "String"
 								}
 							}
 						]
