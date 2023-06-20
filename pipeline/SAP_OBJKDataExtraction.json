@@ -1,0 +1,216 @@
+{
+	"name": "SAP_OBJKDataExtraction",
+	"properties": {
+		"activities": [
+			{
+				"name": "CopySAPOBJKData",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "01:00:00",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "['Mandt']"
+								},
+								"sink": {
+									"name": "Mandt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Obknr']"
+								},
+								"sink": {
+									"name": "Obknr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Obzae']"
+								},
+								"sink": {
+									"name": "Obzae",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Equnr']"
+								},
+								"sink": {
+									"name": "Equnr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ihnum']"
+								},
+								"sink": {
+									"name": "Ihnum",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Bautl']"
+								},
+								"sink": {
+									"name": "Bautl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Iloan']"
+								},
+								"sink": {
+									"name": "Iloan",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Sortf']"
+								},
+								"sink": {
+									"name": "Sortf",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Bearb']"
+								},
+								"sink": {
+									"name": "Bearb",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Objvw']"
+								},
+								"sink": {
+									"name": "Objvw",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Sernr']"
+								},
+								"sink": {
+									"name": "Sernr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Matnr']"
+								},
+								"sink": {
+									"name": "Matnr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Datum']"
+								},
+								"sink": {
+									"name": "Datum",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Eqsnr']"
+								},
+								"sink": {
+									"name": "Eqsnr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Taser']"
+								},
+								"sink": {
+									"name": "Taser",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Uii']"
+								},
+								"sink": {
+									"name": "Uii",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['EamBadiFlag']"
+								},
+								"sink": {
+									"name": "EamBadiFlag",
+									"type": "String"
+								}
+							}
+						],
+						"collectionReference": "$['d']['results']"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_SAPOBJK",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_SAPOBJK_FILE",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": []
+	}
+}

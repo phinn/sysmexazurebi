@@ -74,6 +74,46 @@
 					},
 					"waitOnCompletion": true
 				}
+			},
+			{
+				"name": "SAP_OBJKDataExtraction",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "RestInventoryDataExtraction",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "SAP_OBJKDataExtraction",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "SAP_SER01DataExtraction",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "SAP_OBJKDataExtraction",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "SAP_SER01DataExtraction",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
 			}
 		],
 		"folder": {

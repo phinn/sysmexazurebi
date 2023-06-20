@@ -1,0 +1,171 @@
+{
+	"name": "SAP_SER01DataExtraction",
+	"properties": {
+		"activities": [
+			{
+				"name": "CopySAPSER01Data",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "01:00:00",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "['Mandt']"
+								},
+								"sink": {
+									"name": "Mandt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Obknr']"
+								},
+								"sink": {
+									"name": "Obknr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['LiefNr']"
+								},
+								"sink": {
+									"name": "LiefNr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Posnr']"
+								},
+								"sink": {
+									"name": "Posnr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Datum']"
+								},
+								"sink": {
+									"name": "Datum",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Letznr']"
+								},
+								"sink": {
+									"name": "Letznr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kunde']"
+								},
+								"sink": {
+									"name": "Kunde",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Anzsn']"
+								},
+								"sink": {
+									"name": "Anzsn",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Vorgang']"
+								},
+								"sink": {
+									"name": "Vorgang",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Uzeit']"
+								},
+								"sink": {
+									"name": "Uzeit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Vbtyp']"
+								},
+								"sink": {
+									"name": "Vbtyp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Bwart']"
+								},
+								"sink": {
+									"name": "Bwart",
+									"type": "String"
+								}
+							}
+						],
+						"collectionReference": "$['d']['results']"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_SAPSER01",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_SAPSER01_FILE",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": []
+	}
+}
