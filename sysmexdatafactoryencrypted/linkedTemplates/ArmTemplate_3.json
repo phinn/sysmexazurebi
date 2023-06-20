@@ -13,6 +13,54 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPACDOCA_SCH_FOC')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4002' and (Racct ge '5000000000' and Racct le '5999999999' or  AuartPa eq 'ZCFF')",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPACDOCA_SCH_FOC_BAK')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPOData",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": {
+						"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4002' and AuartPa eq 'ZCFF'&$select=Racct,Usnam,Umskz,Bschl,Belnr,Lifnr,Sgtxt,Aufnr,Rcntr,Rassc,Matnr,Bldat,Budat,Wsl,Rwcur,Hsl,Rhcur,Msl",
+						"type": "Expression"
+					}
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPACDOCA_SHK')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -432,51 +480,6 @@
 				"typeProperties": {
 					"relativeUrl": {
 						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MBEW_SRV/MBEWSet?sap-client=110&$format=json",
-						"type": "Expression"
-					}
-				},
-				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPProductPrice')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SourceDataset_SAPProductPrice",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "RestResource",
-				"typeProperties": {
-					"relativeUrl": {
-						"value": "/v1/mdg/GetProductListFromSAP",
-						"type": "Expression"
-					}
-				},
-				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPT179')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SAPOData",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "SAP/S4/OData"
-				},
-				"annotations": [],
-				"type": "RestResource",
-				"typeProperties": {
-					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_T179_SRV/T179Set?sap-client=110&$format=json",
 						"type": "Expression"
 					}
 				},
