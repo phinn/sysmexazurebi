@@ -33,6 +33,12 @@
 					"referenceName": "SAPDataExtraction",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "DealerMasterDataExtraction",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
