@@ -24,12 +24,6 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "FinancialSCH_FOCDataExtraction",
-					"type": "PipelineReference"
-				}
-			},
-			{
-				"pipelineReference": {
 					"referenceName": "SAPDataExtraction",
 					"type": "PipelineReference"
 				}
