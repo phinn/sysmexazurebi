@@ -42626,27 +42626,6 @@
 							"waitOnCompletion": true,
 							"parameters": {}
 						}
-					},
-					{
-						"name": "FinancialSCH_FOCDataExtraction",
-						"type": "ExecutePipeline",
-						"dependsOn": [
-							{
-								"activity": "SAP_SER01DataExtraction",
-								"dependencyConditions": [
-									"Completed"
-								]
-							}
-						],
-						"userProperties": [],
-						"typeProperties": {
-							"pipeline": {
-								"referenceName": "FinancialSCH_FOCDataExtraction",
-								"type": "PipelineReference"
-							},
-							"waitOnCompletion": true,
-							"parameters": {}
-						}
 					}
 				],
 				"policy": {
@@ -42664,8 +42643,7 @@
 				"[concat(variables('factoryId'), '/pipelines/DeliveryNotesDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/RestInventoryDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/SAP_OBJKDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/SAP_SER01DataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/FinancialSCH_FOCDataExtraction')]"
+				"[concat(variables('factoryId'), '/pipelines/SAP_SER01DataExtraction')]"
 			]
 		},
 		{
@@ -82264,7 +82242,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIKP_SRV/LIKPSet?sap-client=110&$format=json",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIKP_SRV/LIKPSet?sap-client=110&$format=json&$filter=Vkorg eq '4002' ",
 						"type": "Expression"
 					}
 				},
@@ -82916,6 +82894,13 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "FinancialSCH_FOCDataExtraction",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -82932,7 +82917,8 @@
 				"[concat(variables('factoryId'), '/pipelines/ProductDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/AnnualContractDataExtraction')]",
 				"[concat(variables('factoryId'), '/pipelines/SAPDataExtraction')]",
-				"[concat(variables('factoryId'), '/pipelines/DealerMasterDataExtraction')]"
+				"[concat(variables('factoryId'), '/pipelines/DealerMasterDataExtraction')]",
+				"[concat(variables('factoryId'), '/pipelines/FinancialSCH_FOCDataExtraction')]"
 			]
 		},
 		{
