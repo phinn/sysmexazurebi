@@ -22,13 +22,6 @@
 				"pipelines": [
 					{
 						"pipelineReference": {
-							"referenceName": "FinancialDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
 							"referenceName": "ProductDataExtraction",
 							"type": "PipelineReference"
 						},
@@ -37,13 +30,6 @@
 					{
 						"pipelineReference": {
 							"referenceName": "AnnualContractDataExtraction",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					},
-					{
-						"pipelineReference": {
-							"referenceName": "FinancialSCH_FOCDataExtraction",
 							"type": "PipelineReference"
 						},
 						"parameters": {}
