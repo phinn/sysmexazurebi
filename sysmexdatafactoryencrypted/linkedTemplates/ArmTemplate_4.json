@@ -829,7 +829,7 @@
 							"source": {
 								"type": "RestSource",
 								"httpRequestTimeout": "07:00:00",
-								"requestInterval": "00.00:00:00.010",
+								"requestInterval": "00.00:00:00.030",
 								"requestMethod": "GET",
 								"paginationRules": {
 									"supportRFC5988": "true"
