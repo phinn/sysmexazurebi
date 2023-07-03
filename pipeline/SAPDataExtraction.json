@@ -114,26 +114,6 @@
 					},
 					"waitOnCompletion": true
 				}
-			},
-			{
-				"name": "FinancialSCH_FOCDataExtraction",
-				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "SAP_SER01DataExtraction",
-						"dependencyConditions": [
-							"Completed"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "FinancialSCH_FOCDataExtraction",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
-				}
 			}
 		],
 		"folder": {
