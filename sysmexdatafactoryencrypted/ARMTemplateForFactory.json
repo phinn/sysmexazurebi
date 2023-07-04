@@ -82268,7 +82268,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json&$filter=Vkorg eq '4002'",
 						"type": "Expression"
 					}
 				},
