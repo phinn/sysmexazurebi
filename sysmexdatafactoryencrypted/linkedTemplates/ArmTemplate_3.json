@@ -383,7 +383,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIKP_SRV/LIKPSet?sap-client=110&$format=json&$filter=Vkorg eq '4002' ",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIKP_SRV/LIKPSet?sap-client=110&$format=json&$skip={offset}&$top=10000&$filter=Vkorg eq '4002' ",
 						"type": "Expression"
 					}
 				},
