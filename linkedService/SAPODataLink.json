@@ -5,10 +5,10 @@
 		"annotations": [],
 		"type": "OData",
 		"typeProperties": {
-			"url": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000",
+			"url": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110",
 			"authenticationType": "Basic",
 			"userName": "OData",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwZWI5YmY2NS0zYjIyLTQ1M2UtOGFiMy04MmNkYTg3ZjZiMzMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwMzdhZDU3My02YjIxLTRlZTQtYmJmMS0xZGY4MDA3MjBmN2QiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "selfhostedForSAP",
