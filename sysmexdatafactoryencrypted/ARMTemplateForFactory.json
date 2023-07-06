@@ -44714,7 +44714,8 @@
 								"requestInterval": "00.00:00:00.010",
 								"requestMethod": "GET",
 								"paginationRules": {
-									"supportRFC5988": "true"
+									"QueryParameters.{offset}": "RANGE:0::10000",
+									"EndCondition:$.d.results": "Empty"
 								}
 							},
 							"sink": {
@@ -47061,7 +47062,8 @@
 								"requestInterval": "00.00:00:00.010",
 								"requestMethod": "GET",
 								"paginationRules": {
-									"supportRFC5988": "true"
+									"QueryParameters.{offset}": "RANGE:0::10000",
+									"EndCondition:$.d.results": "Empty"
 								}
 							},
 							"sink": {
@@ -50515,7 +50517,8 @@
 								"requestInterval": "00.00:00:00.010",
 								"requestMethod": "GET",
 								"paginationRules": {
-									"supportRFC5988": "true"
+									"QueryParameters.{offset}": "RANGE:0::10000",
+									"EndCondition:$.d.results": "Empty"
 								}
 							},
 							"sink": {
@@ -82587,7 +82590,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBAK_SRV/VBAKSet?sap-client=110&$format=json",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBAK_SRV/VBAKSet?sap-client=110&$format=json&$skip={offset}&$top=10000",
 						"type": "Expression"
 					}
 				},
@@ -82613,7 +82616,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBAP_SRV/VBAPSet?sap-client=110&$format=json",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBAP_SRV/VBAPSet?sap-client=110&$format=json&$skip={offset}&$top=10000",
 						"type": "Expression"
 					}
 				},
@@ -82639,7 +82642,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBEP_SRV/VBEPSet?sap-client=110&$format=json",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_VBEP_SRV/VBEPSet?sap-client=110&$format=json&$skip={offset}&$top=10000",
 						"type": "Expression"
 					}
 				},
