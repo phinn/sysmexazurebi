@@ -21,7 +21,8 @@
 						"requestInterval": "00.00:00:00.030",
 						"requestMethod": "GET",
 						"paginationRules": {
-							"supportRFC5988": "true"
+							"QueryParameters.{offset}": "RANGE:0::10000",
+							"EndCondition:$.d.results": "Empty"
 						}
 					},
 					"sink": {
@@ -2645,7 +2646,7 @@
 						"requestInterval": "00.00:00:00.010",
 						"requestMethod": "GET",
 						"paginationRules": {
-							"QueryParameters.{offset}": "RANGE:0:100:10000",
+							"QueryParameters.{offset}": "RANGE:0::10000",
 							"EndCondition:$.d.results": "Empty"
 						}
 					},
