@@ -6560,7 +6560,7 @@
 								"requestInterval": "00.00:00:00.010",
 								"requestMethod": "GET",
 								"paginationRules": {
-									"QueryParameters.{offset}": "RANGE:0:10000:1"
+									"QueryParameters.{offset}": "RANGE:0:100:1"
 								}
 							},
 							"sink": {
