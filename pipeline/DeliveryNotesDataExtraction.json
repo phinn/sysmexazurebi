@@ -2645,7 +2645,8 @@
 						"requestInterval": "00.00:00:00.010",
 						"requestMethod": "GET",
 						"paginationRules": {
-							"supportRFC5988": "true"
+							"supportRFC5988": "true",
+							"QueryParameters.{offset}": "RANGE:0:100:1"
 						}
 					},
 					"sink": {
