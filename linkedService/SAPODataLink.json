@@ -5,13 +5,13 @@
 		"annotations": [],
 		"type": "OData",
 		"typeProperties": {
-			"url": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000",
+			"url": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV",
 			"authenticationType": "Basic",
 			"userName": "OData",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3YTFiYjU1Yy0xMTYwLTQ1YzctYmQ1ZC04ZTdiMDc1ODM0NTYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmMDIxZTIxYi03M2IzLTRjZGMtOWFkMy0zMjg1NTFkZjEyZGIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
-			"referenceName": "selfhosted",
+			"referenceName": "selfhostedForSAP",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
