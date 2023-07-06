@@ -14,9 +14,6 @@
 		"SAPOData_password": {
 			"value": ""
 		},
-		"SAPODataLink_password": {
-			"value": ""
-		},
 		"mdm_db_connectionString": {
 			"value": ""
 		},
@@ -39,12 +36,6 @@
 			"value": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
 		},
 		"SAPOData_properties_typeProperties_userName": {
-			"value": "OData"
-		},
-		"SAPODataLink_properties_typeProperties_url": {
-			"value": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
-		},
-		"SAPODataLink_properties_typeProperties_userName": {
 			"value": "OData"
 		},
 		"SourceDataset_SAPProductPrice_properties_typeProperties_url": {

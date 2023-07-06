@@ -19,10 +19,6 @@
 			"type": "secureString",
 			"metadata": "“SAPOData”的“password”的安全字符串"
 		},
-		"SAPODataLink_password": {
-			"type": "secureString",
-			"metadata": "“SAPODataLink”的“password”的安全字符串"
-		},
 		"mdm_db_connectionString": {
 			"type": "secureString",
 			"metadata": "“mdm_db”的“connectionString”的安全字符串"
@@ -52,14 +48,6 @@
 			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
 		},
 		"SAPOData_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "OData"
-		},
-		"SAPODataLink_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "http://vhsmxsjpci.hec.jp.sysmex.biz:8000"
-		},
-		"SAPODataLink_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "OData"
 		},
@@ -6569,10 +6557,7 @@
 								"type": "RestSource",
 								"httpRequestTimeout": "07:00:00",
 								"requestInterval": "00.00:00:00.010",
-								"requestMethod": "GET",
-								"paginationRules": {
-									"supportRFC5988": "true"
-								}
+								"requestMethod": "GET"
 							},
 							"sink": {
 								"type": "ParquetSink",
@@ -6584,6 +6569,8 @@
 								}
 							},
 							"enableStaging": false,
+							"parallelCopies": 10,
+							"dataIntegrationUnits": 8,
 							"translator": {
 								"type": "TabularTranslator",
 								"mappings": [
@@ -9788,8 +9775,111 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
+				"variables": {
+					"skip": {
+						"type": "String",
+						"defaultValue": "0"
+					}
+				},
 				"folder": {
 					"name": "SAP/S4/OData"
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_SAPLIPS')]",
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_SAPLIPS_FILE')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DeliveryNotesItemDataExtractionSplitPage')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "CopyLIPSUnit",
+						"type": "Until",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"expression": {
+								"value": "@empty(activity('CopyLIPSDataOnePage').output.d.results)",
+								"type": "Expression"
+							},
+							"activities": [
+								{
+									"name": "CopyLIPSDataOnePage",
+									"type": "Copy",
+									"dependsOn": [],
+									"policy": {
+										"timeout": "00:30:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"source": {
+											"type": "RestSource",
+											"httpRequestTimeout": "01:00:00",
+											"requestInterval": "00.00:00:00.010",
+											"requestMethod": "GET",
+											"paginationRules": {
+												"QueryParameters.$skip": {
+													"value": "@variables('skip')",
+													"type": "Expression"
+												},
+												"QueryParameters.$top": {
+													"value": "100",
+													"type": "Expression"
+												}
+											}
+										},
+										"sink": {
+											"type": "ParquetSink",
+											"storeSettings": {
+												"type": "AzureBlobFSWriteSettings"
+											},
+											"formatSettings": {
+												"type": "ParquetWriteSettings"
+											}
+										},
+										"enableStaging": false
+									},
+									"inputs": [
+										{
+											"referenceName": "SourceDataset_SAPLIPS",
+											"type": "DatasetReference",
+											"parameters": {}
+										}
+									],
+									"outputs": [
+										{
+											"referenceName": "DestinationDataset_SAPLIPS_FILE",
+											"type": "DatasetReference",
+											"parameters": {}
+										}
+									]
+								}
+							],
+							"timeout": "0.12:00:00"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"variables": {
+					"skip": {
+						"type": "String",
+						"defaultValue": "1"
+					}
+				},
+				"folder": {
+					"name": "SAP/S4/OData/SplitPage"
 				},
 				"annotations": []
 			},
@@ -82268,7 +82358,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json&$filter=Vkorg eq '4002'",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json&$filter=Werks eq '4210' or Werks eq '4220'",
 						"type": "Expression"
 					}
 				},
@@ -82652,31 +82742,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/integrationRuntimes/selfhostedForSAP')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SAPODataLink')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "OData",
-				"typeProperties": {
-					"url": "[parameters('SAPODataLink_properties_typeProperties_url')]",
-					"authenticationType": "Basic",
-					"userName": "[parameters('SAPODataLink_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('SAPODataLink_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "selfhosted",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/selfhosted')]"
 			]
 		},
 		{
