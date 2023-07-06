@@ -6557,7 +6557,10 @@
 								"type": "RestSource",
 								"httpRequestTimeout": "07:00:00",
 								"requestInterval": "00.00:00:00.010",
-								"requestMethod": "GET"
+								"requestMethod": "GET",
+								"paginationRules": {
+									"QueryParameters.{offset}": "RANGE:0:10000:1"
+								}
 							},
 							"sink": {
 								"type": "ParquetSink",
@@ -9775,12 +9778,6 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
-				"variables": {
-					"skip": {
-						"type": "String",
-						"defaultValue": "0"
-					}
-				},
 				"folder": {
 					"name": "SAP/S4/OData"
 				},
@@ -9827,11 +9824,8 @@
 											"requestInterval": "00.00:00:00.010",
 											"requestMethod": "GET",
 											"paginationRules": {
-												"QueryParameters.$skip": {
-													"value": "@variables('skip')",
-													"type": "Expression"
-												},
-												"QueryParameters.$top": {
+												"QueryParameters.{offset}": "RANGE:0:10000:1",
+												"QueryParameters.{limit}": {
 													"value": "100",
 													"type": "Expression"
 												}
@@ -9875,7 +9869,7 @@
 				"variables": {
 					"skip": {
 						"type": "String",
-						"defaultValue": "1"
+						"defaultValue": "0"
 					}
 				},
 				"folder": {
@@ -82358,7 +82352,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json&$filter=(Werks eq '4210' or Werks eq '4220') and Pstyv ne 'ELN'",
+						"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json&$skip={offset}&$top=10000&$filter=(Werks eq '4210' or Werks eq '4220') and Pstyv ne 'ELN'",
 						"type": "Expression"
 					}
 				},

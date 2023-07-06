@@ -6681,7 +6681,10 @@
 								"type": "RestSource",
 								"httpRequestTimeout": "07:00:00",
 								"requestInterval": "00.00:00:00.010",
-								"requestMethod": "GET"
+								"requestMethod": "GET",
+								"paginationRules": {
+									"QueryParameters.{offset}": "RANGE:0:10000:1"
+								}
 							},
 							"sink": {
 								"type": "ParquetSink",
@@ -9899,12 +9902,6 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
-				"variables": {
-					"skip": {
-						"type": "String",
-						"defaultValue": "0"
-					}
-				},
 				"folder": {
 					"name": "SAP/S4/OData"
 				},
@@ -9948,11 +9945,8 @@
 											"requestInterval": "00.00:00:00.010",
 											"requestMethod": "GET",
 											"paginationRules": {
-												"QueryParameters.$skip": {
-													"value": "@variables('skip')",
-													"type": "Expression"
-												},
-												"QueryParameters.$top": {
+												"QueryParameters.{offset}": "RANGE:0:10000:1",
+												"QueryParameters.{limit}": {
 													"value": "100",
 													"type": "Expression"
 												}
@@ -9996,7 +9990,7 @@
 				"variables": {
 					"skip": {
 						"type": "String",
-						"defaultValue": "1"
+						"defaultValue": "0"
 					}
 				},
 				"folder": {
