@@ -2646,7 +2646,7 @@
 						"requestMethod": "GET",
 						"paginationRules": {
 							"supportRFC5988": "true",
-							"QueryParameters.{offset}": "RANGE:0:100:1"
+							"QueryParameters.{offset}": "RANGE:0:100:10000"
 						}
 					},
 					"sink": {
