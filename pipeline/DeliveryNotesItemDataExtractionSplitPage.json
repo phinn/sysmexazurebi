@@ -56,7 +56,10 @@
 							"inputs": [
 								{
 									"referenceName": "SourceDataset_SAPLIPS",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"$format": "json"
+									}
 								}
 							],
 							"outputs": [

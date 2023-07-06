@@ -5,16 +5,6 @@
 			"referenceName": "SAPOData",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"sap-client": {
-				"type": "string",
-				"defaultValue": "110"
-			},
-			"$format": {
-				"type": "string",
-				"defaultValue": "json"
-			}
-		},
 		"folder": {
 			"name": "SAP/S4/OData"
 		},
@@ -22,7 +12,7 @@
 		"type": "RestResource",
 		"typeProperties": {
 			"relativeUrl": {
-				"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json",
+				"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json&$filter=Werks eq '4210' or Werks eq '4220'",
 				"type": "Expression"
 			}
 		},
