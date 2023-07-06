@@ -3306,7 +3306,7 @@
 								"requestMethod": "GET",
 								"paginationRules": {
 									"supportRFC5988": "true",
-									"QueryParameters.{offset}": "RANGE:0:100:1"
+									"QueryParameters.{offset}": "RANGE:0:100:10000"
 								}
 							},
 							"sink": {
@@ -6560,7 +6560,7 @@
 								"requestInterval": "00.00:00:00.010",
 								"requestMethod": "GET",
 								"paginationRules": {
-									"QueryParameters.{offset}": "RANGE:0:100:1"
+									"QueryParameters.{offset}": "RANGE:0:100:10000"
 								}
 							},
 							"sink": {
@@ -6575,6 +6575,7 @@
 							"enableStaging": false,
 							"parallelCopies": 10,
 							"enableSkipIncompatibleRow": false,
+							"dataIntegrationUnits": 16,
 							"translator": {
 								"type": "TabularTranslator",
 								"mappings": [
