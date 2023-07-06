@@ -1,0 +1,85 @@
+{
+	"name": "DeliveryNotesItemDataExtractionSplitPage",
+	"properties": {
+		"activities": [
+			{
+				"name": "CopyLIPSUnit",
+				"type": "Until",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@empty(activity('CopyLIPSDataOnePage').output.d.results)",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "CopyLIPSDataOnePage",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "00:30:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "RestSource",
+									"httpRequestTimeout": "01:00:00",
+									"requestInterval": "00.00:00:00.010",
+									"requestMethod": "GET",
+									"paginationRules": {
+										"QueryParameters.$skip": {
+											"value": "@variables('skip')",
+											"type": "Expression"
+										},
+										"QueryParameters.$top": {
+											"value": "100",
+											"type": "Expression"
+										}
+									}
+								},
+								"sink": {
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "ParquetWriteSettings"
+									}
+								},
+								"enableStaging": false
+							},
+							"inputs": [
+								{
+									"referenceName": "SourceDataset_SAPLIPS",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DestinationDataset_SAPLIPS_FILE",
+									"type": "DatasetReference"
+								}
+							]
+						}
+					],
+					"timeout": "0.12:00:00"
+				}
+			}
+		],
+		"variables": {
+			"skip": {
+				"type": "String",
+				"defaultValue": "1"
+			}
+		},
+		"folder": {
+			"name": "SAP/S4/OData/SplitPage"
+		},
+		"annotations": []
+	}
+}

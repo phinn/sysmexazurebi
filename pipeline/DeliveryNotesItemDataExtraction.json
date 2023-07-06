@@ -19,10 +19,7 @@
 						"type": "RestSource",
 						"httpRequestTimeout": "07:00:00",
 						"requestInterval": "00.00:00:00.010",
-						"requestMethod": "GET",
-						"paginationRules": {
-							"supportRFC5988": "true"
-						}
+						"requestMethod": "GET"
 					},
 					"sink": {
 						"type": "ParquetSink",
@@ -34,6 +31,8 @@
 						}
 					},
 					"enableStaging": false,
+					"parallelCopies": 10,
+					"dataIntegrationUnits": 8,
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
@@ -3221,7 +3220,10 @@
 				"inputs": [
 					{
 						"referenceName": "SourceDataset_SAPLIPS",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"$format": "json"
+						}
 					}
 				],
 				"outputs": [
@@ -3232,6 +3234,12 @@
 				]
 			}
 		],
+		"variables": {
+			"skip": {
+				"type": "String",
+				"defaultValue": "0"
+			}
+		},
 		"folder": {
 			"name": "SAP/S4/OData"
 		},
