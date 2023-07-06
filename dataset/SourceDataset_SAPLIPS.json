@@ -12,7 +12,7 @@
 		"type": "RestResource",
 		"typeProperties": {
 			"relativeUrl": {
-				"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json&$filter=(Werks eq '4210' or Werks eq '4220') and Pstyv ne 'ELN'",
+				"value": "/sap/opu/odata/sap/ZOTC_GBL_API_LIPS_SRV/LIPSSet?sap-client=110&$format=json&$skip={offset}&$top=10000&$filter=(Werks eq '4210' or Werks eq '4220') and Pstyv ne 'ELN'",
 				"type": "Expression"
 			}
 		},
