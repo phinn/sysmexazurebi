@@ -24098,7 +24098,8 @@
 								"requestInterval": "00.00:00:00.010",
 								"requestMethod": "GET",
 								"paginationRules": {
-									"supportRFC5988": "true"
+									"QueryParameters.{offset}": "RANGE:0::10000",
+									"EndCondition:$.d.results": "Empty"
 								}
 							},
 							"sink": {
@@ -82437,7 +82438,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARD_SRV/MARDSet?sap-client=110&$format=json&filter=(Werks eq '4220' or Werks eq '4210') and Labst ne 0",
+						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARD_SRV/MARDSet?sap-client=110&$format=json&$skip={offset}&$top=10000&filter=(Werks eq '4220' or Werks eq '4210') and Labst ne 0",
 						"type": "Expression"
 					}
 				},
