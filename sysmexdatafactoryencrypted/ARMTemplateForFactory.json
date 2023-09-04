@@ -15344,7 +15344,8 @@
 								"requestInterval": "00.00:00:00.010",
 								"requestMethod": "GET",
 								"paginationRules": {
-									"supportRFC5988": "true"
+									"QueryParameters.{offset}": "RANGE:0::10000",
+									"EndCondition:$.d.results": "Empty"
 								}
 							},
 							"sink": {
@@ -43807,8 +43808,6 @@
 							}
 						],
 						"policy": {
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
 							"secureOutput": false,
 							"secureInput": false
 						},
@@ -55614,8 +55613,6 @@
 							}
 						],
 						"policy": {
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
 							"secureOutput": false,
 							"secureInput": false
 						},
@@ -56537,8 +56534,6 @@
 							}
 						],
 						"policy": {
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
 							"secureOutput": false,
 							"secureInput": false
 						},
@@ -57460,8 +57455,6 @@
 							}
 						],
 						"policy": {
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
 							"secureOutput": false,
 							"secureInput": false
 						},
@@ -81975,7 +81968,7 @@
 				"type": "RestResource",
 				"typeProperties": {
 					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4002' and (Racct ge '5000000000' and Racct le '5999999999' or  AuartPa eq 'ZCFF')",
+						"value": "/sap/opu/odata/sap/ZRTR_GBL_API_ACDOCA_SRV/ACDOCASet?sap-client=110&$format=json&$filter=Rldnr eq '0L' and Rbukrs eq '4002' and (Racct ge '5000000000' and Racct le '5999999999' or  AuartPa eq 'ZCFF')&$skip={offset}&$top=10000",
 						"type": "Expression"
 					}
 				},
