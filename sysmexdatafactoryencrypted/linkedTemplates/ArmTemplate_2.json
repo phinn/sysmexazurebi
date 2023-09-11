@@ -4630,6 +4630,36 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_SAPVBKD_FILE')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SAP/S4/OData"
+				},
+				"annotations": [],
+				"type": "Parquet",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "VBKD",
+							"type": "Expression"
+						},
+						"folderPath": "OData",
+						"fileSystem": "saps4data"
+					},
+					"compressionCodec": "gzip"
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/RestServiceAPIGW')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -4953,77 +4983,6 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "View_MDM_CustomerAnnualContract_All"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/oa_db')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_OA_CustomerSalesRegion')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "oa_db",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "OA"
-				},
-				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "OANo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FiscalYear",
-						"type": "decimal",
-						"precision": 4,
-						"scale": 0
-					},
-					{
-						"name": "CustomerNo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "CustomerNoS4",
-						"type": "nvarchar"
-					},
-					{
-						"name": "CustomerName",
-						"type": "nvarchar"
-					},
-					{
-						"name": "CustomerRelated",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ProvinceName",
-						"type": "nvarchar"
-					},
-					{
-						"name": "CityName",
-						"type": "nvarchar"
-					},
-					{
-						"name": "DistrictName",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ProductLineNo",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ProductLineName",
-						"type": "nvarchar"
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "View_MDM_CustomerSalesRegionFromRiskControlTable"
 				}
 			},
 			"dependsOn": [
