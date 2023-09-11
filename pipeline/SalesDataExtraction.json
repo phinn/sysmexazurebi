@@ -6582,6 +6582,984 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "CopyVBKDData",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "CopyVBEPData",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "07:00:00",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"QueryParameters.{offset}": "RANGE:0::10000",
+							"EndCondition:$.d.results": "Empty"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "['Mandt']"
+								},
+								"sink": {
+									"name": "Mandt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Vbeln']"
+								},
+								"sink": {
+									"name": "Vbeln",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Posnr']"
+								},
+								"sink": {
+									"name": "Posnr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Konda']"
+								},
+								"sink": {
+									"name": "Konda",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kdgrp']"
+								},
+								"sink": {
+									"name": "Kdgrp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Bzirk']"
+								},
+								"sink": {
+									"name": "Bzirk",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Pltyp']"
+								},
+								"sink": {
+									"name": "Pltyp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Inco1']"
+								},
+								"sink": {
+									"name": "Inco1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Inco2']"
+								},
+								"sink": {
+									"name": "Inco2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kzazu']"
+								},
+								"sink": {
+									"name": "Kzazu",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Perfk']"
+								},
+								"sink": {
+									"name": "Perfk",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Perrl']"
+								},
+								"sink": {
+									"name": "Perrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Mrnkz']"
+								},
+								"sink": {
+									"name": "Mrnkz",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kurrf']"
+								},
+								"sink": {
+									"name": "Kurrf",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Valtg']"
+								},
+								"sink": {
+									"name": "Valtg",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Valdt']"
+								},
+								"sink": {
+									"name": "Valdt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Zterm']"
+								},
+								"sink": {
+									"name": "Zterm",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Zlsch']"
+								},
+								"sink": {
+									"name": "Zlsch",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ktgrd']"
+								},
+								"sink": {
+									"name": "Ktgrd",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kursk']"
+								},
+								"sink": {
+									"name": "Kursk",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Prsdt']"
+								},
+								"sink": {
+									"name": "Prsdt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Fkdat']"
+								},
+								"sink": {
+									"name": "Fkdat",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Fbuda']"
+								},
+								"sink": {
+									"name": "Fbuda",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Gjahr']"
+								},
+								"sink": {
+									"name": "Gjahr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Poper']"
+								},
+								"sink": {
+									"name": "Poper",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Stcur']"
+								},
+								"sink": {
+									"name": "Stcur",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Mschl']"
+								},
+								"sink": {
+									"name": "Mschl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Mansp']"
+								},
+								"sink": {
+									"name": "Mansp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Fplnr']"
+								},
+								"sink": {
+									"name": "Fplnr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Waktion']"
+								},
+								"sink": {
+									"name": "Waktion",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Abssc']"
+								},
+								"sink": {
+									"name": "Abssc",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Lcnum']"
+								},
+								"sink": {
+									"name": "Lcnum",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['J1afitp']"
+								},
+								"sink": {
+									"name": "J1afitp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['J1arfz']"
+								},
+								"sink": {
+									"name": "J1arfz",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['J1aregio']"
+								},
+								"sink": {
+									"name": "J1aregio",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['J1agicd']"
+								},
+								"sink": {
+									"name": "J1agicd",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['J1adtyp']"
+								},
+								"sink": {
+									"name": "J1adtyp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['J1atxrel']"
+								},
+								"sink": {
+									"name": "J1atxrel",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Abtnr']"
+								},
+								"sink": {
+									"name": "Abtnr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Empst']"
+								},
+								"sink": {
+									"name": "Empst",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Bstkd']"
+								},
+								"sink": {
+									"name": "Bstkd",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Bstdk']"
+								},
+								"sink": {
+									"name": "Bstdk",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Bsark']"
+								},
+								"sink": {
+									"name": "Bsark",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ihrez']"
+								},
+								"sink": {
+									"name": "Ihrez",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['BstkdE']"
+								},
+								"sink": {
+									"name": "BstkdE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['BstdkE']"
+								},
+								"sink": {
+									"name": "BstdkE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['BsarkE']"
+								},
+								"sink": {
+									"name": "BsarkE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['IhrezE']"
+								},
+								"sink": {
+									"name": "IhrezE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['PosexE']"
+								},
+								"sink": {
+									"name": "PosexE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['KurskDat']"
+								},
+								"sink": {
+									"name": "KurskDat",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['KurrfDat']"
+								},
+								"sink": {
+									"name": "KurrfDat",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kdkg1']"
+								},
+								"sink": {
+									"name": "Kdkg1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kdkg2']"
+								},
+								"sink": {
+									"name": "Kdkg2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kdkg3']"
+								},
+								"sink": {
+									"name": "Kdkg3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kdkg4']"
+								},
+								"sink": {
+									"name": "Kdkg4",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Kdkg5']"
+								},
+								"sink": {
+									"name": "Kdkg5",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Wkwae']"
+								},
+								"sink": {
+									"name": "Wkwae",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Wkkur']"
+								},
+								"sink": {
+									"name": "Wkkur",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Akwae']"
+								},
+								"sink": {
+									"name": "Akwae",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Akkur']"
+								},
+								"sink": {
+									"name": "Akkur",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Akprz']"
+								},
+								"sink": {
+									"name": "Akprz",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['J1aindxp']"
+								},
+								"sink": {
+									"name": "J1aindxp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['J1aidatep']"
+								},
+								"sink": {
+									"name": "J1aidatep",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['BstkdM']"
+								},
+								"sink": {
+									"name": "BstkdM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Delco']"
+								},
+								"sink": {
+									"name": "Delco",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Ffprf']"
+								},
+								"sink": {
+									"name": "Ffprf",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Bemot']"
+								},
+								"sink": {
+									"name": "Bemot",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Faktf']"
+								},
+								"sink": {
+									"name": "Faktf",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Rrrel']"
+								},
+								"sink": {
+									"name": "Rrrel",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Acdatv']"
+								},
+								"sink": {
+									"name": "Acdatv",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Vsart']"
+								},
+								"sink": {
+									"name": "Vsart",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Traty']"
+								},
+								"sink": {
+									"name": "Traty",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Trmtyp']"
+								},
+								"sink": {
+									"name": "Trmtyp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Sdabw']"
+								},
+								"sink": {
+									"name": "Sdabw",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Wminr']"
+								},
+								"sink": {
+									"name": "Wminr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Fkber']"
+								},
+								"sink": {
+									"name": "Fkber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Podkz']"
+								},
+								"sink": {
+									"name": "Podkz",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Campaign']"
+								},
+								"sink": {
+									"name": "Campaign",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Vkont']"
+								},
+								"sink": {
+									"name": "Vkont",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['DpbpRefFplnr']"
+								},
+								"sink": {
+									"name": "DpbpRefFplnr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['DpbpRefFpltr']"
+								},
+								"sink": {
+									"name": "DpbpRefFpltr",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Revsp']"
+								},
+								"sink": {
+									"name": "Revsp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Revevtyp']"
+								},
+								"sink": {
+									"name": "Revevtyp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['FarrReltype']"
+								},
+								"sink": {
+									"name": "FarrReltype",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Vtref']"
+								},
+								"sink": {
+									"name": "Vtref",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Dataaging']"
+								},
+								"sink": {
+									"name": "Dataaging",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['J1tpbupl']"
+								},
+								"sink": {
+									"name": "J1tpbupl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Incov']"
+								},
+								"sink": {
+									"name": "Incov",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Inco2L']"
+								},
+								"sink": {
+									"name": "Inco2L",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Inco3L']"
+								},
+								"sink": {
+									"name": "Inco3L",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Packno']"
+								},
+								"sink": {
+									"name": "Packno",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['PeropBeg']"
+								},
+								"sink": {
+									"name": "PeropBeg",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['PeropEnd']"
+								},
+								"sink": {
+									"name": "PeropEnd",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Stcode']"
+								},
+								"sink": {
+									"name": "Stcode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Formc1']"
+								},
+								"sink": {
+									"name": "Formc1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Formc2']"
+								},
+								"sink": {
+									"name": "Formc2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Steuc']"
+								},
+								"sink": {
+									"name": "Steuc",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Compreas']"
+								},
+								"sink": {
+									"name": "Compreas",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Mndid']"
+								},
+								"sink": {
+									"name": "Mndid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['PayType']"
+								},
+								"sink": {
+									"name": "PayType",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Sepon']"
+								},
+								"sink": {
+									"name": "Sepon",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "['Mndvg']"
+								},
+								"sink": {
+									"name": "Mndvg",
+									"type": "String"
+								}
+							}
+						],
+						"collectionReference": "$['d']['results']"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_SAPVBKD",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_SAPVBKD_FILE",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"folder": {
