@@ -13,6 +13,123 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_OA_CustomerAnnualContract')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "oa_db",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "OA"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "PriceTypeName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DealerName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RelatedDealer",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OldDealerName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DealerNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "OA_SN",
+						"type": "nvarchar"
+					},
+					{
+						"name": "DealerType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ServiceType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "FiscalYear",
+						"type": "decimal",
+						"precision": 4,
+						"scale": 0
+					},
+					{
+						"name": "DeletionFlag",
+						"type": "nvarchar"
+					},
+					{
+						"name": "PriceTypeNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ContractStatus",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ModifyType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ValidateFrom",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "ValidateTo",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "DealerNoS4",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CreatedDate",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "ModifiedDate",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "Applier",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesArea",
+						"type": "nvarchar"
+					},
+					{
+						"name": "SalesOffice",
+						"type": "nvarchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "View_MDM_CustomerAnnualContract_All"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset_OA_CustomerSalesRegion')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -501,30 +618,6 @@
 				"typeProperties": {
 					"relativeUrl": {
 						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARA_SRV/MARASet?sap-client=110&$format=json",
-						"type": "Expression"
-					}
-				},
-				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceDataset_SAPMARC')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SAPOData",
-					"type": "LinkedServiceReference"
-				},
-				"folder": {
-					"name": "SAP/S4/OData"
-				},
-				"annotations": [],
-				"type": "RestResource",
-				"typeProperties": {
-					"relativeUrl": {
-						"value": "/sap/opu/odata/sap/ZPTP_GBL_API_MARC_SRV/MARCSet?sap-client=110&$format=json",
 						"type": "Expression"
 					}
 				},
