@@ -1,0 +1,28 @@
+{
+	"name": "DestinationDataset_SAPVBRK_FILE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SAP/S4/OData"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "VBRK",
+					"type": "Expression"
+				},
+				"folderPath": "OData",
+				"fileSystem": "saps4data"
+			},
+			"compressionCodec": "gzip"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,32 @@
+{
+	"name": "triggerPerDayEvening",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "SAPBillingDataExtraction",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2023-09-13T02:06:00",
+				"timeZone": "China Standard Time",
+				"schedule": {
+					"minutes": [
+						0
+					],
+					"hours": [
+						19
+					]
+				}
+			}
+		}
+	}
+}
